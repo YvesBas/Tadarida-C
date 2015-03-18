@@ -1,0 +1,33 @@
+#! /bin/sh
+
+TADARIDAC_DIR=`dirname $0`/tadaridaC_src
+TADARIDAC_LEARNER_NAME="ClassifEsp.learner"
+
+if ( [ "$TADARIDAC_LEARNER_URL" = "" ] )
+then
+ TADARIDAC_LEARNER_URL='https://s3-eu-west-1.amazonaws.com/vigiechiro/ClassifEsp.learner'
+fi
+
+if ( [ "$#" -eq 0 ] )
+then
+    echo 'usage: tadaridaC <input.ta>'
+    exit 1
+else
+    INPUT_FILE=`readlink -f $1`
+    if ( [ "$?" -ne 0 ] )
+    then
+        echo "$1 is not a valid file"
+        exit 1
+    fi
+fi
+
+cd $TADARIDAC_DIR
+
+if ( ! [ -f $TADARIDAC_LEARNER_NAME ] )
+then
+    echo 'Retrieving tadaridaC learder'
+    wget $TADARIDAC_LEARNER_URL -O $TADARIDAC_LEARNER_NAME
+fi
+
+# Finally start tadaridaC R script
+Rscript ./TadaridaC.r $INPUT_FILE

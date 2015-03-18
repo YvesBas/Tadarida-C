@@ -9,3 +9,6 @@
 
 # RStudio files
 .Rproj.user/
+
+# Tadarida learner file is too big for github
+*.learner
