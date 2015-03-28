@@ -10,6 +10,9 @@ my_packages = c("randomForest")
 
 ###########################################################
 
+local({r <- getOption("repos"); 
+       r["CRAN"] <- "http://cran.r-project.org"; options(repos=r)})
+
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
     install.packages(p, dependencies = TRUE)
