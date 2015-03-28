@@ -1,5 +1,7 @@
 sudo: required
 language: r
-r_binary_packages:
- - randomForest
+#r_binary_packages:
+# - randomForest
+install:
+ - Rscript init.r
 script: make test
