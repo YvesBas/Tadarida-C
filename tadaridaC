@@ -5,7 +5,7 @@ TADARIDAC_LEARNER_NAME="ClassifEsp.learner"
 
 if ( [ "$TADARIDAC_LEARNER_URL" = "" ] )
 then
- TADARIDAC_LEARNER_URL='https://s3-eu-west-1.amazonaws.com/vigiechiro/ClassifEsp.learner'
+ TADARIDAC_LEARNER_URL='https://s3-eu-west-1.amazonaws.com/vigie-chiro-site/ClassifEsp.learner'
 fi
 
 if ( [ "$#" -eq 0 ] )
