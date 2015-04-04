@@ -10,6 +10,7 @@ init:
 
 clean:
 	rm -f tadaridaC_src/*.learner
+	find . -name "*.tc" -delete
 
 test: all
 	./$(TARGET) $(TEST_TADS_DIR)

@@ -195,8 +195,8 @@ if (nrow(ProbEspN2a)>0)
 
 IdTot2=cbind(IdTot,VersionD=CTP$Version[1],VersionC=Version)
 
-#ecriture fichier tac
-fichierid=paste(tadir,".tc", sep="")
+#ecriture fichier tc
+fichierid=paste(tadir,"output.tc", sep="/")
 write.csv(IdTot2,fichierid,row.names=FALSE)
 
 #nettoie tous les objets sauf ClassifEsp3

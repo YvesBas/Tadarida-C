@@ -1,11 +1,11 @@
 #! /bin/sh
 
 TADARIDAC_DIR=`dirname $0`/tadaridaC_src
-TADARIDAC_LEARNER_NAME="ClassifEsp.learner"
+TADARIDAC_LEARNER_NAME=$TADARIDAC_DIR/ClassifEsp.learner
 
 if ( [ "$TADARIDAC_LEARNER_URL" = "" ] )
 then
- TADARIDAC_LEARNER_URL='https://s3-eu-west-1.amazonaws.com/vigie-chiro-site/ClassifEsp.learner'
+    TADARIDAC_LEARNER_URL='https://s3-eu-west-1.amazonaws.com/vigie-chiro-site/ClassifEsp.learner'
 fi
 
 if ( [ "$#" -eq 0 ] )
@@ -21,7 +21,6 @@ else
     fi
 fi
 
-cd $TADARIDAC_DIR
 
 if ( ! [ -f $TADARIDAC_LEARNER_NAME ] )
 then
@@ -30,4 +29,4 @@ then
 fi
 
 # Finally start tadaridaC R script
-Rscript ./TadaridaC.r $INPUT_FILE
+cd $TADARIDAC_DIR && Rscript ./TadaridaC.r $INPUT_FILE
