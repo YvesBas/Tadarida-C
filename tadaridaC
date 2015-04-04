@@ -10,7 +10,7 @@ fi
 
 if ( [ "$#" -eq 0 ] )
 then
-    echo 'usage: tadaridaC <input.ta>'
+    echo 'usage: tadaridaC <directory>'
     exit 1
 else
     INPUT_FILE=`readlink -f $1`

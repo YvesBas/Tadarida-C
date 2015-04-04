@@ -1,6 +1,6 @@
 args <- commandArgs(trailingOnly = TRUE)
 if(length(args)==0){
-  print("usage: Rscript TadaridaC.r <input.ta>")
+  print("usage: Rscript TadaridaC.r <directory>")
   q()
 }
 
@@ -11,10 +11,15 @@ library(data.table)
 
 Version=2
 
+obslist=list.files(tadir,pattern=".ta$",full.names=T,recursive=F)
+
+if (length(obslist) == 0) {
+  print("no .ta files to process")
+  q()
+}
+
 # charge classificateur haute fréquence (chiros/orthos)
 if (exists("ClassifEsp3")==FALSE) load("ClassifEsp.learner")
-
-obslist=list.files(tadir,pattern=".ta$",full.names=T,recursive=F)
 
 my.data <- list()
 for (i in 1:length(obslist)){
