@@ -1,9 +1,9 @@
 RSCRIPT		?= Rscript
 TARGET		= tadaridaC
 
-TEST_TADS	= tests/tads/*
+TEST_TADS_DIR	= tests/tads
 
-all:$(TARGET)
+all:
 
 init:
 	$(RSCRIPT) init.r
@@ -11,5 +11,5 @@ init:
 clean:
 	rm -f tadaridaC_src/*.learner
 
-test: all $(TEST_TADS)
-	for i in $(TEST_TADS); do ./$(TARGET) $$i || exit $?; done
+test: all
+	./$(TARGET) $(TEST_TADS_DIR)
