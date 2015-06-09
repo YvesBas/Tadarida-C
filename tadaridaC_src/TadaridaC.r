@@ -198,7 +198,7 @@ IdTot2=cbind(IdTot,VersionD=CTP$Version[1],VersionC=Version)
 #ecriture fichier tc
 for (i in 1:nlevels(IdTot2$Group.1))
   {
-  fichierid=paste(substr(levels(IdTot2$Group.1)[i],1,(nchar(levels(IdTot2$Group.1)[i])-4)),".tc", sep="")
+  fichierid=paste(tadir,'/',substr(levels(IdTot2$Group.1)[i],1,(nchar(levels(IdTot2$Group.1)[i])-4)),".tc", sep="")
   write.csv(subset(IdTot2,IdTot2$Group.1==levels(IdTot2$Group.1)[i]),fichierid,row.names=FALSE)  
 }
 
