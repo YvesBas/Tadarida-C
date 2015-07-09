@@ -1,3 +1,5 @@
+options(error = function() traceback(2))
+
 args <- commandArgs(trailingOnly = TRUE)
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
