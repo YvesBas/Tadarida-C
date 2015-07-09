@@ -35,7 +35,7 @@ ProbEsp0 <- predict(ClassifEsp3, CTP,type="prob",norm.votes=TRUE)
 ProbEsp <-  cbind(CTP[,1:12],ProbEsp0)
 
 #cherche le meilleur score pour 1 cri par espèce et par fichier
-MaxparFich<-aggregate(ProbEsp[,13:(ncol(ProbEsp)-1)],by=list(ProbEsp$Filename),FUN=max)
+MaxparFich<-aggregate(ProbEsp[,13:(ncol(ProbEsp))],by=list(ProbEsp$Filename),FUN=max)
 
 SpMax<-max.col(MaxparFich[,2:ncol(MaxparFich)],ties.method = "first")
 
@@ -79,7 +79,7 @@ if (nrow(ProbEspN2a)>0)
 {
   
   #On cherche la "meilleur espèce secondaire", et on recommence...
-  MaxparFichN2t<-aggregate(ProbEspN2a[,13:(ncol(ProbEspN2a)-1)],by=list(ProbEspN2a$Filename),FUN=max)
+  MaxparFichN2t<-aggregate(ProbEspN2a[,13:(ncol(ProbEspN2a))],by=list(ProbEspN2a$Filename),FUN=max)
   
   SpMaxN2<-max.col(MaxparFichN2t[,2:ncol(MaxparFichN2t)],ties.method = "first")
   
@@ -131,7 +131,7 @@ if (nrow(ProbEspN2a)>0)
   if (nrow(ProbEspN3a)>0)
   {
     
-    MaxparFichN3t<-aggregate(ProbEspN3a[,13:(ncol(ProbEspN3a)-1)],by=list(ProbEspN3a$Filename),FUN=max)
+    MaxparFichN3t<-aggregate(ProbEspN3a[,13:(ncol(ProbEspN3a))],by=list(ProbEspN3a$Filename),FUN=max)
     
     SpMaxN3<-max.col(MaxparFichN3t[,2:ncol(MaxparFichN3t)],ties.method = "first")
     
@@ -175,7 +175,7 @@ if (nrow(ProbEspN2a)>0)
     
     if (nrow(ProbEspN4)>0)
     {
-      MaxparFichN4<-aggregate(ProbEspN4[,13:(ncol(ProbEspN4)-1)],by=list(ProbEspN4$Filename),FUN=max)
+      MaxparFichN4<-aggregate(ProbEspN4[,13:(ncol(ProbEspN4))],by=list(ProbEspN4$Filename),FUN=max)
       
       SpMaxN4<-max.col(MaxparFichN4[,2:ncol(MaxparFichN4)],ties.method = "first")
       
