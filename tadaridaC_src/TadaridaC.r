@@ -11,7 +11,7 @@ tadir=args[1]
 library(randomForest)
 library(data.table)
 
-Version=2
+Version=3
 
 obslist=list.files(tadir,pattern=".ta$",full.names=T,recursive=F)
 
@@ -21,7 +21,7 @@ if (length(obslist) == 0) {
 }
 
 # charge classificateur haute fréquence (chiros/orthos)
-if (exists("ClassifEsp3")==FALSE) load("ClassifEsp.learner")
+if (exists("ClassifEsp3")==FALSE) load("ClassifEspHF3.learner")
 
 my.data <- list()
 for (i in 1:length(obslist)){
