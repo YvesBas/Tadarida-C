@@ -62,7 +62,7 @@ ProbEspN1=subset(ProbEspDom0,ProbEspDom0$PED>=0.02)
 
 MaxparFichN1<-aggregate(ProbEspN1[,13:(ncol(ProbEspN1)-4)],by=list(ProbEspN1$Filename),FUN=max)
 
-FreqMed1=aggregate(ProbEspN1$FreqMP,by=list(ProbEspN1$Filename),function(x) floor(quantile(x,0.5)))
+FreqMed1=aggregate((ProbEspN1$Fmin+ProbEspN1$BW/2),by=list(ProbEspN1$Filename),function(x) floor(quantile(x,0.5)))
 
 TDeb1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) floor(min(x/100))/10)
 
@@ -113,7 +113,7 @@ if (nrow(ProbEspN2a)>0)
   
   MaxparFichN2<-aggregate(ProbEspN2[,13:(ncol(ProbEspN2)-4)],by=list(ProbEspN2$Filename),FUN=max)
   
-  FreqMed2=aggregate(ProbEspN2$FreqMP,by=list(ProbEspN2$Filename),function(x) floor(quantile(x,0.5)))
+  FreqMed2=aggregate((ProbEspN2$Fmin+ProbEspN2$BW/2),by=list(ProbEspN2$Filename),function(x) floor(quantile(x,0.5)))
   
   TDeb2=aggregate(ProbEspN2$StTime,by=list(ProbEspN2$Filename),function(x) floor(min(x/100))/10)
   
@@ -158,7 +158,7 @@ if (nrow(ProbEspN2a)>0)
     
     MaxparFichN3<-aggregate(ProbEspN3[,13:(ncol(ProbEspN3)-4)],by=list(ProbEspN3$Filename),FUN=max)
     
-    FreqMed3=aggregate(ProbEspN3$FreqMP,by=list(ProbEspN3$Filename),function(x) floor(quantile(x,0.5)))
+    FreqMed3=aggregate((ProbEspN3$Fmin+ProbEspN3$BW/2),by=list(ProbEspN3$Filename),function(x) floor(quantile(x,0.5)))
     
     TDeb3=aggregate(ProbEspN3$StTime,by=list(ProbEspN3$Filename),function(x) floor(min(x/100))/10)
     
@@ -183,7 +183,7 @@ if (nrow(ProbEspN2a)>0)
       
       
       
-      FreqMed4=aggregate(ProbEspN4$FreqMP,by=list(ProbEspN4$Filename),function(x) floor(quantile(x,0.5)))
+      FreqMed4=aggregate((ProbEspN4$Fmin+ProbEspN4$BW/2),by=list(ProbEspN4$Filename),function(x) floor(quantile(x,0.5)))
       
       TDeb4=aggregate(ProbEspN4$StTime,by=list(ProbEspN4$Filename),function(x) floor(min(x/100))/10)
       
