@@ -26,7 +26,7 @@ if (length(obslist) == 0) {
 }
 
 # load the classifier
-if (exists("ClassifEsp3")==FALSE) load("ClassifEspHF3.learner")
+if (exists("ClassifEspA")==FALSE) load("ClassifEspHF3.learner")
 
 #concatenate all the features table
 my.data <- list()
@@ -36,7 +36,7 @@ for (i in 1:length(obslist)){
 CTP=as.data.frame(rbindlist(my.data))
 
 #get the predictions and the main features (noticeably the file name)
-ProbEsp0 <- predict(ClassifEsp3, CTP,type="prob",norm.votes=TRUE)
+ProbEsp0 <- predict(ClassifEspA, CTP,type="prob",norm.votes=TRUE)
 ProbEsp <-  cbind(CTP[,1:12],ProbEsp0)
 
 #this loop intends to detect successively different species within each file if there is sufficient dicrepancy in predicted probabilities
