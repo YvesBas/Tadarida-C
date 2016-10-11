@@ -3,8 +3,7 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-#args="C:/Users/yves/Documents/Tadarida/test/txt"
-args="C:/Users/yves/Documents/Tadarida/testbase/20160718/txt"
+args="C:/Users/yves/Documents/Tadarida/test/txt"
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()

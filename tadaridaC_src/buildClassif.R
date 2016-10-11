@@ -1,11 +1,11 @@
 #INPUTS (to be edited according to local path)
 #required:
-RSDB="C:/Users/yves/Documents/Tadarida/baseref"
-MRF="C:/Users/yves/Documents/R/Modified_randomForest.R"
+RSDB="C:/Users/yves/Documents/Tadarida/Tadarida-C/RSDB_sample"
+MRF="C:/Users/yves/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R"
 #optional:
-SpeciesList=read.csv("C:/Users/yves/Documents/R/SpeciesList.csv",h=T) #to uncomment if a species grouping and/or filtering is necessary
+SpeciesList=read.csv("C:/Users/yves/Documents/Tadarida-C/SpeciesList.csv") #to uncomment if a species grouping and/or filtering is necessary
 ### A TESTER SANS FILTRE##
-#GeoFilter="France" #to uncomment and edit if a species filtering is necessary
+GeoFilter="France" #to uncomment and edit if a species filtering is necessary
 
 #SETTINGS (both are intended to balance unvenness in species sampling)
 SubSamp=11 #level of minimum subsampling (= X times average number of calls per species)
