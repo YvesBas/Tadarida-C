@@ -3,13 +3,16 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-args="C:/Users/yves/Documents/Tadarida/test/txt"
+args="C:/Users/yves/Documents/Tadarida/Tadarida-C/tests/txt"
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
 }
-
 tadir=args[1]
+
+#uncomment the following line if you do not store the classifier file in the working directory of R
+#and in that case, indicate the folder path where the classifier file is stored
+#setwd("C:/Users/yves/Documents/Tadarida/Tadarida-C/tests")
 
 library(randomForest) #to use the classifier
 library(data.table) #to handle large numbers of .ta files
