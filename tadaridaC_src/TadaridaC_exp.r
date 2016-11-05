@@ -5,7 +5,7 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-args="F:/pourscanEspagne160823/DataRondaChenaieVerteEst_MicMor/txt"
+args="C:/Users/yves/Documents/Tadarida/test_ta"
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
@@ -34,7 +34,7 @@ nruns<-ceiling(l/500)
 #nruns<-l
 
 
-for (r in 2:nruns){
+for (r in 1:nruns){
   #for (r in 137:138){    
   #  for (r in 3:4){
   print(r)
@@ -107,6 +107,10 @@ while (nrow(ProbEsp)>0)
                    ,FUN=function(x) 
                      if(length(x)>4){quantile(x,5/length(x))}else{max(x)})
   
+  ScoreNClust=aggregate(ScoreSec,by=list(ProbEspDom0$Filename)
+                   ,FUN=function(x) 
+                     length(subset(x,x<0))-length(subset(x,((x>0)&(x<1)))))
+  
   #allowing to compute a "secondary species index"
   
   SecInd=1.17+1.6*ScoreM$x+0.0574*Score2$x+0.0312*Score5$x
@@ -130,11 +134,20 @@ while (nrow(ProbEsp)>0)
   if(exists("IdTot")==T){IdTot=rbind(IdTot,IdTemp)}else{IdTot=IdTemp}
   
   #sound events kept for the next round
-  #2 conditions: they belong to a file whose "SecInd" is negativ AND ScoreSec is negative (see above)
+  #3 conditions: 
+  #condition 1: they belong to a file whose "SecInd" is negative   
   ProbEsp=subset(ProbEspDom0[,1:(ncol(ProbEspDom0)-3)],ScoreSec<0)
   ProbEsp=merge(ProbEsp,subset(ScoreM,SecInd<0),by.x="Filename",by.y="Group.1")
   ProbEsp=ProbEsp[,1:(ncol(ProbEsp)-1)]
-  if(max(SecInd)<0){ProbEsp=ProbEsp[0,]}
+  #condition2: SecInd should be negative (see above)
+  if(min(SecInd)>0)
+  {ProbEsp=ProbEsp[0,]}else{
+    ProbEsp=merge(ProbEsp,subset(ScoreM,SecInd<0),by.x="Filename",by.y="Group.1")
+    ProbEsp=ProbEsp[,1:(ncol(ProbEsp)-1)]
+    #condition3: lowest values of ScoreSec form a distinctive cluster
+    ProbEsp=merge(ProbEsp,subset(ScoreNClust,ScoreNClust$x>0),by.x="Filename",by.y="Group.1")
+    ProbEsp=ProbEsp[,1:(ncol(ProbEsp)-1)]
+  }
 }
 
 #computing the species
