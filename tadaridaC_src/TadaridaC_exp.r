@@ -5,7 +5,7 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-args="C:/Users/yves/Documents/Tadarida/test_ta"
+args="F:/wav_RE/txt"
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
@@ -34,16 +34,16 @@ nruns<-ceiling(l/500)
 #nruns<-l
 
 
-for (r in 1:nruns){
-  #for (r in 137:138){    
+#for (r in 1:nruns){
+ for (r in 39:nruns){    
   #  for (r in 3:4){
-  print(r)
+  print(paste(r,"/",nruns,Sys.time()))
   fstart<-(r*500)-499
   fend<-(r*500)
   fend<-ifelse(fend>l,l,fend)
   my.data <- list()
   for(f in fstart:fend) {
-    print(f)
+    #print(f)
     my.data[[f]] <- read.csv(obslist[[f]],sep="\t")
     #  my.data[[1]] <- read.csv(obslist[[1]],sep="\t")
   }
@@ -54,13 +54,13 @@ for (r in 1:nruns){
 
 
 # load the classifier
-if (exists("ClassifEsp3")==FALSE) load("ClassifEspEsp.learner")
+if (exists("ClassifEspA")==FALSE) load("ClassifEspHF3.learner")
 
 #concatenate all the features table
 CTP=as.data.frame(rbindlist(my.data))
 
 #get the predictions and the main features (noticeably the file name)
-ProbEsp0 <- predict(ClassifEsp3, CTP,type="prob",norm.votes=TRUE)
+ProbEsp0 <- predict(ClassifEspA, CTP,type="prob",norm.votes=TRUE)
 ProbEsp <-  cbind(CTP[,1:12],ProbEsp0
                   ,HL=(CTP$Hup_RFMP!=0),HU=(CTP$Hlo_PosEn!=9999))
 
@@ -119,8 +119,12 @@ while (nrow(ProbEsp)>0)
   #those whose "most probable species" score is under 2%, and thus are considered to be from other species to be identified in next rounds of the loop (hence go in "ProbEsp")
   #the others are considered to be from the same source and thus are used to compute the probability distribution among species (MaxParFichN1) and ancillary data (median frequency, time of start an time of end during the file)
   
-  ProbEspN1=subset(ProbEspDom0,ScoreSec>0)
-  if(nrow(ProbEspN1)==0){ProbEspN1=ProbEspDom0}
+  ProbEspN1=subset(ProbEspDom0,(ScoreSec>0))
+  if(nrow(ProbEspN1)==0)
+  {
+    ProbEspN1=ProbEspDom0
+    SecInd=1
+    }
   MaxparFichN1<-aggregate(ProbEspN1[,13:(ncol(ProbEspN1)-5)],by=list(ProbEspN1$Filename),FUN=max)
   
   FreqMed1=aggregate((ProbEspN1$Fmin+ProbEspN1$BW/2),by=list(ProbEspN1$Filename),function(x) floor(quantile(x,0.5)))
@@ -148,7 +152,8 @@ while (nrow(ProbEsp)>0)
     ProbEsp=merge(ProbEsp,subset(ScoreNClust,ScoreNClust$x>0),by.x="Filename",by.y="Group.1")
     ProbEsp=ProbEsp[,1:(ncol(ProbEsp)-1)]
   }
-}
+    }
+
 
 #computing the species
 SpMaxF<-max.col(IdTot[,2:(ncol(IdTot)-4)],ties.method = "first")
@@ -202,4 +207,4 @@ write.table(IdCombine,fichierid,row.names=FALSE,sep=";")
 
 
 #suppressing every objects except the classifier (which is time-consuming to load)
-rm(list=setdiff(ls(), list("ClassifEsp3","CTP","ProbEsp0","args")))
+rm(list=setdiff(ls(), list("ClassifEspA","CTP","ProbEsp0","args")))
