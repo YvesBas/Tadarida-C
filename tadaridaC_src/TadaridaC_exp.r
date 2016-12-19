@@ -122,8 +122,8 @@ while (nrow(ProbEsp)>0)
   ProbEspN1=subset(ProbEspDom0,(ScoreSec>0))
   if(nrow(ProbEspN1)==0) #to treat rare cases of low probabilities for all "species"
   {
-    ProbEspN1=ProbEspDom0
-    SecInd=1
+    ProbEspN1=ProbEspDom0 
+    SecInd=1 #to stope the loop (because probabilities went too low)
     }
   MaxparFichN1<-aggregate(ProbEspN1[,13:(ncol(ProbEspN1)-5)],by=list(ProbEspN1$Filename),FUN=max)
   
