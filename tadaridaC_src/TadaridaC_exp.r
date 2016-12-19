@@ -5,7 +5,7 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-args="F:/wav_RE/txt"
+args="F:/pourscanLitEN/Datavergersudvilnius011m5/txt"
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
@@ -34,8 +34,8 @@ nruns<-ceiling(l/500)
 #nruns<-l
 
 
-#for (r in 1:nruns){
- for (r in 39:nruns){    
+for (r in 1:nruns){
+ #for (r in 39:nruns){    
   #  for (r in 3:4){
   print(paste(r,"/",nruns,Sys.time()))
   fstart<-(r*500)-499
@@ -120,7 +120,7 @@ while (nrow(ProbEsp)>0)
   #the others are considered to be from the same source and thus are used to compute the probability distribution among species (MaxParFichN1) and ancillary data (median frequency, time of start an time of end during the file)
   
   ProbEspN1=subset(ProbEspDom0,(ScoreSec>0))
-  if(nrow(ProbEspN1)==0)
+  if(nrow(ProbEspN1)==0) #to treat rare cases of low probabilities for all "species"
   {
     ProbEspN1=ProbEspDom0
     SecInd=1
