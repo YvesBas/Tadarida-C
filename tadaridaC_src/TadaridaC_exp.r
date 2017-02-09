@@ -5,7 +5,7 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-args="F:/pourscanLitEN/Datavergersudvilnius011m5/txt"
+args="H:/round170112VRAI/txt"
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
@@ -31,21 +31,16 @@ Sys.time()
 
 l<-length(obslist)
 nruns<-ceiling(l/500)
-#nruns<-l
 
 
 for (r in 1:nruns){
- #for (r in 39:nruns){    
-  #  for (r in 3:4){
   print(paste(r,"/",nruns,Sys.time()))
   fstart<-(r*500)-499
   fend<-(r*500)
   fend<-ifelse(fend>l,l,fend)
   my.data <- list()
   for(f in fstart:fend) {
-    #print(f)
     my.data[[f]] <- read.csv(obslist[[f]],sep="\t")
-    #  my.data[[1]] <- read.csv(obslist[[1]],sep="\t")
   }
   
 
@@ -54,16 +49,19 @@ for (r in 1:nruns){
 
 
 # load the classifier
-if (exists("ClassifEspA")==FALSE) load("ClassifEspHF3.learner")
+if (exists("ClassifEspA")==FALSE) load("ClassifEspFrance170111.learner")
 
 #concatenate all the features table
 CTP=as.data.frame(rbindlist(my.data))
 
 #get the predictions and the main features (noticeably the file name)
 ProbEsp0 <- predict(ClassifEspA, CTP,type="prob",norm.votes=TRUE)
+
+
+
+#Loop init
 ProbEsp <-  cbind(CTP[,1:12],ProbEsp0
                   ,HL=(CTP$Hup_RFMP!=0),HU=(CTP$Hlo_PosEn!=9999))
-
 #this loop intends to detect successively different species within each file if there is sufficient dicrepancy in predicted probabilities
 j=0
 while (nrow(ProbEsp)>0)
@@ -123,15 +121,15 @@ while (nrow(ProbEsp)>0)
   if(nrow(ProbEspN1)==0) #to treat rare cases of low probabilities for all "species"
   {
     ProbEspN1=ProbEspDom0 
-    SecInd=1 #to stope the loop (because probabilities went too low)
+    SecInd=1 #to stop the loop (because probabilities went too low in that case)
     }
-  MaxparFichN1<-aggregate(ProbEspN1[,13:(ncol(ProbEspN1)-5)],by=list(ProbEspN1$Filename),FUN=max)
+  MaxparFichN1<-aggregate(ProbEspN1[,13:(ncol(ProbEspN1)-5)],by=list(ProbEspN1$Filename),FUN=max) #matrix of maximum probability per species
   
-  FreqMed1=aggregate((ProbEspN1$Fmin+ProbEspN1$BW/2),by=list(ProbEspN1$Filename),function(x) floor(quantile(x,0.5)))
+  FreqMed1=aggregate((ProbEspN1$Fmin+ProbEspN1$BW/2),by=list(ProbEspN1$Filename),function(x) floor(quantile(x,0.5))) #median frequency of sound events
   
-  TDeb1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) floor(min(x/100))/10)
+  TDeb1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) floor(min(x/100))/10)  #time of the first sound event
   
-  TFin1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) ceiling(max(x/100))/10)
+  TFin1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) ceiling(max(x/100))/10) #time of the last sound event
   
   #storing results
   IdTemp=cbind(MaxparFichN1,FreqM=FreqMed1$x,Tstart=TDeb1$x,Tend=TFin1$x,Order=paste("N",j,sep=""))
@@ -159,7 +157,7 @@ while (nrow(ProbEsp)>0)
 SpMaxF<-max.col(IdTot[,2:(ncol(IdTot)-4)],ties.method = "first")
 SpMaxF2=colnames(MaxparFich)[SpMaxF+1]
 
-#experimenting a finer confidence index
+#Calculating the confidence index (linear combination of the four highest scores)
 n1=apply(IdTot[,2:(ncol(IdTot)-4)],MARGIN=1,FUN=max)
 
 n2=apply(IdTot[,2:(ncol(IdTot)-4)],MARGIN=1
@@ -173,7 +171,7 @@ NIC=exp(-2.5+8*n1-2.5*(n2+n3+n4))/(1+exp(-2.5+8*n1-2.5*(n2+n3+n4)))
 
 IdDetail=cbind(IdTot,SpMaxF2,NIC,n1,n2,n3,n4)
 
-
+Detail=subset(IdDetail,select=c(Group.1,FreqM:n4))
 
 fichierid=paste(args,r,"IdDetailNEW.csv",sep="")
 write.table(IdDetail,fichierid,row.names=FALSE,sep=";")
@@ -189,22 +187,57 @@ Date=f2p(as.character(IdDetail$Group.1))
 Time=(Date$hour*3600+Date$min*60+Date$sec)/3600+24*(1-floor(Date$hour/12))
 stripchart(as.numeric(as.character(IdDetail$NIC))~IdDetail$SpMaxF2,las=2)
 axis(4,at=c(1:length(levels(IdDetail$SpMaxF2))),labels=levels(IdDetail$SpMaxF2),las=2)
-stripchart(Time~IdDetail$SpMaxF2,las=2)
-axis(4,at=c(1:length(levels(IdDetail$SpMaxF2))),labels=levels(IdDetail$SpMaxF2),las=2)
+#stripchart(Time~IdDetail$SpMaxF2,las=2)
+#axis(4,at=c(1:length(levels(IdDetail$SpMaxF2))),labels=levels(IdDetail$SpMaxF2),las=2)
 gc()
 
 rm(my.data)
 }
 
+IdMax=aggregate(subset(IdTot,select=amph:Zeuabb),by=list(IdTot$Group.1),FUN=max)
 
+IdTot3=merge(IdTot,IdMax,by="Group.1")
 
+if (exists("ClassifEsp_C2")==F){load("ClassifEspFrance_C2_170112.learner")}
 
+ProbEsp_C2=predict(ClassifEspC2,IdTot3,type="prob",norm.votes=TRUE)
+ProbEsp_C2s=predict(ClassifEspC2,IdTot3,type="response",norm.votes=TRUE)
 
-fichierid=paste(args,"IdDetailNEW.csv",sep="")
-write.table(IdCombine,fichierid,row.names=FALSE,sep=";")
+PredC2=as.data.frame(cbind(Group.1=as.character(IdTot3$Group.1),Order=as.character(IdTot3$Order),ProbEsp_C2s,ProbEsp_C2))
+
+table(ProbEsp_C2s,IdTot3$Order)
+
+table(ProbEsp_C2s,IdDetail$SpMaxF2)
+
+Id_C2=merge(IdDetail,PredC2,by=c("Group.1","Order"))
+
+write.csv(Id_C2,"Id_C2.csv",row.names=F)
+
+DS=read.csv("DataSel.csv")
+
+DS_Order=1
+for (i in 2:nrow(DS))
+  {
+    if(DS$donnee[i-1]==DS$donnee[i]){Otemp=DS_Order[i-1]+1}else{Otemp=1}
+    DS_Order=c(DS_Order,Otemp)
+    print(i)
+}
+
+Order=paste0("N",DS_Order)
+Group.1=paste0(DS$donnee,".wav")
+DS2=cbind(DS,Order,Group.1)
+
+write.csv(DS2,"DS2.csv",row.names=F)
+
+IdpourRound=merge(Id_C2,DS2,by=c("Group.1","Order"),all.x=T,all.y=T)
+names(Id_C2)
+
+write.csv(IdpourRound,"IPR.csv",row.names=F)
+#fichierid=paste(args,"IdDetailNEW.csv",sep="")
+#write.table(IdCombine,fichierid,row.names=FALSE,sep=";")
 
 
 
 
 #suppressing every objects except the classifier (which is time-consuming to load)
-rm(list=setdiff(ls(), list("ClassifEspA","CTP","ProbEsp0","args")))
+rm(list=setdiff(ls(), list("ClassifEspA","ClassifEspC2","CTP","ProbEsp0","args","DS2")))

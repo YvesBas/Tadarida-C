@@ -1,34 +1,24 @@
 #INPUTS (to be edited according to local path)
 #required:
-RSDB="C:/Users/yves/Documents/Tadarida/Tadarida-C/RSDB_sample"
-MRF="C:/Users/yves/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R"
+RSDB="C:/Users/yves/Documents/Tadarida/Tadarida-C/RSDB_sample" #path of the local Reference Sound Data Base (RSDB)
+MRF="C:/Users/yves/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R" #a dedicated function of randomForest (allows specific strata sampling, see manual)
 #optional:
 SpeciesList=read.csv("C:/Users/yves/Documents/Tadarida/Tadarida-C/SpeciesList.csv") #to uncomment if a species grouping and/or filtering is necessary
-### A TESTER SANS FILTRE##
-GeoFilter="France" #to uncomment and edit if a species filtering is necessary
 
-#SETTINGS (both are intended to balance unvenness in species sampling)
+#SETTINGS (first two are intended to balance unvenness in species sampling)
 SubSamp=11 #level of minimum subsampling (= X times average number of calls per species)
 GradientSamp=-0.1 #gradient strength (must be negative)
+GeoFilter="France" #to uncomment and edit if a species filtering is necessary
 
 #loading randomForest library to build the classifier then modified randomforest function
 set.seed(921)
 library(randomForest)
 source(MRF) #Slightly modified randomForest function to allow empty sample strata
 
-###AUTOMATISER IMPORTATION fonction modifiée randomForest
-
 library(data.table) #used to generate features table from labelled sound database
 
-#etidir="C:/Users/yves/Documents/Tadarida/eti" #path where labels (.eti files) are stored 
-#pardir="C:/Users/yves/Documents/Tadarida/txt" #path where features (.ta files) are stored 
-
-#setwd("D:/ScanRLogs/R_data")
-
-#listing label files with and without their path
-
+#listing subfolder of the RSDB
 ListDate=list.dirs(RSDB,recursive=F)
-
 if(length(ListDate)==0) {print("RSDB is empty")}
 
 #Initializing and listing label files
@@ -63,10 +53,7 @@ Sys.time()
 etitot=as.data.frame(rbindlist(my.data,fill=T))
 colnames(etitot)=colnames(
   read.csv(etilist1[[1]],sep="\t",h=T,row.names=1))
-etitot2=cbind(fichier,etitot)
-
-
-#test=subset(etitot2,(etitot2$Cri=="Pippip")&(etitot2$Espece=="social")&()
+etitot2=cbind(fichier,etitot) # data frame of labels
 
 #concatenating features tables
 parlist=vector()
@@ -84,7 +71,7 @@ for (i in 1:length(parlist1)){
 }
 Sys.time()
 
-param3=as.data.frame(rbindlist(my.data))
+param3=as.data.frame(rbindlist(my.data)) # data frame of features
 
 
 #merging labels and features
@@ -94,7 +81,7 @@ tabase=merge(param3,etitot2,by.x=c("Filename","CallNum"),by.y=c("fichier","Cri")
 tabase2=subset(tabase,tabase$Espece!="")
 
 
-#write.csv(levels(tabase2$Cri),"TtEsp.csv") #to list all species
+#write.csv(levels(tabase2$Espece),"TtEsp.csv") #to list all species
 
 #Filtering species according to their "country" occurence and grouping undistinguishable species (e.g. Myotis blythii and M. myotis)
 if (exists("GeoFilter")==T) 
@@ -110,18 +97,15 @@ if (exists("GeoFilter")==T)
     }
   }
 
-tabase3$Nesp=factor(tabase3$Nesp,exclude=NULL)
-tabase3$Site=factor(tabase3$Site,exclude=NULL)
-
-#converting (rarely) missing features to 0 #A SUPPRIMER
-#tabase3[is.na(tabase3)]=0
+tabase3$Nesp=factor(tabase3$Nesp,exclude=NULL) #purging empty species classes (following filter)
+tabase3$Site=factor(tabase3$Site,exclude=NULL) #purging empty site classes (following filter)
 
 
 #creating a formula using all sound features
 FormulCrit=colnames(tabase3[5])
-for (i in 6:154)
+for (i in 6:(ncol(tabase3)-18))
 {
-  FormulCrit=paste(FormulCrit,colnames(tabase2)[i],sep="+")
+  FormulCrit=paste(FormulCrit,colnames(tabase3)[i],sep="+")
 }
 
 #average number of sound events per species, used thereafter to balance species weights in the classifier
@@ -142,7 +126,7 @@ for (i in 1:50)
   
   SelSiteTemp=cbind(Site=levels(tabase3$Site),Sel)
   
-  tabase4=merge(tabase3,SelSiteTemp,by="Site")
+  tabase4=merge(tabase3,SelSiteTemp,by="Site") #merging total data frame with random site selection
   
   #designing sampling strata as a combination of species and site
   StrataTemp=as.factor(paste(as.character(tabase4$Nesp)
@@ -170,13 +154,13 @@ for (i in 1:50)
                               ,sampsize=SampTemp2
                               ,importance=F,ntree=10) 
   
-  #combine it with previously build small forests
+  #combine it with previously built small forests
   if (exists("ClassifEspA")==TRUE) {ClassifEspA=combine(ClassifEspA,ClassifEspTemp)} else {ClassifEspA=ClassifEspTemp}
 }
 Sys.time()
 
 
-save (ClassifEspA,file="ClassifEspHF3.learner") 
+save (ClassifEspA,file="ClassifEspHF3.learner") #saving the total forest (50x10 trees)
 Sys.time()
 
 

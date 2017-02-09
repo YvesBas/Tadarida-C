@@ -3,7 +3,7 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-args="C:/Users/yves/Documents/Tadarida/Tadarida-C/tests/txt"
+args="C:/Users/yves/Documents/Tadarida/Tadarida-C/tests/tadaridaC_input/txt"
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
@@ -73,13 +73,13 @@ while (nrow(ProbEsp)>0)
   
   ProbEspN1=subset(ProbEspDom0,ProbEspDom0$PED>=0.02)
   
-  MaxparFichN1<-aggregate(ProbEspN1[,13:(ncol(ProbEspN1)-3)],by=list(ProbEspN1$Filename),FUN=max)
+  MaxparFichN1<-aggregate(ProbEspN1[,13:(ncol(ProbEspN1)-3)],by=list(ProbEspN1$Filename),FUN=max) #matrix of maximum probability per species
   
-  FreqMed1=aggregate((ProbEspN1$Fmin+ProbEspN1$BW/2),by=list(ProbEspN1$Filename),function(x) floor(quantile(x,0.5)))
+  FreqMed1=aggregate((ProbEspN1$Fmin+ProbEspN1$BW/2),by=list(ProbEspN1$Filename),function(x) floor(quantile(x,0.5))) #median frequency of sound events
   
-  TDeb1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) floor(min(x/100))/10)
+  TDeb1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) floor(min(x/100))/10) #time of the first sound event
   
-  TFin1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) ceiling(max(x/100))/10)
+  TFin1=aggregate(ProbEspN1$StTime,by=list(ProbEspN1$Filename),function(x) ceiling(max(x/100))/10) #time of the last sound event
   
   #storing results
   IdTemp=cbind(MaxparFichN1,FreqM=FreqMed1$x,Tstart=TDeb1$x,Tend=TFin1$x,Order=paste("N",j,sep=""))
@@ -102,4 +102,4 @@ for (i in 1:nlevels(IdTot2$Group.1))
 
 
 #suppressing every objects except the classifier (which is time-consuming to load)
-rm(list=setdiff(ls(), "ClassifEspA"))
+rm(list=setdiff(ls(), "ClassifEspA","IdTot2"))
