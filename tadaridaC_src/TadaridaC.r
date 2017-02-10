@@ -102,4 +102,4 @@ for (i in 1:nlevels(IdTot2$Group.1))
 
 
 #suppressing every objects except the classifier (which is time-consuming to load)
-rm(list=setdiff(ls(), "ClassifEspA","IdTot2"))
+rm(list=setdiff(ls(), list("ClassifEspA","IdTot2")))
