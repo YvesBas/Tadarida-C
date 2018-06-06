@@ -3,7 +3,7 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-args="C:/Users/yves/Documents/Tadarida/Tadarida-C/tests/tadaridaC_input/txt"
+args="C:/Users/Yves Bas/Documents/txt"
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
@@ -28,7 +28,7 @@ if (length(obslist) == 0) {
 }
 
 # load the classifier
-if (exists("ClassifEspA")==FALSE) load("ClassifEspHF3.learner")
+if (exists("ClassifEspA")==FALSE) load("ClassifEspFrance_simpl171214_1_50.learner")
 
 #concatenate all the features table
 my.data <- list()
@@ -103,3 +103,4 @@ for (i in 1:nlevels(IdTot2$Group.1))
 
 #suppressing every objects except the classifier (which is time-consuming to load)
 rm(list=setdiff(ls(), list("ClassifEspA","IdTot2")))
+

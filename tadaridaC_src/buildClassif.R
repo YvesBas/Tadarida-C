@@ -1,6 +1,6 @@
 #INPUTS (to be edited according to local path)
 #required:
-RSDB="C:/Users/yves/Documents/Tadarida/Tadarida-C/RSDB_sample" #path of the local Reference Sound Data Base (RSDB)
+RSDB="C:/Users/yves/Documents/Tadarida/baseref" #path of the local Reference Sound Data Base (RSDB)
 MRF="C:/Users/yves/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R" #a dedicated function of randomForest (allows specific strata sampling, see manual)
 #optional:
 SpeciesList=read.csv("C:/Users/yves/Documents/Tadarida/Tadarida-C/SpeciesList.csv") #to uncomment if a species grouping and/or filtering is necessary
@@ -57,7 +57,7 @@ etitot2=cbind(fichier,etitot) # data frame of labels
 
 #concatenating features tables
 parlist=vector()
-
+if(exists("parlist1"){rm(parlist1)}
 for (i in 1:length(ListDate))
 {
   parlistemp1=list.files(paste(ListDate[[i]],"/txt",sep=""),pattern=".ta$",full.names=T,recursive=F)
@@ -100,6 +100,7 @@ if (exists("GeoFilter")==T)
 tabase3$Nesp=factor(tabase3$Nesp,exclude=NULL) #purging empty species classes (following filter)
 tabase3$Site=factor(tabase3$Site,exclude=NULL) #purging empty site classes (following filter)
 
+rm(tabase,tabase2,param3,etitot,etitot2)
 
 #creating a formula using all sound features
 FormulCrit=colnames(tabase3[5])
@@ -160,7 +161,7 @@ for (i in 1:50)
 Sys.time()
 
 
-save (ClassifEspA,file="ClassifEspHF3.learner") #saving the total forest (50x10 trees)
+save (ClassifEspA,file="ClassifEspHF170326.learner") #saving the total forest (50x10 trees)
 Sys.time()
 
 
