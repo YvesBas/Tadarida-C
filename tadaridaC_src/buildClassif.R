@@ -57,7 +57,7 @@ etitot2=cbind(fichier,etitot) # data frame of labels
 
 #concatenating features tables
 parlist=vector()
-if(exists("parlist1"){rm(parlist1)}
+if(exists("parlist1")){rm(parlist1)}
 for (i in 1:length(ListDate))
 {
   parlistemp1=list.files(paste(ListDate[[i]],"/txt",sep=""),pattern=".ta$",full.names=T,recursive=F)
