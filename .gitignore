@@ -10,8 +10,6 @@
 # RStudio files
 .Rproj.user/
 
-# Tadarida learner file is too big for github
-*.learner
 ClassifEspVotes170110.csv
 IdTot170112.csv
 matconf.csv
