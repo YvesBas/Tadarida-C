@@ -11,7 +11,7 @@ AggNbSp="AggNbSp.r"
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following lines if you prefer to do not use R in command line
-#args[1]="C:/wamp64/www/wavtri_test2ndSp/txt"
+#args="C:/wamp64/www/wavtri_test2ndSp/txt"
 #args="E:/PI_CDL1804/5ae195607dcf87000f45bbfb/txt"
 #args[2]="ClassifEsp_LF_180320.learner"
 #args[2]="ClassifEsp_LF_180129.learner"
