@@ -150,11 +150,11 @@ while (nrow(ProbEsp)>0)
     Ampm90=aggregate(Ampmax,by=list(ProbEspN1$Filename),function(x) round(quantile(x,0.9),digits=1)) #90 percentile of Ampmax (see above)
     
     AmpSD=apply(cbind(ProbEspN1$Amp1,ProbEspN1$Amp2,ProbEspN1$Amp3,ProbEspN1$Amp4)
-                ,MARGIN=1,FUN=sd)#max amplitude among 4 quarters (in time)
+                ,MARGIN=1,FUN=sd)#sd amplitude among 4 quarters (in time)
     
-    AmpSMd=aggregate(AmpSD,by=list(ProbEspN1$Filename),function(x) round(quantile(x,0.5))) #median of Ampmax (see above)
+    AmpSMd=aggregate(AmpSD,by=list(ProbEspN1$Filename),function(x) round(quantile(x,0.5))) #median of AmpSD (see above)
     
-    AmpE50=aggregate(ProbEspN1$Amp4,by=list(ProbEspN1$Filename),function(x) round(quantile(x,0.5),digits=1)) #median of Ampmax (see above)
+    AmpE50=aggregate(ProbEspN1$Amp4,by=list(ProbEspN1$Filename),function(x) round(quantile(x,0.5),digits=1)) #median amplitude of the last quarter
     
     DiffME=Ampm50$x-AmpE50$x
   }else{
