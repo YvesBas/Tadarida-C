@@ -92,7 +92,7 @@ for (i in 1:50)
 Sys.time()
 
 
-save (ClassifEspA,file="ClassifEspFranceXXXXX.learner") 
+save (ClassifEspA,file="ClassifEspFrance180303.learner") 
 Sys.time()
 
 

@@ -2,12 +2,18 @@ library(randomForest)
 library(data.table)
 PredAdd=select=c("FreqM","Tstart","Tend","NbCris","Ind"
                  ,"Duree","OrderNum","Overlap","FreqDiff","FreqRatio")
-args="tabase3HF_France_IdConc.csv"
+args="tabase3HF_France_IdConc.csv" 
 args[2]="SpeciesList.csv"
-args[3]="IdExhaustifsTriees.csv"
+args[3]="IdExhaustifsTriees.csv" #let "" if you don't have any additional reference file
 
 IdConc1=fread(args[1])
+
+if(args[3]!="")
+{
 IdConc2=fread(args[3])
+}else{
+  IdConc2=IdConc1[0,]
+}
 IdConc2sel=subset(IdConc2,select=names(IdConc1))
 IdConc=rbind(IdConc1,IdConc2sel)
 

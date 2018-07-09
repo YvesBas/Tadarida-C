@@ -1,11 +1,23 @@
 #! /bin/sh
 
-TADARIDAC_DIR=`dirname $0`/tadaridaC_src
-TADARIDAC_LEARNER_NAME=$TADARIDAC_DIR/ClassifEsp.learner
+if [ -z "$RSCRIPT" ]
+then
+    RSCRIPT=Rscript
+fi
+
+if [ -z "$TADARIDAC_DIR" ]
+then
+    TADARIDAC_DIR=`dirname $0`/tadaridaC_src
+fi
+if [ -z "$TADARIDAC_LEARNER_NAME" ]
+then
+    TADARIDAC_LEARNER_NAME=ClassifEspHF3.learner
+fi
+TADARIDAC_LEARNER_PATH=$TADARIDAC_DIR/$TADARIDAC_LEARNER_NAME
 
 if ( [ "$TADARIDAC_LEARNER_URL" = "" ] )
 then
-    TADARIDAC_LEARNER_URL='https://s3-eu-west-1.amazonaws.com/vigie-chiro-site/ClassifEsp.learner'
+    TADARIDAC_LEARNER_URL='https://s3-eu-west-1.amazonaws.com/vigie-chiro-site/ClassifEspHF3.learner'
 fi
 
 if ( [ "$#" -eq 0 ] )
@@ -22,11 +34,11 @@ else
 fi
 
 
-if ( ! [ -f $TADARIDAC_LEARNER_NAME ] )
+if ( ! [ -f $TADARIDAC_LEARNER_PATH ] )
 then
-    echo 'Retrieving tadaridaC learder'
-    wget $TADARIDAC_LEARNER_URL -O $TADARIDAC_LEARNER_NAME
+    echo 'Retrieving tadaridaC learner'
+    wget $TADARIDAC_LEARNER_URL -O $TADARIDAC_LEARNER_PATH -nv
 fi
 
 # Finally start tadaridaC R script
-cd $TADARIDAC_DIR && Rscript ./TadaridaC.r $INPUT_FILE
+cd $TADARIDAC_DIR && $RSCRIPT ./Ta_Tc.r $INPUT_FILE ClassifEspFrance180303.learner N 8 F T 500 0 0 SpeciesList.csv CNS_tabase3HF_France_IdConc.learner T

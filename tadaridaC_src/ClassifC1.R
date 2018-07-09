@@ -17,7 +17,6 @@ Var_AGarder=c("Filename","CallNum","Version","FileDur","SampleRate"
 
 #options (HPF = filtre passe-haut / Reduc = réduction des features par DFA)
 #args[4]=8 #HPF
-#args[5]=F #Reduc
 #args[8]=1 #start number
 #args[9]=100 #end number number
 
