@@ -49,15 +49,18 @@ end=min(length(obslist),as.numeric(args[9]))
 
 Sys.time()
 my.data <- list()
- # for(f in 1:length(obslist)) {
+# for(f in 1:length(obslist)) {
 for(f in start:end) {   #0.026 sec/files
   #print(obslist[[f]])    
   my.data[[f]] <- read.table(obslist[[f]],sep="\t",h=T)
-  }
+}
 Sys.time()
 
 # load the classifier
 if (exists("ClassifEspA")==FALSE) load(args[2])
+if (exists("ClassifEspA")==FALSE) ClassifEspA=ClassifEsp3 #temp for test
+
+#print(ls())
 
 #concatenate all the features table
 CTP=as.data.frame(rbindlist(my.data))
@@ -71,7 +74,7 @@ CTP=as.data.frame(rbindlist(my.data))
 #discard sound events below 8 kHz or 0.8 kHz
 if(is.na(match("FreqMP",names(CTP)))==F)
 {
-CTP=subset(CTP,CTP$FreqMP>as.numeric(args[4]))
+  CTP=subset(CTP,CTP$FreqMP>as.numeric(args[4]))
 }
 #discard false positives due to bin bleed on the last column
 
@@ -85,7 +88,7 @@ testReduc=grepl("LD",row.names(ClassifEspA$importance))
 
 if (mean(testReduc)>0.5) #when a reduction of variables is necessary (=low frequency case)
 {
-
+  
   #baseref pour recalculer les variables "rankées"
   if(exists("tabase3")==F){tabase3=fread(paste0(args[3],".csv"))}
   if(exists("Scaling")==F){Scaling=readRDS(paste0(args[3],"_Reduc1.rds"))}
@@ -99,24 +102,29 @@ if (mean(testReduc)>0.5) #when a reduction of variables is necessary (=low frequ
     test2=findInterval(temp,cuts,left.open=T)
     #plot(test2,tabaseR[,1])
     CTP[,i]=test2
-  #fwrite(list(i),"i.csv")
+    #fwrite(list(i),"i.csv")
     #print(i)
   }
   
   
-Reduc2=predict(Scaling,CTP[,4:274])
-
-CTP0=cbind(CTP0,Reduc2$x)
+  Reduc2=predict(Scaling,CTP[,4:274])
+  
+  CTP0=cbind(CTP0,Reduc2$x)
 }
 
 
 #fwrite(CTP0,"CTP0.csv")
 
-
-#print("Avant")
+if(nrow(CTP)>0)
+{
+print("Avant predict")
+print(nrow(CTP))
+print(gc())
 #get the predictions and the main features (noticeably the file name)
 ProbEsp0 <- predict(ClassifEspA, CTP0,type="prob",norm.votes=TRUE)
-#print("Apres")
+print("Apres predict")
+print(gc())
+print(nrow(ProbEsp0))
 
 #fwrite(as.data.frame(ProbEsp0),"ProbEsp0.csv")
 
@@ -131,4 +139,9 @@ ProbEsp <-  cbind(CTP_AG,ProbEsp0
 fwrite(ProbEsp,paste0(substr(obslist[start],1,nchar(obslist[1])-3)
                       ,"_",(end-start+1),"_ProbEsp.csv"))
 
+#for test
+print(list.files(tadir,pattern="_ProbEsp.csv"))
 
+}else{
+  print("no sound events to classify")
+}

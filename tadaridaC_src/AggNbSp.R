@@ -1,12 +1,17 @@
 library(data.table)
 library(randomForest)
 #library(proxy)
+#args[6]=F #TC files
 #args[10]="SpeciesList.csv" #species list
+#args[11]="CNS_tabase3HF_France_IdConc.learner" #name of the species number" classifier
+#args[12]=T #if species number should be filtered or not
 
 
 if(dir.exists(args[1]))
 {
   FichIT=list.files(args[1],pattern="IdTot",full.names=T)
+  if (length(FichIT)>0)
+  {
   my.data <- list()
   # for(f in 1:length(obslist)) {
   for(f in 1:length(FichIT)) {   #0.026 sec/files
@@ -15,6 +20,7 @@ if(dir.exists(args[1]))
   Sys.time()
   
   IdTot=rbindlist(my.data)
+  }
   tadir=args[1]
 }else{
   IdTot=as.data.frame(fread(paste0(dirname(args[1]),"/IdTot.csv")))
@@ -26,6 +32,8 @@ if(dir.exists(args[1]))
   }
 }
 
+if(length(FichIT)>0)
+{
 #get the variables necessary to predict "NbSp"
 IdTot=IdTot[order(IdTot$Group.1,IdTot$Order),]
 
@@ -42,7 +50,7 @@ if(args[12])
 
 test=subset(IdTot,IdTot$Duree>5)
 
-test=match("003760_0_20160907_033641_676.wav",levels(as.factor(IdTot$Group.1)))
+#test=match("003760_0_20160907_033641_676.wav",levels(as.factor(IdTot$Group.1)))
 
 
 Overlap=vector()
@@ -81,7 +89,7 @@ for (i in 1:nlevels(as.factor(IdTot$Group.1)))
   
   if(i%%1000==1)
   {
-    print(paste(i,nlevels(as.factor(IdTot$Group.1)),Sys.time()))
+   # print(paste(i,nlevels(as.factor(IdTot$Group.1)),Sys.time()))
   }
   
   
@@ -103,7 +111,8 @@ colnames(ProbaMax)[2:ncol(ProbaMax)]=paste0(colnames(ProbaMax)[2:ncol(ProbaMax)]
 IdTot_pourRF=merge(IdTot2,ProbaMax,by="Group.1")
 if(nrow(IdTot2)!=nrow(IdTot_pourRF)){stop("problem w merge")}
 
-
+#print(names(IdTot_pourRF))
+#print(row.names(ClassifNbSp$importance))
 
 NbSp=predict(ClassifNbSp,IdTot_pourRF,type="prob",norm.votes=T)
 
@@ -137,7 +146,7 @@ for (i in 1:nlevels(as.factor(IdTot_pourRF2$Group.1)))
   
   if(i%%1000==1)
   {
-    print(paste(i,nlevels(as.factor(IdTot_pourRF2$Group.1)),Sys.time()))
+    #print(paste(i,nlevels(as.factor(IdTot_pourRF2$Group.1)),Sys.time()))
   }
   
 }
@@ -151,19 +160,28 @@ IdTot4=IdTot3[,..ColIdTot]
   IdTot4=IdTot
 }
 
+#adding version number from both Tadarida-D and Tadarida-C
+IdTot4=cbind(IdTot4,VersionD=CTP$Version[1],VersionC=Version)
+#IdTot4$Order=NULL
 
 if(args[6])
 {
-  
-  #writing .tc files
+  #print(table(IdTot4$Group.1))
+      #writing .tc files
   for (i in 1:nlevels(as.factor(IdTot4$Group.1)))
   {
     fichier=levels(as.factor(IdTot4$Group.1))[i]
     fichierid=paste(tadir,'/',substr(fichier,1,(nchar(fichier)-4)),".tc", sep="")
     write.csv(subset(IdTot4,IdTot4$Group.1==fichier),fichierid,row.names=FALSE)  
-  }
+    }
 }else{
   fwrite(IdTot4,paste0(tadir,"/IdTri.csv"))
   fwrite(cbind(IdTot4[,1,with=F],IdTot4[,((ncol(IdTot4)-17):ncol(IdTot4)),with=F]),paste0(tadir,"/Idshort.csv"))
 }
 
+#for test
+print(table(IdTot4$SpMaxF2))
+
+}else{
+  print("no sound sequences to aggregate")
+}

@@ -11,6 +11,8 @@ Version=5 #allow to track results from different classifier versions
 if(dir.exists(args[1]))
 {
 FichPE=list.files(args[1],pattern="ProbEsp",full.names=T)
+if(length(FichPE)>0)
+{
 my.data <- list()
   # for(f in 1:length(obslist)) {
   for(f in 1:length(FichPE)) {   #0.026 sec/files
@@ -19,6 +21,7 @@ my.data <- list()
   Sys.time()
   
   ProbEsp=as.data.frame(rbindlist(my.data))
+}
   tadir=args[1]
 }else{
   FichPE=args[1]
@@ -30,6 +33,9 @@ my.data <- list()
     tadir=getwd()
   }
 }
+
+if (length(FichPE)>0)
+{
 
 SpeciesList=fread(args[10])
 
@@ -44,7 +50,8 @@ ColSp1=min(ColPE_Sp)
 TestConform=match(colnames(ProbEsp)[ColSp1:length(ProbEsp)],SpeciesList$Esp)
 if(sum(is.na(TestConform[1:(length(TestConform)-2)]))>0)
 {
-  stop("probleme de conformité entre classifieur et liste espèces (espèces manquantes)")
+  print(subset(colnames(ProbEsp)[ColSp1:length(ProbEsp)],is.na(TestConform)))
+  stop("probleme de conformite entre classifieur et liste especes (especes manquantes)")
 }
 
 #get the predictions and the main features (noticeably the file name)
@@ -120,6 +127,7 @@ while (nrow(ProbEsp)>0)
     FreqC1=rep(999,nrow(FreqMed1))
   }
   
+  SR=aggregate(ProbEspN1$SampleRate,by=list(ProbEspN1$Filename),function(x) x[1])$x
   
   #Calculating number of calls (trying to suppress echoes on the basis of small IPI)
   
@@ -162,7 +170,7 @@ while (nrow(ProbEsp)>0)
   IdTemp=cbind(MaxparFichN1,FreqM=FreqMed1$x,FreqP=FreqPic1,FreqC=FreqC1
                ,Tstart=TDeb1$x,Tend=TFin1$x,NbCris=NbCris1$x
                ,DurMed=Dur50$x,Dur90=Dur90$x,Ampm50=Ampm50$x
-               ,Ampm90=Ampm90$x,AmpSMd=AmpSMd$x,DiffME=DiffME
+               ,Ampm90=Ampm90$x,AmpSMd=AmpSMd$x,DiffME=DiffME,SR=SR
                ,Order=paste0("N",j))
   if(exists("IdTot")==T){IdTot=rbind(IdTot,IdTemp)}else{IdTot=IdTemp}
   
@@ -198,3 +206,6 @@ IdTot$Version=Version
 
 #rm(list=setdiff(ls(), list("ClassifEspA")))
 
+}else{
+  print("no sound events to aggregate")
+}
