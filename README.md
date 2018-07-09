@@ -133,18 +133,18 @@ Some ancillary data is also computed for end users to get summary information ab
 
 ## Ancillary data
 Outputs of Ta_Tc.r, AggContacts.r and AggNbSp.r give some ancillary data which are a summary of features extracted by Tadarida-D/L, in addition to probability of classification among potential species
-FreqM: median of the median frequency ((Fmin+Fmax)/2)
-FreqP: peak frequency 
-FreqC: characteristic freqency (frequency of the flattest part)
-Tstart: time of the first sound event
-Tend: time of the last sound event
-NbCris: number of calls
-DurMed: median duration of calls
-Dur90: 90%-quantile of call durations
-Ampm50: median of call maximum amplitude
-Ampm90: 90%-quantile of call maximum amplitude
-AmpSMd: median of amplitude standard deviation among 4 quarters in duration
-DiffME: median amplitude difference between the peak and the end of the call
-SR: sample rate
-Order: order in which the species were identified (iterative loop of AggContacts.r)
+- FreqM: median of the median frequency ((Fmin+Fmax)/2)
+- FreqP: peak frequency 
+- FreqC: characteristic freqency (frequency of the flattest part)
+- Tstart: time of the first sound event
+- Tend: time of the last sound event
+- NbCris: number of calls
+- DurMed: median duration of calls
+- Dur90: 90%-quantile of call durations
+- Ampm50: median of call maximum amplitude
+- Ampm90: 90%-quantile of call maximum amplitude
+- AmpSMd: median of amplitude standard deviation among 4 quarters in duration
+- DiffME: median amplitude difference between the peak and the end of the call
+- SR: sample rate
+- Order: order in which the species were identified (iterative loop of AggContacts.r)
 
