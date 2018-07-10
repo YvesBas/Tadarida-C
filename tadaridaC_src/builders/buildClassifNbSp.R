@@ -1,6 +1,6 @@
 library(randomForest)
 library(data.table)
-PredAdd=select=c("FreqM","Tstart","Tend","NbCris","Ind"
+PredAdd=c("FreqM","Tstart","Tend","NbCris","Ind"
                  ,"Duree","OrderNum","Overlap","FreqDiff","FreqRatio")
 args="tabase3HF_France_IdConc.csv" 
 args[2]="SpeciesList.csv"

@@ -2,10 +2,9 @@ library(data.table) #used to generate features table from labelled sound databas
 #INPUTS (to be edited according to local path)
 #required:
 RSDB="C:/Users/Yves Bas/Documents/RSDB_HF"
-MRF="C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R"
+VarSel=fread("VarSel.csv")
 #optional:
 SpeciesList=as.data.frame(fread("SpeciesList.csv")) #to uncomment if a species grouping and/or filtering is necessary
-VarSel=fread("VarSel.csv")
 
 
 ### A TESTER SANS FILTRE##

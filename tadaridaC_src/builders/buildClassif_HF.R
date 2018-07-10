@@ -1,10 +1,6 @@
 library(data.table) #used to generate features table from labelled sound database
 #INPUTS (to be edited according to local path)
-#required:
-RSDB="C:/Users/Yves Bas/Documents/RSDB_HF"
 MRF="C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R"
-#optional:
-SpeciesList=as.data.frame(fread("SpeciesList.csv")) #to uncomment if a species grouping and/or filtering is necessary
 VarSel=fread("VarSel.csv")
 
 ### A TESTER SANS FILTRE##
@@ -92,7 +88,8 @@ for (i in 1:50)
 Sys.time()
 
 
-save (ClassifEspA,file="ClassifEspFrance180303.learner") 
+save (ClassifEspA,file=paste0("ClassifEsp",GeoFilter
+                              ,substr(Sys.time(),1,10),".learner")) 
 Sys.time()
 
 
@@ -109,5 +106,5 @@ ProbEsp <-  cbind(tabase4[,1:12],ProbEsp0
 
 setcolorder(ProbEsp,c(colnames(ProbEsp)[3:12],colnames(ProbEsp)[1:2],colnames(ProbEsp)[13:ncol(ProbEsp)]))
 
-fwrite(ProbEsp,"ProbEspHF.csv",row.names=F)
+fwrite(ProbEsp,paste0("ProbEspHF",substr(Sys.time(),1,10),".csv"),row.names=F)
 

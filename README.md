@@ -3,11 +3,7 @@
 ## Updates
 
 ### 09/07/2018
-TadaridaC.r is now obsolete and replaced by Ta_Tc.r which is more modular and calls sequentially 3 scripts:
--ClassifC1.r which applies the species classifier to each calls
--AggContacts.r which applies an ad hoc clustering algorithms to group calls which have similar probabilities to belong to a specific species
-- AggNbSp.r which calls a new classifier (see below) which determines which groups of calls are really an additional species or more likely a peculiar group of calls of an already detected species (e.g. social and echolocation calls of the same species)
-To run this last script we added a “buildClassifNbSp.r” which use files where ALL species have been identified to train a classifier which will decide which calls group correspond to an additionnal species or not.
+TadaridaC.r and buildClassif.r are now obsolete and replaced by a set of modular scripts called sequentially (see below)
 
 ## Software Installation
 
@@ -17,9 +13,68 @@ Tadarida-C is a set of scripts running under [R environment](https://www.r-proje
 If you use R in command line, you can run the “init.r” script provided on the Github repository (https://github.com/YvesBas/Tadarida-C) to install those two libraries.
 If asked, you should prefer to install those libraries in a “personal libraries” folder.
 
+The architecture and interaction between scripts is available [here]() (first two slides)
 
-## Software function
+## Software function 1 - build classifiers
+
+### write_tabase3HF.r
+This script produce a table from the RSDB (Reference Sound DataBase) to be used as a direct input for buildClassif_HF.r
+#### Inputs:
+It requires 4 arguments: 
+- RSDB: (character) the path where the RSDB from Tadarida-L has been saved
+- VarSel: (character) a csv file indicating which sound features should be subsetted (see VarSel.csv example)
+- SpeciesList: (optional, character) a path indicating a table listing the potential species and grouping, and/or a filter excluding some taxa, according to geographical occurrence for example. If no “SpeciesList” is provided, all taxa will be included in the classifier without any grouping.
+- GeoFilter: (optional, character) a header of SpeciesList indicating which species list should be selected (= according to geographical occurrence)
+
+#### Outputs:
+a csv table used as an input for buildClassif_HF.r (see below)
+
+### buildClassif_HF.r
+Build the main classifier of Tadarida-C
+#### Inputs:
+- MRF: (character) the path where Modified_randomForest.r has been stored
+- VarSel: (character) a csv file indicating which sound features should be subsetted (see VarSel.csv example)
+- GeoFilter: (character) which geographical zone should be selected (if none, use "") (write_tabase3HF.r should have been run first)
+- SubSamp: (numeric) level of minimum subsampling (= X times average number of calls per species)
+- GradientSamp: (numeric) gradient strength (must be negative)
+
+#### Outputs:
+- a classifier file to be used by ClassifC1.r (see below)
+- a ProbEspXXX.csv file compiling an independent out-of-bag votes that could be used to evaluate classifier performance, model error risk according to score, etc.
+
+### buildClassifNbSp.r 
+build an additionnal classifier that helps discriminates false positives due to within-class heterogeneity (e.g. social and echolocation calls) or low species scores (e.g. overlaps between insect species)
+#### Inputs:
+- PredAdd: (character vector) a list of variables that should be used to predict the probability that a group of calls belong to another species than the previously identified species, in addition to the species scores (e.g. number of calls, frequency, etc)
+- args[1]: (character) the parth of a csv table giving the results of the out-of-bag prediction of buildClassif_HF.r
+- args[2]: (character) the path of species list reference
+- args[3]: (optional, character) potentially the Ta_Tc.r output of files that have been EXHAUSTIVELY identified (= all species have been identified within the files) that could be used as additionnal reference to build this classifier. (script producing this table still to be documented, but example given iin "other_inputs" folder)
+
+#### Outputs:
+a boolean classifier that could be used to predict the probability that a group of calls is an additionnal species within the file or belong to one of the already identified species
+
+### seuils_analyse.r
+Use the secondary output of buildClassif_HF.r (ProbEspXXX.csv) to compute :
+- score thresholds over which error risk should not exceed 1, 5, 10 and 50 %
+- corresponding false positive and negative rates according to each species (beware that these rates are calculated on your RSDB and could be either underestimates of ground truth if you selected high quality recordings as reference, or alternatively overestimates if you overselected problematic files)
+
+
+### Tabase3_IdMan.r
+computes a summary of the RSDB (list of species per file and corresponding confidence given by the labeller)
+
+### IdMan_IdAuto.r
+merge manual id with Tadarida-C id
+
+### IdConc_AUC.r
+computes ROC curve and area under the curve (AUC) for each species
+
+### purgeoldversionRSDB.r
+This script removes old version of RSDB files except the initial versions.
+DON'T DO THAT if you played a lot with additionnal settings of Tadarida-L AND if you updated the labels during the meantime.
+
+
 ### buildClassif.r
+THIS SCRIPT IS NOW OBSOLETE AND REPLACED BY write_tabase3HF.r and buildClassif_HF.r (see above)
 #### Inputs:
 The builder has two required inputs that should be indicated by editing the first lines of the script: 
 -	a path indicating where is the reference sound database (RSDB) built with Tadarida-L (Note that a sample for test is available at https://github.com/YvesBas/Tadarida-C) 
@@ -39,6 +94,9 @@ They allow to mix a gradient of trees in the Random Forest (RF). First will bene
 The builder output is a RF classifier named “ClassifEspHF3.learner” to be used as input for the following script.
 You can find at https://github.com/YvesBas/Tadarida-C, the classifier file produced on the basis of the RSDB sample provided on the same page. However, since this RSDB sample is small, please note that the performance of this classifier is evidently poor.
 
+
+
+## Software function 2 - apply classifiers
 ### Ta_Tc.r
 This script replace TadaridaC.r and calls subsequentely ClassifC1.r, AggContacts.r and AggNbSp.r-project
 #### Inputs:
