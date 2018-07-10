@@ -1,5 +1,10 @@
 # Tadarida-C
 
+##Summary
+
+The architecture and interaction between scripts is summarized [here](https://drive.google.com/open?id=1LV-Li36kZvC18UaklBbJp0hjeumf1fCh) (first three slides)
+
+
 ## Updates
 
 ### 09/07/2018
@@ -13,7 +18,6 @@ Tadarida-C is a set of scripts running under [R environment](https://www.r-proje
 If you use R in command line, you can run the “init.r” script provided on the Github repository (https://github.com/YvesBas/Tadarida-C) to install those two libraries.
 If asked, you should prefer to install those libraries in a “personal libraries” folder.
 
-The architecture and interaction between scripts is available [here]() (first two slides)
 
 ## Software function 1 - build classifiers
 
