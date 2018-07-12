@@ -14,7 +14,6 @@ GeoFilter="France" #to uncomment and edit if a species filtering is necessary
 #loading randomForest library to build the classifier then modified randomforest function
 set.seed(921)
 library(randomForest)
-source(MRF) #Slightly modified randomForest function to allow empty sample strata
 
 
 #etidir="C:/Users/yves/Documents/Tadarida/eti" #path where labels (.eti files) are stored 
@@ -94,7 +93,7 @@ for (i in 1:length(parlist1)){ # 6 min
 Sys.time()
 
 param3=as.data.frame(rbindlist(my.data))
-param3=subset(param3$FreqMP>=8)
+param3=subset(param3,param3$FreqMP>=8)
 
 param4=subset(param3,select=c("Filename","CallNum",VarSel$VarSel))
 
