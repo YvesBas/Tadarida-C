@@ -177,7 +177,7 @@ if(length(FichIT)>0)
     }
   }else{
     fwrite(IdTot4,paste0(tadir,"/IdTri.csv"))
-    fwrite(cbind(IdTot4[,1,with=F],IdTot4[,((ncol(IdTot4)-17):ncol(IdTot4)),with=F]),paste0(tadir,"/Idshort.csv"))
+    fwrite(cbind(IdTot4[,1,with=F],IdTot4[,((ncol(IdTot4)-18):ncol(IdTot4)),with=F]),paste0(tadir,"/Idshort.csv"))
   }
   
   #for test

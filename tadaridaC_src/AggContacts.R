@@ -201,7 +201,7 @@ IdTot$Version=Version
 
 
   fwrite(IdTot,paste0(tadir,"/IdTot.csv"))
-  fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-15):ncol(IdTot))]),paste0(tadir,"/Idshort.csv"))
+  fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(tadir,"/Idshort.csv"))
 
 
 #rm(list=setdiff(ls(), list("ClassifEspA")))
