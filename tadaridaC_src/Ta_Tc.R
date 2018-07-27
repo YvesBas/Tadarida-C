@@ -11,7 +11,7 @@ AggNbSp="AggNbSp.r"
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following lines if you prefer to do not use R in command line
-#args="C:/wamp64/www/ta/"
+#args="C:/wamp64/www/wav/txt"
 #args="E:/PI_CDL1804/5ae195607dcf87000f45bbfb/txt"
 #args[2]="ClassifEsp_LF_180320.learner"
 #args[2]="ClassifEsp_LF_180129.learner"
@@ -27,6 +27,7 @@ args <- commandArgs(trailingOnly = TRUE)
 #args[10]="SpeciesList.csv" #species list
 #args[11]="CNS_tabase3HF_France_IdConc.learner" #name of the species number" classifier
 #args[12]=T #if species number should be filtered or not
+#args[13]="Referentiel_seuils_ProbEspHF_.csv"
 
 print(getwd())
 print(args)

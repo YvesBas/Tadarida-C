@@ -1,8 +1,8 @@
 library(data.table)
 library(randomForest)
 #library(proxy)
-#if(!exists("args")){args=""}
-#args[6]=F #TC files
+#args="" #TC files
+#args[6]=T #TC files
 #args[10]="SpeciesList.csv" #species list
 #args[11]="CNS_tabase3HF_France_IdConc.learner" #name of the species number" classifier
 #args[12]=T #if species number should be filtered or not
@@ -164,7 +164,31 @@ if(length(FichIT)>0)
   #adding version number from both Tadarida-D and Tadarida-C
   IdTot4=cbind(IdTot4,VersionD=CTP$Version[1],VersionC=Version)
   #IdTot4$Order=NULL
+
+  #compute real success probability
+  RefErrorRisk=fread(args[13])
+  IdTot4$SuccessProb=999
+  IdTottemp=IdTot4[0,]
+  for (i in 1:nlevels(as.factor(IdTot4$SpMaxF2)))
+  {
+    IdToti=subset(IdTot4,IdTot4$SpMaxF2==levels(as.factor(IdTot4$SpMaxF2))[i])
+    Refi=subset(RefErrorRisk,RefErrorRisk$Espece==levels(as.factor(IdTot4$SpMaxF2))[i])
+    if((nrow(Refi)==1)&(Refi$Pente[1]>0))
+    {
+      IdToti$SuccessProb=exp(Refi$Int[1]+Refi$Pente[1]*IdToti$Ind)/(1+exp(Refi$Int[1]+Refi$Pente[1]*IdToti$Ind))
+    }else{
+      IdToti$SuccessProb=IdToti$Ind
+    }
+    IdTottemp=rbind(IdTottemp,IdToti)
+  }
   
+  IdTottemp$SuccessProb=round(IdTottemp$SuccessProb,2)
+  IdTottemp$SuccessProb=pmin(IdTottemp$SuccessProb,0.99)
+  
+  IdTot4=IdTottemp
+  
+  
+    
   if(args[6])
   {
     #print(table(IdTot4$Group.1))
