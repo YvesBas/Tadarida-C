@@ -59,6 +59,7 @@ a boolean classifier that could be used to predict the probability that a group 
 
 ### seuils_analyse.r
 Use the secondary output of buildClassif_HF.r (ProbEspXXX.csv) to compute :
+- logistic regression coefficients (Int and Pente) that allows to convert confidence scores to real success probability
 - score thresholds over which error risk should not exceed 1, 5, 10 and 50 %
 - corresponding false positive and negative rates according to each species (beware that these rates are calculated on your RSDB and could be either underestimates of ground truth if you selected high quality recordings as reference, or alternatively overestimates if you overselected problematic files)
 
@@ -125,6 +126,7 @@ It requires 6 arguments:
 It gives a probability matrix of each sound events (in lines) belonging to each potential species (in rows) named according to the first treated .ta file and with a _ProbEsp.csv suffix
 
 ### AggContacts.r
+Please note that this script is also needed to generate inputs of IdMan_IdAuto.r on RSDB (its "args[1]" input is in this case a ProbEspXXX.csv file from buildClassif_HF.r)
 #### Inputs:
 It requires 3 arguments: 
 - args[1]: (character) the path of a folder containing the ClassifC1.r outputs (_ProbEsp.csv files) (=args[1]) or of the votes from buildClassif.r (ProbEspXXX.csv file)
@@ -133,6 +135,7 @@ It requires 3 arguments:
 
 #### Outputs:
 either splitted .tc files or two big tables (IdTot.csv and IdShort.csv), see above (args[6])
+
 
 ### AggNbSp.r
 #### Inputs:
