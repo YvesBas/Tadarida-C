@@ -1,7 +1,7 @@
 library(data.table)
 library(randomForest)
 #library(proxy)
-#args="" #TC files
+#args="" #init
 #args[6]=T #TC files
 #args[10]="SpeciesList.csv" #species list
 #args[11]="CNS_tabase3HF_France_IdConc.learner" #name of the species number" classifier

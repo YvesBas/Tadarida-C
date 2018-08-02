@@ -1,5 +1,3 @@
-##BEWARE experimental version, implementing new confidence index and new "secondary species" algorithm. Still being tested...
-
 options(error = function() traceback(2))
 
 Var_AGarder=c("Filename","CallNum","Version","FileDur","SampleRate"
