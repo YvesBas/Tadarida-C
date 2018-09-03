@@ -168,7 +168,7 @@ while (nrow(ProbEsp)>0)
   
   #storing results
   IdTemp=cbind(MaxparFichN1,FreqM=FreqMed1$x,FreqP=FreqPic1,FreqC=FreqC1
-               ,Tstart=TDeb1$x,Tend=TFin1$x,NbCris=NbCris1$x
+               ,TDeb=TDeb1$x,TFin=TFin1$x,NbCris=NbCris1$x
                ,DurMed=Dur50$x,Dur90=Dur90$x,Ampm50=Ampm50$x
                ,Ampm90=Ampm90$x,AmpSMd=AmpSMd$x,DiffME=DiffME,SR=SR
                ,Order=paste0("N",j))
