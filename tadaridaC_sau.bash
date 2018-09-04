@@ -7,7 +7,7 @@ fi
 
 if [ -z "$TADARIDAC_DIR" ]
 then
-    TADARIDAC_DIR=$VIGIECHIRO_DIR/Tadarida-C/tadaridaC_src
+    TADARIDAC_DIR=$VIGIECHIRO_DIR/Tadarida-C
 fi
 if [ -z "$TADARIDAC_LEARNER_NAME" ]
 then
@@ -30,4 +30,4 @@ fi
 
 
 # Finally start tadaridaC R script
-cd /pbs/home/e/eleblond/vigiechiro-test/Tadarida-C/tadaridaC_src/ && $RSCRIPT Ta_Tc.r $INPUT_FILE ClassifEspFrance180303.learner N 8 F T 500 0 0 ./other_inputs/SpeciesList.csv ./other_inputs/CNS_tabase3HF_France_IdConc.learner T ./other_inputs/Referentiel_seuils_ProbEspHF_.csv
+cd $TADARIDAC_DIR && $RSCRIPT ./tadaridaC_src/Ta_Tc.r $INPUT_FILE $TADARIDAC_LEARNER_PATH N 8 F T 500 0 0 ./other_inputs/SpeciesList.csv ./other_inputs/CNS_tabase3HF_France_IdConc.learner T ./other_inputs/Referentiel_seuils_ProbEspHF_.csv

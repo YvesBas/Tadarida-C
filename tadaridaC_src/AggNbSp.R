@@ -39,7 +39,7 @@ if(length(FichIT)>0)
   IdTot=IdTot[order(IdTot$Group.1,IdTot$Order),]
   
   IdTot$OrderNum=as.numeric(gsub("N","",IdTot$Order))
-  IdTot$Duree=IdTot$TFin-IdTot$TDeb
+  IdTot$Duree=IdTot$Tend-IdTot$Tstart
   
   
   if(args[12])
@@ -66,12 +66,12 @@ if(length(FichIT)>0)
       FreqDom=999
       for (j in 1:nrow(IdSub))
       {
-        TSO=max(TS,IdSub$TDeb[j])
-        TEO=min(TE,IdSub$TFin[j])
+        TSO=max(TS,IdSub$Tstart[j])
+        TEO=min(TE,IdSub$Tend[j])
         OverlapTemp=max(0,TEO-TSO)/max(1e-3,TE-TS)
         Overlap=c(Overlap,OverlapTemp)
-        TS=min(TS,IdSub$TDeb[j])
-        TE=max(TE,IdSub$TFin[j])
+        TS=min(TS,IdSub$Tstart[j])
+        TE=max(TE,IdSub$Tend[j])
         
         if(j==1)
         {
