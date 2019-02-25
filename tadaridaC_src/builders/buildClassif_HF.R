@@ -99,8 +99,6 @@ ProbEsp0=ClassifEspVotes/SumProb
 
 
 
-#Loop init
-#this loop intends to detect successively different species within each file if there is sufficient dicrepancy in predicted probabilities
 ProbEsp <-  cbind(tabase4[,1:12],ProbEsp0
                   ,HL=(tabase4$Hup_RFMP!=0),HU=(tabase4$Hlo_PosEn!=9999))
 
