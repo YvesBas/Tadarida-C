@@ -8,7 +8,16 @@ library(data.table)
 
 Version=5 #allow to track results from different classifier versions
 
-if(dir.exists(args[1]))
+
+if(exists("r")) #very dirty...
+{
+  FichPE=list.files(args[1],pattern="ProbEsp",full.names=T)
+  PreFichPE=substr(FichPE[[r]],1,nchar(FichPE[[r]])-11)
+  ProbEsp=as.data.frame(fread(FichPE[[r]]))
+  tadir=args[1]
+}else{
+
+if((dir.exists(args[1])))
 {
 FichPE=list.files(args[1],pattern="ProbEsp",full.names=T)
 if(length(FichPE)>0)
@@ -33,7 +42,7 @@ my.data <- list()
     tadir=getwd()
   }
 }
-
+}
 if (length(FichPE)>0)
 {
 
@@ -175,10 +184,9 @@ while (nrow(ProbEsp)>0)
   if(exists("IdTot")==T){IdTot=rbind(IdTot,IdTemp)}else{IdTot=IdTemp}
   
   #sound events kept for the next round
-  #3 conditions: 
-  #condition 1: they belong to a file whose "SecInd" is negative   
+  #if "ScoreSec" is negative   
   ProbEsp=subset(ProbEspDom0[,1:(ncol(ProbEspDom0)-3)],ScoreSec<0)
-  #condition2: SecInd should be negative (see above)
+  
   if(StopLoop)
   {ProbEsp=ProbEsp[0,]}  
     }
@@ -199,10 +207,14 @@ IdTot$Ind=apply(ITSp,MARGIN=1,FUN=max)
 IdTot$SpMaxF2=SpMaxF2
 IdTot$Version=Version
 
-
+if(exists("r"))
+{
+  fwrite(IdTot,paste0(PreFichPE,"IdTot.csv"))
+  fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(PreFichPE,"Idshort.csv"))
+}else{
   fwrite(IdTot,paste0(tadir,"/IdTot.csv"))
   fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(tadir,"/Idshort.csv"))
-
+}
 
 #rm(list=setdiff(ls(), list("ClassifEspA")))
 
