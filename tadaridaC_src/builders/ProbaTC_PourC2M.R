@@ -165,4 +165,4 @@ for (i in 1:length(ListLocaPart))
 }
 
 PourC2M=merge(PourC2,MaxTot,by="Group.1")
-fwrite(Pourcém,"PourC2M.csv")
+fwrite(Pourc2M,"PourC2M.csv")
