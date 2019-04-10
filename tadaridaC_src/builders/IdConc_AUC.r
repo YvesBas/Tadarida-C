@@ -1,15 +1,29 @@
 library(data.table)
 library(pROC)
-FIdConc="ProbEspHF_C2_PF"
+FIdConc="ProbEspC3_2019-03-25_G7"
+GroupingSp=T
+SpeciesList=fread("SpeciesList.csv")
 
 IdConc=fread(paste0(FIdConc,".csv"))
 
 if(sum(grepl("IdMan",names(IdConc)))==0)
 {
+  if(sum(grepl("IdMan",names(IdConc)))==0)
+  {
+    IdConc$IdMan=IdConc$ValidId
+  }else{
   IdConc$IdMan=IdConc$valid.espece
-}
+}}
+
+if(GroupingSp)
+{
+  test=match(IdConc$IdMan,SpeciesList$Esp)
+IdConc$IdMan=SpeciesList$Nesp2[test]
+  }
+
 
 ListSp=levels(as.factor(IdConc$IdMan))
+ListSp=subset(ListSp,ListSp!="")
 
 ROClist=list()
 AUCtot=vector()
@@ -37,7 +51,7 @@ dev.off()
   print(paste(ListSp[i],AUCSp))
   }
 
-AUCtable=data.frame(Espece=ListSp[2:length(ListSp)],AUC=AUCtot)
+AUCtable=data.frame(Espece=ListSp,AUC=AUCtot)
 
 fwrite(AUCtable,paste0("./VigieChiro/ROC/",FIdConc,"_AUC.csv"))
 save(ROClist,file=paste0("./VigieChiro/ROC/",FIdConc,"_ROC.RData"))       
