@@ -2,7 +2,7 @@
 
 ##Summary
 
-The architecture and interaction between scripts is summarized [here](https://drive.google.com/open?id=1LV-Li36kZvC18UaklBbJp0hjeumf1fCh) (first three slides)
+The architecture and interaction between scripts is summarized [here](https://drive.google.com/open?id=1LV-Li36kZvC18UaklBbJp0hjeumf1fCh) (first 8 slides)
 
 
 ## Updates
