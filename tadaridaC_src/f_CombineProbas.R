@@ -57,7 +57,7 @@ CombineProbas=function(probas,splist,groupingsp,suffixes,weights,write)
     ProbaGroup=ProbaGroup/sum(Weight)
     ProbEsp0=cbind(ProbEsp0,ProbaGroup)
     colnames(ProbEsp0)[ncol(ProbEsp0)]=levels(as.factor(SpGroup))[i]
-    print(levels(as.factor(SpGroup))[i])
+    #print(levels(as.factor(SpGroup))[i])
   }
   if(write)
   {
