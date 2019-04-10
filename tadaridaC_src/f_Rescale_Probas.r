@@ -2,11 +2,11 @@ Test=F
 Rescale_Probas=function(probas,splist,ref,minp,maxp,accuracy)
 {
   library(data.table)
-  print("L5")
+  #print("L5")
   SpeciesList=fread(splist)
-  print("L6")
+  #print("L6")
   Ref=read.csv2(ref)
-  print("L9")
+  #print("L9")
   Ref$Pente=as.numeric(as.character(Ref$Pente))
   Ref$Int=as.numeric(as.character(Ref$Int))
   
@@ -30,7 +30,7 @@ Rescale_Probas=function(probas,splist,ref,minp,maxp,accuracy)
     Probi=round(Probi,accuracy)
     ProbEsp0=cbind(ProbEsp0,Probi)
     colnames(ProbEsp0)[ncol(ProbEsp0)]=ListSpPE[i]
-    print(ListSpPE[i])
+    #print(ListSpPE[i])
   }
   
   test=match(colnames(ProbEsp),SpeciesList$Esp)
