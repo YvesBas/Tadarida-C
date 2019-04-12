@@ -8,7 +8,7 @@ Alaarv;piaf;piaf;x;;;x;Alauda arvensis;bird;Alouette des champs;Autre
 Alcatt;piaf;piaf;x;x;x;x;Alcedo atthis;bird;Martin-pêcheur d'Europe;Autre
 Aleruf;piaf;piaf;x;;;x;Alectoris rufa;bird;Perdrix rouge;Autre
 Aloaeg;piaf;piaf;x;;;x;Alopochen aegyptiaca;bird;Ouette d'Egypte;Autre
-amph;amph;amph;x;x;x;x;Amphibia sp.;frog;Amphibien sp.;Autre
+amph;amph;amph;x;x;x;;Amphibia sp.;frog;Amphibien sp.;Autre
 Anacre;piaf;piaf;x;;;x;Anas crecca;bird;Sarcelle d'hiver;Autre
 Anapen;piaf;piaf;x;;;x;Anas penelope;bird;Canard siffleur;Autre
 Anapla;piaf;piaf;x;;;x;Anas platyrhynchos;bird;Canard colvert;Autre
@@ -20,7 +20,7 @@ Anthis;Anthis;Antsp;x;;x;;Antaxius hispanicus;bush-cricket;Antaxie pyrénéenne;Sa
 Anthiu;Antius;Antsp;x;;x;;Antaxius spinibrachius;bush-cricket;Antaxie voyageuse;Sauterelle
 Antius;Antius;Antsp;x;;x;;Antaxius spinibrachius;bush-cricket;Antaxie voyageuse;Sauterelle
 Antped;Antped;Antsp;x;;;;Antaxius pedestris;bush-cricket;Antaxie marbree;Sauterelle
-Antpet;piaf;piaf;x;x;;;Anthus petrosus;bird;Pipit maritime;Autre
+Antpet;piaf;piaf;x;x;;x;Anthus petrosus;bird;Pipit maritime;Autre
 Antpra;piaf;piaf;x;;;x;Anthus pratensis;bird;Pipit farlouse;Autre
 Antric;piaf;piaf;x;x;x;x;Anthus richardi;bird;Pipit de Richard;Autre
 Antsor;Antsor;Antsp;x;;;;Antaxius sorrezensis;bush-cricket;Antaxie cevenole;Sauterelle
@@ -64,7 +64,7 @@ Capeur;piaf;piaf;x;;;x;Caprimulgus europaeus;bird;Engoulevent d'Europe;Autre
 Cappyr;Cappyr;Cappyr;x;;;;Capra pyrenaica;other mammal;Bouquetin d'Espagne;Autre
 car;noise;noise;x;x;x;x;vehicle;noise;véhicule;Autre
 Carcar;piaf;piaf;x;x;x;x;Carduelis carduelis;bird;Chardonneret élégant;Autre
-Cerbra;piaf;piaf;x;x;x;x;Certhia brachydactyla;bird;Grimpereau des jardins;Autre
+Cerbra;piaf;piaf;x;x;x;;Certhia brachydactyla;bird;Grimpereau des jardins;Autre
 Cerela;Cerela;Cerela;x;;;x;Cervus elaphus;other mammal;Cerf élaphe;Autre
 Cetcet;piaf;piaf;x;x;x;x;Cettia cettia;bird;Bouscarle de Cetti;Autre
 Chahia;piaf;piaf;x;;;x;Charadrius hiaticula;bird;Grand Gravelot;Autre
@@ -73,14 +73,14 @@ chirp;chirp;noise;x;;;;chirp;noise;chirp;Autre
 Chlchl;piaf;piaf;x;x;x;x;Chloris chloris;bird;Verdier d'Europe;Autre
 Chlhyb;piaf;piaf;x;;;;Chlidonias hybridus;bird;Guifette moustac;Autre
 Chobru;criq;criq;x;;;x;Chorthippus brunneus;grasshopper;Criquet duettiste;Autre
-Chovag;criq;criq;x;x;x;x;Chorthippus vagans;grasshopper;Criquet des pins;Autre
+Chovag;criq;criq;x;x;x;;Chorthippus vagans;grasshopper;Criquet des pins;Autre
 Chrrid;piaf;piaf;x;;;x;Chroicocephalus ridibundus;bird;Mouette rieuse;Autre
 Cicatr;Cicatr;cigale;x;x;x;;Cicadatra atra;cicada;Cigale noire;Autre
 Cicorn;Cicorn;cigale;x;x;x;;Cicada orni;cicada;Cigale grise;Autre
 cigale;cigale;cigale;x;x;x;x;Cicadoidea sp.;cicada;Cigale sp.;Autre
 Cincin;piaf;piaf;x;;;x;Cinclus cinclus;bird;Cincle plongeur;Autre
 Ciraer;piaf;piaf;x;;;x;Circus aeruginosus;bird;Busard des roseaux;Autre
-Cisjun;piaf;piaf;x;x;x;x;Cisticola juncidis;bird;Cisticole des joncs;Autre
+Cisjun;piaf;piaf;x;x;x;;Cisticola juncidis;bird;Cisticole des joncs;Autre
 Coccoc;piaf;piaf;x;;;x;Coccothraustes coccothraustes;bird;Grosbec casse-noyaux;Autre
 Colpal;piaf;piaf;x;;;x;Columba palumbus;bird;Pigeon ramier;Autre
 Concon;Concon;Confus;x;x;x;;Conocephalus conocephalus;bush-cricket;Conocéphale africain;Sauterelle
@@ -89,12 +89,12 @@ Confus;Confus;Confus;x;;x;x;Conocephalus fuscus;bush-cricket;Conocephale bigarre
 Corcho;Epheph;Epheph;x;;;;Corsteropleurus chopardi;bush-cricket;Ephippigère corse;Sauterelle
 Corfru;piaf;piaf;x;;;x;Corvus frugilegus;bird;Corbeau freux;Autre
 Cormon;piaf;piaf;x;;;x;Corvus monedula;bird;Choucas des tours;Autre
-Cornix;piaf;piaf;x;x;x;x;Corvus cornix;bird;Corneille mantelée;Autre
+Cornix;piaf;piaf;x;x;x;;Corvus cornix;bird;Corneille mantelée;Autre
 Corone;piaf;piaf;x;;;x;Corvus corone;bird;Corneille noire;Autre
 Corrax;piaf;piaf;x;x;x;x;Corvus corax;bird;Grand Corbeau;Autre
 Cotcot;piaf;piaf;x;;;x;Coturnix coturnix;bird;Caille des blés;Autre
 criq;criq;criq;x;x;x;x;Caelifera sp.;grasshopper;Criquet sp.;Autre
-Crorus;Mussp;Mussp;x;x;x;x;Crocidura russula;other mammal;Crocidure musette;Autre
+Crorus;Mussp;Mussp;x;x;x;;Crocidura russula;other mammal;Crocidure musette;Autre
 Cuccan;piaf;piaf;x;;;x;Cuculus canorus;bird;Coucou gris;Autre
 Culimp;Culimp;Culimp;x;;;x;Culicoides impunctatus;fly;Moustique;Autre
 Cyacae;piaf;piaf;x;x;x;x;Cyanistes caerulea;bird;Mésange bleue;Autre
@@ -106,10 +106,10 @@ Denmaj;piaf;piaf;x;x;x;x;Dendrocopos major;bird;Pic épeiche;Autre
 Denmin;piaf;piaf;x;;;x;Dendrocopos minor;bird;Pic épeichette;Autre
 Egrgar;piaf;piaf;x;;;x;Egretta garzetta;bird;Aigrette garzette;Autre
 elec;noise;noise;x;x;x;x;electronical noise;noise;parasite;Autre
-Embcae;piaf;piaf;x;x;x;x;Emberiza caesia;bird;Bruant cendrillard;Autre
+Embcae;piaf;piaf;x;x;x;;Emberiza caesia;bird;Bruant cendrillard;Autre
 Embcal;piaf;piaf;x;x;x;x;Emberiza calandra;bird;Bruant proyer;Autre
 Embcia;piaf;piaf;x;;;;Emberiza cia;bird;Bruant fou;Autre
-Embcir;piaf;piaf;x;x;x;x;Emberiza cirlus;bird;Bruant zizi;Autre
+Embcir;piaf;piaf;x;x;x;;Emberiza cirlus;bird;Bruant zizi;Autre
 Embcit;piaf;piaf;x;x;x;x;Emberiza citrinella;bird;Bruant jaune;Autre
 Embhor;piaf;piaf;x;;;;Emberiza hortulana;bird;Bruant ortolan;Autre
 Embsch;piaf;piaf;x;x;x;x;Emberiza schoeniclus;bird;Bruant des roseaux;Autre
@@ -179,7 +179,7 @@ Lincan;piaf;piaf;x;;;x;Linaria cannabina;bird;Linotte mélodieuse;Autre
 Llusta;Llusta;Llusta;;;x;;Lluciapomaresius stalii;bush-cricket;Ephippigere de Stal;Sauterelle
 Loclus;piaf;piaf;x;;;x;Locustella luscinoides;bird;Locustelle luscino‹de;Autre
 Locnae;piaf;piaf;x;;;x;Locustella naevia;bird;Locustelle tachetée;Autre
-Lopcri;piaf;piaf;x;x;x;x;Lophophanes cristatus;bird;Mésange huppée;Autre
+Lopcri;piaf;piaf;x;x;x;;Lophophanes cristatus;bird;Mésange huppée;Autre
 Loxcur;piaf;piaf;x;;;x;Loxia curvirostra;bird;Beccroisé des sapins;Autre
 Lularb;piaf;piaf;x;;;x;Lullula arborea;bird;Alouette lulu;Autre
 Lusmeg;piaf;piaf;x;x;x;x;Luscinia megarhynchos;bird;Rossignol philomèle;Autre
@@ -228,12 +228,12 @@ Myocap;Myocap;Myocap;x;x;x;;Myotis capaccinii;bat;Murin de Capaccini;Chauve-sour
 Myocoy;Myocoy;Myocoy;x;;;;Myocastor coypus;other mammal;Rat musqué;Autre
 Myodas;Myodas;Myodas;x;x;;;Myotis dasycneme;bat;Murin des marais;Chauve-souris
 Myodau;Myodau;Myodau;x;x;x;x;Myotis daubentonii;bat;Murin de Daubenton;Chauve-souris
-Myoema;Myoema;Myoema;x;x;x;x;Myotis emarginatus;bat;Murin a oreilles echancrees;Chauve-souris
-MyoGT;MyoGT;MyoGT;x;x;x;x;Myotis cf. myotis;bat;Murin de grande taille;Chauve-souris
+Myoema;Myoema;Myoema;x;x;x;;Myotis emarginatus;bat;Murin a oreilles echancrees;Chauve-souris
+MyoGT;MyoGT;MyoGT;x;x;x;;Myotis cf. myotis;bat;Murin de grande taille;Chauve-souris
 Myomyo;MyoGT;MyoGT;x;x;x;;Myotis myotis;bat;Grand Murin;Chauve-souris
 Myomys;Myomys;Myomys;x;x;x;x;Myotis mystacinus;bat;Murin a moustaches;Chauve-souris
 Myonat;Myonat;Myonat;x;x;;x;Myotis nattereri;bat;Murin groupe Natterer;Chauve-souris
-MyospA;Myonat;Myonat;x;x;x;x;Myotis sp. A ('southern' Natterer);bat;Murin sp. A;Chauve-souris
+MyospA;Myonat;Myonat;x;x;x;;Myotis sp. A ('southern' Natterer);bat;Murin sp. A;Chauve-souris
 Nemsyl;gril;gril;x;;;;Nemobius sylvestris;ground-cricket;Grillon des bois;Autre
 noise;noise;noise;x;x;x;x;noise;noise;bruit;Autre
 Numarq;piaf;piaf;x;;;x;Numenius arquata;bird;Courlis cendré;Autre
@@ -260,7 +260,7 @@ Pelrid;amph;amph;x;x;x;x;Pelophylax ridibundus;frog;Grenouille rieuse;Autre
 Perate;piaf;piaf;x;x;x;x;Periparus ater;bird;Mésange noire;Autre
 Pernap;piaf;piaf;x;;;;Pernis apivorus;bird;Bondrée apivore;Autre
 Phacol;piaf;piaf;x;;;x;Phasianus colchicus;bird;Faisan de Colchide;Autre
-Phafal;Phafal;Phafal;x;x;x;;Phaneroptera falcata;bush-cricket;Phaneroptere commun;Sauterelle
+Phafal;Phafal;Phafal;x;x;x;x;Phaneroptera falcata;bush-cricket;Phaneroptere commun;Sauterelle
 Phanan;Phanan;Phanan;x;x;x;;Phaneroptera nana;bush-cricket;Phaneroptere meridional;Sauterelle
 Phofem;Phofem;Phofem;x;x;;;Pholidoptera femorata;bush-cricket;Decticelle des friches;Sauterelle
 Phogri;Phogri;Phogri;x;x;x;x;Pholidoptera griseoaptera;bush-cricket;Decticelle cendree;Sauterelle
@@ -273,7 +273,7 @@ Phytro;piaf;piaf;x;;;x;Phylloscopus trochilus;bird;Pouillot fitis;Autre
 piaf;piaf;piaf;x;x;x;x;Aves sp.;bird;Oiseau sp.;Autre
 Picpic;piaf;piaf;x;x;x;x;Pica pica;bird;Pie bavarde;Autre
 Picvir;piaf;piaf;x;;;x;Picus viridis;bird;Pic vert;Autre
-Pipkuh;Pipkuh;Pipkuh;x;x;x;x;Pipistrellus kuhlii;bat;Pipistrelle de Kuhl;Chauve-souris
+Pipkuh;Pipkuh;Pipkuh;x;x;x;;Pipistrellus kuhlii;bat;Pipistrelle de Kuhl;Chauve-souris
 Pipmad;Pipmad;Pipmad;;;;;Pipistrellus madeirensis;bat;Pipistrelle de Madère;Chauve-souris
 Pipnat;Pipnat;Pipnat;x;x;x;x;Pipistrellus nathusii;bat;Pipistrelle de Nathusius;Chauve-souris
 Pippip;Pippip;Pippip;x;x;x;x;Pipistrellus pipistrellus;bat;Pipistrelle commune;Chauve-souris
@@ -286,7 +286,7 @@ Plaint;Plaint;Plaint;x;;x;;Platycleis intermedia;bush-cricket;Decticelle interme
 plane;plane;plane;x;x;x;x;plane;noise;Avion;Autre
 Plasab;Plasab;Plasab;x;;x;;Platycleis sabulosa;bush-cricket;Decticelle des sables;Sauterelle
 Pleaur;Pleaur;Pleaur;x;;x;x;Plecotus auritus;bat;Oreillard roux;Chauve-souris
-Pleaus;Pleaus;Pleaus;x;;x;x;Plecotus austriacus;bat;Oreillard gris;Chauve-souris
+Pleaus;Pleaus;Pleaus;x;;x;;Plecotus austriacus;bat;Oreillard gris;Chauve-souris
 Plekol;Plekol;Plekol;;x;;;Plecotus kolombatovici;bat;Oreillard des Balkans;Chauve-souris
 Plemac;Plemac;Plemac;x;x;x;;Plecotus macrobullaris;bat;Oreillard montagnard;Chauve-souris
 Pluapr;piaf;piaf;x;;;x;Pluvialis apricaria;bird;Pluvier doré;Autre
@@ -322,7 +322,7 @@ Rhimeh;Rhimeh;Rhimeh;;x;x;;Rhinolophus mehelyi;bat;Rinolophe de Mehely;Chauve-so
 river;noise;noise;x;x;x;x;watercourse;noise;cours d'eau;Autre
 RodTu1;mamm;mamm;x;x;x;;Rodentia sp. from Turkey 1;other mammal;Rongeur de Turquie type 1;Autre
 Roeroe;Roeroe;Roeroe;x;x;x;x;Roeseliana roeselii;bush-cricket;Decticelle bariolee;Sauterelle
-Rusnit;Rusnit;Rusnit;x;x;x;x;Ruspolia nitidula;bush-cricket;Conocephale gracieux;Sauterelle
+Rusnit;Rusnit;Rusnit;x;x;x;;Ruspolia nitidula;bush-cricket;Conocephale gracieux;Sauterelle
 SauIn1;SauIn1;SauIn1;;;;;Tettigoniidae sp. from India 1;bush-cricket;Sauterelle sp. In1;Sauterelle
 SauIn2;SauIn2;SauIn2;;;;;Tettigoniidae sp. from India 2;bush-cricket;Sauterelle sp. In2;Sauterelle
 SauIn3;SauIn3;SauIn3;;;;;Tettigoniidae sp. from India 3;bush-cricket;Sauterelle sp. In3;Sauterelle
@@ -339,12 +339,12 @@ Saxrube;piaf;piaf;x;;;x;Saxicola rubetra;bird;Tarier des prés;Autre
 Saxrubi;piaf;piaf;x;;;x;Saxicola rubicola;bird;Tarier pâtre;Autre
 Scorus;piaf;piaf;x;;;x;Scolopax rusticola;bird;Bécasse des bois;Autre
 Sepsep;Sepsep;Sepsep;x;;x;;Sepiana sepium;bush-cricket;Decticelle echassiere;Sauterelle
-Serser;piaf;piaf;x;x;x;x;Serinus serinus;bird;Serin cini;Autre
+Serser;piaf;piaf;x;x;x;;Serinus serinus;bird;Serin cini;Autre
 Siteur;piaf;piaf;x;x;x;x;Sitta europaea;bird;Sittelle torchepot;Autre
-Sorcor;Mussp;Mussp;x;x;x;x;Soricinus coronatus;other mammal;Musaraigne couronnée;Autre
+Sorcor;Mussp;Mussp;x;x;x;;Soricinus coronatus;other mammal;Musaraigne couronnée;Autre
 Spispi;piaf;piaf;x;;;x;Spinus spinus;bird;Tarin des aulnes;Autre
 Stralu;piaf;piaf;x;x;x;x;Strix aluco;bird;Chouette hulotte;Autre
-Strdec;piaf;piaf;x;x;x;;Streptopelia decaocto;bird;Tourterelle turque;Autre
+Strdec;piaf;piaf;x;x;x;x;Streptopelia decaocto;bird;Tourterelle turque;Autre
 Stuvul;piaf;piaf;x;x;x;x;Sturnus vulgaris;bird;Etourneau sansonnet;Autre
 Susscr;Susscr;Susscr;x;;;;Sus scrofa;other mammal;Sanglier;Autre
 Sylatr;piaf;piaf;x;x;x;x;Sylvia atricapilla;bird;Fauvette à tête noire;Autre
@@ -352,7 +352,7 @@ Sylbor;piaf;piaf;x;;;x;Sylvia borin;bird;Fauvette des jardins;Autre
 Sylcan;piaf;piaf;x;;;;Sylvia cantillans;bird;Fauvette passerinette;Autre
 Sylcom;piaf;piaf;x;x;x;x;Sylvia communis;bird;Fauvette grisette;Autre
 Sylcur;piaf;piaf;x;;;x;Sylvia curruca;bird;Fauvette babillarde;Autre
-Sylmel;piaf;piaf;x;x;x;x;Sylvia melanocephala;bird;Fauvette mélanocéphale;Autre
+Sylmel;piaf;piaf;x;x;x;;Sylvia melanocephala;bird;Fauvette mélanocéphale;Autre
 Sylund;piaf;piaf;x;;;x;Sylvia undata;bird;Fauvette pitchou;Autre
 Tadten;Tadten;Tadten;x;x;x;;Tadarida teniotis;bat;Molosse;Chauve-souris
 Tamsib;Tamsib;Tamsib;x;;;;Tamias sibiricus;other mammal;Tamia de Sibérie;Autre
