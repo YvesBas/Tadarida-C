@@ -31,4 +31,4 @@ fi
 
 # Finally start tadaridaC R script
 cd $TADARIDAC_DIR && $RSCRIPT Ta_Tc.R $INPUT_FILE ClassifEspFrance180303.learner N 8 F T 500 0 0 ./other_inputs/SpeciesList.csv ./other_inputs/CNS_tabase3HF_France_IdConc.learner T ./other_inputs/Referentiel_seuils_ProbEspHF_.csv
-cd $TADARIDAC_DIR && $RSCRIPT ContextualClassif.R $INPUT_FILE ./other_inputs/SpeciesList.csv ./other_inputs/ClassifEspC3_2019-03-25.learner f_CombineProbas.r f_Rescale_Probas.r ./other_inputs/Referentiel_seuils_ProbEspC3_2019-03-25_G7__D_G.csv
+cd $TADARIDAC_DIR && $RSCRIPT ContextualClassif.R $INPUT_FILE ./other_inputs/SpeciesList.csv ./other_inputs/ClassifEspC3_2019-03-25.learner f_CombineProbas.R f_Rescale_Probas.r ./other_inputs/Referentiel_seuils_ProbEspC3_2019-03-25_G7__D_G.csv
