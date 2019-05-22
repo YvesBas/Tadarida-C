@@ -17,6 +17,9 @@ Var_AGarder=c("Filename","CallNum","Version","FileDur","SampleRate"
 #args[4]=8 #HPF
 #args[8]=1 #start number
 #args[9]=100 #end number number
+#obslist=list.files(args[1],pattern=".ta$",full.names=T,recursive=T) # 1e-4 sec/files
+
+skip=F
 
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
@@ -27,11 +30,8 @@ library(randomForest) #to use the classifier
 library(data.table) #to handle large numbers of .ta files
 library(MASS) # to handle reduction (lda predict)
 
-tadir=args[1]
+obslist=talistot
 #get the .ta files list
-#obslist=list.files(tadir,pattern=".ta$",full.names=T,recursive=F)
-
-obslist=list.files(tadir,pattern=".ta$",full.names=T,recursive=T) # 1e-4 sec/files
 if (length(obslist) == 0) {
   print("no .ta files to process")
   q()
@@ -62,7 +62,7 @@ if (exists("ClassifEspA")==FALSE) ClassifEspA=ClassifEsp3 #temp for test
 #print(ls())
 
 #concatenate all the features table
-CTP=as.data.frame(rbindlist(my.data,fill=T))
+CTP=as.data.frame(rbindlist(my.data))
 
 
 #fwrite(CTP,"CTP.csv")
@@ -76,7 +76,6 @@ if(is.na(match("FreqMP",names(CTP)))==F)
   CTP=subset(CTP,CTP$FreqMP>as.numeric(args[4]))
 }
 #discard false positives due to bin bleed on the last column
-
 CTP=subset(CTP,CTP$StTime<(1000*CTP$FileDur-2))
 
 CTP[is.na(CTP)]=0
@@ -117,37 +116,40 @@ if (mean(testReduc)>0.5) #when a reduction of variables is necessary (=low frequ
 
 if(nrow(CTP)>0)
 {
-print("Avant predict")
-print(nrow(CTP))
-print(gc())
-#get the predictions and the main features (noticeably the file name)
-ProbEsp0 <- predict(ClassifEspA, CTP0,type="prob",norm.votes=TRUE)
-print(nrow(ProbEsp0))
-print(getwd())
-print("Apres predict")
-print(gc())
-
-#fwrite(as.data.frame(ProbEsp0),"ProbEsp0.csv")
-
-Test_AG=match(Var_AGarder,colnames(CTP0))
-Col_AG=unique(Test_AG[!is.na(Test_AG)])
-print(length(Col_AG))
-CTP_AG=subset(CTP0,select=Col_AG)
-
-print(ncol(CTP_AG))
-
-#Loop init
-ProbEsp <-  cbind(CTP_AG,ProbEsp0
-                  ,HL=(CTP0$Hup_RFMP!=0),HU=(CTP0$Hlo_PosEn!=9999))
-
-print(nrow(ProbEsp))
-
-fwrite(ProbEsp,paste0(substr(obslist[start],1,nchar(obslist[1])-3)
-                      ,"_",(end-start+1),"_ProbEsp.csv"))
-
-#for test
-print(list.files(tadir,pattern="_ProbEsp.csv"))
-
+  print("Avant predict")
+  print(nrow(CTP))
+  print(gc())
+  #get the predictions and the main features (noticeably the file name)
+  ProbEsp0 <- predict(ClassifEspA, CTP0,type="prob",norm.votes=TRUE)
+  print(nrow(ProbEsp0))
+  print(getwd())
+  print("Apres predict")
+  print(gc())
+  
+  #fwrite(as.data.frame(ProbEsp0),"ProbEsp0.csv")
+  
+  Test_AG=match(Var_AGarder,colnames(CTP0))
+  Col_AG=unique(Test_AG[!is.na(Test_AG)])
+  print(length(Col_AG))
+  CTP_AG=subset(CTP0,select=Col_AG)
+  
+  print(ncol(CTP_AG))
+  
+  #Loop init
+  ProbEsp <-  cbind(CTP_AG,ProbEsp0
+                    ,HL=(CTP0$Hup_RFMP!=0),HU=(CTP0$Hlo_PosEn!=9999))
+  
+  print(nrow(ProbEsp))
+  
+  PreFichPE=paste0(substr(obslist[start],1,nchar(obslist[1])-3)
+                   ,"_",(end-start+1))
+  
+  fwrite(ProbEsp,paste0(PreFichPE,"_ProbEsp.csv"))
+  
+  #for test
+  print(list.files(tadir,pattern="_ProbEsp.csv"))
+  
 }else{
   print("no sound events to classify")
-}
+skip=T
+  }

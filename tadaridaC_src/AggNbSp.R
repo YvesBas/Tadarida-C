@@ -10,18 +10,18 @@ library(randomForest)
 
 if(dir.exists(args[1]))
 {
-  FichIT=list.files(args[1],pattern="IdTot",full.names=T)
-  if (length(FichIT)>0)
-  {
-    my.data <- list()
-    # for(f in 1:length(obslist)) {
-    for(f in 1:length(FichIT)) {   #0.026 sec/files
-      my.data[[f]] <- fread(FichIT[[f]])
-    }
-    Sys.time()
-    
-    IdTot=rbindlist(my.data)
-  }
+  #FichIT=list.files(args[1],pattern="IdTot",full.names=T)
+  #if (length(FichIT)>0)
+  #{
+  #  my.data <- list()
+  # for(f in 1:length(obslist)) {
+  #  for(f in 1:length(FichIT)) {   #0.026 sec/files
+  #   my.data[[f]] <- fread(FichIT[[f]])
+  #  }
+  # Sys.time()
+  
+  #IdTot=rbindlist(my.data)
+  IdTot=as.data.table(IdTot)
   tadir=args[1]
 }else{
   IdTot=as.data.frame(fread(paste0(dirname(args[1]),"/IdTot.csv")))
@@ -33,8 +33,8 @@ if(dir.exists(args[1]))
   }
 }
 
-if(length(FichIT)>0)
-{
+#if(length(FichIT)>0)
+#{
   #get the variables necessary to predict "NbSp"
   IdTot=IdTot[order(IdTot$Group.1,IdTot$Order),]
   
@@ -53,6 +53,8 @@ if(length(FichIT)>0)
     
     #test=match("003760_0_20160907_033641_676.wav",levels(as.factor(IdTot$Group.1)))
     
+    
+    IdTot$Group.1=factor(IdTot$Group.1,exclude=NULL)
     
     Overlap=vector()
     FreqDiff=vector()
@@ -82,16 +84,20 @@ if(length(FichIT)>0)
           FreqDiff=c(FreqDiff,abs(IdSub$FreqM[j]-FreqInit))
           FreqRatio=c(FreqRatio,IdSub$FreqM[j]/FreqInit)
         }
-        
-        
-      }
+        }
       
+      #print(levels(as.factor(IdTot$Group.1))[i])
+      #print(i)
+      
+      
+      #print(length(Overlap))
       IdTot2=rbind(IdTot2,IdSub)
+      #print(nrow(IdTot2))
       
-      if(i%%1000==1)
-      {
-        # print(paste(i,nlevels(as.factor(IdTot$Group.1)),Sys.time()))
-      }
+      #if(i%%10==1)
+      #{
+       # print(paste(i,nlevels(as.factor(IdTot$Group.1)),Sys.time()))
+      #}
       
       
     }
@@ -164,7 +170,7 @@ if(length(FichIT)>0)
   #adding version number from both Tadarida-D and Tadarida-C
   IdTot4=cbind(IdTot4,VersionD=CTP$Version[1],VersionC=Version)
   #IdTot4$Order=NULL
-
+  
   #compute real success probability
   RefErrorRisk=fread(args[13])
   IdTot4$SuccessProb=999
@@ -188,7 +194,7 @@ if(length(FichIT)>0)
   IdTot4=IdTottemp
   
   
-    
+  
   if(args[6])
   {
     #print(table(IdTot4$Group.1))
@@ -207,6 +213,6 @@ if(length(FichIT)>0)
   #for test
   print(table(IdTot4$SpMaxF2))
   
-}else{
-  print("no sound sequences to aggregate")
-}
+#}else{
+ # print("no sound sequences to aggregate")
+#}

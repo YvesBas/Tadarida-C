@@ -22,35 +22,48 @@ args <- commandArgs(trailingOnly = TRUE)
 #options (HPF = filtre passe-haut / Reduc = réduction des features par DFA)
 #args[4]=8 #HPF
 #args[5]=F #Reduc - obsolete
-#args[6]=F #TC
+#args[6]=T #TC
 #args[7]=200 #block size
 #args[10]="SpeciesList.csv" #species list
 #args[11]="CNS_tabase3HF_France_IdConc.learner" #name of the species number" classifier
 #args[12]=T #if species number should be filtered or not
 #args[13]="Referentiel_seuils_ProbEspHF_.csv"
+#args[14]=1000 #an additionnal, larger block size to handle memory leaks problem in randomForest
+#args[15]=3 #block number 
+
 
 print(getwd())
 print(args)
 
 tadir=args[1]
 talistot=list.files(tadir,pattern=".ta$",full.names=T)
-FITA=file.info(talistot)
-talistot=subset(talistot,FITA$size>1000)
+
+if(length(talistot)>as.numeric(args[14])*(as.numeric(args[15])-1))
+{
+  talistot=talistot[(as.numeric(args[14])*(as.numeric(args[15])-1)+1)
+                    :(min(length(talistot)
+                          ,as.numeric(args[14])*(as.numeric(args[15]))))]
   
-block=as.numeric(args[7])
-
-
-for (r in 1:ceiling(length(talistot)/block))
+  FITA=file.info(talistot)
+  talistot=subset(talistot,FITA$size>1000)
+  
+  
+  
+  block=as.numeric(args[7])
+  
+  
+  for (r in 1:ceiling(length(talistot)/block))
   {
-args[8]=block*(r-1)+1 #start number
-args[9]=block*r #end number
-source(ClassifC1)
-print(paste(r,ceiling(length(talistot)/block),Sys.time()))
-source(AggContacts)
+    args[8]=block*(r-1)+1 #start number
+    args[9]=block*r #end number
+    source(ClassifC1)
+    print(paste(r,ceiling(length(talistot)/block),Sys.time()))
+    if(!skip){
+      source(AggContacts)
+      source(AggNbSp)
+    }
+    
+    print(gc())
+    
+  }
 }
-
-print(gc())
-
-source(AggNbSp)
-print(gc())
-
