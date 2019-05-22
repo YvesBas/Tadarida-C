@@ -11,7 +11,7 @@ AggNbSp="AggNbSp.R"
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following lines if you pre mfer to do not use R in command line
-#args="C:/wamp64/www/wav/txt" #directory containing .ta files
+#args="./Tadarida/testbugtavide" #directory containing .ta files
 #args[1]="D:/PI_20/DataPR_Net1&2/txt"
 #args[2]="ClassifEsp_LF_180320.learner"
 #args[2]="ClassifEsp_LF_180129.learner"
@@ -34,6 +34,9 @@ print(args)
 
 tadir=args[1]
 talistot=list.files(tadir,pattern=".ta$",full.names=T)
+FITA=file.info(talistot)
+talistot=subset(talistot,FITA$size>1000)
+  
 block=as.numeric(args[7])
 
 

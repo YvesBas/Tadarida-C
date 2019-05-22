@@ -36,6 +36,8 @@ if (length(obslist) == 0) {
   print("no .ta files to process")
   q()
 }
+FIO=file.info(obslist)
+obslist=subset(obslist,FIO$size>1000)
 
 
 #fwrite(as.list(obslist),"obslist.csv")
@@ -60,7 +62,7 @@ if (exists("ClassifEspA")==FALSE) ClassifEspA=ClassifEsp3 #temp for test
 #print(ls())
 
 #concatenate all the features table
-CTP=as.data.frame(rbindlist(my.data))
+CTP=as.data.frame(rbindlist(my.data,fill=T))
 
 
 #fwrite(CTP,"CTP.csv")
@@ -82,6 +84,7 @@ CTP[is.na(CTP)]=0
 CTP0=CTP
 
 testReduc=grepl("LD",row.names(ClassifEspA$importance))
+print(mean(testReduc))
 
 if (mean(testReduc)>0.5) #when a reduction of variables is necessary (=low frequency case)
 {
@@ -119,19 +122,25 @@ print(nrow(CTP))
 print(gc())
 #get the predictions and the main features (noticeably the file name)
 ProbEsp0 <- predict(ClassifEspA, CTP0,type="prob",norm.votes=TRUE)
+print(nrow(ProbEsp0))
+print(getwd())
 print("Apres predict")
 print(gc())
-print(nrow(ProbEsp0))
 
 #fwrite(as.data.frame(ProbEsp0),"ProbEsp0.csv")
 
 Test_AG=match(Var_AGarder,colnames(CTP0))
 Col_AG=unique(Test_AG[!is.na(Test_AG)])
+print(length(Col_AG))
 CTP_AG=subset(CTP0,select=Col_AG)
+
+print(ncol(CTP_AG))
 
 #Loop init
 ProbEsp <-  cbind(CTP_AG,ProbEsp0
                   ,HL=(CTP0$Hup_RFMP!=0),HU=(CTP0$Hlo_PosEn!=9999))
+
+print(nrow(ProbEsp))
 
 fwrite(ProbEsp,paste0(substr(obslist[start],1,nchar(obslist[1])-3)
                       ,"_",(end-start+1),"_ProbEsp.csv"))
