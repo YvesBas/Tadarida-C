@@ -84,6 +84,8 @@ for (i in 1:50)
   #combine it with previously build small forests
   if (exists("ClassifEspA")==TRUE) {ClassifEspA=combine(ClassifEspA,ClassifEspTemp)} else {ClassifEspA=ClassifEspTemp}
   Sys.time()
+  save (ClassifEspA,file=paste0("ClassifEsp",GeoFilter
+                                ,substr(Sys.time(),1,10),"_",i,".learner")) 
   }
 Sys.time()
 
