@@ -1,5 +1,13 @@
 args <- commandArgs(trailingOnly = TRUE)
-#args=c("./Tadarida/TCtest/5835dcd8db03c2000fba9dfc","SpeciesList.csv","ClassifEspC3_2019-03-25.learner","C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/f_CombineProbas.r","C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/f_Rescale_Probas.r","Referentiel_seuils_ProbEspC3_2019-03-25_G7__D_G.csv")
+if(length(args)<3)
+{
+args=c("C:/wamp64/www/taz/588a24cb7ac9bd081c000043","SpeciesList.csv"
+       ,"ClassifEspC3_2019-03-25.learner"
+       ,"C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/f_CombineProbas.r"
+       ,"C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/f_Rescale_Probas.r"
+       ,"Referentiel_seuils_ProbEspC3_2019-03-25_G7__D_G.csv"
+       ,"Referentiel_seuils_RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc__G.csv")
+}
 print(args)
 library(randomForest)
 library(data.table) #to handle large numbers of .ta files
@@ -14,9 +22,13 @@ Weights=c(7,3)
 fCP=args[4]
 fRP=args[5]
 KeepPrev1=F
-KeepPrev2=T
+KeepPrev2=F
 OutputTC=T
-Version=1904
+Version=1911
+FormatVC=F
+NamePar="BufoFret"
+HeadersVC=c("nom du fichier","temps_debut","temps_fin","frequence_mediane"
+            ,"tadarida_taxon","tadarida_probabilite")
 
 
 f2p <- function(x) 
@@ -35,8 +47,8 @@ print(length(TClist))
 print(head(TClist))
 if(KeepPrev2)
 {
-NameSave=paste0(TClist,"0")
-file.copy(from=TClist,to=NameSave)
+  NameSave=paste0(TClist,"0")
+  file.copy(from=TClist,to=NameSave)
 }
 my.data=list()
 for (i in 1:length(TClist))
@@ -50,6 +62,8 @@ LocaS=as.factor(substr((TCdata$Group.1),1,27))
 
 ListLocaPart=levels(as.factor(LocaS))
 
+if(substr(TCdata$Group.1[1],1,3)!="Cir")
+{
 PourC2=data.frame()
 MaxTot=data.frame()
 Pardoublons=list()
@@ -155,12 +169,23 @@ PourC2M$Pedestre=((substr(PourC2M$Group.1,10,10)=="-")
 
 #ajout de la date
 FI=tstrsplit(PourC2M$Group.1,"-")
-Passnum=as.numeric(gsub("Pass","",FI[[3]]))
-DatePass=pmin(126+Passnum*62,126+62*3)
-DateTot=ifelse(PourC2M$PF,yday(f2p(PourC2M$Group.1)),DatePass)
-PourC2M$Date=DateTot
-PourC2M$Date[is.na(PourC2M$Date)]=mean(subset(PourC2M$Date,!is.na(PourC2M$Date)))
+if(length(FI)>2)
+{
+  Passnum=as.numeric(gsub("Pass","",FI[[3]]))
+  DatePass=pmin(126+Passnum*62,126+62*3)
+  DateTot=ifelse(PourC2M$PF,yday(f2p(PourC2M$Group.1)),DatePass)
+  PourC2M$Date=DateTot
+  PourC2M$Date[is.na(PourC2M$Date)]=mean(subset(PourC2M$Date,!is.na(PourC2M$Date)))
+  PourC2M$Date[is.na(PourC2M$Date)]=225
+}else{
+  PourC2M$Date=225
+}
 
+if(sum(grepl("OrderNum",names(PourC2M)))==0)
+{
+  PourC2M$OrderNum=as.numeric(gsub("N","",PourC2M$Order))
+  PourC2M$Duree=PourC2M$Tend-PourC2M$Tstart
+}
 
 
 #application des classificateurs (meilleure espèce et matrice de proba)
@@ -185,6 +210,7 @@ NewProbas$OrderInit=c(1:nrow(NewProbas))
 ScaledProbas=Rescale_Probas(probas=NewProbas,splist=args[2]
                             ,ref=args[6]
                             ,minp=0.01,maxp=0.99,accuracy=2)
+
 
 ScaledProbas$Score=apply(ScaledProbas[,4:(ncol(ScaledProbas)-1)],MARGIN=1,max)
 ScaledProbas=ScaledProbas[order(ScaledProbas$OrderInit),]
@@ -213,6 +239,7 @@ PourC2M$SpMax1=ScaledProbas$SpMax1
 PourC2M$SpMax2=ScaledProbas$SpMax2
 VotesDiverging=subset(PourC2M,PourC2M$SpMaxF2!=ScaledProbas$SpMax2)
 fwrite(VotesDiverging,paste0(TCdir,"_diverging.csv"),sep=";")
+table(VotesDiverging$SpMax2,VotesDiverging$SpMaxF2)
 
 ColSel2=subset(colnames(PourC2M),!(colnames(PourC2M) %in% SpeciesList$Esp))
 PourC2MWoProbas=subset(PourC2M,select=ColSel2)
@@ -234,6 +261,19 @@ if(KeepPrev1)
   ForTC=cbind(PourC2Mshort,ScaledProbas)
 }
 
+}else{
+  ScaledProbas=Rescale_Probas(probas=TCdata,splist=args[2]
+                              ,ref=args[7]
+                              ,minp=0.01,maxp=0.99,accuracy=2)
+  ScaledProbas$Score=apply(ScaledProbas[,4:(ncol(ScaledProbas)-1)],MARGIN=1,max)
+  
+  ColSel2=subset(colnames(TCdata),!(colnames(TCdata) %in% SpeciesList$Esp))
+  TCshort=subset(TCdata,select=ColSel2)
+  ForTC=cbind(TCshort,ScaledProbas)
+  
+}
+
+
 ForTCo=ForTC[order(ForTC$Duree,ForTC$Score,decreasing=T),]
 ForTCagg=unique(ForTCo,by=c("Group.1","SpMax2"))  
 ForTCagg=ForTCagg[order(ForTCagg$Group.1,ForTCagg$OrderNum),]
@@ -254,3 +294,20 @@ if(OutputTC)
 }
 #t012
 #ForTC$Group.1[1]
+
+if(FormatVC)
+{
+  ExportPar=subset(ForTC,select=c("Group.1","Tstart","Tend","FreqM"
+                                  ,"SpMax2","Score"))
+  ExportPar$Group.1=gsub(".wav","",ExportPar$Group.1)
+  names(ExportPar)=HeadersVC
+  ExportPar$tadarida_taxon_autre=""
+  ExportPar$observateur_taxon=""
+  ExportPar$observateur_probabilite=""
+  ExportPar$validateur_taxon=""
+  ExportPar$validateur_probabilite=""
+  
+  NameExport=paste0(dirname(args[1]),"/participation-",NamePar,"-observations.csv")
+  fwrite(ExportPar,NameExport,sep=";")
+}
+

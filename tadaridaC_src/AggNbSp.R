@@ -6,6 +6,7 @@ library(randomForest)
 #args[10]="SpeciesList.csv" #species list
 #args[11]="CNS_tabase3HF_France_IdConc.learner" #name of the species number" classifier
 #args[12]=T #if species number should be filtered or not
+#args[16]="CNS_RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc.learner"
 
 
 if(dir.exists(args[1]))
@@ -46,8 +47,15 @@ if(args[12])
 {
   
   SpeciesList=fread(args[10])
-  if(!exists("ClassifNbSp")){load(args[11])}
-  
+  if(!exists("ClassifNbSp"))
+  {
+    if(substr(IdTot$Group.1[1],1,3)=="Cir")
+    {
+      load(args[16])
+    }else{
+      load(args[11])
+    }
+  }
   
   test=subset(IdTot,IdTot$Duree>5)
   
@@ -172,7 +180,12 @@ IdTot4=cbind(IdTot4,VersionD=CTP$Version[1],VersionC=Version)
 #IdTot4$Order=NULL
 
 #compute real success probability
+if(substr(IdTot$Group.1[1],1,3)=="Cir")
+{
+  RefErrorRisk=fread(args[17])
+}else{
 RefErrorRisk=fread(args[13])
+}
 IdTot4$SuccessProb=999
 IdTottemp=IdTot4[0,]
 for (i in 1:nlevels(as.factor(IdTot4$SpMaxF2)))

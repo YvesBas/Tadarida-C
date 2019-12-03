@@ -1,6 +1,6 @@
 library(data.table)
 
-args="tabase3HF_France.csv"
+args="RSDB_HF_tabase3HF_sansfiltre.csv"
 
 tabase3=fread(args[1])
 

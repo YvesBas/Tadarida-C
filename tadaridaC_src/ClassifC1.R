@@ -17,7 +17,11 @@ Var_AGarder=c("Filename","CallNum","Version","FileDur","SampleRate"
 #args[4]=8 #HPF
 #args[8]=1 #start number
 #args[9]=100 #end number number
+obslist=talistot
+FIO=FITA
 #obslist=list.files(args[1],pattern=".ta$",full.names=T,recursive=T) # 1e-4 sec/files
+#args[15]="ClassifEsp_tabase3HF_France_Cir_2019-11-26_wiSR.learner"
+
 
 skip=F
 
@@ -30,13 +34,12 @@ library(randomForest) #to use the classifier
 library(data.table) #to handle large numbers of .ta files
 library(MASS) # to handle reduction (lda predict)
 
-obslist=talistot
 #get the .ta files list
 if (length(obslist) == 0) {
   print("no .ta files to process")
   q()
 }
-FIO=file.info(obslist)
+#FIO=file.info(obslist)
 obslist=subset(obslist,FIO$size>1000)
 
 
@@ -56,7 +59,15 @@ for(f in start:end) {   #0.026 sec/files
 Sys.time()
 
 # load the classifier
-if (exists("ClassifEspA")==FALSE) load(args[2])
+if (exists("ClassifEspA")==FALSE) 
+  {
+  if(substr(basename(obslist[1]),1,3)=="Cir")
+  {
+    load(args[15])
+  }else{
+  load(args[2])
+  }
+    }
 if (exists("ClassifEspA")==FALSE) ClassifEspA=ClassifEsp3 #temp for test
 
 #print(ls())
@@ -152,4 +163,4 @@ if(nrow(CTP)>0)
 }else{
   print("no sound events to classify")
 skip=T
-  }
+}

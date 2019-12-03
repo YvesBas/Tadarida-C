@@ -2,9 +2,12 @@ library(randomForest)
 library(data.table)
 PredAdd=c("FreqM","Tstart","Tend","NbCris","Ind"
                  ,"Duree","OrderNum","Overlap","FreqDiff","FreqRatio")
-args="tabase3HF_France_IdConc.csv" 
+args="tabase3HF_France_IdConc.csv"
+args="RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc.csv"
 args[2]="SpeciesList.csv"
-args[3]="IdExhaustifsTriees.csv" #let "" if you don't have any additional reference file
+#args[3]="IdExhaustifsTriees.csv" #let "" if you don't have any additional reference file
+args[3]="" #let "" if you don't have any additional reference file
+
 
 IdConc1=fread(args[1])
 

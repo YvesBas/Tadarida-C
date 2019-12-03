@@ -1,17 +1,19 @@
 library(boot)
-#args="tabase3HF_France_IdConc.csv"
-args="ProbEspC3_2019-03-25_G7.csv"
+args="tabase3HF_France_IdConc.csv"
+#args="ProbEspC3_2019-03-25_G7.csv"
 #args="./Tadarida/OliverMetcalfData/06.01.19/ProbEspHF_allspreduced_NoAug_NoML_2019-01-06.csv"
 library(data.table)
 ColD="Group.1" #indicate where names of data identifier; "Filename" if from C1 Classifier, "Group.1" from C3
-ColSp="ValidId" #indicate of the "species" column name; "Espece" if from C1 classifier, "SpMaxF2" from C3
+#ColSp="ValidId" #indicate of the "species" column name; "IdMan" if from C1 classifier, "ValidId" from C3
+ColSp="IdMan" 
 #SpeciesList=fread("./Tadarida/OliverMetcalfData/06.01.19/SpeciesList_291118_Notypes.csv")
 SpeciesList=fread("SpeciesList.csv")
-DiscardRSDB=T
+DiscardRSDB=F
 GroupingSp=T
 GroupingSamples=T
 Sel="" # "" if no selection, or "Car" or "Cir" to select a protocol
-
+FiltDur=0 #percentage of sequences filtered out on a sequence duration criteria
+FiltAmp=0 #percentage of sequences filtered out on an amplitude criteria
 
 #A EDITER en fonction du classificateur et du jeu de données que l'on veut évaluer
 #récupération des votes / tests qui permettent les régressions
@@ -26,11 +28,11 @@ if(Sel!=""){
 
 if(DiscardRSDB)
 {
-Sys.time()
-FilesRSDB=list.files("./RSDB_HF",recursive=T
-                                         ,full.names=T,pattern=".wav$")
-Sys.time()
-Votes=subset(Votes,!(Votes[,testD] %in% basename(FilesRSDB)))
+  Sys.time()
+  FilesRSDB=list.files("./RSDB_HF",recursive=T
+                       ,full.names=T,pattern=".wav$")
+  Sys.time()
+  Votes=subset(Votes,!(Votes[,testD] %in% basename(FilesRSDB)))
 }
 
 #########################################################################
@@ -42,6 +44,9 @@ Votes=subset(Votes,!(Votes[,testD] %in% basename(FilesRSDB)))
 #groupement des espèces si besoin
 test=match(ColSp,colnames(Votes))
 Espece0=Votes[,test]
+Votes=subset(Votes,Espece0!="")
+Espece0=Votes[,test]
+
 testE=match(Espece0,SpeciesList$Esp)
 print(table(subset(Espece0,is.na(testE))))
 #summing columns of the same group (if necessary)
@@ -56,11 +61,11 @@ if(GroupingSp)
   #colnames(Probas)=CorrGroup
   for (i in 1:nlevels(as.factor(CorrGroup)))
   {
-   SelGroup=(CorrGroup==levels(as.factor(CorrGroup))[i])
-     ProbaGroup=apply(subset(Probas,select=SelGroup),MARGIN=1,sum)
+    SelGroup=(CorrGroup==levels(as.factor(CorrGroup))[i])
+    ProbaGroup=apply(subset(Probas,select=SelGroup),MARGIN=1,sum)
     Votes=cbind(Votes,ProbaGroup)
-  colnames(Votes)[ncol(Votes)]=levels(as.factor(CorrGroup))[i]
-  print(levels(as.factor(CorrGroup))[i])  
+    colnames(Votes)[ncol(Votes)]=levels(as.factor(CorrGroup))[i]
+    print(levels(as.factor(CorrGroup))[i])  
   }
   Votes$Espece=SpeciesList$Nesp2[testE]
 }else{
@@ -79,7 +84,6 @@ test=match(ListSp,colnames(Votes)) # récupère la colonne qui contient l'indice d
 table(subset(ListSp,!is.na(test)==F))
 ListSp=subset(ListSp,is.na(test)==F) #retire les espèces manquantes (normalement ça n'arrive pas mais possible incohérence SpeciesList)
 
-
 VotesDiverging=subset(Votes,Votes$SpMaxF2!=Votes$SpName)
 test=sample.int(nrow(VotesDiverging),1)
 VotesDiverging$Group.1[test]
@@ -93,6 +97,8 @@ VotesDiverging$ValidId[test]
 #title("", outer=TRUE)
 #mtext(text="Confidence index of the automatic identification",side=1,line=0,outer=TRUE)
 #mtext(text="Success probability",side=2,line=0,outer=TRUE)
+
+Votes_sauv=Votes
 
 par(mfrow=c(1,1))
 
@@ -117,21 +123,42 @@ FP99=vector() # pour stocker le taux de faux positifs (parmi les validations et 
 Nvalid=vector() # pour stocker le nombre de validations par espèces
 for (i in 1:length(ListSp)) #12 min sur la couche n°1
 {
+  if (FiltDur>0)
+  {
+    Threshold=quantile(subset(Votes_sauv$Duree,Votes_sauv$Espece==ListSp[i]),FiltDur)
+    Votes=subset(Votes_sauv,Votes_sauv$Duree>=Threshold)
+  }else{
+    Votes=Votes_sauv
+  }
+  if (FiltAmp>0)
+  {
+    Threshold=quantile(subset(Votes_sauv$Ampm90,Votes_sauv$Espece==ListSp[i]),FiltDur)
+    Votes=subset(Votes,Votes$Ampm90>=Threshold)
+  }else{
+    Votes=Votes_sauv
+  }
+  
   SpCol=as.numeric(match(ListSp[i],colnames(Votes))) # récupère la colonne qui contient l'indice de confiance pour l'espèce i
   VoteEsp=as.data.frame(Votes)[,SpCol]
-#if(ColD=="Filename" )
- if(GroupingSamples)
-   {
+  #if(ColD=="Filename" )
+  if(GroupingSamples) #this part is bugged since it discards secondary species
+  {
     VoteAgg=aggregate(VoteEsp,by=list(Votes[,testD]),FUN=max)
     test=match(paste(Votes[,testD],VoteEsp),paste(VoteAgg$Group.1,VoteAgg$x))
     Votesp0=subset(Votes,is.na(test)==F)
     Votesp=unique(as.data.table(Votesp0),by=ColD)
-    }else{
+    #ListSucces=unique(subset(Votes_sauv[,testD],Votes_sauv$Espece==ListSp[i]))
+    #succes=sapply(Votesp[,..testD],FUN=function(x) (x %in% ListSucces)) 
+  }else{
     Votesp=Votes
   }
+  succes=(Votesp$Espece==ListSp[i]) 
+  
   VoteEsp=as.data.frame(Votesp)[,SpCol]
   
-  succes=(Votesp$Espece==ListSp[i]) #succes si l'espèce i n'obtient pas le score max
+  
+  
+  
   print(paste(i, ListSp[i],sum(as.numeric(succes)),Sys.time()))
   
   
@@ -159,18 +186,18 @@ for (i in 1:length(ListSp)) #12 min sur la couche n°1
   #dev.off() # envoie le graphe dans le fichier jpeg
   
   #dump for testing
-  FP_confident=subset(Votesp,(VoteEsp>min(subset(absc,y>0.5)))&
-                        (succes==0))
+ # FP_confident=subset(Votesp,(VoteEsp>min(subset(absc,y>0.5)))&
+  #                      (succes==0))
   #table(FP_confident$Filename)
   #FilesRSDB=list.files("D:/Documents/Data/Tadarida Dat No Type",recursive=T
-   #                    ,full.names=T,pattern=".wav$")
+  #                    ,full.names=T,pattern=".wav$")
   #FP_files=FilesRSDB[test]
   #dir.create("C:/Users/Yves Bas/Documents/Tadarida/OliverMetcalfData/ToCheck/")
   #NewLoc=paste0("C:/Users/Yves Bas/Documents/Tadarida/OliverMetcalfData/ToCheck/"
-   #             ,basename(FP_files))
-#  file.copy(from=FP_files,to=NewLoc)
+  #             ,basename(FP_files))
+  #  file.copy(from=FP_files,to=NewLoc)
   
- # subset(FP_confident,select=c("Filename","CallNum","StTime","Dur","Fmin","BW"
+  # subset(FP_confident,select=c("Filename","CallNum","StTime","Dur","Fmin","BW"
   #                             ,"Espece"))
   
   #test=match(FP_confident$Filename,basename(FilesRSDB))
@@ -189,7 +216,7 @@ for (i in 1:length(ListSp)) #12 min sur la couche n°1
   
   stemp=nrow(subset(Votesp,VoteEsp>=min(subset(absc,y>0.50))))
   if(stemp>0)
-    {
+  {
     FP50=c(FP50,sum(subset((1-succes),VoteEsp>=min(subset(absc,y>0.50))))/stemp)
   }else{
     FP50=c(FP50,999)
@@ -229,5 +256,12 @@ Referentiel_seuils=as.data.frame(cbind(Espece=ListSp,Int,Pente
 fwrite(Referentiel_seuils,paste0("Referentiel_seuils_"
                                  ,substr(args,1,nchar(args)-4),"_",Sel
                                  ,ifelse(DiscardRSDB,"_D","")
-                                 ,ifelse(GroupingSp,"_G",""),".csv")
+                                 ,ifelse(GroupingSp,"_G","")
+                                 ,ifelse(FiltDur>0
+,paste0("_Dur",gsub("0.","",FiltDur)),"")
+,ifelse(FiltAmp>0
+        ,paste0("_Amp",gsub("0.","",FiltAmp)),"")
+
+,".csv")
        ,row.names=F,sep=";")
+

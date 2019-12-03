@@ -1,15 +1,17 @@
 library(data.table)
 
-#args="tabase3HF_1015France_IdMan.csv"
-args="IdExhaustifs.csv"
-args[2]="C:/wamp64/www/Exhaustifs/txt1/IdTot.csv"
+args="RSDB_HF_tabase3HF_sansfiltre_IdMan.csv"
+#args="IdExhaustifs.csv"
+args[2]="IdTot_woSR.csv"
 args[3]="SpeciesList.csv"
 args[4]=T #exhaustive? (mean every species within the files are identified so all IdAuto should have a IdMan match)
 
 
 IdMan=fread(args[1])
-colnames(IdMan)[10]="temps_fin"
-
+if(ncol(IdMan)>9)
+{
+  colnames(IdMan)[10]="temps_fin"
+}
 test=match("Group.1",colnames(IdMan))
 
 if(is.na(test))
@@ -125,7 +127,10 @@ for (i in 1:nlevels(as.factor(IdAuto$Group.1))) #0.02 sec / données
       
     }
   }
-  IdSubA$participation=IdSubM$participation[1]
+  if("participation" %in% names(IdSubM))
+  {
+    IdSubA$participation=IdSubM$participation[1]
+  }
   IdConc=rbind(IdConc,IdSubA)
   if(i%%1000==1)
   {
@@ -140,4 +145,6 @@ IdCSp=IdConc[,..ColIdCSpSel]
 
 IdConc$Indice=apply(IdCSp,MARGIN=1,FUN=max)
 
-fwrite(IdConc,paste0(substr(args[1],1,nchar(args[1])-10),"_IdConc.csv"))
+fwrite(IdConc,paste0(substr(args[1],1,nchar(args[1])-10),"_"
+                     ,gsub(".csv","",args[2]),"_IdConc.csv"))
+

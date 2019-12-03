@@ -1,10 +1,10 @@
 library(data.table)
 library(pROC)
-FIdConc="ProbEspC3_2019-03-25_G7"
+FIdConc="RSDB_HF_tabase3HF_sansfiltre_IdTot_woSR_IdConc"
 GroupingSp=T
 SpeciesList=fread("SpeciesList.csv")
-DiscardRSDB=T
-ColD="Group.1" #indicate where names of data identifier; "Filename" if from C1 Classifier, "Group.1" from C3
+DiscardRSDB=F
+ColD="Filename" #indicate where names of data identifier; "Filename" if from C1 Classifier, "Group.1" from C3
 
 
 
@@ -25,12 +25,11 @@ if(DiscardRSDB)
 
 if(sum(grepl("IdMan",names(IdConc)))==0)
 {
-  if(sum(grepl("IdMan",names(IdConc)))==0)
-  {
-    IdConc$IdMan=IdConc$ValidId
-  }else{
-    IdConc$IdMan=IdConc$valid.espece
-  }}
+  IdConc$IdMan=IdConc$ValidId
+}
+#else{
+#   IdConc$IdMan=IdConc$valid.espece
+#}
 
 if(GroupingSp)
 {
@@ -41,10 +40,12 @@ if(GroupingSp)
 
 ListSp=levels(as.factor(IdConc$IdMan))
 ListSp=subset(ListSp,ListSp!="")
+ListSp=subset(ListSp,ListSp %in% names(IdConc))
+
+#IdConc=subset(IdConc,!is.na(IdConc$IdMan))
 
 ROClist=list()
 AUCtot=vector()
-
 for (i in 1:length(ListSp))
 {
   Label=(IdConc$IdMan==ListSp[i])
@@ -53,10 +54,10 @@ for (i in 1:length(ListSp))
   #boxplot(as.data.frame(ScoreSp)[,1]~as.factor(Label))
   ROCSp=roc(Label,as.data.frame(ScoreSp)[,1])
   ROClist=c(ROClist,ROCSp)
-  png(filename=paste0("C:/Users/Yves Bas/Documents/VigieChiro/AUC/",ListSp[i],"_"
-                      ,FIdConc,".png"),res=100)
+  png(filename=paste0("C:/Users/Yves Bas/Documents/VigieChiro/AUC/",ListSp[i]
+                      ,"_",FIdConc,".png"),res=100)
   
-  print(    plot(ROCSp,type="l",main=ListSp[i]
+print(    plot(ROCSp,type="l",main=ListSp[i]
                  ,grid=c(0.1, 0.1),grid.col=c("green", "red"),xlim=c(0,1),ylim=c(0,1)
                  ,add=F)
   )
@@ -66,7 +67,8 @@ for (i in 1:length(ListSp))
   AUCSp=auc(ROCSp)
   AUCtot=c(AUCtot,AUCSp)
   print(paste(ListSp[i],AUCSp))
-}
+  }
+  
 
 AUCtable=data.frame(Espece=ListSp,AUC=AUCtot)
 

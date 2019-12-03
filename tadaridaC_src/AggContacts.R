@@ -2,7 +2,7 @@ library(data.table)
 #get arguments from the command line
 #args <- commandArgs(trailingOnly = TRUE)
 
-#args="C:/Users/Yves Bas/Documents/ProbEspHF.csv" #probabibility matrix file or directory containing "XXXProbEsp.csv" files
+#args="ProbEspHF2019-11-27_Cir.csv" #probabibility matrix file or directory containing "XXXProbEsp.csv" files
 #args[6]=F #TC
 #args[10]="SpeciesList.csv" #species list
 
@@ -224,3 +224,5 @@ if(exists("r")) #very dirty...
 #}else{
 #  print("no sound events to aggregate")
 #}
+
+  

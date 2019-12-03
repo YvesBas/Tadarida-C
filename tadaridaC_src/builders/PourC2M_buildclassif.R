@@ -1,13 +1,13 @@
 library(data.table)
 library(randomForest)
 MRF="C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R"
-PourC2M=fread("PourC2M2.csv")
+PourC2M=fread("PourC2M_Norfolk.csv")
 SpeciesList=fread("SpeciesList.csv")
 FactorsToExclude=c("Group.1","participation","ValidConf","ValidId"
                   ,"SuccessProb","VersionC","VersionD","Version"
                   ,"SpMaxF2","Order","LP","CaseTracking")
-#SuffixToExclude=c("_ntot","RT")
-SuffixToExclude="XXXXX"
+SuffixToExclude=c("_ntot","_RT")
+#SuffixToExclude="XXXXX"
 SubSamp=20
 GradientSamp=-0.1
 set.seed(921)

@@ -2,7 +2,9 @@ library(data.table) #used to generate features table from labelled sound databas
 #INPUTS (to be edited according to local path)
 #required:
 RSDB="C:/Users/Yves Bas/Documents/RSDB_HF"
-VarSel=fread("VarSel.csv")
+#RSDB="G:/RSDB_LF"
+
+#VarSel=fread("VarSel.csv") #to uncomment to select variables
 #optional:
 SpeciesList=as.data.frame(fread("SpeciesList.csv")) #to uncomment if a species grouping and/or filtering is necessary
 
@@ -48,7 +50,7 @@ Sys.time()
 my.data <- list() #reading label tables
 fichier=vector() #reconstituting wave file names
 fichier2=vector()
-for (i in 1:length(etilist1)){
+for (i in 1:length(etilist1)){ #5e5 labels/min
   if (file.size(etilist1[[i]])>0)
   {
     my.data[[i]] <- read.csv(etilist1[[i]],sep="\t",h=T,row.names=NULL)
@@ -81,7 +83,7 @@ for (i in 1:length(ListDate))
 
 Sys.time()
 my.data <- list()
-for (i in 1:length(parlist1)){ # 6 min
+for (i in 1:length(parlist1)){ # 3e5 calls/min
 #for (i in 1:20300){
   if (length(parlist1[[i]])==1)
   {
@@ -93,9 +95,12 @@ for (i in 1:length(parlist1)){ # 6 min
 Sys.time()
 
 param3=as.data.frame(rbindlist(my.data))
-param3=subset(param3,param3$FreqMP>=8)
-
+#param3=subset(param3,param3$FreqMP>=8)
+if(exists("VarSel")){
 param4=subset(param3,select=c("Filename","CallNum",VarSel$VarSel))
+}else{
+  param4=param3
+}
 
 #merging labels and features
 tabase=merge(param4,etitot2,by.x=c("Filename","CallNum"),by.y=c("fichier","Cri"),all.x=T)
@@ -112,15 +117,41 @@ if (exists("GeoFilter")==T)
   colFilter = match(GeoFilter, colnames(SpeciesList))
   SpeciesFilter=subset(SpeciesList,SpeciesList[,(colFilter)]=="x")
   tabase3=merge(tabase2,SpeciesFilter,by.x="Espece",by.y="Esp")
-}else{
+  fwrite(tabase3,paste0("tabase3HF_",GeoFilter,".csv"),row.names=F)
+  
+  }else{
   if(exists("SpeciesList")==TRUE){
     tabase3=merge(tabase2,SpeciesList,by.x="Espece",by.y="Esp")
-  }else{
+    }else{
     tabase3=cbind(tabase2,Nesp=tabase2$Espece)
-  }
+    }
+    fwrite(tabase3,paste0(RSDB,"_tabase3HF_sansfiltre.csv"),row.names=F)
+    
+}
+
+
+if(!exists("GeoFilter"))
+{
+SiteEsp=aggregate(tabase3$Filename
+                  ,by=c(list(tabase3$Espece),list(tabase3$Site))
+                  ,FUN=length)
+
+NbSiteEsp=aggregate(SiteEsp$Group.2
+                    ,by=list(SiteEsp$Group.1)
+                    ,FUN=length)
+
+NbDataEsp=aggregate(SiteEsp$x
+                    ,by=list(SiteEsp$Group.1)
+                    ,FUN=sum)
+
+NbSiteEsp$ndata=NbDataEsp$x
+
+fwrite(NbSiteEsp,paste0(RSDB,"_NbSiteEsp.csv"),row.names=F)
+
+
 }
 
 #converting (rarely) missing features to 0 #A SUPPRIMER
 #tabase3[is.na(tabase3)]=0
-fwrite(tabase3,paste0("tabase3HF_",GeoFilter,".csv"),row.names=F)
+
 

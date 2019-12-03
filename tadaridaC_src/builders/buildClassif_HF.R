@@ -2,9 +2,10 @@ library(data.table) #used to generate features table from labelled sound databas
 #INPUTS (to be edited according to local path)
 MRF="C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R"
 VarSel=fread("VarSel.csv")
-
-### A TESTER SANS FILTRE##
-GeoFilter="France" #to uncomment and edit if a species filtering is necessary
+SaveTemp=T
+Ftabase="RSDB_HF_tabase3HF_sansfiltre.csv"
+#Ftabase="tabase3HF_France_Cir.csv"
+StartForest=1
 
 #SETTINGS (both are intended to balance unvenness in species sampling)
 SubSamp=11 #level of minimum subsampling (= X times average number of calls per species)
@@ -16,7 +17,7 @@ library(randomForest)
 source(MRF) #Slightly modified randomForest function to allow empty sample strata
 
 
-tabase3=fread(paste0("tabase3HF_",GeoFilter,".csv"))
+tabase3=fread(Ftabase)
 
 tabase3$Nesp=factor(tabase3$Nesp,exclude=NULL)
 tabase3$Site=factor(tabase3$Site,exclude=NULL)
@@ -33,7 +34,7 @@ NbMoyCri=as.numeric(mean(table(tabase3$Nesp)))
 
 #iterative loop building each time a small random forest (10 trees) where sampling vary (see below)
 Sys.time()
-for (i in 1:50)
+for (i in StartForest:50)
 {
   Sys.time()
   print(paste("forest n°",i,Sys.time()))
@@ -68,13 +69,20 @@ for (i in 1:50)
   gc()
   
   # building the "10 trees" random forest
-  Predictors=tabase4[,5:154]
+  Predictors=subset(tabase4,select=VarSel$VarSel)
+
   
   ClassifEspTemp=randomForest(x=Predictors,y=tabase4$Nesp
                               ,replace=F
                               ,strata=StrataTemp
                               ,sampsize=SampTemp2
                               ,importance=F,ntree=10) 
+  
+  if(SaveTemp)
+  {
+    save (ClassifEspTemp,file=paste0("ClassifEsp"
+                                     ,substr(Sys.time(),1,10),"_",i,".learner")) 
+  }
   
   Sel10=1-as.numeric(sapply(StrataTemp
                             ,FUN=function(x) strsplit(as.character(x),split=" ")[[1]][2]))
@@ -84,17 +92,17 @@ for (i in 1:50)
   #combine it with previously build small forests
   if (exists("ClassifEspA")==TRUE) {ClassifEspA=combine(ClassifEspA,ClassifEspTemp)} else {ClassifEspA=ClassifEspTemp}
   Sys.time()
-  save (ClassifEspA,file=paste0("ClassifEsp",GeoFilter
-                                ,substr(Sys.time(),1,10),"_",i,".learner")) 
-  }
+}
 Sys.time()
 
 
-save (ClassifEspA,file=paste0("ClassifEsp",GeoFilter
+save (ClassifEspA,file=paste0("ClassifEsp_",gsub(".csv","",Ftabase),"_"
                               ,substr(Sys.time(),1,10),".learner")) 
 Sys.time()
 
 
+fwrite(as.data.frame(ClassifEspVotes)
+       ,paste0("ClassifEspVotes",substr(Sys.time(),1,10),".csv"))
 
 SumProb=apply(ClassifEspVotes,MARGIN=1,FUN=sum)
 ProbEsp0=ClassifEspVotes/SumProb
