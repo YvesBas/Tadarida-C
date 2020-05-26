@@ -40,7 +40,7 @@ if (length(obslist) == 0) {
   q()
 }
 #FIO=file.info(obslist)
-obslist=subset(obslist,FIO$size>1000)
+#obslist=subset(obslist,FIO$size>1000)
 
 
 #fwrite(as.list(obslist),"obslist.csv")
@@ -54,26 +54,28 @@ my.data <- list()
 # for(f in 1:length(obslist)) {
 for(f in start:end) {   #0.026 sec/files
   #print(obslist[[f]])    
-  my.data[[f]] <- read.table(obslist[[f]],sep="\t",h=T)
+  if(FIO$size[f]<1000){
+    my.data[[f]] <- read.table(obslist[[f]],sep="\t",h=T)
+  }
 }
 Sys.time()
 
 # load the classifier
 if (exists("ClassifEspA")==FALSE) 
-  {
+{
   if(substr(basename(obslist[1]),1,3)=="Cir")
   {
     load(args[15])
   }else{
-  load(args[2])
+    load(args[2])
   }
-    }
+}
 if (exists("ClassifEspA")==FALSE) ClassifEspA=ClassifEsp3 #temp for test
 
 #print(ls())
 
 #concatenate all the features table
-CTP=as.data.frame(rbindlist(my.data))
+CTP=as.data.frame(rbindlist(my.data,use.names=T,fill=T))
 
 
 #fwrite(CTP,"CTP.csv")
@@ -162,5 +164,5 @@ if(nrow(CTP)>0)
   
 }else{
   print("no sound events to classify")
-skip=T
+  skip=T
 }
