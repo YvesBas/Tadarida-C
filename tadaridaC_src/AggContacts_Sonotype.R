@@ -128,12 +128,9 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   #PED = probability of the "most probable species"
   colnames(ProbEspDom0)[ncol(ProbEspDom0)]="PED"
   
-  #get the call with maximum probability
+  #get the call with maximum probability and keep the parameter for best mode
   ProbM=left_join(ProbEspDom0,MaxparFich,by=c("Filename"="Group.1"))
   ProbCallMax=subset(ProbM,ProbM$PED==ProbM$ScoreMax)
-  
-  
-  
   
   #If there is more than 1 call per file, proceed with sorting, else go directly at storing
   #If more than one call per file
@@ -143,12 +140,38 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   ProbEspDom_1call=ProbEspDom0[!(duplicated(ProbEspDom0$Filename) | 
                                    duplicated(ProbEspDom0$Filename, fromLast = TRUE)), ]
   
+  
+  #### ScoreSec ####
+  #the PED probability is converted into a "secondary species score, 
+  #adding penalties for harmonics and long duration DSEs
+  ScoreSec=(-1.5+32.7*ProbEspDom01$PED
+            +0.696*ProbEspDom01$HU+0.459*ProbEspDom01$HL)
+  
+  ####sound events are separated in two groups: ################################
+  
+  #(1) those whose "most probable species" score is >0
+  #AND belong to the dominant frequency mode
+  #(hence go in "ProbEspN1")
+  #they are considered to be from the same source and thus are used to 
+  #compute the probability distribution among species (MaxparFichN1) 
+  #and ancillary data (median frequency, time of start and time of end during the file)
+  
+  #(2) those whose "most probable species" score is <0
+  #AND not belonging to the dominant frequency mode
+  #(hence go in "ProbEsp")
+  #they are considered to be from other species 
+  #they are to be identified in next rounds of the loop 
+  
+  ProbEspN1_0=subset(ProbEspDom01,(ScoreSec>0))
+  
+  
+  
   #Identify each call belonging to the dominant mode within the dominant sonotype
   #Subset rows belonging to the dominant sonotype
   PourModeTemp=subset(ProbEspDom01, ProbEspDom01$MaxSonotype == Id)
   ListFilenames=names(table(PourModeTemp$Filename))
   
-  #### Find the dominant mode of the peak frequency ####
+  #### Find the dominant mode of the chosen parameter (arg[19]) ####
   if(exists("Modes")==T){rm(Modes)}
   if(exists("ModeInf")==T){rm(ModeInf)}
   if(exists("ModeSup")==T){rm(ModeSup)}
@@ -241,28 +264,17 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
                                    ProbEspDom1[,args[19]]< ProbEspDom1$ModeSup &
                                    ProbEspDom1[,args[19]]> ProbEspDom1$ModeInf, T, F)
   
-  #### ScoreSec ####
-  #the PED probability is converted into a "secondary species score, 
-  #adding penalties for harmonics and long duration DSEs
-  ScoreSec=(-1.5+32.7*ProbEspDom1$PED
-            +0.696*ProbEspDom1$HU+0.459*ProbEspDom1$HL)
+ 
   
-  ####sound events are separated in two groups: ################################
   
-  #(1) those whose "most probable species" score is >0
-  #AND belong to the dominant frequency mode
-  #(hence go in "ProbEspN1")
-  #they are considered to be from the same source and thus are used to 
-  #compute the probability distribution among species (MaxparFichN1) 
-  #and ancillary data (median frequency, time of start and time of end during the file)
   
-  #(2) those whose "most probable species" score is <0
-  #AND not belonging to the dominant frequency mode
-  #(hence go in "ProbEsp")
-  #they are considered to be from other species 
-  #they are to be identified in next rounds of the loop 
+  ########
   
-  ProbEspN1_0=subset(ProbEspDom1,(ScoreSec>0 & IsDominant))
+  
+  
+  
+  
+  
   
   #Add files that only contained 1 call and take peak frequency as dominant mode
   ProbEspN1 = bind_rows (ProbEspN1_0, ProbEspDom_1call)
