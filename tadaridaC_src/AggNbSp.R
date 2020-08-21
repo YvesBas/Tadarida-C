@@ -180,6 +180,13 @@ IdTot4=cbind(IdTot4,VersionD=CTP$Version[1],VersionC=Version)
 #IdTot4$Order=NULL
 
 #compute real success probability
+if(is.na(args[13])){
+  NamesSp=subset(names(IdTot4),names(IdTot4) %in% SpeciesList$Esp)
+  ScoreSp=subset(IdTot4,select=NamesSp)
+  IdTot4$SuccessProb=apply(ScoreSp,MARGIN=1,max)
+}else{
+  
+
 if(substr(IdTot$Group.1[1],1,3)=="Cir")
 {
   RefErrorRisk=fread(args[17])
@@ -206,7 +213,7 @@ IdTottemp$SuccessProb=pmin(IdTottemp$SuccessProb,0.99)
 
 IdTot4=IdTottemp
 
-
+}
 
 if(args[6])
 {

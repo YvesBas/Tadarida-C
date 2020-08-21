@@ -1,16 +1,16 @@
 library(data.table) #used to generate features table from labelled sound database
 #INPUTS (to be edited according to local path)
 #required:
-RSDB="C:/Users/Yves Bas/Documents/RSDB_HF"
+RSDB="D:/RSDB_HF/"
 #RSDB="G:/RSDB_LF"
 
 #VarSel=fread("VarSel.csv") #to uncomment to select variables
 #optional:
-SpeciesList=as.data.frame(fread("SpeciesList.csv")) #to uncomment if a species grouping and/or filtering is necessary
+SpeciesList=as.data.frame(fread("D:/Post-Doc/Vigie-Chiro et Indicateurs_ecologiques/Classificateur/SpeciesListComplete.csv", header=T)) #to uncomment if a species grouping and/or filtering is necessary
 
 
 ### A TESTER SANS FILTRE##
-GeoFilter="France" #to uncomment and edit if a species filtering is necessary
+#GeoFilter="France" #to uncomment and edit if a species filtering is necessary
 
 
 #loading randomForest library to build the classifier then modified randomforest function
