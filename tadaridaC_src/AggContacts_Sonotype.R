@@ -148,7 +148,11 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   #adding penalties for harmonics and long duration DSEs
   ScoreSec=(-1.5+32.7*ProbEspDom01$PED
             +0.696*ProbEspDom01$HU+0.459*ProbEspDom01$HL)
-  ScoreSec2=
+  #Calculate difference between 2 best scores
+  ScoreSec2=as.numeric(apply(ProbEspDom01[,ColPE_Sp], MARGIN = 1, 
+                             max) -
+                         apply(ProbEspDom01[,ColPE_Sp], MARGIN = 1, 
+                               function(x) sort(x,partial=length(x)-1)[length(x)-1]))
   
   ####sound events are separated in two groups: ################################
   
@@ -165,7 +169,11 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   #they are considered to be from other species 
   #they are to be identified in next rounds of the loop 
   
-  PourModeTemp=subset(ProbEspDom01,(ScoreSec>0))
+  if (TRUE %in% ScoreSec2 > 0.1){
+    PourModeTemp=subset(ProbEspDom01,(ScoreSec>0 & ScoreSec2>0.1))
+  }else{
+    PourModeTemp=subset(ProbEspDom01,ScoreSec>0)
+  }
   
   #Identify each call belonging to the dominant mode within the dominant sonotype
   #Subset rows belonging to the dominant sonotype
@@ -271,7 +279,11 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
                                    ProbEspDom1[,args[19]]> ProbEspDom1$ModeInf, T, F)
   
   #Subset calls in the dominant mode of the dominant sonotype
-  ProbEspN1_0 = subset(ProbEspDom1, IsDominant & ScoreSec>0)
+  if (TRUE %in% ScoreSec2 > 0.1){
+    ProbEspN1_0 = subset(ProbEspDom1, IsDominant & ScoreSec>0 & ScoreSec2>0.1)
+  }else{
+    ProbEspN1_0 = subset(ProbEspDom1, IsDominant & ScoreSec>0) 
+  }
   
   #Add files that only contained 1 call and take parameter (args[19]) as dominant mode
   ProbEspN1 = bind_rows (ProbEspN1_0, ProbEspDom_1call)
@@ -346,8 +358,11 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   
   #sound events kept for the next round ######################################
   #if "ScoreSec" is negative or if not belonging to the dominant frequency mode
-  ProbEsp=subset(ProbEspDom1[,1:(ncol(ProbEspDom1)-7)],ScoreSec<0 | 
+  ProbEsp=subset(ProbEspDom1[,1:(ncol(ProbEspDom1)-7)], 
+                 ScoreSec<0 | 
+                   ScoreSec2<0.1 | 
                    !ProbEspDom1$IsDominant)
+  
   
   if(StopLoop)
   {ProbEsp=ProbEsp[0,]}  
