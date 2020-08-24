@@ -1,5 +1,6 @@
 library(data.table)
 library(dplyr)
+library(Hmisc)
 #get arguments from the command line
 #args <- commandArgs(trailingOnly = TRUE)
 
@@ -7,7 +8,7 @@ library(dplyr)
 #args[6]=F #TC
 #args[10]="SpeciesList.csv" #species list
 
-Version=7.2 #allow to track results from different classifier versions
+Version=7.4 #allow to track results from different classifier versions
 
 # Function find_modes
 find_modes<- function(x) {
@@ -131,6 +132,7 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   #get the call with maximum probability and keep the parameter for best mode
   ProbM=left_join(ProbEspDom0,MaxparFich,by=c("Filename"="Group.1"))
   ProbCallMax=subset(ProbM,ProbM$PED==ProbM$ScoreMax)
+  ProbCallMax=ProbCallMax[!duplicated(ProbCallMax$Filename),]
   
   #If there is more than 1 call per file, proceed with sorting, else go directly at storing
   #If more than one call per file
@@ -146,6 +148,7 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   #adding penalties for harmonics and long duration DSEs
   ScoreSec=(-1.5+32.7*ProbEspDom01$PED
             +0.696*ProbEspDom01$HU+0.459*ProbEspDom01$HL)
+  ScoreSec2=
   
   ####sound events are separated in two groups: ################################
   
@@ -162,13 +165,11 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   #they are considered to be from other species 
   #they are to be identified in next rounds of the loop 
   
-  ProbEspN1_0=subset(ProbEspDom01,(ScoreSec>0))
-  
-  
+  PourModeTemp=subset(ProbEspDom01,(ScoreSec>0))
   
   #Identify each call belonging to the dominant mode within the dominant sonotype
   #Subset rows belonging to the dominant sonotype
-  PourModeTemp=subset(ProbEspDom01, ProbEspDom01$MaxSonotype == Id)
+  #PourModeTemp=subset(ProbEspDom01, ProbEspDom01$MaxSonotype == Id)
   ListFilenames=names(table(PourModeTemp$Filename))
   
   #### Find the dominant mode of the chosen parameter (arg[19]) ####
@@ -181,7 +182,13 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
       Density_FreqMP=density(PourModeTemp2sub[,args[19]], adjust=1)
       if(is.numeric(find_modes(Density_FreqMP$y))){
         modesFC=Density_FreqMP$x[find_modes(Density_FreqMP$y)]
-        mainmode=Density_FreqMP$x[which.max(Density_FreqMP$y)]
+        #        mainmode=Density_FreqMP$x[which.max(Density_FreqMP$y)]
+        # Find mode closest to the parameter of the call with highest PED
+        findmode=find.matches(ProbCallMax[,args[19]][which(ProbCallMax$Filename==ListFilenames[k])],
+                              modesFC, 
+                              tol=200,
+                              maxmatch=1)
+        mainmode=modesFC[findmode$matches]
         
       }else{ # if returns 'This is a monotonic distribution'
         modesFC=mean(PourModeTemp2sub[,args[19]])
@@ -193,16 +200,16 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
     
     mainmode2=which(modesFC==mainmode)
     
-    #PLOT DEBUG
-    if(ListFilenames[k]=="20191112_211634_000.wav")
+    ####PLOT DEBUG####
+    if(ListFilenames[k]=="20191112_211639_000.wav")
     {
       print(paste("j=", j, "k=", k, "mainmode=", mainmode, "modesFC=",  
-                  unique(PourModeTemp2sub$MaxSonotype), sep=" "))
+                  unique(PourModeTemp2sub$Id), sep=" "))
       print(modesFC)
       print(plot(Density_FreqMP, 
-                 main = paste (j, k, unique(PourModeTemp2sub$MaxSonotype))),
+                 main = paste (j, k, unique(PourModeTemp2sub$Id))),
             axis(1, seq(0,200,10)))
-      print(cbind(PourModeTemp2sub[,args[19]], PourModeTemp2sub$MaxSonotype))
+      print(cbind(PourModeTemp2sub[,args[19]], PourModeTemp2sub$Id))
     }
     
     #Defines mode inferior threshold
@@ -259,24 +266,14 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   ProbEspDom1$ModeInf[which(is.na(ProbEspDom1$ModeInf))]=-999
   ProbEspDom1$ModeSup[which(is.na(ProbEspDom1$ModeSup))]=999
   
-  #Assess whether each call belongs to the dominant frequency mode of the dominant sonotype
-  ProbEspDom1$IsDominant= ifelse(ProbEspDom1$MaxSonotype==ProbEspDom1$Id & 
-                                   ProbEspDom1[,args[19]]< ProbEspDom1$ModeSup &
+  # #Assess whether each call belongs to the dominant frequency mode of the dominant sonotype
+  ProbEspDom1$IsDominant= ifelse(ProbEspDom1[,args[19]]< ProbEspDom1$ModeSup &
                                    ProbEspDom1[,args[19]]> ProbEspDom1$ModeInf, T, F)
   
- 
+  #Subset calls in the dominant mode of the dominant sonotype
+  ProbEspN1_0 = subset(ProbEspDom1, IsDominant & ScoreSec>0)
   
-  
-  
-  ########
-  
-  
-  
-  
-  
-  
-  
-  #Add files that only contained 1 call and take peak frequency as dominant mode
+  #Add files that only contained 1 call and take parameter (args[19]) as dominant mode
   ProbEspN1 = bind_rows (ProbEspN1_0, ProbEspDom_1call)
   ProbEspN1$MainMode[is.na(ProbEspN1$MainMode)]=ProbEspN1[,args[19]][is.na(ProbEspN1$MainMode)]
   ProbEspN1$IsDominant[is.na(ProbEspN1$IsDominant)]=TRUE
@@ -349,7 +346,7 @@ while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
   
   #sound events kept for the next round ######################################
   #if "ScoreSec" is negative or if not belonging to the dominant frequency mode
-  ProbEsp=subset(ProbEspDom1[,1:(ncol(ProbEspDom1)-8)],ScoreSec<0 | 
+  ProbEsp=subset(ProbEspDom1[,1:(ncol(ProbEspDom1)-7)],ScoreSec<0 | 
                    !ProbEspDom1$IsDominant)
   
   if(StopLoop)
@@ -377,10 +374,10 @@ IdTot= IdTot[order(IdTot$Filename, IdTot$SpMaxF2), ]
 
 if(exists("r"))
 {
-  fwrite(IdTot,paste0(PreFichPE,"/IdTot.csv"))
+  fwrite(IdTot,paste0(PreFichPE,"IdTot.csv"))
   fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(PreFichPE,"Idshort.csv"))
 }else{
-  fwrite(IdTot,paste0(tadir,"/IdTot.csv"))
+  fwrite(IdTot,paste0(tadir,"IdTot.csv"))
   fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(tadir,"/Idshort.csv"))
 }
 
