@@ -36,6 +36,8 @@ args[16]="CNS_RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc.learner"
 args[17]="Referentiel_seuils_RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc__G.csv"
 args[18]=1 #block number 
 args[19]="CO2_FIF" # The variable used to build modes, i.e. to build groups of calls
+args[20]=1.5 # the threshold of ScoreSec used to separate secondary species
+#args[21]="Car340130-2019-Pass1-Z8-1715-0_20190209_235945_000.ta" # If provided, the script will only run for this file
 }
 
 print(getwd())
@@ -43,6 +45,10 @@ print(args)
 
 tadir=args[1] # Directory containing .ta files of sounds to classify
 talistot=list.files(tadir,pattern=".ta$",full.names=T) # Lists .ta files
+
+if (!is.na(args[21])){
+  talistot=subset(talistot, talistot == paste0(args[1], "/", args[21]))
+}
 
 # Applies classifier and sorts results by sonotype
 if(length(talistot)>as.numeric(args[14])*(as.numeric(args[18])-1))

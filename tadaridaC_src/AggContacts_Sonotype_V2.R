@@ -8,7 +8,7 @@ library(Hmisc)
 #args[6]=F #TC
 #args[10]="SpeciesList.csv" #species list
 
-Version=7.2 #allow to track results from different classifier versions
+Version=7.4 #allow to track results from different classifier versions
 
 # Function find_modes
 find_modes<- function(x) {
@@ -95,7 +95,7 @@ if(sum(is.na(TestConform[1:(length(TestConform)-2)]))>0)
 j=0
 if(exists("IdTot")==T){rm(IdTot)}
 StopLoop=F
-while (nrow(ProbEsp)>0)
+while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
 {
   j=j+1
   
@@ -108,6 +108,7 @@ while (nrow(ProbEsp)>0)
   ProbEspSp=subset(ProbEsp,select=ColPE_Sp)
   MaxparFich<-aggregate(ProbEspSp,by=list(ProbEsp$Filename),FUN=max)
   MaxparFich$ScoreMax=apply(MaxparFich[,2:ncol(MaxparFich)],MARGIN=1,max)
+  
   
   #find the most probable species in each file
   SpMax<-max.col(MaxparFich[,2:ncol(MaxparFich)],ties.method = "first")
@@ -140,26 +141,47 @@ while (nrow(ProbEsp)>0)
   ProbEspDom_1call=ProbEspDom0[!(duplicated(ProbEspDom0$Filename) | 
                                    duplicated(ProbEspDom0$Filename, fromLast = TRUE)), ]
   
+  
   #### ScoreSec ####
   #the PED probability is converted into a "secondary species score, 
   #adding penalties for harmonics and long duration DSEs
-  ScoreSec=(-1.5+32.7*ProbEspDom01$PED
+  ScoreSec1=(-1.5+32.7*ProbEspDom01$PED
             +0.696*ProbEspDom01$HU+0.459*ProbEspDom01$HL)
+  #Calculate difference between 2 best scores
+  ScoreSec2=as.numeric(apply(ProbEspDom01[,ColPE_Sp], MARGIN = 1, 
+                             max) -
+                         apply(ProbEspDom01[,ColPE_Sp], MARGIN = 1, 
+                               function(x) sort(x,partial=length(x)-1)[length(x)-1]))
+  ScoreSec=ScoreSec1
+  
+  ####sound events are separated in two groups: ################################
+  
+  #(1) those whose "most probable species" score is >0
+  #AND belong to the dominant frequency mode
+  #(hence go in "ProbEspN1")
+  #they are considered to be from the same source and thus are used to 
+  #compute the probability distribution among species (MaxparFichN1) 
+  #and ancillary data (median frequency, time of start and time of end during the file)
+  
+  #(2) those whose "most probable species" score is <0
+  #AND not belonging to the dominant frequency mode
+  #(hence go in "ProbEsp")
+  #they are considered to be from other species 
+  #they are to be identified in next rounds of the loop 
+  
+  PourModeTemp=subset(ProbEspDom01,ScoreSec>as.numeric(args[20]))
   
   #Identify each call belonging to the dominant mode within the dominant sonotype
   #Subset rows belonging to the dominant sonotype
-  PourModeTemp=subset(ProbEspDom01, ScoreSec>as.numeric(args[20]))
+  #PourModeTemp=subset(ProbEspDom01, ProbEspDom01$MaxSonotype == Id)
   ListFilenames=names(table(PourModeTemp$Filename))
   
-  if(!is.null(ListFilenames)){
-    
-  #### Find the dominant mode of the peak frequency ####
+  #### Find the dominant mode of the chosen parameter (arg[19]) ####
   if(exists("Modes")==T){rm(Modes)}
   if(exists("ModeInf")==T){rm(ModeInf)}
   if(exists("ModeSup")==T){rm(ModeSup)}
   for (k in 1:length(ListFilenames))
-  {
-
+    {
     PourModeTemp2sub=subset(PourModeTemp, PourModeTemp$Filename==ListFilenames[k])
     if(nrow(PourModeTemp2sub)>1){
       Density_FreqMP=density(PourModeTemp2sub[,args[19]], adjust=0.3)
@@ -197,17 +219,46 @@ while (nrow(ProbEsp)>0)
     
     #Defines mode inferior threshold
     #If modes are separated by less than 5 kHz, takes threshold before previous mode
-    ModeInfTemp = modesFC[mainmode2]-5
+    #Allows to group up to 5 close modes
+    if(mainmode2>1)
+    {
+      if(modesFC[mainmode2]-modesFC[mainmode2-1]>5){
+        ModeInfTemp=(modesFC[mainmode2-1]+modesFC[mainmode2])/2
+      }else{if(mainmode2>2){
+        if(modesFC[mainmode2]-modesFC[mainmode2-2]>5){
+          ModeInfTemp=(modesFC[mainmode2-2]+modesFC[mainmode2-1])/2
+        }else{if(mainmode2>3){
+          ModeInfTemp=(modesFC[mainmode2-3]+modesFC[mainmode2-2])/2
+        }else{ModeInfTemp=-999}
+        }
+      }else{ModeInfTemp=-999}
+      }
+    }else{ModeInfTemp=-999}
     
     #Defines mode superior threshold
     # If modes are separated by less than 5 kHz, takes threshold after following mode
-    ModeSupTemp = modesFC[mainmode2]+ 5
+    #Allows to group up to 5 close modes
+    if(mainmode2<length(modesFC))
+    {
+      if(modesFC[mainmode2+1]-modesFC[mainmode2]>5){
+        ModeSupTemp=(modesFC[mainmode2+1]+modesFC[mainmode2])/2
+      }else{if(mainmode2<(length(modesFC)-1)){
+        if(modesFC[mainmode2+2]-modesFC[mainmode2]>5){
+          ModeSupTemp=(modesFC[mainmode2+2]+modesFC[mainmode2+1])/2
+        }else{
+          if(mainmode2<(length(modesFC)-2)){
+            ModeSupTemp=(modesFC[mainmode2+3]+modesFC[mainmode2+2])/2
+          }else{ModeSupTemp=999}
+        }
+      }else{ModeSupTemp=999}
+      }
+    }else{ModeSupTemp=999
+    }
     
     if(exists("Modes")==T){Modes=c(Modes, mainmode)}else{Modes=mainmode}
     if(exists("ModeInf")==T){ModeInf=c(ModeInf, ModeInfTemp)}else{ModeInf=ModeInfTemp}
     if(exists("ModeSup")==T){ModeSup=c(ModeSup, ModeSupTemp)}else{ModeSup=ModeSupTemp}
   }
-
   
   # Store the dominant mode of the peak frequency for the dominant sonotype
   FileMode=as.data.frame(cbind(ListFilenames, Modes, ModeInf, ModeSup))
@@ -220,41 +271,17 @@ while (nrow(ProbEsp)>0)
   ProbEspDom1$ModeInf[which(is.na(ProbEspDom1$ModeInf))]=-999
   ProbEspDom1$ModeSup[which(is.na(ProbEspDom1$ModeSup))]=999
   
-  #Assess whether each call belongs to the dominant frequency mode of the dominant sonotype
+  # #Assess whether each call belongs to the dominant frequency mode of the dominant sonotype
   ProbEspDom1$IsDominant= ifelse(ProbEspDom1[,args[19]]< ProbEspDom1$ModeSup &
                                    ProbEspDom1[,args[19]]> ProbEspDom1$ModeInf, T, F)
   
+  #Subset calls in the dominant mode of the dominant sonotype
+  ProbEspN1_0 = subset(ProbEspDom1, IsDominant & ScoreSec>as.numeric(args[20]))
   
-  ####sound events are separated in two groups: ################################
-  
-  #(1) those whose "most probable species" score is > args[20]
-  #AND belong to the dominant frequency mode
-  #(hence go in "ProbEspN1")
-  #they are considered to be from the same source and thus are used to 
-  #compute the probability distribution among species (MaxparFichN1) 
-  #and ancillary data (median frequency, time of start and time of end during the file)
-  
-  #(2) those whose "most probable species" score is < args[20]
-  #OR not belonging to the dominant frequency mode
-  #(hence go in "ProbEsp")
-  #they are considered to be from other species 
-  #they are to be identified in next rounds of the loop 
-  
-  ScoreSec=(-1.5+32.7*ProbEspDom1$PED
-            +0.696*ProbEspDom1$HU+0.459*ProbEspDom1$HL)
-  
-  ProbEspN1_0=subset(ProbEspDom1,IsDominant & ScoreSec>as.numeric(args[20]))
-  
-  #Add files that only contained 1 call and take peak frequency as dominant mode
+  #Add files that only contained 1 call and take parameter (args[19]) as dominant mode
   ProbEspN1 = bind_rows (ProbEspN1_0, ProbEspDom_1call)
   ProbEspN1$MainMode[is.na(ProbEspN1$MainMode)]=ProbEspN1[,args[19]][is.na(ProbEspN1$MainMode)]
   ProbEspN1$IsDominant[is.na(ProbEspN1$IsDominant)]=TRUE
-  
-  }else{
-    ProbEspN1=ProbEspDom_1call
-    ProbEspN1$MainMode=ProbEspN1[,args[19]]
-    ProbEspN1$IsDominant=TRUE
-      }
   
   #to treat rare cases of low probabilities for all "species"
   if(nrow(ProbEspN1)==0) 
@@ -264,17 +291,10 @@ while (nrow(ProbEsp)>0)
     
   }
   
-  #sound events kept for the next round ######################################
-  #if "ScoreSec" is < args[20] OR if not belonging to the dominant frequency mode
-  ScoreSec=(-1.5+32.7*ProbEspDom1$PED
-               +0.696*ProbEspDom1$HU+0.459*ProbEspDom1$HL)
-  
-  ProbEsp=subset(ProbEspDom1[,1:(ncol(ProbEspDom1)-7)],ScoreSec<as.numeric(args[20]) | 
-                   !ProbEspDom1$IsDominant)
-  
   ProbEspSpN1=subset(ProbEspN1,select=ColPE_Sp)
   ProbEspSpN1$MainMode=round(ProbEspN1$MainMode, digits=1)
   MaxparFichN1<-aggregate(ProbEspSpN1,by=list(ProbEspN1$Filename),FUN=max)
+  ID = ProbEspN1$Id[1]
   
   #### Compute ancillary data ####
   FreqMed1=aggregate((ProbEspN1$Fmin+ProbEspN1$BW/2),by=list(ProbEspN1$Filename),function(x) round(quantile(x,0.5))) #median frequency of sound events
@@ -326,16 +346,19 @@ while (nrow(ProbEsp)>0)
                ,Tstart=TDeb1$x,Tend=TFin1$x,NbCris=NbCris1$x
                ,DurMed=Dur50$x,Dur90=Dur90$x,Ampm50=Ampm50$x
                ,Ampm90=Ampm90$x,AmpSMd=AmpSMd$x,DiffME=DiffME,SR=SR
-               ,Order=paste0("N",j))
-  
+               ,Order=paste0("N",j), ID=ID)
   if(exists("IdTot")==T){IdTot=rbind(IdTot,IdTemp)}else{IdTot=IdTemp}
   
   
- if(!T %in% duplicated(ProbEspN1$Filename))
- {
-   ProbEsp=ProbEsp[0,]
- }
-
+  #sound events kept for the next round ######################################
+  #if "ScoreSec" is negative or if not belonging to the dominant frequency mode
+  ScoreSecbis=(-1.5+32.7*ProbEspDom1$PED
+             +0.696*ProbEspDom1$HU+0.459*ProbEspDom1$HL)
+  
+  ProbEsp=subset(ProbEspDom1[,1:(ncol(ProbEspDom1)-7)], 
+                 ScoreSecbis<as.numeric(args[20]) | !ProbEspDom1$IsDominant)
+  
+  
   if(StopLoop)
   {ProbEsp=ProbEsp[0,]}  
 }
@@ -359,13 +382,12 @@ IdTot$Version=Version
 IdTot$Filename=IdTot$Group.1
 IdTot= IdTot[order(IdTot$Filename, IdTot$SpMaxF2), ]
 
-
 if(exists("r"))
 {
   fwrite(IdTot,paste0(PreFichPE,"IdTot.csv"))
   fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(PreFichPE,"Idshort.csv"))
 }else{
-  fwrite(IdTot,paste0(tadir,"/IdTot.csv"))
+  fwrite(IdTot,paste0(tadir,"IdTot.csv"))
   fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(tadir,"/Idshort.csv"))
 }
 

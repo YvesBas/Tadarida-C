@@ -95,7 +95,7 @@ if(sum(is.na(TestConform[1:(length(TestConform)-2)]))>0)
 j=0
 if(exists("IdTot")==T){rm(IdTot)}
 StopLoop=F
-while (nrow(ProbEsp)>0)
+while (nrow(ProbEsp)>0 & (T %in% duplicated(ProbEsp$Filename)))
 {
   j=j+1
   
@@ -151,15 +151,12 @@ while (nrow(ProbEsp)>0)
   PourModeTemp=subset(ProbEspDom01, ScoreSec>as.numeric(args[20]))
   ListFilenames=names(table(PourModeTemp$Filename))
   
-  if(!is.null(ListFilenames)){
-    
   #### Find the dominant mode of the peak frequency ####
   if(exists("Modes")==T){rm(Modes)}
   if(exists("ModeInf")==T){rm(ModeInf)}
   if(exists("ModeSup")==T){rm(ModeSup)}
   for (k in 1:length(ListFilenames))
-  {
-
+    {
     PourModeTemp2sub=subset(PourModeTemp, PourModeTemp$Filename==ListFilenames[k])
     if(nrow(PourModeTemp2sub)>1){
       Density_FreqMP=density(PourModeTemp2sub[,args[19]], adjust=0.3)
@@ -184,7 +181,7 @@ while (nrow(ProbEsp)>0)
     mainmode2=which(modesFC==mainmode)
     
     ####PLOT DEBUG####
-    if(ListFilenames[k]=="20191112_211639_000.wav")
+    if(ListFilenames[k]=="Car340130-2019-Pass1-Z8-1715-0_20190209_235710_000.wav")
     {
       print(paste("j=", j, "k=", k, "mainmode=", mainmode, "modesFC=",  
                   unique(PourModeTemp2sub$Id), sep=" "))
@@ -197,17 +194,46 @@ while (nrow(ProbEsp)>0)
     
     #Defines mode inferior threshold
     #If modes are separated by less than 5 kHz, takes threshold before previous mode
-    ModeInfTemp = modesFC[mainmode2]-5
+    #Allows to group up to 5 close modes
+    if(mainmode2>1)
+    {
+      if(modesFC[mainmode2]-modesFC[mainmode2-1]>5){
+        ModeInfTemp=(modesFC[mainmode2-1]+modesFC[mainmode2])/2
+      }else{if(mainmode2>2){
+        if(modesFC[mainmode2]-modesFC[mainmode2-2]>5){
+          ModeInfTemp=(modesFC[mainmode2-2]+modesFC[mainmode2-1])/2
+        }else{if(mainmode2>3){
+          ModeInfTemp=(modesFC[mainmode2-3]+modesFC[mainmode2-2])/2
+        }else{ModeInfTemp=-999}
+        }
+      }else{ModeInfTemp=-999}
+      }
+    }else{ModeInfTemp=-999}
     
     #Defines mode superior threshold
     # If modes are separated by less than 5 kHz, takes threshold after following mode
-    ModeSupTemp = modesFC[mainmode2]+ 5
+    #Allows to group up to 5 close modes
+    if(mainmode2<length(modesFC))
+    {
+      if(modesFC[mainmode2+1]-modesFC[mainmode2]>5){
+        ModeSupTemp=(modesFC[mainmode2+1]+modesFC[mainmode2])/2
+      }else{if(mainmode2<(length(modesFC)-1)){
+        if(modesFC[mainmode2+2]-modesFC[mainmode2]>5){
+          ModeSupTemp=(modesFC[mainmode2+2]+modesFC[mainmode2+1])/2
+        }else{
+          if(mainmode2<(length(modesFC)-2)){
+            ModeSupTemp=(modesFC[mainmode2+3]+modesFC[mainmode2+2])/2
+          }else{ModeSupTemp=999}
+        }
+      }else{ModeSupTemp=999}
+      }
+    }else{ModeSupTemp=999
+    }
     
     if(exists("Modes")==T){Modes=c(Modes, mainmode)}else{Modes=mainmode}
     if(exists("ModeInf")==T){ModeInf=c(ModeInf, ModeInfTemp)}else{ModeInf=ModeInfTemp}
     if(exists("ModeSup")==T){ModeSup=c(ModeSup, ModeSupTemp)}else{ModeSup=ModeSupTemp}
   }
-
   
   # Store the dominant mode of the peak frequency for the dominant sonotype
   FileMode=as.data.frame(cbind(ListFilenames, Modes, ModeInf, ModeSup))
@@ -227,34 +253,25 @@ while (nrow(ProbEsp)>0)
   
   ####sound events are separated in two groups: ################################
   
-  #(1) those whose "most probable species" score is > args[20]
+  #(1) those whose "most probable species" score is over 2% 
   #AND belong to the dominant frequency mode
   #(hence go in "ProbEspN1")
   #they are considered to be from the same source and thus are used to 
   #compute the probability distribution among species (MaxparFichN1) 
   #and ancillary data (median frequency, time of start and time of end during the file)
   
-  #(2) those whose "most probable species" score is < args[20]
+  #(2) those whose "most probable species" score is under 2% 
   #OR not belonging to the dominant frequency mode
   #(hence go in "ProbEsp")
   #they are considered to be from other species 
   #they are to be identified in next rounds of the loop 
   
-  ScoreSec=(-1.5+32.7*ProbEspDom1$PED
-            +0.696*ProbEspDom1$HU+0.459*ProbEspDom1$HL)
-  
-  ProbEspN1_0=subset(ProbEspDom1,IsDominant & ScoreSec>as.numeric(args[20]))
+  ProbEspN1_0=subset(ProbEspDom1,(ScoreSec>as.numeric(args[20]) & IsDominant))
   
   #Add files that only contained 1 call and take peak frequency as dominant mode
   ProbEspN1 = bind_rows (ProbEspN1_0, ProbEspDom_1call)
   ProbEspN1$MainMode[is.na(ProbEspN1$MainMode)]=ProbEspN1[,args[19]][is.na(ProbEspN1$MainMode)]
   ProbEspN1$IsDominant[is.na(ProbEspN1$IsDominant)]=TRUE
-  
-  }else{
-    ProbEspN1=ProbEspDom_1call
-    ProbEspN1$MainMode=ProbEspN1[,args[19]]
-    ProbEspN1$IsDominant=TRUE
-      }
   
   #to treat rare cases of low probabilities for all "species"
   if(nrow(ProbEspN1)==0) 
@@ -263,14 +280,6 @@ while (nrow(ProbEsp)>0)
     StopLoop=T #to stop the loop (because probabilities went too low in that case)
     
   }
-  
-  #sound events kept for the next round ######################################
-  #if "ScoreSec" is < args[20] OR if not belonging to the dominant frequency mode
-  ScoreSec=(-1.5+32.7*ProbEspDom1$PED
-               +0.696*ProbEspDom1$HU+0.459*ProbEspDom1$HL)
-  
-  ProbEsp=subset(ProbEspDom1[,1:(ncol(ProbEspDom1)-7)],ScoreSec<as.numeric(args[20]) | 
-                   !ProbEspDom1$IsDominant)
   
   ProbEspSpN1=subset(ProbEspN1,select=ColPE_Sp)
   ProbEspSpN1$MainMode=round(ProbEspN1$MainMode, digits=1)
@@ -327,15 +336,17 @@ while (nrow(ProbEsp)>0)
                ,DurMed=Dur50$x,Dur90=Dur90$x,Ampm50=Ampm50$x
                ,Ampm90=Ampm90$x,AmpSMd=AmpSMd$x,DiffME=DiffME,SR=SR
                ,Order=paste0("N",j))
-  
   if(exists("IdTot")==T){IdTot=rbind(IdTot,IdTemp)}else{IdTot=IdTemp}
   
   
- if(!T %in% duplicated(ProbEspN1$Filename))
- {
-   ProbEsp=ProbEsp[0,]
- }
-
+  #sound events kept for the next round ######################################
+  #if "ScoreSec" is negative or if not belonging to the dominant frequency mode
+  ScoreSecbis=(-1.5+32.7*ProbEspDom1$PED
+               +0.696*ProbEspDom1$HU+0.459*ProbEspDom1$HL)
+  
+  ProbEsp=subset(ProbEspDom1[,1:(ncol(ProbEspDom1)-7)],ScoreSecbis<as.numeric(args[20]) | 
+                   !ProbEspDom1$IsDominant)
+  
   if(StopLoop)
   {ProbEsp=ProbEsp[0,]}  
 }
@@ -359,13 +370,12 @@ IdTot$Version=Version
 IdTot$Filename=IdTot$Group.1
 IdTot= IdTot[order(IdTot$Filename, IdTot$SpMaxF2), ]
 
-
 if(exists("r"))
 {
   fwrite(IdTot,paste0(PreFichPE,"IdTot.csv"))
   fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(PreFichPE,"Idshort.csv"))
 }else{
-  fwrite(IdTot,paste0(tadir,"/IdTot.csv"))
+  fwrite(IdTot,paste0(tadir,"IdTot.csv"))
   fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-18):ncol(IdTot))]),paste0(tadir,"/Idshort.csv"))
 }
 
