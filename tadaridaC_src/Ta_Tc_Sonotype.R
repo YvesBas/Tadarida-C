@@ -12,7 +12,7 @@ if(length(args)<3) #for local tests
   ClassifC1="D:/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/ClassifC1_Sonotype.R"
   AggContacts="D:/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggContacts_Sonotype.R"
   AggNbSp="D:/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggNbSp.R"
-    args="F:/Sons_Guyane_2019/Sons_Audiomoth/20191112_MN004/txt" # Directory containing .ta files of sounds to classify
+    args="F:/Refs_sons_exotiquesYB/costa rica/Artibeus jamaicensis/txt" # Directory containing .ta files of sounds to classify
 #args[1]="D:/PI_20/DataPR_Net1&2/txt"
 #args[2]="ClassifEsp_LF_180320.learner"
 #args[2]="ClassifEsp_LF_180129.learner"
@@ -35,9 +35,9 @@ args[15]="ClassifEsp_tabase3HF_France_Cir_2019-11-26_wiSR.learner"
 args[16]="CNS_RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc.learner"
 args[17]="Referentiel_seuils_RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc__G.csv"
 args[18]=1 #block number 
-args[19]="CO2_FIF" # The variable used to build modes, i.e. to build groups of calls
+args[19]="FreqMP" # The variable used to build modes, i.e. to build groups of calls
 args[20]=1.5 # the threshold of ScoreSec used to separate secondary species
-#args[21]="Car340130-2019-Pass1-Z8-1715-0_20190209_235945_000.ta" # If provided, the script will only run for this file
+#args[21]="130901puntarenitas-artjam2.ta" # If provided, the script will only run for this file
 }
 
 print(getwd())

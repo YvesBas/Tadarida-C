@@ -184,7 +184,7 @@ while (nrow(ProbEsp)>0)
     mainmode2=which(modesFC==mainmode)
     
     ####PLOT DEBUG####
-    if(ListFilenames[k]=="20191112_211639_000.wav")
+    if(ListFilenames[k]=="130901puntarenitas-artjam2.wav")
     {
       print(paste("j=", j, "k=", k, "mainmode=", mainmode, "modesFC=",  
                   unique(PourModeTemp2sub$Id), sep=" "))
@@ -195,12 +195,10 @@ while (nrow(ProbEsp)>0)
       print(cbind(PourModeTemp2sub[,args[19]], PourModeTemp2sub$Id))
     }
     
-    #Defines mode inferior threshold
-    #If modes are separated by less than 5 kHz, takes threshold before previous mode
+    #Defines mode inferior threshold with a tolerance of 5 kHz from main mode
     ModeInfTemp = modesFC[mainmode2]-5
     
-    #Defines mode superior threshold
-    # If modes are separated by less than 5 kHz, takes threshold after following mode
+    #Defines mode superior threshold with a tolerance of 5 kHz from main mode
     ModeSupTemp = modesFC[mainmode2]+ 5
     
     if(exists("Modes")==T){Modes=c(Modes, mainmode)}else{Modes=mainmode}
@@ -212,9 +210,9 @@ while (nrow(ProbEsp)>0)
   # Store the dominant mode of the peak frequency for the dominant sonotype
   FileMode=as.data.frame(cbind(ListFilenames, Modes, ModeInf, ModeSup))
   colnames(FileMode)=c("Filename", "MainMode", "ModeInf", "ModeSup")
-  FileMode$MainMode=as.numeric(FileMode$MainMode)
-  FileMode$ModeInf=as.numeric(FileMode$ModeInf)
-  FileMode$ModeSup=as.numeric(FileMode$ModeSup)
+  FileMode$MainMode=as.numeric(as.character(FileMode$MainMode))
+  FileMode$ModeInf=as.numeric(as.character(FileMode$ModeInf))
+  FileMode$ModeSup=as.numeric(as.character(FileMode$ModeSup))
   ProbEspDom1=merge(ProbEspDom01,FileMode, all.x = T)
   ProbEspDom1$MainMode[which(is.na(ProbEspDom1$MainMode))]=ProbEspDom1[,args[19]][which(is.na(ProbEspDom1$MainMode))]
   ProbEspDom1$ModeInf[which(is.na(ProbEspDom1$ModeInf))]=-999
