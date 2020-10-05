@@ -1,70 +1,43 @@
 library(data.table)
 library(randomForest)
 MRF="C:/Users/Yves Bas/Documents/Tadarida/Tadarida-C/tadaridaC_src/Modified_randomForest.R"
-#PourC2M=fread("PourC2M_Norfolk.csv")
-PourC2M=antser_train
+PourC2M=fread("ForOlivier_PourC2M.csv")
 #SpeciesList=fread("SpeciesList.csv")
-FactorsToExclude=c("Group.1","participation","ValidConf","ValidId"
-                  ,"SuccessProb","VersionC","VersionD","Version"
-                  ,"SpMaxF2","Order","LP","CaseTracking")
+FactorsToExclude=c("Time" , "Date" ,"datetime",   "daytime"   , "nocturnal" 
+                   ,"ID",      "filepath", "Filename","SpeciesPred" 
+                   ,"filename"      ,      "Transect"       ,   "present"            
+                   , "Species"  ,"Score","rainQ2"             
+                   , "rain_min" ,           "RMS"   ,           "Meanspec"           
+                   , "CallNum"   ,          "Version"   ,     "FileDur"            
+                   , "SampleRate" ,         "StTime"  ,            "Dur"                
+                   ,"PrevSt"      ,        "Fmax"  ,              "Fmin"               
+                   ,"BW"      ,            "FreqMP" ,         "CM_FIF"             
+                   , "Amp1"      ,          "Amp2" ,       "Amp3"               
+                   , "Amp4"
+                   )
 SuffixToExclude=c("_ntot","_RT")
 #SuffixToExclude="XXXXX"
 SubSamp=20
 GradientSamp=-0.1
 set.seed(921)
+VarToPredict="present"
 
-f2p <- function(x) 
-{
-  if (is(x)[1] == "data.frame") {pretemps <- vector(length = nrow(x))}
-  op <- options(digits.secs = 3)
-  pretemps <- paste(substr(x, nchar(x) - 22, nchar(x)-8), ".", substr(x, nchar(x) - 6, nchar(x)-4), sep = "")
-  strptime(pretemps, "%Y%m%d_%H%M%OS",tz="UTC")-7200
-}
+
+#f2p <- function(x) 
+#{
+ # if (is(x)[1] == "data.frame") {pretemps <- vector(length = nrow(x))}
+#  op <- options(digits.secs = 3)
+  #pretemps <- paste(substr(x, nchar(x) - 22, nchar(x)-8), ".", substr(x, nchar(x) - 6, nchar(x)-4), sep = "")
+ # strptime(pretemps, "%Y%m%d_%H%M%OS",tz="UTC")-7200
+#}
 
 source(MRF)
 
 if(exists("ClassifEspC2b")){rm(ClassifEspC2b)}
-test=match(PourC2M$ValidId,SpeciesList$Esp)
-
-SpMissing=subset(PourC2M,is.na(test))
-if(nrow(SpMissing)>0)
-  {
-  print(table(SpMissing$ValidId))
-  stop("MISSING TAXA!!!")
-  }
-SpGroup=SpeciesList$Nesp[test]
-test=(SpGroup==PourC2M$ValidId)
-print(table(subset(PourC2M$ValidId,!test)))
-
-PourC2M$ValidId=SpGroup
-
-PourC2M$ValidId=factor(PourC2M$ValidId,exclude=NULL)
-PourC2M$SpMaxF2=as.factor(PourC2M$SpMaxF2)
-PourC2M$PF=!(substr(PourC2M$Group.1,2,2)=="i")
-PourC2M$Pedestre=((substr(PourC2M$Group.1,10,10)=="-")
-                  &(!(substr(PourC2M$Group.1,5,5)=="-"))
-                  &(!PourC2M$PF))
-
-
-#création d'indice standardisé pour mieux tenir compte de l'espèce choisie
-testCol=!is.na(match(names(PourC2M),SpeciesList$Esp))
-RFresults=subset(PourC2M,select=(subset(names(PourC2M),testCol)))
-Score=apply(RFresults,MARGIN=1,max)
-RFresultsStd=RFresults/Score
-names(RFresultsStd)=paste0(names(RFresultsStd),"_std")
-
-PourC2M=cbind(PourC2M,RFresultsStd)
 
 #ajout de la date
-FI=tstrsplit(PourC2M$Group.1,"-")
-Passnum=as.numeric(gsub("Pass","",FI[[3]]))
-DatePass=pmin(126+Passnum*62,126+62*3)
-DateTot=ifelse(PourC2M$PF,yday(f2p(PourC2M$Group.1)),DatePass)
-PourC2M$Date=DateTot
-PourC2M$Date[is.na(PourC2M$Date)]=mean(subset(PourC2M$Date,!is.na(PourC2M$Date)))
-#construction du classificateur
-#classifieur avec equilibrage des classes
-NbMoyCri=as.numeric(mean(table(PourC2M$ValidId)))
+ToPredict=subset(PourC2M,select=VarToPredict)[[1]]
+NbMoyCri=as.numeric(mean(table(ToPredict)))
 
 Predictors=subset(names(PourC2M),!names(PourC2M) %in% FactorsToExclude)
 
@@ -147,13 +120,13 @@ Imp=cbind(Var=row.names(Imp),Imp)
 fwrite(Imp,paste0("ClassifEspC3_",substr(Sys.time(),1,10),"_imp.csv"),sep=";")
 
 
-test1=subset(PourC2M,PourC2M$ValidId %in% c("Myomys"))
-test2=subset(PourC2M,PourC2M$ValidId %in% c("Myoalc"))
-test3=subset(PourC2M,PourC2M$ValidId %in% c("Myocap"))
-test4=subset(PourC2M,PourC2M$ValidId %in% c("Myoema"))
+#test1=subset(PourC2M,PourC2M$ValidId %in% c("Myomys"))
+#test2=subset(PourC2M,PourC2M$ValidId %in% c("Myoalc"))
+#test3=subset(PourC2M,PourC2M$ValidId %in% c("Myocap"))
+#test4=subset(PourC2M,PourC2M$ValidId %in% c("Myoema"))
 
-plot(test4$Myoema_ratio,test4$Myomys_ratio,log="xy")
-points(test1$Myoema_ratio,test1$Myomys_ratio,col=2)
+#plot(test4$Myoema_ratio,test4$Myomys_ratio,log="xy")
+#points(test1$Myoema_ratio,test1$Myomys_ratio,col=2)
 
 SumProb=apply(ClassifEspVotes,MARGIN=1,FUN=sum)
 ProbEsp0=ClassifEspVotes/SumProb
