@@ -21,7 +21,7 @@ SubSamp=20
 GradientSamp=-0.1
 set.seed(921)
 VarToPredict="present"
-
+Strata="Transect"
 
 #f2p <- function(x) 
 #{
@@ -63,14 +63,16 @@ for (i in 1:50)
   #randomly selecting 63% of sites to build the small forest
   Sel=vector()
   while(sum(Sel)==0)
-  {Sel=sample(0:1,nlevels(as.factor(PourC2M$participation)),
+  {Sel=sample(0:1,nlevels(as.factor(subset(PourC2M,select=Strata)[[1]])),
               replace=T,prob=c(0.37,0.63))}
-  SelSiteTemp=cbind(participation=levels(as.factor(PourC2M$participation)),Sel)
+  SelSiteTemp=cbind(participation=levels(as.factor(subset(PourC2M,select=Strata)[[1]])),Sel)
+  names(SelSiteTemp)[1]=Strata
   
-  VoteC5=merge(PourC2M,SelSiteTemp,by="participation")
+  VoteC5=merge(PourC2M,SelSiteTemp,by=Strata)
   
   #designing sampling strata as a combination of species and site
-  StrataTemp=as.factor(paste(as.character(VoteC5$ValidId)
+  StrataTemp=as.factor(paste(as.character(subset(VoteC5
+                                                 ,select=VarToPredict)[[1]])
                              ,as.character(VoteC5$Sel)))
   
   #maximum sampled sound events per species
