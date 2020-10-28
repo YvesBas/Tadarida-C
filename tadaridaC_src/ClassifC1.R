@@ -54,7 +54,7 @@ my.data <- list()
 # for(f in 1:length(obslist)) {
 for(f in start:end) {   #0.026 sec/files
   #print(obslist[[f]])    
-  if(FIO$size[f]<1000){
+  if(FIO$size[f]>1000){
     my.data[[f]] <- read.table(obslist[[f]],sep="\t",h=T)
   }
 }
@@ -70,6 +70,7 @@ if (exists("ClassifEspA")==FALSE)
     load(args[2])
   }
 }
+
 if (exists("ClassifEspA")==FALSE) ClassifEspA=ClassifEsp3 #temp for test
 
 #print(ls())
