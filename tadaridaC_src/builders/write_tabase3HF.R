@@ -1,16 +1,19 @@
 library(data.table) #used to generate features table from labelled sound database
 #INPUTS (to be edited according to local path)
 #required:
-RSDB="C:/Users/Yves Bas/Documents/RSDB_HF"
-#RSDB="G:/RSDB_LF"
+RSDB=choose.dir()
+#RSDB="C:/Users/Yves Bas/Documents/RSDB_sample2011"
+#RSDB="E:/RSDB_LF"
+HPF=21 #high-pass filter
 
 #VarSel=fread("VarSel.csv") #to uncomment to select variables
 #optional:
-SpeciesList=as.data.frame(fread("SpeciesList.csv")) #to uncomment if a species grouping and/or filtering is necessary
+#SpeciesList=as.data.frame(fread("SpeciesList_ForVerbatim.csv")) #to uncomment if a species grouping and/or filtering is necessary
+#SpeciesList=as.data.frame(fread("SpeciesList.csv")) #to uncomment if a species grouping and/or filtering is necessary
 
 
 ### A TESTER SANS FILTRE##
-GeoFilter="France" #to uncomment and edit if a species filtering is necessary
+#GeoFilter="France" #to uncomment and edit if a species filtering is necessary
 
 
 #loading randomForest library to build the classifier then modified randomforest function
@@ -23,6 +26,7 @@ library(randomForest)
 
 #setwd("D:/ScanRLogs/R_data")
 
+if(exists("tabase3")){rm(tabase3)}
 #listing label files with and without their path
 
 ListDate=list.dirs(RSDB,recursive=F)
@@ -34,9 +38,9 @@ etilist1=vector() #for full names
 etilist2=vector() #for file names only
 
 for (i in 1:length(ListDate))
-#for (i in 1:161) # 10/15 version
-    
-  {
+  #for (i in 1:161) # 10/15 version
+  
+{
   etilistemp1=list.files(paste(ListDate[[i]],"/eti",sep=""),pattern=".eti$",full.names=T,recursive=F)
   if(exists("etilist1")==T){etilist1=c(etilist1,etilistemp1)}else{etilist1=etilistemp1}
   etilistemp2=list.files(paste(ListDate[[i]],"/eti",sep=""),pattern=".eti$",full.names=F,recursive=F)
@@ -58,8 +62,8 @@ for (i in 1:length(etilist1)){ #5e5 labels/min
               ,rep(paste(substr(etilist2[[i]],1,nchar(etilist2[[i]])-4)
                          ,".wav",sep=""),nrow(my.data[[i]])))
     #fichier2=c(fichier2
-     #         ,rep(paste(substr(etilist1[[i]],1,nchar(etilist1[[i]])-4)
-      #                   ,".wav",sep=""),nrow(my.data[[i]])))
+    #         ,rep(paste(substr(etilist1[[i]],1,nchar(etilist1[[i]])-4)
+    #                   ,".wav",sep=""),nrow(my.data[[i]])))
   }
 }
 
@@ -84,10 +88,10 @@ for (i in 1:length(ListDate))
 Sys.time()
 my.data <- list()
 for (i in 1:length(parlist1)){ # 3e5 calls/min
-#for (i in 1:20300){
+  #for (i in 1:20300){
   if (length(parlist1[[i]])==1)
   {
-  my.data[[i]] <- read.csv(parlist1[[i]],sep="\t")
+    my.data[[i]] <- read.csv(parlist1[[i]],sep="\t")
   }else{
     print(i)
   }
@@ -95,9 +99,9 @@ for (i in 1:length(parlist1)){ # 3e5 calls/min
 Sys.time()
 
 param3=as.data.frame(rbindlist(my.data))
-#param3=subset(param3,param3$FreqMP>=8)
+param3=subset(param3,param3$FreqMP>=HPF)
 if(exists("VarSel")){
-param4=subset(param3,select=c("Filename","CallNum",VarSel$VarSel))
+  param4=subset(param3,select=c("Filename","CallNum",VarSel$VarSel))
 }else{
   param4=param3
 }
@@ -119,36 +123,49 @@ if (exists("GeoFilter")==T)
   tabase3=merge(tabase2,SpeciesFilter,by.x="Espece",by.y="Esp")
   fwrite(tabase3,paste0("tabase3HF_",GeoFilter,".csv"),row.names=F)
   
-  }else{
+}else{
   if(exists("SpeciesList")==TRUE){
     tabase3=merge(tabase2,SpeciesList,by.x="Espece",by.y="Esp")
-    }else{
+  }else{
     tabase3=cbind(tabase2,Nesp=tabase2$Espece)
-    }
-    fwrite(tabase3,paste0(RSDB,"_tabase3HF_sansfiltre.csv"),row.names=F)
-    
+  }
+  tabase3$SubNesp=paste(tabase3$Nesp,tabase3$Type,sep="_")
+  
+  fwrite(tabase3,paste0(RSDB,"_tabase3HF_sansfiltre.csv"),sep=";"
+         ,row.names=F)
+  
 }
 
+#test de conformité
+if(exists("SpeciesList"))
+{
+  TestConform=match(tabase3$espece,SpeciesList$Esp)
+  if(sum(is.na(TestConform))>0)
+  {
+    print(table(subset(tabase3$espece,is.na(TestConform))))
+    stop("probleme de conformite entre classifieur et liste especes (especes manquantes)")
+  }
+}
 
 if(!exists("GeoFilter"))
 {
-SiteEsp=aggregate(tabase3$Filename
-                  ,by=c(list(tabase3$Espece),list(tabase3$Site))
-                  ,FUN=length)
-
-NbSiteEsp=aggregate(SiteEsp$Group.2
-                    ,by=list(SiteEsp$Group.1)
+  SiteEsp=aggregate(tabase3$Filename
+                    ,by=c(list(tabase3$Espece),list(tabase3$Site))
                     ,FUN=length)
-
-NbDataEsp=aggregate(SiteEsp$x
-                    ,by=list(SiteEsp$Group.1)
-                    ,FUN=sum)
-
-NbSiteEsp$ndata=NbDataEsp$x
-
-fwrite(NbSiteEsp,paste0(RSDB,"_NbSiteEsp.csv"),row.names=F)
-
-
+  
+  NbSiteEsp=aggregate(SiteEsp$Group.2
+                      ,by=list(SiteEsp$Group.1)
+                      ,FUN=length)
+  
+  NbDataEsp=aggregate(SiteEsp$x
+                      ,by=list(SiteEsp$Group.1)
+                      ,FUN=sum)
+  
+  NbSiteEsp$ndata=NbDataEsp$x
+  
+  fwrite(NbSiteEsp,paste0(RSDB,"_NbSiteEsp.csv"),row.names=F)
+  
+  
 }
 
 #converting (rarely) missing features to 0 #A SUPPRIMER
