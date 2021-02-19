@@ -1,0 +1,947 @@
+ORDRE;FAMILLE;SOUS_FAMILLE;CD_NOM;CD_TAXSUP;CD_SUP;CD_REF;RANG;LB_NOM;LB_AUTEUR;NOM_COMPLET;NOM_COMPLET_HTML;NOM_VALIDE;NOM_VERN;NOM_VERN_ENG;SONOTYPE;HABITAT;FR;GF;MAR;GUA;SM;SB;SPM;MAY;EPA;REU;SA;TA;TAAF;PF;NC;WF;CLI;URL
+Chiroptera;;;186233;186206;899351;186233;OR;Chiroptera;Blumenbach, 1779;Chiroptera Blumenbach, 1779;Chiroptera Blumenbach, 1779;Chiroptera Blumenbach, 1779;;bats;;;P;P;P;P;P;P;P;P;;P;;;;P;P;P;;
+Chiroptera;Emballonuridae;;418438;186233;186233;418438;FM;Emballonuridae;Gervais, 1856;Emballonuridae Gervais, 1856;Emballonuridae Gervais, 1856;Emballonuridae Gervais, 1856;;;;;;P;;;;;;P;;P;;;;;;;;
+Chiroptera;Emballonuridae;;443517;418438;418438;443517;GN;Centronycteris;Gray, 1838;Centronycteris Gray, 1838;<i>Centronycteris</i> Gray, 1838;Centronycteris Gray, 1838;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Emballonuridae;;443633;443517;443517;443633;ES;Centronycteris maximiliani;(Fischer, 1829);Centronycteris maximiliani (Fischer, 1829);<i>Centronycteris maximiliani</i> (Fischer, 1829);Centronycteris maximiliani (Fischer, 1829);;;FMu-QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443633
+Chiroptera;Emballonuridae;;443518;418438;418438;443518;GN;Cormura;W. Peters, 1867;Cormura W. Peters, 1867;<i>Cormura</i> W. Peters, 1867;Cormura W. Peters, 1867;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Emballonuridae;;443634;443518;443518;443634;ES;Cormura brevirostris;(Wagner, 1843);Cormura brevirostris (Wagner, 1843);<i>Cormura brevirostris</i> (Wagner, 1843);Cormura brevirostris (Wagner, 1843);;;FMu-QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443634
+Chiroptera;Emballonuridae;;443519;418438;418438;443519;GN;Cyttarops;Thomas, 1913;Cyttarops Thomas, 1913;<i>Cyttarops</i> Thomas, 1913;Cyttarops Thomas, 1913;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Emballonuridae;;443635;443519;443519;443635;ES;Cyttarops alecto;Thomas, 1913;Cyttarops alecto Thomas, 1913;<i>Cyttarops alecto</i> Thomas, 1913;Cyttarops alecto Thomas, 1913;;;FMu-QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443635
+Chiroptera;Emballonuridae;;443520;418438;418438;443520;GN;Diclidurus;Wied-Neuwied, 1820;Diclidurus Wied-Neuwied, 1820;<i>Diclidurus</i> Wied-Neuwied, 1820;Diclidurus Wied-Neuwied, 1820;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Emballonuridae;;655273;443520;443520;655273;ES;Diclidurus albus;Wied-Neuwied, 1820;Diclidurus albus Wied-Neuwied, 1820;<i>Diclidurus albus</i> Wied-Neuwied, 1820;Diclidurus albus Wied-Neuwied, 1820;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655273
+Chiroptera;Emballonuridae;;443636;443520;443520;443636;ES;Diclidurus ingens;Hernandez-Camacho, 1955;Diclidurus ingens Hernandez-Camacho, 1955;<i>Diclidurus ingens</i> Hernandez-Camacho, 1955;Diclidurus ingens Hernandez-Camacho, 1955;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443636
+Chiroptera;Emballonuridae;;443637;443520;443520;443637;ES;Diclidurus scutatus;Peters, 1869;Diclidurus scutatus Peters, 1869;<i>Diclidurus scutatus</i> Peters, 1869;Diclidurus scutatus Peters, 1869;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443637
+Chiroptera;Emballonuridae;;443522;418438;418438;443522;GN;Peropteryx;W. Peters, 1867;Peropteryx W. Peters, 1867;<i>Peropteryx</i> W. Peters, 1867;Peropteryx W. Peters, 1867;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Emballonuridae;;443823;443522;443522;443823;ES;Peropteryx kappleri;Peters, 1867;Peropteryx kappleri Peters, 1867;<i>Peropteryx kappleri</i> Peters, 1867;Peropteryx kappleri Peters, 1867;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443823
+Chiroptera;Emballonuridae;;443638;443522;443522;443638;ES;Peropteryx leucoptera;Peters, 1867;Peropteryx leucoptera Peters, 1867;<i>Peropteryx leucoptera</i> Peters, 1867;Peropteryx leucoptera Peters, 1867;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443638
+Chiroptera;Emballonuridae;;443822;;;443638;ES;Peronymus leucopterus;(W. Peters, 1867);Peronymus leucopterus (W. Peters, 1867);<i>Peronymus leucopterus</i> (W. Peters, 1867);Peropteryx leucoptera Peters, 1867;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443822
+Chiroptera;Emballonuridae;;443639;443522;443522;443639;ES;Peropteryx macrotis;(Wagner, 1843);Peropteryx macrotis (Wagner, 1843);<i>Peropteryx macrotis</i> (Wagner, 1843);Peropteryx macrotis (Wagner, 1843);;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443639
+Chiroptera;Emballonuridae;;443640;443522;443522;443640;ES;Peropteryx trinitatis;Miller, 1899;Peropteryx trinitatis Miller, 1899;<i>Peropteryx trinitatis</i> Miller, 1899;Peropteryx trinitatis Miller, 1899;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443640
+Chiroptera;Emballonuridae;;443523;418438;418438;443523;GN;Rhynchonycteris;W. Peters, 1867;Rhynchonycteris W. Peters, 1867;<i>Rhynchonycteris</i> W. Peters, 1867;Rhynchonycteris W. Peters, 1867;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Emballonuridae;;443641;443523;443523;443641;ES;Rhynchonycteris naso;(Wied-Neuwied, 1820);Rhynchonycteris naso (Wied-Neuwied, 1820);<i>Rhynchonycteris naso</i> (Wied-Neuwied, 1820);Rhynchonycteris naso (Wied-Neuwied, 1820);;;CF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443641
+Chiroptera;Emballonuridae;;443524;418438;418438;443524;GN;Saccopteryx;Illiger, 1811;Saccopteryx Illiger, 1811;<i>Saccopteryx</i> Illiger, 1811;Saccopteryx Illiger, 1811;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Emballonuridae;;443642;443524;443524;443642;ES;Saccopteryx bilineata;(Temminck, 1838);Saccopteryx bilineata (Temminck, 1838);<i>Saccopteryx bilineata</i> (Temminck, 1838);Saccopteryx bilineata (Temminck, 1838);;;FMu-QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443642
+Chiroptera;Emballonuridae;;443643;443524;443524;443643;ES;Saccopteryx canescens;Thomas, 1901;Saccopteryx canescens Thomas, 1901;<i>Saccopteryx canescens</i> Thomas, 1901;Saccopteryx canescens Thomas, 1901;;;FMu-QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443643
+Chiroptera;Emballonuridae;;521600;443524;443524;521600;ES;Saccopteryx gymnura;Thomas, 1901;Saccopteryx gymnura Thomas, 1901;<i>Saccopteryx gymnura</i> Thomas, 1901;Saccopteryx gymnura Thomas, 1901;;;FMu-QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/521600
+Chiroptera;Emballonuridae;;443644;443524;443524;443644;ES;Saccopteryx leptura;(Schreber, 1774);Saccopteryx leptura (Schreber, 1774);<i>Saccopteryx leptura</i> (Schreber, 1774);Saccopteryx leptura (Schreber, 1774);;;FMu-QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443644
+Chiroptera;Emballonuridae;;418439;418438;418438;418439;GN;Taphozous;É. Geoffroy Saint-Hilaire, 1818;Taphozous É. Geoffroy Saint-Hilaire, 1818;<i>Taphozous</i> É. Geoffroy Saint-Hilaire, 1818;Taphozous É. Geoffroy Saint-Hilaire, 1818;;;;3;;;;;;;;P;;P;;;;;;;;
+Chiroptera;Emballonuridae;;418762;418439;418439;418762;ES;Taphozous mauritianus;É. Geoffroy Saint-Hilaire, 1818;Taphozous mauritianus É. Geoffroy Saint-Hilaire, 1818;<i>Taphozous mauritianus</i> É. Geoffroy Saint-Hilaire, 1818;Taphozous mauritianus É. Geoffroy Saint-Hilaire, 1818;Chauve-souris à ventre blanc, Taphien de Maurice;;FMd-QCF;3;;;;;;;;P;;P;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/418762
+Chiroptera;Furipteridae;;443482;186233;186233;443482;FM;Furipteridae;Gray, 1866;Furipteridae Gray, 1866;Furipteridae Gray, 1866;Furipteridae Gray, 1866;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Furipteridae;;443525;443482;443482;443525;GN;Furipterus;Bonaparte, 1837;Furipterus Bonaparte, 1837;<i>Furipterus</i> Bonaparte, 1837;Furipterus Bonaparte, 1837;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Furipteridae;;443645;443525;443525;443645;ES;Furipterus horrens;(F. Cuvier, 1828);Furipterus horrens (F. Cuvier, 1828);<i>Furipterus horrens</i> (F. Cuvier, 1828);Furipterus horrens (F. Cuvier, 1828);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443645
+Chiroptera;;;186234;186233;186233;186234;SBOR;Megachiroptera;;Megachiroptera ;Megachiroptera;Megachiroptera ;Chiroptères;;;;;;;;;;;P;;P;;;;P;P;P;;
+Chiroptera;;;186236;186233;186233;186236;SBOR;Microchiroptera;Dobson, 1875;Microchiroptera Dobson, 1875;Microchiroptera Dobson, 1875;Microchiroptera Dobson, 1875;Chauves-souris;;;;P;P;P;P;P;P;P;P;;P;;;;;P;;;
+Chiroptera;Miniopteridae;;699095;186233;699094;699095;FM;Miniopteridae;;Miniopteridae ;Miniopteridae;Miniopteridae ;;;;;P;;;;;;;;;;;;;;P;;;
+Chiroptera;Miniopteridae;;194793;699095;699095;194793;GN;Miniopterus;Bonaparte, 1837;Miniopterus Bonaparte, 1837;<i>Miniopterus</i> Bonaparte, 1837;Miniopterus Bonaparte, 1837;;;;;P;;;;;;;;;;;;;;P;;;
+Chiroptera;Miniopteridae;;532353;194793;194793;532353;ES;Miniopterus australis;Tomes, 1858;Miniopterus australis Tomes, 1858;<i>Miniopterus australis</i> Tomes, 1858;Miniopterus australis Tomes, 1858;Minioptère australasien;Little Bent-winged bat;FMd-QCF;3;;;;;;;;;;;;;;;P;;;https://inpn.mnhn.fr/espece/cd_nom/532353
+Chiroptera;Miniopteridae;;532422;194793;194793;532422;ES;Miniopterus macrocneme;Revilliod, 1914;Miniopterus macrocneme Revilliod, 1914;<i>Miniopterus macrocneme</i> Revilliod, 1914;Miniopterus macrocneme Revilliod, 1914;Minioptère de Mélanésie;Small Melanesian Bentwing-bat;FMd-QCF;3;;;;;;;;;;;;;;;P;;;https://inpn.mnhn.fr/espece/cd_nom/532422
+Chiroptera;Miniopteridae;;418815;194793;194793;418815;ES;Miniopterus robustior;Revilliod, 1913-1914;Miniopterus robustior Revilliod, 1913-1914;<i>Miniopterus robustior</i> Revilliod, 1913-1914;Miniopterus robustior Revilliod, 1913-1914;Minioptère des Îles Loyautés;Loyalty Bentwing-bat;FMd-QCF;3;A;A;A;A;A;A;A;A;A;A;A;A;A;A;E;A;A;https://inpn.mnhn.fr/espece/cd_nom/418815
+Chiroptera;Miniopteridae;;79305;194793;194793;79305;ES;Miniopterus schreibersii;(Kuhl, 1817);Miniopterus schreibersii (Kuhl, 1817);<i>Miniopterus schreibersii</i> (Kuhl, 1817);Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/79305
+Chiroptera;Miniopteridae;;60550;;;79305;ES;Miniopterus italicus;;Miniopterus italicus ;<i>Miniopterus italicus</i>;Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60550
+Chiroptera;Miniopteridae;;60554;;;79305;ES;Miniopterus oceanensis;;Miniopterus oceanensis ;<i>Miniopterus oceanensis</i>;Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60554
+Chiroptera;Miniopteridae;;60551;;;79305;ES;Miniopterus oreinii;;Miniopterus oreinii ;<i>Miniopterus oreinii</i>;Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60551
+Chiroptera;Miniopteridae;;60553;;;79305;SSES;Miniopterus schreibersi baussensis;Laurent, 1944;Miniopterus schreibersi baussensis Laurent, 1944;<i>Miniopterus schreibersi baussensis</i> Laurent, 1944;Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60553
+Chiroptera;Miniopteridae;;60546;;;79305;ES;Miniopterus schreibersi;(Kuhl, 1817);Miniopterus schreibersi (Kuhl, 1817);<i>Miniopterus schreibersi</i> (Kuhl, 1817);Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60546
+Chiroptera;Miniopteridae;;60548;;;79305;SSES;Miniopterus schreibersii schreibersii;(Kuhl, 1817);Miniopterus schreibersii schreibersii (Kuhl, 1817);<i>Miniopterus schreibersii schreibersii</i> (Kuhl, 1817);Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60548
+Chiroptera;Miniopteridae;;60552;;;79305;ES;Miniopterus ursinii;;Miniopterus ursinii ;<i>Miniopterus ursinii</i>;Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60552
+Chiroptera;Miniopteridae;;60549;;;79305;ES;Minopterus inexpectatus;;Minopterus inexpectatus ;<i>Minopterus inexpectatus</i>;Miniopterus schreibersii (Kuhl, 1817);Minioptère de Schreibers;Schreiber's bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60549
+Chiroptera;Molossidae;;186237;186233;699094;186237;FM;Molossidae;Gervais, 1856;Molossidae Gervais, 1856;Molossidae Gervais, 1856;Molossidae Gervais, 1856;;;;;P;P;P;P;P;P;;P;;P;;;;;;;;
+Chiroptera;Molossidae;;418668;186237;186237;418668;GN;Chaerephon;;Chaerephon ;<i>Chaerephon</i>;Chaerephon ;;;;;;;;;;;;P;;;;;;;;;;
+Chiroptera;Molossidae;;699195;418668;418668;699195;ES;Chaerephon leucogaster;(Grandidier, 1869);Chaerephon leucogaster (Grandidier, 1869);<i>Chaerephon leucogaster</i> (Grandidier, 1869);Chaerephon leucogaster (Grandidier, 1869);;;FMd-QCF;3;;;;;;;;P;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/699195
+Chiroptera;Molossidae;;699213;418668;418668;699213;ES;Chaerephon pusillus;(Miller, 1902);Chaerephon pusillus (Miller, 1902);<i>Chaerephon pusillus</i> (Miller, 1902);Chaerephon pusillus (Miller, 1902);Tadaride;;FMd-QCF;3;;;;;;;;P;;Q;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/699213
+Chiroptera;Molossidae;;418671;;;699213;ES;Chaerephon pumila;(Cretzschmar, 1830);Chaerephon pumila (Cretzschmar, 1830);<i>Chaerephon pumila</i> (Cretzschmar, 1830);Chaerephon pusillus (Miller, 1902);Tadaride;;FMd-QCF;3;;;;;;;;P;;Q;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/418671
+Chiroptera;Molossidae;;699214;;;699213;ES;Dysopes pumilus;Cretzschmar, 1830;Dysopes pumilus Cretzschmar, 1830;<i>Dysopes pumilus</i> Cretzschmar, 1830;Chaerephon pusillus (Miller, 1902);Tadaride;;FMd-QCF;3;;;;;;;;P;;Q;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/699214
+Chiroptera;Molossidae;;699215;;;699213;ES;Nyctinomus pumilus;Gunther, 1879;Nyctinomus pumilus Gunther, 1879;<i>Nyctinomus pumilus</i> Gunther, 1879;Chaerephon pusillus (Miller, 1902);Tadaride;;FMd-QCF;3;;;;;;;;P;;Q;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/699215
+Chiroptera;Molossidae;;699216;;;699213;ES;Nyctinomus pusillus;Miller, 1902;Nyctinomus pusillus Miller, 1902;<i>Nyctinomus pusillus</i> Miller, 1902;Chaerephon pusillus (Miller, 1902);Tadaride;;FMd-QCF;3;;;;;;;;P;;Q;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/699216
+Chiroptera;Molossidae;;699217;;;699213;ES;Tadarida (Chaerephon) pumila;Freeman, 1981;Tadarida (Chaerephon) pumila Freeman, 1981;<i>Tadarida </i>(<i>Chaerephon</i>)<i> pumila</i> Freeman, 1981;Chaerephon pusillus (Miller, 1902);Tadaride;;FMd-QCF;3;;;;;;;;P;;Q;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/699217
+Chiroptera;Molossidae;;418670;;;699213;ES;Tadarida pumila;(Cretzschmar, 1830);Tadarida pumila (Cretzschmar, 1830);<i>Tadarida pumila</i> (Cretzschmar, 1830);Chaerephon pusillus (Miller, 1902);Tadaride;;FMd-QCF;3;;;;;;;;P;;Q;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/418670
+Chiroptera;Molossidae;;655359;186237;186237;655359;GN;Cynomops;Thomas, 1920;Cynomops Thomas, 1920;<i>Cynomops</i> Thomas, 1920;Cynomops Thomas, 1920;;;;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;
+Chiroptera;Molossidae;;459542;655359;655359;459542;ES;Cynomops abrasus;(Temminck, 1827);Cynomops abrasus (Temminck, 1827);<i>Cynomops abrasus</i> (Temminck, 1827);Cynomops abrasus (Temminck, 1827);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459542
+Chiroptera;Molossidae;;443649;;;459542;ES;Molossops abrasus;(Temminck, 1827);Molossops abrasus (Temminck, 1827);<i>Molossops abrasus</i> (Temminck, 1827);Cynomops abrasus (Temminck, 1827);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443649
+Chiroptera;Molossidae;;459546;655359;655359;459546;ES;Cynomops greenhalli;(Goodwin, 1958);Cynomops greenhalli (Goodwin, 1958);<i>Cynomops greenhalli</i> (Goodwin, 1958);Cynomops greenhalli (Goodwin, 1958);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459546
+Chiroptera;Molossidae;;443650;;;459546;ES;Molossops greenhalli;(Goodwin, 1958);Molossops greenhalli (Goodwin, 1958);<i>Molossops greenhalli</i> (Goodwin, 1958);Cynomops greenhalli (Goodwin, 1958);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443650
+Chiroptera;Molossidae;;926995;655359;655359;926995;ES;Cynomops milleri;(Osgood, 1914);Cynomops milleri (Osgood, 1914);<i>Cynomops milleri</i> (Osgood, 1914);Cynomops milleri (Osgood, 1914);;;FMd-QCF;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/926995
+Chiroptera;Molossidae;;655360;;;926995;ES;Cynomops paranus;(Thomas, 1901);Cynomops paranus (Thomas, 1901);<i>Cynomops paranus</i> (Thomas, 1901);Cynomops milleri (Osgood, 1914);;;FMd-QCF;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/655360
+Chiroptera;Molossidae;;927080;;;926995;ES;Molossops milleri;Osgood, 1914;Molossops milleri Osgood, 1914;<i>Molossops milleri</i> Osgood, 1914;Cynomops milleri (Osgood, 1914);;;FMd-QCF;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/927080
+Chiroptera;Molossidae;;521604;;;926995;ES;Molossops paranus;(Thomas, 1901);Molossops paranus (Thomas, 1901);<i>Molossops paranus</i> (Thomas, 1901);Cynomops milleri (Osgood, 1914);;;FMd-QCF;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/521604
+Chiroptera;Molossidae;;459547;655359;655359;459547;ES;Cynomops planirostris;(Peters, 1865);Cynomops planirostris (Peters, 1865);<i>Cynomops planirostris</i> (Peters, 1865);Cynomops planirostris (Peters, 1865);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459547
+Chiroptera;Molossidae;;443653;;;459547;ES;Molossops planirostris;(Peters, 1865);Molossops planirostris (Peters, 1865);<i>Molossops planirostris</i> (Peters, 1865);Cynomops planirostris (Peters, 1865);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443653
+Chiroptera;Molossidae;;443526;186237;186237;443526;GN;Eumops;Miller, 1906;Eumops Miller, 1906;<i>Eumops</i> Miller, 1906;Eumops Miller, 1906;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;443646;443526;443526;443646;ES;Eumops auripendulus;(Shaw, 1800);Eumops auripendulus (Shaw, 1800);<i>Eumops auripendulus</i> (Shaw, 1800);Eumops auripendulus (Shaw, 1800);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443646
+Chiroptera;Molossidae;;443647;443526;443526;443647;ES;Eumops hansae;Sanborn, 1932;Eumops hansae Sanborn, 1932;<i>Eumops hansae</i> Sanborn, 1932;Eumops hansae Sanborn, 1932;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443647
+Chiroptera;Molossidae;;443648;443526;443526;443648;ES;Eumops maurus;(Thomas, 1901);Eumops maurus (Thomas, 1901);<i>Eumops maurus</i> (Thomas, 1901);Eumops maurus (Thomas, 1901);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443648
+Chiroptera;Molossidae;;655357;;;443648;ES;Eumops geijskesi;Husson, 1962;Eumops geijskesi Husson, 1962;<i>Eumops geijskesi</i> Husson, 1962;Eumops maurus (Thomas, 1901);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655357
+Chiroptera;Molossidae;;443527;186237;186237;443527;GN;Molossops;Peters, 1865;Molossops Peters, 1865;<i>Molossops</i> Peters, 1865;Molossops Peters, 1865;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;443652;443527;443527;443652;ES;Molossops neglectus;Williams & Genoways, 1980;Molossops neglectus Williams & Genoways, 1980;<i>Molossops neglectus</i> Williams & Genoways, 1980;Molossops neglectus Williams & Genoways, 1980;;;FMu-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443652
+Chiroptera;Molossidae;;443528;186237;186237;443528;GN;Molossus;É. Geoffroy Saint-Hilaire, 1805;Molossus É. Geoffroy Saint-Hilaire, 1805;<i>Molossus</i> É. Geoffroy Saint-Hilaire, 1805;Molossus É. Geoffroy Saint-Hilaire, 1805;;;;3;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Molossidae;;828684;443528;443528;828684;ES;Molossus coibensis;Allen, 1904;Molossus coibensis Allen, 1904;<i>Molossus coibensis</i> Allen, 1904;Molossus coibensis Allen, 1904;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/828684
+Chiroptera;Molossidae;;528755;;;828684;ES;Molossus barnesi;Thomas, 1905;Molossus barnesi Thomas, 1905;<i>Molossus barnesi</i> Thomas, 1905;Molossus coibensis Allen, 1904;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/528755
+Chiroptera;Molossidae;;443655;443528;443528;443655;ES;Molossus molossus;(Pallas, 1766);Molossus molossus (Pallas, 1766);<i>Molossus molossus</i> (Pallas, 1766);Molossus molossus (Pallas, 1766);Molosse commun;Velvety Free-tailed Bat, Pallas's Mastiff Bat;QCF-FMd;3;;P;P;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443655
+Chiroptera;Molossidae;;814258;;;443655;ES;Vespertilio molossus;Pallas, 1766;Vespertilio molossus Pallas, 1766;<i>Vespertilio molossus</i> Pallas, 1766;Molossus molossus (Pallas, 1766);Molosse commun;Velvety Free-tailed Bat, Pallas's Mastiff Bat;QCF-FMd;3;;P;P;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/814258
+Chiroptera;Molossidae;;536085;443655;443655;536085;SSES;Molossus molossus molossus;(Pallas, 1766);Molossus molossus molossus (Pallas, 1766);<i>Molossus molossus molossus</i> (Pallas, 1766);Molossus molossus molossus (Pallas, 1766);;Pallas' Mastiff Bat;;3;;;;;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/536085
+Chiroptera;Molossidae;;443657;443528;443528;443657;ES;Molossus rufus;(É. Geoffroy Saint-Hilaire, 1805);Molossus rufus (É. Geoffroy Saint-Hilaire, 1805);<i>Molossus rufus</i> (É. Geoffroy Saint-Hilaire, 1805);Molossus rufus (É. Geoffroy Saint-Hilaire, 1805);;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443657
+Chiroptera;Molossidae;;443654;;;443657;ES;Molossus ater;(É. Geoffroy Saint-Hilaire, 1805);Molossus ater (É. Geoffroy Saint-Hilaire, 1805);<i>Molossus ater</i> (É. Geoffroy Saint-Hilaire, 1805);Molossus rufus (É. Geoffroy Saint-Hilaire, 1805);;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443654
+Chiroptera;Molossidae;;443658;443528;443528;443658;ES;Molossus sinaloae;J.A. Allen, 1906;Molossus sinaloae J.A. Allen, 1906;<i>Molossus sinaloae</i> J.A. Allen, 1906;Molossus sinaloae J.A. Allen, 1906;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443658
+Chiroptera;Molossidae;;443659;;;443658;ES;Molossus trinitatus;Goodwin, 1959;Molossus trinitatus Goodwin, 1959;<i>Molossus trinitatus</i> Goodwin, 1959;Molossus sinaloae J.A. Allen, 1906;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443659
+Chiroptera;Molossidae;;458689;186237;186237;458689;GN;Mormopterus;Peters, 1865;Mormopterus Peters, 1865;<i>Mormopterus</i> Peters, 1865;Mormopterus Peters, 1865;;;;3;;;;;;;;;;P;;;;;;;;
+Chiroptera;Molossidae;;458690;458689;458689;458690;ES;Mormopterus francoismoutoui;Goodman, Jansen van Vuuren, Ratrimomanarico, Probst & Bowie, 2008;Mormopterus francoismoutoui Goodman, Jansen van Vuuren, Ratrimomanarico, Probst & Bowie, 2008;<i>Mormopterus francoismoutoui</i> Goodman, Jansen van Vuuren, Ratrimomanarico, Probst & Bowie, 2008;Mormopterus francoismoutoui Goodman, Jansen van Vuuren, Ratrimomanarico, Probst & Bowie, 2008;Tadaride de la Réunion, Petit Molosse de la Réunion;;FMd-QCF;3;A;A;A;A;A;A;A;A;A;E;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/458690
+Chiroptera;Molossidae;;645625;;;458690;ES;Mormopterus acetabulosus;auct. non (Hermann, 1804);Mormopterus acetabulosus auct. non (Hermann, 1804);<i>Mormopterus acetabulosus</i> auct. non (Hermann, 1804);Mormopterus francoismoutoui Goodman, Jansen van Vuuren, Ratrimomanarico, Probst & Bowie, 2008;Tadaride de la Réunion, Petit Molosse de la Réunion;;FMd-QCF;3;A;A;A;A;A;A;A;A;A;E;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/645625
+Chiroptera;Molossidae;;645626;;;458690;ES;Tadarida acetabulosa;auct.;Tadarida acetabulosa auct.;<i>Tadarida acetabulosa</i> auct.;Mormopterus francoismoutoui Goodman, Jansen van Vuuren, Ratrimomanarico, Probst & Bowie, 2008;Tadaride de la Réunion, Petit Molosse de la Réunion;;FMd-QCF;3;A;A;A;A;A;A;A;A;A;E;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/645626
+Chiroptera;Molossidae;;593767;186237;186237;593767;GN;Nyctinomops;Miller, 1902;Nyctinomops Miller, 1902;<i>Nyctinomops</i> Miller, 1902;Nyctinomops Miller, 1902;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;443529;;;593767;GN;Nyctonomops;Miller, 1902;Nyctonomops Miller, 1902;<i>Nyctonomops</i> Miller, 1902;Nyctinomops Miller, 1902;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;593768;593767;593767;593768;ES;Nyctinomops laticaudatus;(É. Geoffroy Saint-Hilaire, 1805);Nyctinomops laticaudatus (É. Geoffroy Saint-Hilaire, 1805);<i>Nyctinomops laticaudatus</i> (É. Geoffroy Saint-Hilaire, 1805);Nyctinomops laticaudatus (É. Geoffroy Saint-Hilaire, 1805);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/593768
+Chiroptera;Molossidae;;443660;;;593768;ES;Nyctonomops laticaudatus;(É. Geoffroy Saint-Hilaire, 1805);Nyctonomops laticaudatus (É. Geoffroy Saint-Hilaire, 1805);<i>Nyctonomops laticaudatus</i> (É. Geoffroy Saint-Hilaire, 1805);Nyctinomops laticaudatus (É. Geoffroy Saint-Hilaire, 1805);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443660
+Chiroptera;Molossidae;;443664;;;593768;ES;Tadarida europs;(H. Allen, 1889);Tadarida europs (H. Allen, 1889);<i>Tadarida europs</i> (H. Allen, 1889);Nyctinomops laticaudatus (É. Geoffroy Saint-Hilaire, 1805);;;NA;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443664
+Chiroptera;Molossidae;;655571;593767;593767;655571;ES;Nyctinomops macrotis;Gray, 1840;Nyctinomops macrotis Gray, 1840;<i>Nyctinomops macrotis</i> Gray, 1840;Nyctinomops macrotis Gray, 1840;;;FMd-QCF;3;;D;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655571
+Chiroptera;Molossidae;;443530;186237;186237;443530;GN;Promops;Gervais, 1856;Promops Gervais, 1856;<i>Promops</i> Gervais, 1856;Promops Gervais, 1856;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;443661;443530;443530;443661;ES;Promops centralis;Thomas, 1915;Promops centralis Thomas, 1915;<i>Promops centralis</i> Thomas, 1915;Promops centralis Thomas, 1915;;;FMu-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443661
+Chiroptera;Molossidae;;443662;443530;443530;443662;ES;Promops nasutus;Spix, 1823;Promops nasutus Spix, 1823;<i>Promops nasutus</i> Spix, 1823;Promops nasutus Spix, 1823;;;FMu-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443662
+Chiroptera;Molossidae;;198187;186237;186237;198187;GN;Tadarida;Rafinesque, 1814;Tadarida Rafinesque, 1814;<i>Tadarida</i> Rafinesque, 1814;Tadarida Rafinesque, 1814;;;;3;P;;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Molossidae;;443663;198187;198187;443663;ES;Tadarida brasiliensis;(I. Geoffroy Saint-Hilaire, 1824);Tadarida brasiliensis (I. Geoffroy Saint-Hilaire, 1824);<i>Tadarida brasiliensis</i> (I. Geoffroy Saint-Hilaire, 1824);Tadarida brasiliensis (I. Geoffroy Saint-Hilaire, 1824);Tadaride du Brésil;;FMd-QCF;3;;Q;P;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443663
+Chiroptera;Molossidae;;538284;443663;443663;538284;SSES;Tadarida brasiliensis antillularum;(Miller, 1902);Tadarida brasiliensis antillularum (Miller, 1902);<i>Tadarida brasiliensis antillularum</i> (Miller, 1902);Tadarida brasiliensis antillularum (Miller, 1902);;Brazilian Free-tailed Bat;;3;;;;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/538284
+Chiroptera;Molossidae;;60557;198187;198187;60557;ES;Tadarida teniotis;(Rafinesque, 1814);Tadarida teniotis (Rafinesque, 1814);<i>Tadarida teniotis</i> (Rafinesque, 1814);Tadarida teniotis (Rafinesque, 1814);Molosse de Cestoni;European Free-tailed Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60557
+Chiroptera;Molossidae;;60560;;;60557;ES;Tadarida cestoni;;Tadarida cestoni ;<i>Tadarida cestoni</i>;Tadarida teniotis (Rafinesque, 1814);Molosse de Cestoni;European Free-tailed Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60560
+Chiroptera;Molossidae;;60561;;;60557;ES;Tadarida midas;Schulze;Tadarida midas Schulze;<i>Tadarida midas</i> Schulze;Tadarida teniotis (Rafinesque, 1814);Molosse de Cestoni;European Free-tailed Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60561
+Chiroptera;Molossidae;;60562;;;60557;ES;Tadarida nigrogriseus;;Tadarida nigrogriseus ;<i>Tadarida nigrogriseus</i>;Tadarida teniotis (Rafinesque, 1814);Molosse de Cestoni;European Free-tailed Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60562
+Chiroptera;Molossidae;;60563;;;60557;ES;Tadarida rüppellii;;Tadarida rüppellii ;<i>Tadarida rüppellii</i>;Tadarida teniotis (Rafinesque, 1814);Molosse de Cestoni;European Free-tailed Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60563
+Chiroptera;Molossidae;;60564;;;60557;ES;Tadarida savii;;Tadarida savii ;<i>Tadarida savii</i>;Tadarida teniotis (Rafinesque, 1814);Molosse de Cestoni;European Free-tailed Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60564
+Chiroptera;Molossidae;;60559;;;60557;SSES;Tadarida teniotis teniotis;;Tadarida teniotis teniotis ;<i>Tadarida teniotis teniotis</i>;Tadarida teniotis (Rafinesque, 1814);Molosse de Cestoni;European Free-tailed Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60559
+Chiroptera;Mormoopidae;;655353;186233;186233;655353;FM;Mormoopidae;Saussure, 1860;Mormoopidae Saussure, 1860;Mormoopidae Saussure, 1860;Mormoopidae Saussure, 1860;;;;;;P;P;P;;;;;;;;;;;;;;
+Chiroptera;Mormoopidae;;443483;;;655353;FM;Mormoopidae;Koch, 1862;Mormoopidae Koch, 1862;Mormoopidae Koch, 1862;Mormoopidae Saussure, 1860;;;;;;P;P;P;;;;;;;;;;;;;;
+Chiroptera;Mormoopidae;;443531;655353;655353;443531;GN;Mormoops;;Mormoops ;<i>Mormoops</i>;Mormoops ;;;;;;;;;;;;;;;;;;;;;;
+Chiroptera;Mormoopidae;;443665;443531;443531;443665;ES;Mormoops megalophylla;(Peters, 1864);Mormoops megalophylla (Peters, 1864);<i>Mormoops megalophylla</i> (Peters, 1864);Mormoops megalophylla (Peters, 1864);;;CF-FMd;3;;Q;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443665
+Chiroptera;Mormoopidae;;443532;655353;655353;443532;GN;Pteronotus;Gray, 1838;Pteronotus Gray, 1838;<i>Pteronotus</i> Gray, 1838;Pteronotus Gray, 1838;;;;;;P;P;P;;;;;;;;;;;;;;
+Chiroptera;Mormoopidae;;902922;443532;443532;902922;ES;Pteronotus alitonus;Pavan, Bobrowiec & Percequillo, 2018;Pteronotus alitonus Pavan, Bobrowiec & Percequillo, 2018;<i>Pteronotus alitonus</i> Pavan, Bobrowiec & Percequillo, 2018;Pteronotus alitonus Pavan, Bobrowiec & Percequillo, 2018;;;FMu-CF-FMd;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/902922
+Chiroptera;Mormoopidae;;902929;;;902922;SSES;Pteronotus parnellii rubiginosus;auct. guy. non (Wagner, 1843) p.p.;Pteronotus parnellii rubiginosus auct. guy. non (Wagner, 1843) p.p.;<i>Pteronotus parnellii rubiginosus</i> auct. guy. non (Wagner, 1843) p.p.;Pteronotus alitonus Pavan, Bobrowiec & Percequillo, 2018;;;FMu-CF-FMd;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/902929
+Chiroptera;Mormoopidae;;902925;;;902922;ES;Pteronotus parnellii;auct. guy. non (Gray, 1843) p.p.;Pteronotus parnellii auct. guy. non (Gray, 1843) p.p.;<i>Pteronotus parnellii</i> auct. guy. non (Gray, 1843) p.p.;Pteronotus rubiginosus (Wagner, 1843);;;FMu-CF-FMd;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/902925
+Chiroptera;Mormoopidae;;532562;443532;443532;532562;ES;Pteronotus davyi;Gray, 1838;Pteronotus davyi Gray, 1838;<i>Pteronotus davyi</i> Gray, 1838;Pteronotus davyi Gray, 1838;Ptéronote de Davy, Chauve-souris à dos nu;;CF-FMd-CF;3;;;P;P;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/532562
+Chiroptera;Mormoopidae;;443666;443532;443532;443666;ES;Pteronotus gymnonotus;Natterer, 1843;Pteronotus gymnonotus Natterer, 1843;<i>Pteronotus gymnonotus</i> Natterer, 1843;Pteronotus gymnonotus Natterer, 1843;;;CF-FMd-CF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443666
+Chiroptera;Mormoopidae;;443668;443532;443532;443668;ES;Pteronotus personatus;(Wagner, 1843);Pteronotus personatus (Wagner, 1843);<i>Pteronotus personatus</i> (Wagner, 1843);Pteronotus personatus (Wagner, 1843);;;CF-FMd-CF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443668
+Chiroptera;Mormoopidae;;655355;443532;443532;655355;ES;Pteronotus rubiginosus;(Wagner, 1843);Pteronotus rubiginosus (Wagner, 1843);<i>Pteronotus rubiginosus</i> (Wagner, 1843);Pteronotus rubiginosus (Wagner, 1843);;;FMu-CF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655355
+Chiroptera;Mormoopidae;;902934;;;655355;ES;Chilonycteris rubiginosus;Wagner, 1843;Chilonycteris rubiginosus Wagner, 1843;<i>Chilonycteris rubiginosus</i> Wagner, 1843;Pteronotus rubiginosus (Wagner, 1843);;;CF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/902934
+Chiroptera;Natalidae;;443484;186233;186233;443484;FM;Natalidae;Gray, 1866;Natalidae Gray, 1866;Natalidae Gray, 1866;Natalidae Gray, 1866;;;;;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Natalidae;;443533;443484;443484;443533;GN;Natalus;Gray, 1838;Natalus Gray, 1838;<i>Natalus</i> Gray, 1838;Natalus Gray, 1838;;;;;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Natalidae;;533102;443533;443533;533102;ES;Natalus stramineus;Gray, 1838;Natalus stramineus Gray, 1838;<i>Natalus stramineus</i> Gray, 1838;Natalus stramineus Gray, 1838;Natalide isabelle, Natalide paillée;;FMd;3;;Q;S;S;S;S;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/533102
+Chiroptera;Natalidae;;538283;533102;533102;538283;SSES;Natalus stramineus stramineus;Gray, 1838;Natalus stramineus stramineus Gray, 1838;<i>Natalus stramineus stramineus</i> Gray, 1838;Natalus stramineus stramineus Gray, 1838;;Lesser Antillean Funnel-eared Bat;FMd;3;;;;;P;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/538283
+Chiroptera;Natalidae;;443669;443533;443533;443669;ES;Natalus tumidirostris;(Miller, 1900);Natalus tumidirostris (Miller, 1900);<i>Natalus tumidirostris</i> (Miller, 1900);Natalus tumidirostris (Miller, 1900);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443669
+Chiroptera;Noctilionidae;;443485;186233;186233;443485;FM;Noctilionidae;Gray, 1821;Noctilionidae Gray, 1821;Noctilionidae Gray, 1821;Noctilionidae Gray, 1821;;;;;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Noctilionidae;;443534;443485;443485;443534;GN;Noctilio;Linnaeus, 1766;Noctilio Linnaeus, 1766;<i>Noctilio</i> Linnaeus, 1766;Noctilio Linnaeus, 1766;;;;;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Noctilionidae;;443670;443534;443534;443670;ES;Noctilio albiventris;Desmarest, 1818;Noctilio albiventris Desmarest, 1818;<i>Noctilio albiventris</i> Desmarest, 1818;Noctilio albiventris Desmarest, 1818;;;CF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443670
+Chiroptera;Noctilionidae;;443671;443534;443534;443671;ES;Noctilio leporinus;(Linnaeus, 1758);Noctilio leporinus (Linnaeus, 1758);<i>Noctilio leporinus</i> (Linnaeus, 1758);Noctilio leporinus (Linnaeus, 1758);;Greater Bulldog Bat;CF-FMd;3;;P;P;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443671
+Chiroptera;Noctilionidae;;538262;443671;443671;538262;SSES;Noctilio leporinus mastivus;(Vahl, 1797);Noctilio leporinus mastivus (Vahl, 1797);<i>Noctilio leporinus mastivus</i> (Vahl, 1797);Noctilio leporinus mastivus (Vahl, 1797);Noctilion pêcheur, Noctilion bec de lièvre, Chauve-souris bouledogue;Greater fishing bat;;3;;;;P;P;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/538262
+Chiroptera;Phyllostomidae;;443486;186233;186233;443486;FM;Phyllostomidae;Gray, 1825;Phyllostomidae Gray, 1825;Phyllostomidae Gray, 1825;Phyllostomidae Gray, 1825;;;;3;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Brachyphyllinae;655581;443486;443486;655581;SBFM;Brachyphyllinae;Gray, 1866;Brachyphyllinae Gray, 1866;Brachyphyllinae Gray, 1866;Brachyphyllinae Gray, 1866;;;;3;;;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Brachyphyllinae;532582;655581;655581;532582;GN;Brachyphylla;Gray, 1833;Brachyphylla Gray, 1833;<i>Brachyphylla</i> Gray, 1833;Brachyphylla Gray, 1833;;;;;;;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Brachyphyllinae;532583;532582;532582;532583;ES;Brachyphylla cavernarum;Gray, 1834;Brachyphylla cavernarum Gray, 1834;<i>Brachyphylla cavernarum</i> Gray, 1834;Brachyphylla cavernarum Gray, 1834;Brachyphylle des cavernes, Brachyphylle de Saint Vincent, Brachyphylle des Antilles;Lesser Antillean Fruit Bat, Antillean Fruit-eating Bat;FMd;3;;;P;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/532583
+Chiroptera;Phyllostomidae;Brachyphyllinae;536083;532583;532583;536083;SSES;Brachyphylla cavernarum cavernarum;Gray, 1834;Brachyphylla cavernarum cavernarum Gray, 1834;<i>Brachyphylla cavernarum cavernarum</i> Gray, 1834;Brachyphylla cavernarum cavernarum Gray, 1834;Brachyphylle des Antilles;Antillean Cave Bat;;3;;;;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/536083
+Chiroptera;Phyllostomidae;Carolliinae;655279;443486;443486;655279;SBFM;Carolliinae;Miller, 1924;Carolliinae Miller, 1924;Carolliinae Miller, 1924;Carolliinae Miller, 1924;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Carolliinae;443593;655279;655279;443593;GN;Carollia;Gray, 1838;Carollia Gray, 1838;<i>Carollia</i> Gray, 1838;Carollia Gray, 1838;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Carolliinae;443672;443593;443593;443672;ES;Carollia brevicauda;(Schinz, 1821);Carollia brevicauda (Schinz, 1821);<i>Carollia brevicauda</i> (Schinz, 1821);Carollia brevicauda (Schinz, 1821);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443672
+Chiroptera;Phyllostomidae;Carolliinae;443673;443593;443593;443673;ES;Carollia perspicillata;(Linnaeus, 1758);Carollia perspicillata (Linnaeus, 1758);<i>Carollia perspicillata</i> (Linnaeus, 1758);Carollia perspicillata (Linnaeus, 1758);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443673
+Chiroptera;Phyllostomidae;Carolliinae;443594;655279;655279;443594;GN;Rhinophylla;Peters, 1865;Rhinophylla Peters, 1865;<i>Rhinophylla</i> Peters, 1865;Rhinophylla Peters, 1865;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Carolliinae;443675;443594;443594;443675;ES;Rhinophylla pumilio;Peters, 1865;Rhinophylla pumilio Peters, 1865;<i>Rhinophylla pumilio</i> Peters, 1865;Rhinophylla pumilio Peters, 1865;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443675
+Chiroptera;Phyllostomidae;Desmodontinae;655275;443486;443486;655275;SBFM;Desmodontinae;Bonaparte, 1845;Desmodontinae Bonaparte, 1845;Desmodontinae Bonaparte, 1845;Desmodontinae Bonaparte, 1845;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Desmodontinae;443595;655275;655275;443595;GN;Desmodus;Wied-Neuwied, 1826;Desmodus Wied-Neuwied, 1826;<i>Desmodus</i> Wied-Neuwied, 1826;Desmodus Wied-Neuwied, 1826;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Desmodontinae;443676;443595;443595;443676;ES;Desmodus rotundus;(É. Geoffroy Saint-Hilaire, 1810);Desmodus rotundus (É. Geoffroy Saint-Hilaire, 1810);<i>Desmodus rotundus</i> (É. Geoffroy Saint-Hilaire, 1810);Desmodus rotundus (É. Geoffroy Saint-Hilaire, 1810);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443676
+Chiroptera;Phyllostomidae;Desmodontinae;443596;655275;655275;443596;GN;Diaemus;Miller, 1906;Diaemus Miller, 1906;<i>Diaemus</i> Miller, 1906;Diaemus Miller, 1906;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Desmodontinae;443824;443596;443596;443824;ES;Diaemus youngii;(Jentink, 1893);Diaemus youngii (Jentink, 1893);<i>Diaemus youngii</i> (Jentink, 1893);Diaemus youngii (Jentink, 1893);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443824
+Chiroptera;Phyllostomidae;Desmodontinae;443677;;;443824;ES;Desmodus youngii;(Jentink, 1893);Desmodus youngii (Jentink, 1893);<i>Desmodus youngii</i> (Jentink, 1893);Diaemus youngii (Jentink, 1893);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443677
+Chiroptera;Phyllostomidae;Glossophaginae;655276;443486;443486;655276;SBFM;Glossophaginae;Bonaparte, 1845;Glossophaginae Bonaparte, 1845;Glossophaginae Bonaparte, 1845;Glossophaginae Bonaparte, 1845;;;;3;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Glossophaginae;443597;655276;655276;443597;GN;Anoura;Gray, 1838;Anoura Gray, 1838;<i>Anoura</i> Gray, 1838;Anoura Gray, 1838;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Glossophaginae;655281;443597;443597;655281;ES;Anoura caudifer;(É. Geoffroy Saint-Hilaire, 1818);Anoura caudifer (É. Geoffroy Saint-Hilaire, 1818);<i>Anoura caudifer</i> (É. Geoffroy Saint-Hilaire, 1818);Anoura caudifer (É. Geoffroy Saint-Hilaire, 1818);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655281
+Chiroptera;Phyllostomidae;Glossophaginae;443678;;;655281;ES;Anoura caudifera;(É. Geoffroy Saint-Hilaire, 1818);Anoura caudifera (É. Geoffroy Saint-Hilaire, 1818);<i>Anoura caudifera</i> (É. Geoffroy Saint-Hilaire, 1818);Anoura caudifer (É. Geoffroy Saint-Hilaire, 1818);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443678
+Chiroptera;Phyllostomidae;Glossophaginae;443679;443597;443597;443679;ES;Anoura geoffroyi;Gray, 1838;Anoura geoffroyi Gray, 1838;<i>Anoura geoffroyi</i> Gray, 1838;Anoura geoffroyi Gray, 1838;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443679
+Chiroptera;Phyllostomidae;Glossophaginae;443598;655276;655276;443598;GN;Choeroniscus;Thomas, 1928;Choeroniscus Thomas, 1928;<i>Choeroniscus</i> Thomas, 1928;Choeroniscus Thomas, 1928;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Glossophaginae;655565;443598;443598;655565;ES;Choeroniscus godmani;Thomas, 1903;Choeroniscus godmani Thomas, 1903;<i>Choeroniscus godmani</i> Thomas, 1903;Choeroniscus godmani Thomas, 1903;;;FMd;3;;D;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655565
+Chiroptera;Phyllostomidae;Glossophaginae;459544;443598;443598;459544;ES;Choeroniscus minor;(Peters, 1868);Choeroniscus minor (Peters, 1868);<i>Choeroniscus minor</i> (Peters, 1868);Choeroniscus minor (Peters, 1868);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459544
+Chiroptera;Phyllostomidae;Glossophaginae;443680;;;459544;ES;Choeroniscus intermedius;(J.A. Allen & Chapman, 1893);Choeroniscus intermedius (J.A. Allen & Chapman, 1893);<i>Choeroniscus intermedius</i> (J.A. Allen & Chapman, 1893);Choeroniscus minor (Peters, 1868);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443680
+Chiroptera;Phyllostomidae;Glossophaginae;443599;655276;655276;443599;GN;Glossophaga;É. Geoffroy Saint-Hilaire, 1818;Glossophaga É. Geoffroy Saint-Hilaire, 1818;<i>Glossophaga</i> É. Geoffroy Saint-Hilaire, 1818;Glossophaga É. Geoffroy Saint-Hilaire, 1818;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Glossophaginae;443681;443599;443599;443681;ES;Glossophaga soricina;(Pallas, 1766);Glossophaga soricina (Pallas, 1766);<i>Glossophaga soricina</i> (Pallas, 1766);Glossophaga soricina (Pallas, 1766);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443681
+Chiroptera;Phyllostomidae;Glossophaginae;655283;;;443681;ES;Vespertilio soricinus;Pallas, 1766;Vespertilio soricinus Pallas, 1766;<i>Vespertilio soricinus</i> Pallas, 1766;Glossophaga soricina (Pallas, 1766);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655283
+Chiroptera;Phyllostomidae;Glossophaginae;443600;655276;655276;443600;GN;Lichonycteris;Thomas, 1895;Lichonycteris Thomas, 1895;<i>Lichonycteris</i> Thomas, 1895;Lichonycteris Thomas, 1895;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Glossophaginae;443682;443600;443600;443682;ES;Lichonycteris obscura;Thomas, 1895;Lichonycteris obscura Thomas, 1895;<i>Lichonycteris obscura</i> Thomas, 1895;Lichonycteris obscura Thomas, 1895;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443682
+Chiroptera;Phyllostomidae;Glossophaginae;443601;655276;655276;443601;GN;Lionycteris;Thomas, 1913;Lionycteris Thomas, 1913;<i>Lionycteris</i> Thomas, 1913;Lionycteris Thomas, 1913;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Glossophaginae;443683;443601;443601;443683;ES;Lionycteris spurrelli;Thomas, 1913;Lionycteris spurrelli Thomas, 1913;<i>Lionycteris spurrelli</i> Thomas, 1913;Lionycteris spurrelli Thomas, 1913;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443683
+Chiroptera;Phyllostomidae;Glossophaginae;443602;655276;655276;443602;GN;Lonchophylla;Thomas, 1903;Lonchophylla Thomas, 1903;<i>Lonchophylla</i> Thomas, 1903;Lonchophylla Thomas, 1903;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Glossophaginae;443684;443602;443602;443684;ES;Lonchophylla thomasi;J.A. Allen, 1904;Lonchophylla thomasi J.A. Allen, 1904;<i>Lonchophylla thomasi</i> J.A. Allen, 1904;Lonchophylla thomasi J.A. Allen, 1904;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443684
+Chiroptera;Phyllostomidae;Glossophaginae;533122;655276;655276;533122;GN;Monophyllus;Leach, 1821;Monophyllus Leach, 1821;<i>Monophyllus</i> Leach, 1821;Monophyllus Leach, 1821;;;;;;;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Glossophaginae;533123;533122;533122;533123;ES;Monophyllus plethodon;Miller, 1900;Monophyllus plethodon Miller, 1900;<i>Monophyllus plethodon</i> Miller, 1900;Monophyllus plethodon Miller, 1900;Monophylle des Petites Antilles, Fer de lance de la Barbade;;FMd;3;;;S;S;S;S;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/533123
+Chiroptera;Phyllostomidae;Glossophaginae;536082;533123;533123;536082;SSES;Monophyllus plethodon luciae;Miller, 1902;Monophyllus plethodon luciae Miller, 1902;<i>Monophyllus plethodon luciae</i> Miller, 1902;Monophyllus plethodon luciae Miller, 1902;Fer de lance de la Barbade, Monophylle des Petites Antilles;Insular Long-tongued Bat, Lesser Antillean Long-tongued Bat;;3;;;S;S;S;S;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/536082
+Chiroptera;Phyllostomidae;;701748;443486;443486;701748;GN;Macrotus;Gray, 1843;Macrotus Gray, 1843;<i>Macrotus</i> Gray, 1843;Macrotus Gray, 1843;;;;3;;;;;W;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;;701749;701748;701748;701749;ES;Macrotus waterhousii;Gray, 1843;Macrotus waterhousii Gray, 1843;<i>Macrotus waterhousii</i> Gray, 1843;Macrotus waterhousii Gray, 1843;;;FMd;3;;;;;W;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/701749
+Chiroptera;Phyllostomidae;Phyllostominae;655278;443486;443486;655278;SBFM;Phyllostominae;Gray, 1825;Phyllostominae Gray, 1825;Phyllostominae Gray, 1825;Phyllostominae Gray, 1825;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443603;655278;655278;443603;GN;Chrotopterus;W. Peters, 1865;Chrotopterus W. Peters, 1865;<i>Chrotopterus</i> W. Peters, 1865;Chrotopterus W. Peters, 1865;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443685;443603;443603;443685;ES;Chrotopterus auritus;(W. Peters, 1856);Chrotopterus auritus (W. Peters, 1856);<i>Chrotopterus auritus</i> (W. Peters, 1856);Chrotopterus auritus (W. Peters, 1856);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443685
+Chiroptera;Phyllostomidae;Phyllostominae;655284;655278;655278;655284;GN;Glyphonycteris;Thomas, 1896;Glyphonycteris Thomas, 1896;<i>Glyphonycteris</i> Thomas, 1896;Glyphonycteris Thomas, 1896;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;459549;655284;655284;459549;ES;Glyphonycteris daviesi;(Hill, 1964);Glyphonycteris daviesi (Hill, 1964);<i>Glyphonycteris daviesi</i> (Hill, 1964);Glyphonycteris daviesi (Hill, 1964);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459549
+Chiroptera;Phyllostomidae;Phyllostominae;443689;;;459549;ES;Micronycteris daviesi;(Hill, 1964);Micronycteris daviesi (Hill, 1964);<i>Micronycteris daviesi</i> (Hill, 1964);Glyphonycteris daviesi (Hill, 1964);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443689
+Chiroptera;Phyllostomidae;Phyllostominae;459550;655284;655284;459550;ES;Glyphonycteris sylvestris;(Thomas, 1896);Glyphonycteris sylvestris (Thomas, 1896);<i>Glyphonycteris sylvestris</i> (Thomas, 1896);Glyphonycteris sylvestris (Thomas, 1896);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459550
+Chiroptera;Phyllostomidae;Phyllostominae;443695;;;459550;ES;Micronycteris sylvestris;(Thomas, 1896);Micronycteris sylvestris (Thomas, 1896);<i>Micronycteris sylvestris</i> (Thomas, 1896);Glyphonycteris sylvestris (Thomas, 1896);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443695
+Chiroptera;Phyllostomidae;Phyllostominae;655285;655278;655278;655285;GN;Lampronycteris;Sanborn, 1949;Lampronycteris Sanborn, 1949;<i>Lampronycteris</i> Sanborn, 1949;Lampronycteris Sanborn, 1949;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;459555;655285;655285;459555;ES;Lampronycteris brachyotis;(Dobson, 1879);Lampronycteris brachyotis (Dobson, 1879);<i>Lampronycteris brachyotis</i> (Dobson, 1879);Lampronycteris brachyotis (Dobson, 1879);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459555
+Chiroptera;Phyllostomidae;Phyllostominae;443688;;;459555;ES;Micronycteris brachyotis;(Dobson, 1879);Micronycteris brachyotis (Dobson, 1879);<i>Micronycteris brachyotis</i> (Dobson, 1879);Lampronycteris brachyotis (Dobson, 1879);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443688
+Chiroptera;Phyllostomidae;Phyllostominae;443604;655278;655278;443604;GN;Lonchorhina;Tomes, 1863;Lonchorhina Tomes, 1863;<i>Lonchorhina</i> Tomes, 1863;Lonchorhina Tomes, 1863;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;655566;443604;443604;655566;ES;Lonchorhina aurita;Tomes, 1863;Lonchorhina aurita Tomes, 1863;<i>Lonchorhina aurita</i> Tomes, 1863;Lonchorhina aurita Tomes, 1863;;;QCF-FMd;3;;D;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655566
+Chiroptera;Phyllostomidae;Phyllostominae;528746;443604;443604;528746;ES;Lonchorhina inusitata;Handley & Ochoa, 1997;Lonchorhina inusitata Handley & Ochoa, 1997;<i>Lonchorhina inusitata</i> Handley & Ochoa, 1997;Lonchorhina inusitata Handley & Ochoa, 1997;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/528746
+Chiroptera;Phyllostomidae;Phyllostominae;443686;;;528746;ES;Lonchorhina marinkellei;auct. non Hernandez-Camacho & Cadenas, 1978;Lonchorhina marinkellei auct. non Hernandez-Camacho & Cadenas, 1978;<i>Lonchorhina marinkellei</i> auct. non Hernandez-Camacho & Cadenas, 1978;Lonchorhina inusitata Handley & Ochoa, 1997;;;QCF-FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443686
+Chiroptera;Phyllostomidae;Phyllostominae;655287;655278;655278;655287;GN;Lophostoma;d’Orbigny, 1836;Lophostoma d’Orbigny, 1836;<i>Lophostoma</i> d’Orbigny, 1836;Lophostoma d’Orbigny, 1836;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;459556;655287;655287;459556;ES;Lophostoma brasiliense;(Peters, 1866);Lophostoma brasiliense (Peters, 1866);<i>Lophostoma brasiliense</i> (Peters, 1866);Lophostoma brasiliense (Peters, 1866);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459556
+Chiroptera;Phyllostomidae;Phyllostominae;443704;;;459556;ES;Tonatia brasiliense;(Peters, 1866);Tonatia brasiliense (Peters, 1866);<i>Tonatia brasiliense</i> (Peters, 1866);Lophostoma brasiliense (Peters, 1866);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443704
+Chiroptera;Phyllostomidae;Phyllostominae;459557;655287;655287;459557;ES;Lophostoma carrikeri;(J.A. Allen, 1910);Lophostoma carrikeri (J.A. Allen, 1910);<i>Lophostoma carrikeri</i> (J.A. Allen, 1910);Lophostoma carrikeri (J.A. Allen, 1910);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459557
+Chiroptera;Phyllostomidae;Phyllostominae;443705;;;459557;ES;Tonatia carrikeri;(J.A. Allen, 1910);Tonatia carrikeri (J.A. Allen, 1910);<i>Tonatia carrikeri</i> (J.A. Allen, 1910);Lophostoma carrikeri (J.A. Allen, 1910);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443705
+Chiroptera;Phyllostomidae;Phyllostominae;459558;655287;655287;459558;ES;Lophostoma schulzi;(Genoways & Williams, 1980);Lophostoma schulzi (Genoways & Williams, 1980);<i>Lophostoma schulzi</i> (Genoways & Williams, 1980);Lophostoma schulzi (Genoways & Williams, 1980);;;FMd;3;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/459558
+Chiroptera;Phyllostomidae;Phyllostominae;443707;;;459558;ES;Tonatia schulzi;Genoway & Williams, 1980;Tonatia schulzi Genoway & Williams, 1980;<i>Tonatia schulzi</i> Genoway & Williams, 1980;Lophostoma schulzi (Genoways & Williams, 1980);;;FMd;3;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/443707
+Chiroptera;Phyllostomidae;Phyllostominae;459559;655287;655287;459559;ES;Lophostoma silvicolum;d'Orbigny, 1836;Lophostoma silvicolum d'Orbigny, 1836;<i>Lophostoma silvicolum</i> d'Orbigny, 1836;Lophostoma silvicolum d'Orbigny, 1836;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459559
+Chiroptera;Phyllostomidae;Phyllostominae;443708;;;459559;ES;Tonatia silvicola;(d'Orbigny, 1836);Tonatia silvicola (d'Orbigny, 1836);<i>Tonatia silvicola</i> (d'Orbigny, 1836);Lophostoma silvicolum d'Orbigny, 1836;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443708
+Chiroptera;Phyllostomidae;Phyllostominae;443605;655278;655278;443605;GN;Macrophyllum;Gray, 1838;Macrophyllum Gray, 1838;<i>Macrophyllum</i> Gray, 1838;Macrophyllum Gray, 1838;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443687;443605;443605;443687;ES;Macrophyllum macrophyllum;(Schinz, 1821);Macrophyllum macrophyllum (Schinz, 1821);<i>Macrophyllum macrophyllum</i> (Schinz, 1821);Macrophyllum macrophyllum (Schinz, 1821);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443687
+Chiroptera;Phyllostomidae;Phyllostominae;443606;655278;655278;443606;GN;Micronycteris;Gray, 1866;Micronycteris Gray, 1866;<i>Micronycteris</i> Gray, 1866;Micronycteris Gray, 1866;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;521601;443606;443606;521601;ES;Micronycteris brosseti;Simmons & Voss, 1998;Micronycteris brosseti Simmons & Voss, 1998;<i>Micronycteris brosseti</i> Simmons & Voss, 1998;Micronycteris brosseti Simmons & Voss, 1998;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/521601
+Chiroptera;Phyllostomidae;Phyllostominae;443690;443606;443606;443690;ES;Micronycteris hirsuta;(Peters, 1869);Micronycteris hirsuta (Peters, 1869);<i>Micronycteris hirsuta</i> (Peters, 1869);Micronycteris hirsuta (Peters, 1869);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443690
+Chiroptera;Phyllostomidae;Phyllostominae;443691;443606;443606;443691;ES;Micronycteris megalotis;(Gray, 1842);Micronycteris megalotis (Gray, 1842);<i>Micronycteris megalotis</i> (Gray, 1842);Micronycteris megalotis (Gray, 1842);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443691
+Chiroptera;Phyllostomidae;Phyllostominae;443825;443606;443606;443825;ES;Micronycteris microtis;Miller, 1898;Micronycteris microtis Miller, 1898;<i>Micronycteris microtis</i> Miller, 1898;Micronycteris microtis Miller, 1898;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443825
+Chiroptera;Phyllostomidae;Phyllostominae;443692;443606;443606;443692;ES;Micronycteris minuta;(Gervais, 1856);Micronycteris minuta (Gervais, 1856);<i>Micronycteris minuta</i> (Gervais, 1856);Micronycteris minuta (Gervais, 1856);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443692
+Chiroptera;Phyllostomidae;Phyllostominae;521602;;;443692;ES;Micronycteris homezi;Pirlot, 1967;Micronycteris homezi Pirlot, 1967;<i>Micronycteris homezi</i> Pirlot, 1967;Micronycteris minuta (Gervais, 1856);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/521602
+Chiroptera;Phyllostomidae;Phyllostominae;443694;443606;443606;443694;ES;Micronycteris schmidtorum;Sanborn, 1935;Micronycteris schmidtorum Sanborn, 1935;<i>Micronycteris schmidtorum</i> Sanborn, 1935;Micronycteris schmidtorum Sanborn, 1935;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443694
+Chiroptera;Phyllostomidae;Phyllostominae;443607;655278;655278;443607;GN;Mimon;Gray, 1847;Mimon Gray, 1847;<i>Mimon</i> Gray, 1847;Mimon Gray, 1847;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443696;443607;443607;443696;ES;Mimon bennettii;(Gray, 1838);Mimon bennettii (Gray, 1838);<i>Mimon bennettii</i> (Gray, 1838);Mimon bennettii (Gray, 1838);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443696
+Chiroptera;Phyllostomidae;Phyllostominae;443697;;;655289;ES;Mimon crenulatum;(É. Geoffroy Saint-Hilaire, 1810);Mimon crenulatum (É. Geoffroy Saint-Hilaire, 1810);<i>Mimon crenulatum</i> (É. Geoffroy Saint-Hilaire, 1810);Mimon crenulatum (É. Geoffroy Saint-Hilaire, 1803);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443697
+Chiroptera;Phyllostomidae;Phyllostominae;443608;655278;655278;443608;GN;Phylloderma;Peters, 1865;Phylloderma Peters, 1865;<i>Phylloderma</i> Peters, 1865;Phylloderma Peters, 1865;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443698;443608;443608;443698;ES;Phylloderma stenops;Peters, 1865;Phylloderma stenops Peters, 1865;<i>Phylloderma stenops</i> Peters, 1865;Phylloderma stenops Peters, 1865;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443698
+Chiroptera;Phyllostomidae;Phyllostominae;443609;655278;655278;443609;GN;Phyllostomus;Lacépède, 1799;Phyllostomus Lacépède, 1799;<i>Phyllostomus</i> Lacépède, 1799;Phyllostomus Lacépède, 1799;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443699;443609;443609;443699;ES;Phyllostomus discolor;Wagner, 1843;Phyllostomus discolor Wagner, 1843;<i>Phyllostomus discolor</i> Wagner, 1843;Phyllostomus discolor Wagner, 1843;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443699
+Chiroptera;Phyllostomidae;Phyllostominae;443700;443609;443609;443700;ES;Phyllostomus elongatus;(É. Geoffroy Saint-Hilaire, 1810);Phyllostomus elongatus (É. Geoffroy Saint-Hilaire, 1810);<i>Phyllostomus elongatus</i> (É. Geoffroy Saint-Hilaire, 1810);Phyllostomus elongatus (É. Geoffroy Saint-Hilaire, 1810);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443700
+Chiroptera;Phyllostomidae;Phyllostominae;443701;443609;443609;443701;ES;Phyllostomus hastatus;(Pallas, 1767);Phyllostomus hastatus (Pallas, 1767);<i>Phyllostomus hastatus</i> (Pallas, 1767);Phyllostomus hastatus (Pallas, 1767);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443701
+Chiroptera;Phyllostomidae;Phyllostominae;443702;443609;443609;443702;ES;Phyllostomus latifolius;(Thomas, 1901);Phyllostomus latifolius (Thomas, 1901);<i>Phyllostomus latifolius</i> (Thomas, 1901);Phyllostomus latifolius (Thomas, 1901);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443702
+Chiroptera;Phyllostomidae;Phyllostominae;443610;655278;655278;443610;GN;Tonatia;Gray, 1847;Tonatia Gray, 1847;<i>Tonatia</i> Gray, 1847;Tonatia Gray, 1847;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443706;443610;443610;443706;ES;Tonatia saurophila;Koopman & Williams, 1951;Tonatia saurophila Koopman & Williams, 1951;<i>Tonatia saurophila</i> Koopman & Williams, 1951;Tonatia saurophila Koopman & Williams, 1951;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443706
+Chiroptera;Phyllostomidae;Phyllostominae;443703;;;443706;ES;Tonatia bidens;auct. non (Spix, 1828);Tonatia bidens auct. non (Spix, 1828);<i>Tonatia bidens</i> auct. non (Spix, 1828);Tonatia saurophila Koopman & Williams, 1951;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443703
+Chiroptera;Phyllostomidae;Phyllostominae;443611;655278;655278;443611;GN;Trachops;Gray, 1847;Trachops Gray, 1847;<i>Trachops</i> Gray, 1847;Trachops Gray, 1847;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443709;443611;443611;443709;ES;Trachops cirrhosus;(Spix, 1823);Trachops cirrhosus (Spix, 1823);<i>Trachops cirrhosus</i> (Spix, 1823);Trachops cirrhosus (Spix, 1823);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443709
+Chiroptera;Phyllostomidae;Phyllostominae;655291;655278;655278;655291;GN;Trinycteris;Sanborn, 1949;Trinycteris Sanborn, 1949;<i>Trinycteris</i> Sanborn, 1949;Trinycteris Sanborn, 1949;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;459564;655291;655291;459564;ES;Trinycteris nicefori;(Sanborn, 1949);Trinycteris nicefori (Sanborn, 1949);<i>Trinycteris nicefori</i> (Sanborn, 1949);Trinycteris nicefori (Sanborn, 1949);Trinyctère de Nicéforo, Trinyctère de Nicéphore;Niceforo's Bat;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/459564
+Chiroptera;Phyllostomidae;Phyllostominae;443693;;;459564;ES;Micronycteris nicefori;Sanborn, 1949;Micronycteris nicefori Sanborn, 1949;<i>Micronycteris nicefori</i> Sanborn, 1949;Trinycteris nicefori (Sanborn, 1949);Trinyctère de Nicéforo, Trinyctère de Nicéphore;Niceforo's Bat;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443693
+Chiroptera;Phyllostomidae;Phyllostominae;443612;655278;655278;443612;GN;Vampyrum;Rafinesque, 1815;Vampyrum Rafinesque, 1815;<i>Vampyrum</i> Rafinesque, 1815;Vampyrum Rafinesque, 1815;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Phyllostominae;443710;443612;443612;443710;ES;Vampyrum spectrum;(Linnaeus, 1758);Vampyrum spectrum (Linnaeus, 1758);<i>Vampyrum spectrum</i> (Linnaeus, 1758);Vampyrum spectrum (Linnaeus, 1758);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443710
+Chiroptera;Phyllostomidae;Stenodermatinae;655280;443486;443486;655280;SBFM;Stenodermatinae;Gervais, 1856;Stenodermatinae Gervais, 1856;Stenodermatinae Gervais, 1856;Stenodermatinae Gervais, 1856;;;;3;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443535;655280;655280;443535;GN;Ametrida;Gray, 1847;Ametrida Gray, 1847;<i>Ametrida</i> Gray, 1847;Ametrida Gray, 1847;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443711;443535;443535;443711;ES;Ametrida centurio;Gray, 1847;Ametrida centurio Gray, 1847;<i>Ametrida centurio</i> Gray, 1847;Ametrida centurio Gray, 1847;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443711
+Chiroptera;Phyllostomidae;Stenodermatinae;532602;655280;655280;532602;GN;Ardops;Miller, 1906;Ardops Miller, 1906;<i>Ardops</i> Miller, 1906;Ardops Miller, 1906;;;;;;;P;P;P;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;532622;532602;532602;532622;ES;Ardops nichollsi;Thomas, 1891;Ardops nichollsi Thomas, 1891;<i>Ardops nichollsi</i> Thomas, 1891;Ardops nichollsi Thomas, 1891;Ardops des petites Antilles;;FMd;3;;;S;S;S;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/532622
+Chiroptera;Phyllostomidae;Stenodermatinae;843655;532622;532622;843655;SSES;Ardops nichollsi annectens;Miller, 1913;Ardops nichollsi annectens Miller, 1913;<i>Ardops nichollsi annectens</i> Miller, 1913;Ardops nichollsi annectens Miller, 1913;;;;3;A;A;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/843655
+Chiroptera;Phyllostomidae;Stenodermatinae;699193;532622;532622;699193;SSES;Ardops nichollsi koopmani;(Jones & Schwartz, 1967);Ardops nichollsi koopmani (Jones & Schwartz, 1967);<i>Ardops nichollsi koopmani</i> (Jones & Schwartz, 1967);Ardops nichollsi koopmani (Jones & Schwartz, 1967);Chauve-souris arboricole, Ardops des Petites Antilles ;;;3;A;A;E;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/699193
+Chiroptera;Phyllostomidae;Stenodermatinae;538282;532622;532622;538282;SSES;Ardops nichollsi montserratensis;(Thomas, 1894);Ardops nichollsi montserratensis (Thomas, 1894);<i>Ardops nichollsi montserratensis</i> (Thomas, 1894);Ardops nichollsi montserratensis (Thomas, 1894);;Lesser Antillean Tree Bat;;3;;;;;S;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/538282
+Chiroptera;Phyllostomidae;Stenodermatinae;443536;655280;655280;443536;GN;Artibeus;Leach, 1821;Artibeus Leach, 1821;<i>Artibeus</i> Leach, 1821;Artibeus Leach, 1821;;;;3;;P;P;P;P;P;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443713;443536;443536;443713;ES;Artibeus concolor;Peters, 1865;Artibeus concolor Peters, 1865;<i>Artibeus concolor</i> Peters, 1865;Artibeus concolor Peters, 1865;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443713
+Chiroptera;Phyllostomidae;Stenodermatinae;789445;443536;443536;789445;ES;Artibeus glaucus;Thomas, 1893;Artibeus glaucus Thomas, 1893;<i>Artibeus glaucus</i> Thomas, 1893;Artibeus glaucus Thomas, 1893;;;FMd;3;;Q;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/789445
+Chiroptera;Phyllostomidae;Stenodermatinae;443715;443536;443536;443715;ES;Artibeus jamaicensis;Leach, 1821;Artibeus jamaicensis Leach, 1821;<i>Artibeus jamaicensis</i> Leach, 1821;Artibeus jamaicensis Leach, 1821;Fer de Lance commun, Artibé de la Jamaïque;Jamaican Fruit Bat;FMd;3;;Q;P;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443715
+Chiroptera;Phyllostomidae;Stenodermatinae;701675;;;443715;ES;Dermanura eva;Cope, 1889;Dermanura eva Cope, 1889;<i>Dermanura eva</i> Cope, 1889;Artibeus jamaicensis Leach, 1821;Fer de Lance commun, Artibé de la Jamaïque;Jamaican Fruit Bat;FMd;3;;Q;P;P;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/701675
+Chiroptera;Phyllostomidae;Stenodermatinae;536084;443715;443715;536084;SSES;Artibeus jamaicensis jamaicensis;Leach, 1821;Artibeus jamaicensis jamaicensis Leach, 1821;<i>Artibeus jamaicensis jamaicensis</i> Leach, 1821;Artibeus jamaicensis jamaicensis Leach, 1821;Fer de Lance commun, Artibé de la Jamaïque;Jamaican Fruit-eating Bat;;3;;;;;P;P;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/536084
+Chiroptera;Phyllostomidae;Stenodermatinae;443716;443536;443536;443716;ES;Artibeus lituratus;(Olfers, 1818);Artibeus lituratus (Olfers, 1818);<i>Artibeus lituratus</i> (Olfers, 1818);Artibeus lituratus (Olfers, 1818);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443716
+Chiroptera;Phyllostomidae;Stenodermatinae;443717;443536;443536;443717;ES;Artibeus obscurus;(Schinz, 1821);Artibeus obscurus (Schinz, 1821);<i>Artibeus obscurus</i> (Schinz, 1821);Artibeus obscurus (Schinz, 1821);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443717
+Chiroptera;Phyllostomidae;Stenodermatinae;443826;;;443717;ES;Artibeus fuliginosus;Gray, 1838;Artibeus fuliginosus Gray, 1838;<i>Artibeus fuliginosus</i> Gray, 1838;Artibeus obscurus (Schinz, 1821);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443826
+Chiroptera;Phyllostomidae;Stenodermatinae;593762;443536;443536;593762;ES;Artibeus planirostris;(Spix, 1823);Artibeus planirostris (Spix, 1823);<i>Artibeus planirostris</i> (Spix, 1823);Artibeus planirostris (Spix, 1823);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/593762
+Chiroptera;Phyllostomidae;Stenodermatinae;443537;655280;655280;443537;GN;Chiroderma;Peters, 1860;Chiroderma Peters, 1860;<i>Chiroderma</i> Peters, 1860;Chiroderma Peters, 1860;;;;3;;P;;P;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;532642;443537;443537;532642;ES;Chiroderma improvisum;Baker & Genoways, 1976;Chiroderma improvisum Baker & Genoways, 1976;<i>Chiroderma improvisum</i> Baker & Genoways, 1976;Chiroderma improvisum Baker & Genoways, 1976;Chiroderme de la Guadeloupe;;FMd;3;A;A;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/532642
+Chiroptera;Phyllostomidae;Stenodermatinae;443718;443537;443537;443718;ES;Chiroderma trinitatum;Goodwin, 1958;Chiroderma trinitatum Goodwin, 1958;<i>Chiroderma trinitatum</i> Goodwin, 1958;Chiroderma trinitatum Goodwin, 1958;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443718
+Chiroptera;Phyllostomidae;Stenodermatinae;443719;443537;443537;443719;ES;Chiroderma villosum;Peters, 1860;Chiroderma villosum Peters, 1860;<i>Chiroderma villosum</i> Peters, 1860;Chiroderma villosum Peters, 1860;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443719
+Chiroptera;Phyllostomidae;Stenodermatinae;593763;655280;655280;593763;GN;Dermanura;Gervais, 1856;Dermanura Gervais, 1856;<i>Dermanura</i> Gervais, 1856;Dermanura Gervais, 1856;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;593764;593763;593763;593764;ES;Dermanura cinerea;(Gervais, 1856);Dermanura cinerea (Gervais, 1856);<i>Dermanura cinerea</i> (Gervais, 1856);Dermanura cinerea (Gervais, 1856);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/593764
+Chiroptera;Phyllostomidae;Stenodermatinae;443712;;;593764;ES;Artibeus cinereus;(Gervais, 1856);Artibeus cinereus (Gervais, 1856);<i>Artibeus cinereus</i> (Gervais, 1856);Dermanura cinerea (Gervais, 1856);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443712
+Chiroptera;Phyllostomidae;Stenodermatinae;593765;593763;593763;593765;ES;Dermanura gnoma;Handley, 1987;Dermanura gnoma Handley, 1987;<i>Dermanura gnoma</i> Handley, 1987;Dermanura gnoma Handley, 1987;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/593765
+Chiroptera;Phyllostomidae;Stenodermatinae;443714;;;593765;ES;Artibeus gnomus;Handley, 1987;Artibeus gnomus Handley, 1987;<i>Artibeus gnomus</i> Handley, 1987;Dermanura gnoma Handley, 1987;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443714
+Chiroptera;Phyllostomidae;Stenodermatinae;443538;655280;655280;443538;GN;Mesophylla;Thomas, 1901;Mesophylla Thomas, 1901;<i>Mesophylla</i> Thomas, 1901;Mesophylla Thomas, 1901;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443720;443538;443538;443720;ES;Mesophylla macconnelli;Thomas, 1901;Mesophylla macconnelli Thomas, 1901;<i>Mesophylla macconnelli</i> Thomas, 1901;Mesophylla macconnelli Thomas, 1901;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443720
+Chiroptera;Phyllostomidae;Stenodermatinae;444392;655280;655280;444392;GN;Platyrrhinus;Saussure, 1860;Platyrrhinus Saussure, 1860;<i>Platyrrhinus</i> Saussure, 1860;Platyrrhinus Saussure, 1860;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443828;;;444392;GN;Vampyrops;;Vampyrops ;<i>Vampyrops</i>;Platyrrhinus Saussure, 1860;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443721;444392;444392;443721;ES;Platyrrhinus brachycephalus;(Rouk & Carter, 1972);Platyrrhinus brachycephalus (Rouk & Carter, 1972);<i>Platyrrhinus brachycephalus</i> (Rouk & Carter, 1972);Platyrrhinus brachycephalus (Rouk & Carter, 1972);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443721
+Chiroptera;Phyllostomidae;Stenodermatinae;443829;;;443721;ES;Vampyrops brachycephalus;Rouk & Carter, 1972;Vampyrops brachycephalus Rouk & Carter, 1972;<i>Vampyrops brachycephalus</i> Rouk & Carter, 1972;Platyrrhinus brachycephalus (Rouk & Carter, 1972);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443829
+Chiroptera;Phyllostomidae;Stenodermatinae;593766;444392;444392;593766;ES;Platyrrhinus fusciventris;Velazco, Gardner & Patterson, 2010;Platyrrhinus fusciventris Velazco, Gardner & Patterson, 2010;<i>Platyrrhinus fusciventris</i> Velazco, Gardner & Patterson, 2010;Platyrrhinus fusciventris Velazco, Gardner & Patterson, 2010;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/593766
+Chiroptera;Phyllostomidae;Stenodermatinae;655293;;;593766;ES;Platyrrhinus helleri;auct. non Peters, 1866;Platyrrhinus helleri auct. non Peters, 1866;<i>Platyrrhinus helleri</i> auct. non Peters, 1866;Platyrrhinus fusciventris Velazco, Gardner & Patterson, 2010;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655293
+Chiroptera;Phyllostomidae;Stenodermatinae;443830;;;593766;ES;Vampyrops helleri;auct. non Peters, 1866;Vampyrops helleri auct. non Peters, 1866;<i>Vampyrops helleri</i> auct. non Peters, 1866;Platyrrhinus fusciventris Velazco, Gardner & Patterson, 2010;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443830
+Chiroptera;Phyllostomidae;Stenodermatinae;443722;444392;444392;443722;ES;Platyrrhinus incarum;(Thomas, 1912);Platyrrhinus incarum (Thomas, 1912);<i>Platyrrhinus incarum</i> (Thomas, 1912);Platyrrhinus incarum (Thomas, 1912);;Incan Broad-nosed Bat;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443722
+Chiroptera;Phyllostomidae;Stenodermatinae;443723;444392;444392;443723;ES;Platyrrhinus lineatus;(É. Geoffroy Saint-Hilaire, 1810);Platyrrhinus lineatus (É. Geoffroy Saint-Hilaire, 1810);<i>Platyrrhinus lineatus</i> (É. Geoffroy Saint-Hilaire, 1810);Platyrrhinus lineatus (É. Geoffroy Saint-Hilaire, 1810);;;FMd;3;;D;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443723
+Chiroptera;Phyllostomidae;Stenodermatinae;443831;;;443723;ES;Vampyrops lineatus;;Vampyrops lineatus ;<i>Vampyrops lineatus</i>;Platyrrhinus lineatus (É. Geoffroy Saint-Hilaire, 1810);;;FMd;3;;D;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443831
+Chiroptera;Phyllostomidae;Stenodermatinae;443539;655280;655280;443539;GN;Pygoderma;W. Peters, 1863;Pygoderma W. Peters, 1863;<i>Pygoderma</i> W. Peters, 1863;Pygoderma W. Peters, 1863;;;;;;;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443724;443539;443539;443724;ES;Pygoderma bilabiatum;(Wagner, 1843);Pygoderma bilabiatum (Wagner, 1843);<i>Pygoderma bilabiatum</i> (Wagner, 1843);Pygoderma bilabiatum (Wagner, 1843);;;FMd;3;;Q;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443724
+Chiroptera;Phyllostomidae;Stenodermatinae;443540;655280;655280;443540;GN;Sturnira;Gray, 1842;Sturnira Gray, 1842;<i>Sturnira</i> Gray, 1842;Sturnira Gray, 1842;;;;3;A;P;P;P;A;A;A;A;A;A;A;A;A;A;A;A;A;
+Chiroptera;Phyllostomidae;Stenodermatinae;782492;443540;443540;782492;ES;Sturnira angeli;de la Torre, 1966;Sturnira angeli de la Torre, 1966;<i>Sturnira angeli</i> de la Torre, 1966;Sturnira angeli de la Torre, 1966;Sturnire messager;Guadeloupe Yellow-shouldered Bat;FMd;3;A;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/782492
+Chiroptera;Phyllostomidae;Stenodermatinae;699289;;;782492;SSES;Sturnira lilium zygomaticus;Jones & Phillips, 1976;Sturnira lilium zygomaticus Jones & Phillips, 1976;<i>Sturnira lilium zygomaticus</i> Jones & Phillips, 1976;Sturnira angeli de la Torre, 1966;Sturnire messager;Guadeloupe Yellow-shouldered Bat;;3;A;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/699289
+Chiroptera;Phyllostomidae;Stenodermatinae;926998;443540;443540;926998;ES;Sturnira giannae;Velazco & Patterson, 2019;Sturnira giannae Velazco & Patterson, 2019;<i>Sturnira giannae</i> Velazco & Patterson, 2019;Sturnira giannae Velazco & Patterson, 2019;;;FMd;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/926998
+Chiroptera;Phyllostomidae;Stenodermatinae;443725;;;926998;ES;Sturnira lilium;auct. non (É. Geoffroy Saint-Hilaire, 1810);Sturnira lilium auct. non (É. Geoffroy Saint-Hilaire, 1810);<i>Sturnira lilium</i> auct. non (É. Geoffroy Saint-Hilaire, 1810);Sturnira giannae Velazco & Patterson, 2019;;;FMd;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/443725
+Chiroptera;Phyllostomidae;Stenodermatinae;532662;443540;443540;532662;ES;Sturnira thomasi;de la Torre & Schwartz, 1966;Sturnira thomasi de la Torre & Schwartz, 1966;<i>Sturnira thomasi</i> de la Torre & Schwartz, 1966;Sturnira thomasi de la Torre & Schwartz, 1966;Sturnire de la Guadeloupe;;FMd;3;A;A;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/532662
+Chiroptera;Phyllostomidae;Stenodermatinae;443726;443540;443540;443726;ES;Sturnira tildae;de la Torre, 1959;Sturnira tildae de la Torre, 1959;<i>Sturnira tildae</i> de la Torre, 1959;Sturnira tildae de la Torre, 1959;;;FMd;3;A;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/443726
+Chiroptera;Phyllostomidae;Stenodermatinae;443541;655280;655280;443541;GN;Uroderma;Peters, 1866;Uroderma Peters, 1866;<i>Uroderma</i> Peters, 1866;Uroderma Peters, 1866;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443727;443541;443541;443727;ES;Uroderma bilobatum;Peters, 1866;Uroderma bilobatum Peters, 1866;<i>Uroderma bilobatum</i> Peters, 1866;Uroderma bilobatum Peters, 1866;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443727
+Chiroptera;Phyllostomidae;Stenodermatinae;892674;443541;443541;892674;ES;Uroderma magnirostrum;Davis, 1968;Uroderma magnirostrum Davis, 1968;<i>Uroderma magnirostrum</i> Davis, 1968;Uroderma magnirostrum Davis, 1968;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/892674
+Chiroptera;Phyllostomidae;Stenodermatinae;443542;655280;655280;443542;GN;Vampyressa;Thomas, 1906;Vampyressa Thomas, 1906;<i>Vampyressa</i> Thomas, 1906;Vampyressa Thomas, 1906;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443731;443542;443542;443731;ES;Vampyressa pusilla;(Wagner, 1843);Vampyressa pusilla (Wagner, 1843);<i>Vampyressa pusilla</i> (Wagner, 1843);Vampyressa pusilla (Wagner, 1843);;;FMd;3;A;Q;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/443731
+Chiroptera;Phyllostomidae;Stenodermatinae;655294;655280;655280;655294;GN;Vampyriscus;Thomas, 1900;Vampyriscus Thomas, 1900;<i>Vampyriscus</i> Thomas, 1900;Vampyriscus Thomas, 1900;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;655295;655294;655294;655295;ES;Vampyriscus bidens;(Dobson, 1878);Vampyriscus bidens (Dobson, 1878);<i>Vampyriscus bidens</i> (Dobson, 1878);Vampyriscus bidens (Dobson, 1878);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655295
+Chiroptera;Phyllostomidae;Stenodermatinae;443728;;;655295;ES;Vampyressa bidens;(Dobson, 1878);Vampyressa bidens (Dobson, 1878);<i>Vampyressa bidens</i> (Dobson, 1878);Vampyriscus bidens (Dobson, 1878);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443728
+Chiroptera;Phyllostomidae;Stenodermatinae;655296;655294;655294;655296;ES;Vampyriscus brocki;Peterson, 1968;Vampyriscus brocki Peterson, 1968;<i>Vampyriscus brocki</i> Peterson, 1968;Vampyriscus brocki Peterson, 1968;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655296
+Chiroptera;Phyllostomidae;Stenodermatinae;443729;;;655296;ES;Vampyressa brocki;Peterson, 1968;Vampyressa brocki Peterson, 1968;<i>Vampyressa brocki</i> Peterson, 1968;Vampyriscus brocki Peterson, 1968;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443729
+Chiroptera;Phyllostomidae;Stenodermatinae;443543;655280;655280;443543;GN;Vampyrodes;Thomas, 1900;Vampyrodes Thomas, 1900;<i>Vampyrodes</i> Thomas, 1900;Vampyrodes Thomas, 1900;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;Stenodermatinae;443732;443543;443543;443732;ES;Vampyrodes caraccioli;(Thomas, 1889);Vampyrodes caraccioli (Thomas, 1889);<i>Vampyrodes caraccioli</i> (Thomas, 1889);Vampyrodes caraccioli (Thomas, 1889);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443732
+Chiroptera;Pteropodidae;;186235;186233;186234;186235;FM;Pteropodidae;;Pteropodidae ;Pteropodidae;Pteropodidae ;;;;;;;;;;;;P;;P;;;;P;P;P;;
+Chiroptera;Pteropodidae;;532502;186235;186235;532502;GN;Notopteris;Gray, 1859;Notopteris Gray, 1859;<i>Notopteris</i> Gray, 1859;Notopteris Gray, 1859;;;;;;;;;;;;;;;;;;;P;;;
+Chiroptera;Pteropodidae;;532503;532502;532502;532503;ES;Notopteris neocaledonica;Trouessart, 1908;Notopteris neocaledonica Trouessart, 1908;<i>Notopteris neocaledonica</i> Trouessart, 1908;Notopteris neocaledonica Trouessart, 1908;Roussette à queue;Long-tailed fruit bat;NA;3;A;A;A;A;A;A;A;A;A;A;A;A;A;A;E;A;A;https://inpn.mnhn.fr/espece/cd_nom/532503
+Chiroptera;Pteropodidae;;418654;186235;186235;418654;GN;Pteropus;Brisson, 1762;Pteropus Brisson, 1762;<i>Pteropus</i> Brisson, 1762;Pteropus Brisson, 1762;;;;3;;;;;;;;P;;P;;;;P;P;P;;
+Chiroptera;Pteropodidae;;418806;418654;418654;418806;ES;Pteropus niger;(Kerr, 1792);Pteropus niger (Kerr, 1792);<i>Pteropus niger</i> (Kerr, 1792);Pteropus niger (Kerr, 1792);Renard volant de Maurice, Roussette noire;;NoEcho;3;A;A;A;A;A;A;A;A;A;S;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/418806
+Chiroptera;Pteropodidae;;418813;418654;418654;418813;ES;Pteropus ornatus;Gray, 1870;Pteropus ornatus Gray, 1870;<i>Pteropus ornatus</i> Gray, 1870;Pteropus ornatus Gray, 1870;Roussette rousse, Roussette rouge;Ornate flying fox;NoEcho;3;A;A;A;A;A;A;A;A;A;A;A;A;A;A;E;A;A;https://inpn.mnhn.fr/espece/cd_nom/418813
+Chiroptera;Pteropodidae;;459606;418654;418654;459606;ES;Pteropus seychellensis;Milne-Edwards, 1877;Pteropus seychellensis Milne-Edwards, 1877;<i>Pteropus seychellensis</i> Milne-Edwards, 1877;Pteropus seychellensis Milne-Edwards, 1877;Roussette;;NoEcho;3;A;A;A;A;A;A;A;S;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/459606
+Chiroptera;Pteropodidae;;418761;459606;459606;418761;SSES;Pteropus seychellensis comorensis;(Cheke & Dahl, 1981);Pteropus seychellensis comorensis (Cheke & Dahl, 1981);<i>Pteropus seychellensis comorensis</i> (Cheke & Dahl, 1981);Pteropus seychellensis comorensis (Cheke & Dahl, 1981);Roussette;;;3;A;A;A;A;A;A;A;S;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/418761
+Chiroptera;Pteropodidae;;699211;;;418761;ES;Pteropus comorensis;Andersen, 1912;Pteropus comorensis Andersen, 1912;<i>Pteropus comorensis</i> Andersen, 1912;Pteropus seychellensis comorensis (Cheke & Dahl, 1981);Roussette;;NoEcho;3;A;A;A;A;A;A;A;S;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/699211
+Chiroptera;Pteropodidae;;699210;;;418761;ES;Pteropus edwardsii;Dobson, 1878;Pteropus edwardsii Dobson, 1878;<i>Pteropus edwardsii</i> Dobson, 1878;Pteropus seychellensis comorensis (Cheke & Dahl, 1981);Roussette;;NoEcho;3;A;A;A;A;A;A;A;S;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/699210
+Chiroptera;Pteropodidae;;418807;418654;418654;418807;ES;Pteropus subniger;(Kerr, 1792);Pteropus subniger (Kerr, 1792);<i>Pteropus subniger</i> (Kerr, 1792);Pteropus subniger (Kerr, 1792);Petit Renard volant des Mascareignes, Roussette à collet rouge;;NoEcho;3;;;;;;;;;;X;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/418807
+Chiroptera;Pteropodidae;;459607;418654;418654;459607;ES;Pteropus tonganus;Quoy & Gaimard, 1830;Pteropus tonganus Quoy & Gaimard, 1830;<i>Pteropus tonganus</i> Quoy & Gaimard, 1830;Pteropus tonganus Quoy & Gaimard, 1830;Roussette du Pacifique, Renard-volant du Pacifique;Pacific Flying fox, Insular Fruit Bat;NoEcho;3;;;;;;;;;;;;;;W;P;P;;https://inpn.mnhn.fr/espece/cd_nom/459607
+Chiroptera;Pteropodidae;;418814;418654;418654;418814;ES;Pteropus vetulus;Jouan, 1863;Pteropus vetulus Jouan, 1863;<i>Pteropus vetulus</i> Jouan, 1863;Pteropus vetulus Jouan, 1863;Roussette des roches;New Caledonian Flying fox;NoEcho;3;A;A;A;A;A;A;A;A;A;A;A;A;A;A;E;A;A;https://inpn.mnhn.fr/espece/cd_nom/418814
+Chiroptera;Rhinolophidae;;186238;186233;699093;186238;FM;Rhinolophidae;;Rhinolophidae ;Rhinolophidae;Rhinolophidae ;;horseshoe bats;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Rhinolophidae;;197139;186238;186238;197139;GN;Rhinolophus;Lacépède, 1799;Rhinolophus Lacépède, 1799;<i>Rhinolophus</i> Lacépède, 1799;Rhinolophus Lacépède, 1799;;;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Rhinolophidae;;60330;197139;197139;60330;ES;Rhinolophus euryale;Blasius, 1853;Rhinolophus euryale Blasius, 1853;<i>Rhinolophus euryale</i> Blasius, 1853;Rhinolophus euryale Blasius, 1853;Rhinolophe euryale;Mediterranean horseshoe bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60330
+Chiroptera;Rhinolophidae;;60332;;;60330;ES;Rhinolophus atlanticus;;Rhinolophus atlanticus ;<i>Rhinolophus atlanticus</i>;Rhinolophus euryale Blasius, 1853;Rhinolophe euryale;Mediterranean horseshoe bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60332
+Chiroptera;Rhinolophidae;;60335;;;60330;ES;Rhinolophus barbarus;;Rhinolophus barbarus ;<i>Rhinolophus barbarus</i>;Rhinolophus euryale Blasius, 1853;Rhinolophe euryale;Mediterranean horseshoe bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60335
+Chiroptera;Rhinolophidae;;60333;;;60330;ES;Rhinolophus cabrerae;;Rhinolophus cabrerae ;<i>Rhinolophus cabrerae</i>;Rhinolophus euryale Blasius, 1853;Rhinolophe euryale;Mediterranean horseshoe bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60333
+Chiroptera;Rhinolophidae;;60336;;;60330;ES;Rhinolophus nordmanni;;Rhinolophus nordmanni ;<i>Rhinolophus nordmanni</i>;Rhinolophus euryale Blasius, 1853;Rhinolophe euryale;Mediterranean horseshoe bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60336
+Chiroptera;Rhinolophidae;;60334;;;60330;ES;Rhinolophus toscanus;;Rhinolophus toscanus ;<i>Rhinolophus toscanus</i>;Rhinolophus euryale Blasius, 1853;Rhinolophe euryale;Mediterranean horseshoe bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60334
+Chiroptera;Rhinolophidae;;60295;197139;197139;60295;ES;Rhinolophus ferrumequinum;(Schreber, 1774);Rhinolophus ferrumequinum (Schreber, 1774);<i>Rhinolophus ferrumequinum</i> (Schreber, 1774);Rhinolophus ferrumequinum (Schreber, 1774);Grand rhinolophe;Greater Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60295
+Chiroptera;Rhinolophidae;;60312;;;60295;SSES;Rhinolophus ferrumequinum martinoi;Petrov, 1941;Rhinolophus ferrumequinum martinoi Petrov, 1941;<i>Rhinolophus ferrumequinum martinoi</i> Petrov, 1941;Rhinolophus ferrumequinum (Schreber, 1774);Grand rhinolophe;Greater Horseshoe Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60312
+Chiroptera;Rhinolophidae;;60297;60295;60295;60297;SSES;Rhinolophus ferrumequinum ferrumequinum;(Schreber, 1774);Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);<i>Rhinolophus ferrumequinum ferrumequinum</i> (Schreber, 1774);Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60297
+Chiroptera;Rhinolophidae;;60300;;;60297;ES;Rhinolophus colchicus;;Rhinolophus colchicus ;<i>Rhinolophus colchicus</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60300
+Chiroptera;Rhinolophidae;;60301;;;60297;ES;Rhinolophus germaniqus;;Rhinolophus germaniqus ;<i>Rhinolophus germaniqus</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60301
+Chiroptera;Rhinolophidae;;60298;;;60297;ES;Rhinolophus hippocrepis;;Rhinolophus hippocrepis ;<i>Rhinolophus hippocrepis</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60298
+Chiroptera;Rhinolophidae;;60302;;;60297;ES;Rhinolophus homodorensis;;Rhinolophus homodorensis ;<i>Rhinolophus homodorensis</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60302
+Chiroptera;Rhinolophidae;;60303;;;60297;ES;Rhinolophus homorodalmasiensis;;Rhinolophus homorodalmasiensis ;<i>Rhinolophus homorodalmasiensis</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60303
+Chiroptera;Rhinolophidae;;60304;;;60297;ES;Rhinolophus insulanus;;Rhinolophus insulanus ;<i>Rhinolophus insulanus</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60304
+Chiroptera;Rhinolophidae;;60305;;;60297;ES;Rhinolophus italicus;;Rhinolophus italicus ;<i>Rhinolophus italicus</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60305
+Chiroptera;Rhinolophidae;;60306;;;60297;ES;Rhinolophus major;;Rhinolophus major ;<i>Rhinolophus major</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60306
+Chiroptera;Rhinolophidae;;60307;;;60297;ES;Rhinolophus obscurus;;Rhinolophus obscurus ;<i>Rhinolophus obscurus</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60307
+Chiroptera;Rhinolophidae;;60308;;;60297;ES;Rhinolophus perspicillatus;;Rhinolophus perspicillatus ;<i>Rhinolophus perspicillatus</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60308
+Chiroptera;Rhinolophidae;;60309;;;60297;ES;Rhinolophus solea;;Rhinolophus solea ;<i>Rhinolophus solea</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60309
+Chiroptera;Rhinolophidae;;60299;;;60297;ES;Rhinolophus typicus;;Rhinolophus typicus ;<i>Rhinolophus typicus</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60299
+Chiroptera;Rhinolophidae;;60310;;;60297;ES;Rhinolophus ungula;;Rhinolophus ungula ;<i>Rhinolophus ungula</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60310
+Chiroptera;Rhinolophidae;;60311;;;60297;ES;Rhinolophus unihastatus;;Rhinolophus unihastatus ;<i>Rhinolophus unihastatus</i>;Rhinolophus ferrumequinum ferrumequinum (Schreber, 1774);Grand rhinolophe;;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60311
+Chiroptera;Rhinolophidae;;60313;197139;197139;60313;ES;Rhinolophus hipposideros;(Bechstein, 1800);Rhinolophus hipposideros (Bechstein, 1800);<i>Rhinolophus hipposideros</i> (Bechstein, 1800);Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60313
+Chiroptera;Rhinolophidae;;60317;;;60313;ES;Rhinolophus alpinus;;Rhinolophus alpinus ;<i>Rhinolophus alpinus</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60317
+Chiroptera;Rhinolophidae;;60316;;;60313;ES;Rhinolophus anomalus;;Rhinolophus anomalus ;<i>Rhinolophus anomalus</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60316
+Chiroptera;Rhinolophidae;;60318;;;60313;ES;Rhinolophus bifer;;Rhinolophus bifer ;<i>Rhinolophus bifer</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60318
+Chiroptera;Rhinolophidae;;60319;;;60313;ES;Rhinolophus bihastatus;;Rhinolophus bihastatus ;<i>Rhinolophus bihastatus</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60319
+Chiroptera;Rhinolophidae;;60320;;;60313;ES;Rhinolophus eggenhoffner;;Rhinolophus eggenhoffner ;<i>Rhinolophus eggenhoffner</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60320
+Chiroptera;Rhinolophidae;;60321;;;60313;ES;Rhinolophus helvetica;;Rhinolophus helvetica ;<i>Rhinolophus helvetica</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60321
+Chiroptera;Rhinolophidae;;60315;;;60313;SSES;Rhinolophus hipposideros hipposideros;;Rhinolophus hipposideros hipposideros ;<i>Rhinolophus hipposideros hipposideros</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60315
+Chiroptera;Rhinolophidae;;60322;;;60313;ES;Rhinolophus kisnyresiensis;;Rhinolophus kisnyresiensis ;<i>Rhinolophus kisnyresiensis</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60322
+Chiroptera;Rhinolophidae;;60323;;;60313;ES;Rhinolophus majori;;Rhinolophus majori ;<i>Rhinolophus majori</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60323
+Chiroptera;Rhinolophidae;;60324;;;60313;ES;Rhinolophus minutus;;Rhinolophus minutus ;<i>Rhinolophus minutus</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60324
+Chiroptera;Rhinolophidae;;60325;;;60313;ES;Rhinolophus moravicus;;Rhinolophus moravicus ;<i>Rhinolophus moravicus</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60325
+Chiroptera;Rhinolophidae;;60326;;;60313;ES;Rhinolophus pallidus;;Rhinolophus pallidus ;<i>Rhinolophus pallidus</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60326
+Chiroptera;Rhinolophidae;;60327;;;60313;ES;Rhinolophus phasma;;Rhinolophus phasma ;<i>Rhinolophus phasma</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60327
+Chiroptera;Rhinolophidae;;60328;;;60313;ES;Rhinolophus trogophilus;;Rhinolophus trogophilus ;<i>Rhinolophus trogophilus</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60328
+Chiroptera;Rhinolophidae;;60329;;;60313;ES;Rhinolophus vespa;;Rhinolophus vespa ;<i>Rhinolophus vespa</i>;Rhinolophus hipposideros (Bechstein, 1800);Petit rhinolophe;Lesser Horseshoe Bat;FMu-CF-FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60329
+Chiroptera;Rhinolophidae;;60337;197139;197139;60337;ES;Rhinolophus mehelyi;Matschie, 1901;Rhinolophus mehelyi Matschie, 1901;<i>Rhinolophus mehelyi</i> Matschie, 1901;Rhinolophus mehelyi Matschie, 1901;Rhinolophe de Méhely;Mehely's horseshoe bat;FMu-CF-FMd;3;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/60337
+Chiroptera;Rhinolophidae;;60339;;;60337;ES;Rhinolophus carpetanus;;Rhinolophus carpetanus ;<i>Rhinolophus carpetanus</i>;Rhinolophus mehelyi Matschie, 1901;Rhinolophe de Méhely;Mehely's horseshoe bat;FMu-CF-FMd;3;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/60339
+Chiroptera;Thyropteridae;;443487;186233;186233;443487;FM;Thyropteridae;Miller, 1907;Thyropteridae Miller, 1907;Thyropteridae Miller, 1907;Thyropteridae Miller, 1907;;;;3;;P;;;;;;;;;;;;;;;;
+Chiroptera;Thyropteridae;;443544;443487;443487;443544;GN;Thyroptera;Spix, 1823;Thyroptera Spix, 1823;<i>Thyroptera</i> Spix, 1823;Thyroptera Spix, 1823;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Thyropteridae;;443733;443544;443544;443733;ES;Thyroptera discifera;(Lichtenstein & Peters, 1855);Thyroptera discifera (Lichtenstein & Peters, 1855);<i>Thyroptera discifera</i> (Lichtenstein & Peters, 1855);Thyroptera discifera (Lichtenstein & Peters, 1855);;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443733
+Chiroptera;Thyropteridae;;443734;443544;443544;443734;ES;Thyroptera tricolor;Spix, 1823;Thyroptera tricolor Spix, 1823;<i>Thyroptera tricolor</i> Spix, 1823;Thyroptera tricolor Spix, 1823;;;FMd;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443734
+Chiroptera;Vespertilionidae;;186239;186233;699094;186239;FM;Vespertilionidae;Gray, 1821;Vespertilionidae Gray, 1821;Vespertilionidae Gray, 1821;Vespertilionidae Gray, 1821;;evening bats;;;P;P;P;P;;;P;;;P;;;;;P;;;
+Chiroptera;Vespertilionidae;;189744;186239;186239;189744;GN;Barbastella;Gray, 1821;Barbastella Gray, 1821;<i>Barbastella</i> Gray, 1821;Barbastella Gray, 1821;;;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;60345;189744;189744;60345;ES;Barbastella barbastellus;(Schreber, 1774);Barbastella barbastellus (Schreber, 1774);<i>Barbastella barbastellus</i> (Schreber, 1774);Barbastella barbastellus (Schreber, 1774);Barbastelle d'Europe, Barbastelle;Western Barbastelle;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60345
+Chiroptera;Vespertilionidae;;60347;;;60345;ES;Barbastella communis;;Barbastella communis ;<i>Barbastella communis</i>;Barbastella barbastellus (Schreber, 1774);Barbastelle d'Europe, Barbastelle;Western Barbastelle;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60347
+Chiroptera;Vespertilionidae;;60348;;;60345;ES;Barbastella daubentoni;;Barbastella daubentoni ;<i>Barbastella daubentoni</i>;Barbastella barbastellus (Schreber, 1774);Barbastelle d'Europe, Barbastelle;Western Barbastelle;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60348
+Chiroptera;Vespertilionidae;;532342;186239;186239;532342;GN;Chalinolobus;Peters, 1866;Chalinolobus Peters, 1866;<i>Chalinolobus</i> Peters, 1866;Chalinolobus Peters, 1866;;;;;;;;;;;;;;;;;;;P;;;
+Chiroptera;Vespertilionidae;;532343;532342;532342;532343;ES;Chalinolobus neocaledonicus;Revilliod, 1914;Chalinolobus neocaledonicus Revilliod, 1914;<i>Chalinolobus neocaledonicus</i> Revilliod, 1914;Chalinolobus neocaledonicus Revilliod, 1914;Chalinolobe néo-calédonien;New Caledonia wattled-bat;FMd-QCF;3;A;A;A;A;A;A;A;A;A;A;A;A;A;A;E;A;A;https://inpn.mnhn.fr/espece/cd_nom/532343
+Chiroptera;Vespertilionidae;;192256;186239;186239;192256;GN;Eptesicus;Rafinesque, 1820;Eptesicus Rafinesque, 1820;<i>Eptesicus</i> Rafinesque, 1820;Eptesicus Rafinesque, 1820;;;;;P;P;;P;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;443736;192256;192256;443736;ES;Eptesicus brasiliensis;(Desmarest, 1814);Eptesicus brasiliensis (Desmarest, 1814);<i>Eptesicus brasiliensis</i> (Desmarest, 1814);Eptesicus brasiliensis (Desmarest, 1814);;;FMd-QCF;3;;D;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443736
+Chiroptera;Vespertilionidae;;593769;192256;192256;593769;ES;Eptesicus chiriquinus;Thomas, 1920;Eptesicus chiriquinus Thomas, 1920;<i>Eptesicus chiriquinus</i> Thomas, 1920;Eptesicus chiriquinus Thomas, 1920;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/593769
+Chiroptera;Vespertilionidae;;443735;;;593769;ES;Eptesicus andinus;auct. non J. A. Allen, 1914;Eptesicus andinus auct. non J. A. Allen, 1914;<i>Eptesicus andinus</i> auct. non J. A. Allen, 1914;Eptesicus chiriquinus Thomas, 1920;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443735
+Chiroptera;Vespertilionidae;;443737;192256;192256;443737;ES;Eptesicus furinalis;d'Orbigny, 1847;Eptesicus furinalis d'Orbigny, 1847;<i>Eptesicus furinalis</i> d'Orbigny, 1847;Eptesicus furinalis d'Orbigny, 1847;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443737
+Chiroptera;Vespertilionidae;;853509;192256;192256;853509;ES;Eptesicus fuscus;(Beauvois, 1796);Eptesicus fuscus (Beauvois, 1796);<i>Eptesicus fuscus</i> (Beauvois, 1796);Eptesicus fuscus (Beauvois, 1796);Sérotine brune;Big Brown Bat;FMd-QCF;3;;;;P;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/853509
+Chiroptera;Vespertilionidae;;418797;192256;192256;418797;ES;Eptesicus guadeloupensis;Genoways & Baker, 1975;Eptesicus guadeloupensis Genoways & Baker, 1975;<i>Eptesicus guadeloupensis</i> Genoways & Baker, 1975;Eptesicus guadeloupensis Genoways & Baker, 1975;Sérotine de la Guadeloupe;;FMd-QCF;3;A;A;A;E;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/418797
+Chiroptera;Vespertilionidae;;79302;192256;192256;79302;ES;Eptesicus nilssonii;(Keyserling & Blasius, 1839);Eptesicus nilssonii (Keyserling & Blasius, 1839);<i>Eptesicus nilssonii</i> (Keyserling & Blasius, 1839);Eptesicus nilssonii (Keyserling & Blasius, 1839);Sérotine de Nilsson;Northern Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/79302
+Chiroptera;Vespertilionidae;;60358;;;79302;ES;Eptesicus atratus;Kolenati;Eptesicus atratus Kolenati;<i>Eptesicus atratus</i> Kolenati;Eptesicus nilssonii (Keyserling & Blasius, 1839);Sérotine de Nilsson;Northern Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60358
+Chiroptera;Vespertilionidae;;60359;;;79302;ES;Eptesicus borealis;Nilsson;Eptesicus borealis Nilsson;<i>Eptesicus borealis</i> Nilsson;Eptesicus nilssonii (Keyserling & Blasius, 1839);Sérotine de Nilsson;Northern Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60359
+Chiroptera;Vespertilionidae;;60357;;;79302;SSES;Eptesicus nilssoni nilssoni;;Eptesicus nilssoni nilssoni ;<i>Eptesicus nilssoni nilssoni</i>;Eptesicus nilssonii (Keyserling & Blasius, 1839);Sérotine de Nilsson;Northern Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60357
+Chiroptera;Vespertilionidae;;60355;;;79302;ES;Eptesicus nilssoni;(Keyserling & Blasius, 1839);Eptesicus nilssoni (Keyserling & Blasius, 1839);<i>Eptesicus nilssoni</i> (Keyserling & Blasius, 1839);Eptesicus nilssonii (Keyserling & Blasius, 1839);Sérotine de Nilsson;Northern Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60355
+Chiroptera;Vespertilionidae;;60360;192256;192256;60360;ES;Eptesicus serotinus;(Schreber, 1774);Eptesicus serotinus (Schreber, 1774);<i>Eptesicus serotinus</i> (Schreber, 1774);Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60360
+Chiroptera;Vespertilionidae;;60363;;;60360;ES;Eptesicus boscai;;Eptesicus boscai ;<i>Eptesicus boscai</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60363
+Chiroptera;Vespertilionidae;;60364;;;60360;ES;Eptesicus incisivus;;Eptesicus incisivus ;<i>Eptesicus incisivus</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60364
+Chiroptera;Vespertilionidae;;60366;;;60360;ES;Eptesicus insularis;;Eptesicus insularis ;<i>Eptesicus insularis</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60366
+Chiroptera;Vespertilionidae;;60367;;;60360;ES;Eptesicus intermedius;;Eptesicus intermedius ;<i>Eptesicus intermedius</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60367
+Chiroptera;Vespertilionidae;;60368;;;60360;ES;Eptesicus isabellinus;Cabrera;Eptesicus isabellinus Cabrera;<i>Eptesicus isabellinus</i> Cabrera;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60368
+Chiroptera;Vespertilionidae;;60365;;;60360;ES;Eptesicus kuhlii;Nilsson;Eptesicus kuhlii Nilsson;<i>Eptesicus kuhlii</i> Nilsson;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60365
+Chiroptera;Vespertilionidae;;60369;;;60360;ES;Eptesicus meridionalis;;Eptesicus meridionalis ;<i>Eptesicus meridionalis</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60369
+Chiroptera;Vespertilionidae;;60370;;;60360;ES;Eptesicus okenii;;Eptesicus okenii ;<i>Eptesicus okenii</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60370
+Chiroptera;Vespertilionidae;;60371;;;60360;ES;Eptesicus rufescens;;Eptesicus rufescens ;<i>Eptesicus rufescens</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60371
+Chiroptera;Vespertilionidae;;60372;;;60360;ES;Eptesicus serotine;;Eptesicus serotine ;<i>Eptesicus serotine</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60372
+Chiroptera;Vespertilionidae;;60362;;;60360;SSES;Eptesicus serotinus serotinus;;Eptesicus serotinus serotinus ;<i>Eptesicus serotinus serotinus</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60362
+Chiroptera;Vespertilionidae;;60373;;;60360;ES;Eptesicus transylvanus;;Eptesicus transylvanus ;<i>Eptesicus transylvanus</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60373
+Chiroptera;Vespertilionidae;;60374;;;60360;ES;Eptesicus typus;;Eptesicus typus ;<i>Eptesicus typus</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60374
+Chiroptera;Vespertilionidae;;60375;;;60360;ES;Eptesicus wiedii;;Eptesicus wiedii ;<i>Eptesicus wiedii</i>;Eptesicus serotinus (Schreber, 1774);Sérotine commune;Serotine Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60375
+Chiroptera;Vespertilionidae;;193544;186239;186239;193544;GN;Hypsugo;Kolenati, 1856;Hypsugo Kolenati, 1856;<i>Hypsugo</i> Kolenati, 1856;Hypsugo Kolenati, 1856;;;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;60506;193544;193544;60506;ES;Hypsugo savii;(Bonaparte, 1837);Hypsugo savii (Bonaparte, 1837);<i>Hypsugo savii</i> (Bonaparte, 1837);Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60506
+Chiroptera;Vespertilionidae;;199827;;;60506;SSES;Hypsugo savii caucasicus;(Satunin, 1901);Hypsugo savii caucasicus (Satunin, 1901);<i>Hypsugo savii caucasicus</i> (Satunin, 1901);Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/199827
+Chiroptera;Vespertilionidae;;199828;;;60506;SSES;Hypsugo savii savii;(Bonaparte, 1837);Hypsugo savii savii (Bonaparte, 1837);<i>Hypsugo savii savii</i> (Bonaparte, 1837);Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/199828
+Chiroptera;Vespertilionidae;;60508;;;60506;ES;Pipistrellus agilis;;Pipistrellus agilis ;<i>Pipistrellus agilis</i>;Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60508
+Chiroptera;Vespertilionidae;;60509;;;60506;ES;Pipistrellus aristippe;;Pipistrellus aristippe ;<i>Pipistrellus aristippe</i>;Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60509
+Chiroptera;Vespertilionidae;;60510;;;60506;ES;Pipistrellus bonapartii;;Pipistrellus bonapartii ;<i>Pipistrellus bonapartii</i>;Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60510
+Chiroptera;Vespertilionidae;;60511;;;60506;ES;Pipistrellus leucippe;;Pipistrellus leucippe ;<i>Pipistrellus leucippe</i>;Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60511
+Chiroptera;Vespertilionidae;;60512;;;60506;ES;Pipistrellus maurus;;Pipistrellus maurus ;<i>Pipistrellus maurus</i>;Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60512
+Chiroptera;Vespertilionidae;;60513;;;60506;ES;Pipistrellus nigrans;;Pipistrellus nigrans ;<i>Pipistrellus nigrans</i>;Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60513
+Chiroptera;Vespertilionidae;;60514;;;60506;ES;Pipistrellus ochromixtus;;Pipistrellus ochromixtus ;<i>Pipistrellus ochromixtus</i>;Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60514
+Chiroptera;Vespertilionidae;;60515;;;60506;SSES;Pipistrellus savii caucasicus;(Satunin, 1901);Pipistrellus savii caucasicus (Satunin, 1901);<i>Pipistrellus savii caucasicus</i> (Satunin, 1901);Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60515
+Chiroptera;Vespertilionidae;;60507;;;60506;SSES;Pipistrellus savii savii;(Bonaparte, 1837);Pipistrellus savii savii (Bonaparte, 1837);<i>Pipistrellus savii savii</i> (Bonaparte, 1837);Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60507
+Chiroptera;Vespertilionidae;;60504;;;60506;ES;Pipistrellus savii;(Bonaparte, 1837);Pipistrellus savii (Bonaparte, 1837);<i>Pipistrellus savii</i> (Bonaparte, 1837);Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60504
+Chiroptera;Vespertilionidae;;60516;;;60506;ES;Pipistrellus tauricus;;Pipistrellus tauricus ;<i>Pipistrellus tauricus</i>;Hypsugo savii (Bonaparte, 1837);Vespère de Savi;Savi's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60516
+Chiroptera;Vespertilionidae;;646933;186239;186239;646933;GN;Lasionycteris;Peters, 1866;Lasionycteris Peters, 1866;<i>Lasionycteris</i> Peters, 1866;Lasionycteris Peters, 1866;;;;;;;;;;;P;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;645525;646933;646933;645525;ES;Lasionycteris noctivagans;(Le Conte, 1831);Lasionycteris noctivagans (Le Conte, 1831);<i>Lasionycteris noctivagans</i> (Le Conte, 1831);Lasionycteris noctivagans (Le Conte, 1831);Chauve-souris argentée;;FMd-QCF;3;;;;;;;P;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/645525
+Chiroptera;Vespertilionidae;;193878;186239;186239;193878;GN;Lasiurus;Gray, 1831;Lasiurus Gray, 1831;<i>Lasiurus</i> Gray, 1831;Lasiurus Gray, 1831;;;;;;P;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;443738;193878;193878;443738;ES;Lasiurus atratus;Handley, 1996;Lasiurus atratus Handley, 1996;<i>Lasiurus atratus</i> Handley, 1996;Lasiurus atratus Handley, 1996;;;FMd-QCF;3;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/443738
+Chiroptera;Vespertilionidae;;443832;;;443738;ES;Lasiurus castaneus;auct., non Mandley, 1960;Lasiurus castaneus auct., non Mandley, 1960;<i>Lasiurus castaneus</i> auct., non Mandley, 1960;Lasiurus atratus Handley, 1996;;;FMd-QCF;3;A;S;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/443832
+Chiroptera;Vespertilionidae;;521603;193878;193878;521603;ES;Lasiurus blossevillii;(Lesson & Garnot, 1826);Lasiurus blossevillii (Lesson & Garnot, 1826);<i>Lasiurus blossevillii</i> (Lesson & Garnot, 1826);Lasiurus blossevillii (Lesson & Garnot, 1826);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/521603
+Chiroptera;Vespertilionidae;;443739;193878;193878;443739;ES;Lasiurus borealis;(Müller, 1776);Lasiurus borealis (Müller, 1776);<i>Lasiurus borealis</i> (Müller, 1776);Lasiurus borealis (Müller, 1776);;;FMd-QCF;3;;Q;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443739
+Chiroptera;Vespertilionidae;;655379;193878;193878;655379;ES;Lasiurus ega;Gervais, 1856;Lasiurus ega Gervais, 1856;<i>Lasiurus ega</i> Gervais, 1856;Lasiurus ega Gervais, 1856;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/655379
+Chiroptera;Vespertilionidae;;443740;193878;193878;443740;ES;Lasiurus egregius;(Peters, 1870);Lasiurus egregius (Peters, 1870);<i>Lasiurus egregius</i> (Peters, 1870);Lasiurus egregius (Peters, 1870);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443740
+Chiroptera;Vespertilionidae;;195005;186239;186239;195005;GN;Myotis;Kaup, 1829;Myotis Kaup, 1829;<i>Myotis</i> Kaup, 1829;Myotis Kaup, 1829;;;;3;P;P;P;P;;;P;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;443741;195005;195005;443741;ES;Myotis albescens;(É. Geoffroy Saint-Hilaire, 1806);Myotis albescens (É. Geoffroy Saint-Hilaire, 1806);<i>Myotis albescens</i> (É. Geoffroy Saint-Hilaire, 1806);Myotis albescens (É. Geoffroy Saint-Hilaire, 1806);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443741
+Chiroptera;Vespertilionidae;;79299;195005;195005;79299;ES;Myotis alcathoe;Helversen & Heller, 2001;Myotis alcathoe Helversen & Heller, 2001;<i>Myotis alcathoe</i> Helversen & Heller, 2001;Myotis alcathoe Helversen & Heller, 2001;Murin d'Alcathoe;Alcathoe bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/79299
+Chiroptera;Vespertilionidae;;79301;195005;195005;79301;ES;Myotis bechsteinii;(Kuhl, 1817);Myotis bechsteinii (Kuhl, 1817);<i>Myotis bechsteinii</i> (Kuhl, 1817);Myotis bechsteinii (Kuhl, 1817);Murin de Bechstein;Bechstein's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/79301
+Chiroptera;Vespertilionidae;;60414;;;79301;ES;Myotis bechsteini;(Kuhl, 1817);Myotis bechsteini (Kuhl, 1817);<i>Myotis bechsteini</i> (Kuhl, 1817);Myotis bechsteinii (Kuhl, 1817);Murin de Bechstein;Bechstein's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60414
+Chiroptera;Vespertilionidae;;60416;;;79301;ES;Myotis favonicus;;Myotis favonicus ;<i>Myotis favonicus</i>;Myotis bechsteinii (Kuhl, 1817);Murin de Bechstein;Bechstein's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60416
+Chiroptera;Vespertilionidae;;60417;;;79301;ES;Myotis ghidinii;;Myotis ghidinii ;<i>Myotis ghidinii</i>;Myotis bechsteinii (Kuhl, 1817);Murin de Bechstein;Bechstein's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60417
+Chiroptera;Vespertilionidae;;60427;195005;195005;60427;ES;Myotis blythii;(Tomes, 1857);Myotis blythii (Tomes, 1857);<i>Myotis blythii</i> (Tomes, 1857);Myotis blythii (Tomes, 1857);Petit Murin;Lesser mouse-eared bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60427
+Chiroptera;Vespertilionidae;;200115;60427;60427;200115;SSES;Myotis blythii oxygnathus;(Monticelli, 1885);Myotis blythii oxygnathus (Monticelli, 1885);<i>Myotis blythii oxygnathus</i> (Monticelli, 1885);Myotis blythii oxygnathus (Monticelli, 1885);;;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/200115
+Chiroptera;Vespertilionidae;;60429;;;200115;SSES;Myotis blythii oxyghnatus;(Monticelli, 1885);Myotis blythii oxyghnatus (Monticelli, 1885);<i>Myotis blythii oxyghnatus</i> (Monticelli, 1885);Myotis blythii oxygnathus (Monticelli, 1885);;;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60429
+Chiroptera;Vespertilionidae;;416714;;;200115;ES;Myotis oxygnathus;Monticelli, 1885;Myotis oxygnathus Monticelli, 1885;<i>Myotis oxygnathus</i> Monticelli, 1885;Myotis blythii oxygnathus (Monticelli, 1885);;;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/416714
+Chiroptera;Vespertilionidae;;79300;195005;195005;79300;ES;Myotis brandtii;(Eversmann, 1845);Myotis brandtii (Eversmann, 1845);<i>Myotis brandtii</i> (Eversmann, 1845);Myotis brandtii (Eversmann, 1845);Murin de Brandt;Brandt's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/79300
+Chiroptera;Vespertilionidae;;60399;;;79300;SSES;Complexe mystacinus brandti;(Eversmann, 1845);Complexe mystacinus brandti (Eversmann, 1845);<i>Complexe mystacinus brandti</i> (Eversmann, 1845);Myotis brandtii (Eversmann, 1845);Murin de Brandt;Brandt's Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60399
+Chiroptera;Vespertilionidae;;60396;;;79300;ES;Myotis brandti;(Eversmann, 1845);Myotis brandti (Eversmann, 1845);<i>Myotis brandti</i> (Eversmann, 1845);Myotis brandtii (Eversmann, 1845);Murin de Brandt;Brandt's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60396
+Chiroptera;Vespertilionidae;;60398;;;79300;SSES;Myotis mystacinus brandti;(Eversmann, 1845);Myotis mystacinus brandti (Eversmann, 1845);<i>Myotis mystacinus brandti</i> (Eversmann, 1845);Myotis brandtii (Eversmann, 1845);Murin de Brandt;Brandt's Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60398
+Chiroptera;Vespertilionidae;;847352;;;79300;ES;Vespertilio brandtii;Eversmann, 1845;Vespertilio brandtii Eversmann, 1845;<i>Vespertilio brandtii</i> Eversmann, 1845;Myotis brandtii (Eversmann, 1845);Murin de Brandt;Brandt's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/847352
+Chiroptera;Vespertilionidae;;60439;195005;195005;60439;ES;Myotis capaccinii;(Bonaparte, 1837);Myotis capaccinii (Bonaparte, 1837);<i>Myotis capaccinii</i> (Bonaparte, 1837);Myotis capaccinii (Bonaparte, 1837);Murin de Capaccini, Vespertilion de Capaccini;Long-fingered bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60439
+Chiroptera;Vespertilionidae;;60441;;;60439;ES;Myotis blasii;Major;Myotis blasii Major;<i>Myotis blasii</i> Major;Myotis capaccinii (Bonaparte, 1837);Murin de Capaccini, Vespertilion de Capaccini;Long-fingered bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60441
+Chiroptera;Vespertilionidae;;60442;;;60439;ES;Myotis bureschi;;Myotis bureschi ;<i>Myotis bureschi</i>;Myotis capaccinii (Bonaparte, 1837);Murin de Capaccini, Vespertilion de Capaccini;Long-fingered bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60442
+Chiroptera;Vespertilionidae;;60443;;;60439;ES;Myotis dasypus;;Myotis dasypus ;<i>Myotis dasypus</i>;Myotis capaccinii (Bonaparte, 1837);Murin de Capaccini, Vespertilion de Capaccini;Long-fingered bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60443
+Chiroptera;Vespertilionidae;;60444;;;60439;ES;Myotis majori;;Myotis majori ;<i>Myotis majori</i>;Myotis capaccinii (Bonaparte, 1837);Murin de Capaccini, Vespertilion de Capaccini;Long-fingered bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60444
+Chiroptera;Vespertilionidae;;60445;;;60439;ES;Myotis megapodius;;Myotis megapodius ;<i>Myotis megapodius</i>;Myotis capaccinii (Bonaparte, 1837);Murin de Capaccini, Vespertilion de Capaccini;Long-fingered bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60445
+Chiroptera;Vespertilionidae;;60446;;;60439;ES;Myotis pellucens;;Myotis pellucens ;<i>Myotis pellucens</i>;Myotis capaccinii (Bonaparte, 1837);Murin de Capaccini, Vespertilion de Capaccini;Long-fingered bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60446
+Chiroptera;Vespertilionidae;;200117;60439;60439;200117;SSES;Myotis capaccinii capaccinii;(Bonaparte, 1837);Myotis capaccinii capaccinii (Bonaparte, 1837);<i>Myotis capaccinii capaccinii</i> (Bonaparte, 1837);Myotis capaccinii capaccinii (Bonaparte, 1837);Murin de Capaccini, Vespertilion de Capaccini;;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/200117
+Chiroptera;Vespertilionidae;;912954;195005;195005;912954;ES;Myotis crypticus;Ruedi, Ibáñez, Salicini, Juste & Puechmaille, 2018;Myotis crypticus Ruedi, Ibáñez, Salicini, Juste & Puechmaille, 2018;<i>Myotis crypticus</i> Ruedi, Ibáñez, Salicini, Juste & Puechmaille, 2018;Myotis crypticus Ruedi, Ibáñez, Salicini, Juste & Puechmaille, 2018;;;FMd;3;P;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/912954
+Chiroptera;Vespertilionidae;;60447;195005;195005;60447;ES;Myotis dasycneme;(Boie, 1825);Myotis dasycneme (Boie, 1825);<i>Myotis dasycneme</i> (Boie, 1825);Myotis dasycneme (Boie, 1825);Murin des marais, Vespertilion des marais;Pond Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60447
+Chiroptera;Vespertilionidae;;60449;;;60447;ES;Myotis limnophilus;;Myotis limnophilus ;<i>Myotis limnophilus</i>;Myotis dasycneme (Boie, 1825);Murin des marais, Vespertilion des marais;Pond Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60449
+Chiroptera;Vespertilionidae;;60450;;;60447;ES;Myotis major;;Myotis major ;<i>Myotis major</i>;Myotis dasycneme (Boie, 1825);Murin des marais, Vespertilion des marais;Pond Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60450
+Chiroptera;Vespertilionidae;;200118;195005;195005;200118;ES;Myotis daubentonii;(Kuhl, 1817);Myotis daubentonii (Kuhl, 1817);<i>Myotis daubentonii</i> (Kuhl, 1817);Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/200118
+Chiroptera;Vespertilionidae;;60432;;;200118;ES;Myotis aedilus;Jenyns, 1839;Myotis aedilus Jenyns, 1839;<i>Myotis aedilus</i> Jenyns, 1839;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60432
+Chiroptera;Vespertilionidae;;60433;;;200118;ES;Myotis albus;Fitzinger, 1871;Myotis albus Fitzinger, 1871;<i>Myotis albus</i> Fitzinger, 1871;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60433
+Chiroptera;Vespertilionidae;;60434;;;200118;ES;Myotis capucinellus;Fitzinger, 1871;Myotis capucinellus Fitzinger, 1871;<i>Myotis capucinellus</i> Fitzinger, 1871;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60434
+Chiroptera;Vespertilionidae;;60430;;;200118;ES;Myotis daubentoni;(Kuhl, 1817);Myotis daubentoni (Kuhl, 1817);<i>Myotis daubentoni</i> (Kuhl, 1817);Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60430
+Chiroptera;Vespertilionidae;;60435;;;200118;ES;Myotis lanatus;Crespon, 1844;Myotis lanatus Crespon, 1844;<i>Myotis lanatus</i> Crespon, 1844;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60435
+Chiroptera;Vespertilionidae;;60436;;;200118;ES;Myotis minutellus;Fitzinger, 1871;Myotis minutellus Fitzinger, 1871;<i>Myotis minutellus</i> Fitzinger, 1871;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60436
+Chiroptera;Vespertilionidae;;60451;;;200118;ES;Myotis nathalinea;Tupinier, 1977;Myotis nathalinea Tupinier, 1977;<i>Myotis nathalinea</i> Tupinier, 1977;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60451
+Chiroptera;Vespertilionidae;;60437;;;200118;ES;Myotis staufferi;Fatio, 1890;Myotis staufferi Fatio, 1890;<i>Myotis staufferi</i> Fatio, 1890;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60437
+Chiroptera;Vespertilionidae;;60438;;;200118;ES;Myotis volgensis;Eversmann, 1840;Myotis volgensis Eversmann, 1840;<i>Myotis volgensis</i> Eversmann, 1840;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60438
+Chiroptera;Vespertilionidae;;847351;;;200118;ES;Vespertilio daubentonii;Kuhl, 1817;Vespertilio daubentonii Kuhl, 1817;<i>Vespertilio daubentonii</i> Kuhl, 1817;Myotis daubentonii (Kuhl, 1817);Murin de Daubenton;Daubenton's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/847351
+Chiroptera;Vespertilionidae;;533103;195005;195005;533103;ES;Myotis dominicensis;Miller, 1902;Myotis dominicensis Miller, 1902;<i>Myotis dominicensis</i> Miller, 1902;Myotis dominicensis Miller, 1902;Myotis de la Dominique, Murin de la Dominique;;FMd;3;;;;S;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/533103
+Chiroptera;Vespertilionidae;;60400;195005;195005;60400;ES;Myotis emarginatus;(É. Geoffroy Saint-Hilaire, 1806);Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);<i>Myotis emarginatus</i> (É. Geoffroy Saint-Hilaire, 1806);Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);Murin à oreilles échancrées, Vespertilion à oreilles échancrées;Geoffroy's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60400
+Chiroptera;Vespertilionidae;;60403;;;60400;ES;Myotis budapestiensis;;Myotis budapestiensis ;<i>Myotis budapestiensis</i>;Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);Murin à oreilles échancrées, Vespertilion à oreilles échancrées;Geoffroy's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60403
+Chiroptera;Vespertilionidae;;60404;;;60400;ES;Myotis ciliati;;Myotis ciliati ;<i>Myotis ciliati</i>;Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);Murin à oreilles échancrées, Vespertilion à oreilles échancrées;Geoffroy's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60404
+Chiroptera;Vespertilionidae;;60402;;;60400;SSES;Myotis emarginatus emarginatus;;Myotis emarginatus emarginatus ;<i>Myotis emarginatus emarginatus</i>;Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);Murin à oreilles échancrées, Vespertilion à oreilles échancrées;Geoffroy's Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60402
+Chiroptera;Vespertilionidae;;60405;;;60400;ES;Myotis neglectus;;Myotis neglectus ;<i>Myotis neglectus</i>;Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);Murin à oreilles échancrées, Vespertilion à oreilles échancrées;Geoffroy's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60405
+Chiroptera;Vespertilionidae;;60406;;;60400;ES;Myotis rufescens;Crespon;Myotis rufescens Crespon;<i>Myotis rufescens</i> Crespon;Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);Murin à oreilles échancrées, Vespertilion à oreilles échancrées;Geoffroy's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60406
+Chiroptera;Vespertilionidae;;60407;;;60400;ES;Myotis schrankii;Kolenati, 1856;Myotis schrankii Kolenati, 1856;<i>Myotis schrankii</i> Kolenati, 1856;Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);Murin à oreilles échancrées, Vespertilion à oreilles échancrées;Geoffroy's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60407
+Chiroptera;Vespertilionidae;;885332;;;60400;ES;Vespertilio emarginatus;É. Geoffroy Saint-Hilaire, 1806;Vespertilio emarginatus É. Geoffroy Saint-Hilaire, 1806;<i>Vespertilio emarginatus</i> É. Geoffroy Saint-Hilaire, 1806;Myotis emarginatus (É. Geoffroy Saint-Hilaire, 1806);Murin à oreilles échancrées, Vespertilion à oreilles échancrées;Geoffroy's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/885332
+Chiroptera;Vespertilionidae;;60411;195005;195005;60411;ES;Myotis escalerai;Cabrera, 1904;Myotis escalerai Cabrera, 1904;<i>Myotis escalerai</i> Cabrera, 1904;Myotis escalerai Cabrera, 1904;Murin d'Escalera;Escalera's bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60411
+Chiroptera;Vespertilionidae;;645523;195005;195005;645523;ES;Myotis lucifugus;(Le Conte, 1831);Myotis lucifugus (Le Conte, 1831);<i>Myotis lucifugus</i> (Le Conte, 1831);Myotis lucifugus (Le Conte, 1831);Chauve souris brune;Little Brown Bat, Little Brown Myotis;FMd;3;;;;;;;P;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/645523
+Chiroptera;Vespertilionidae;;418901;195005;195005;418901;ES;Myotis martiniquensis;LaVal, 1973;Myotis martiniquensis LaVal, 1973;<i>Myotis martiniquensis</i> LaVal, 1973;Myotis martiniquensis LaVal, 1973;Murin de la Martinique;;FMd;3;A;A;S;S;A;A;A;A;A;A;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/418901
+Chiroptera;Vespertilionidae;;60418;195005;195005;60418;ES;Myotis myotis;(Borkhausen, 1797);Myotis myotis (Borkhausen, 1797);<i>Myotis myotis</i> (Borkhausen, 1797);Myotis myotis (Borkhausen, 1797);Grand Murin;Greater Mouse-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60418
+Chiroptera;Vespertilionidae;;60421;;;60418;ES;Myotis alpinus;;Myotis alpinus ;<i>Myotis alpinus</i>;Myotis myotis (Borkhausen, 1797);Grand Murin;Greater Mouse-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60421
+Chiroptera;Vespertilionidae;;60422;;;60418;ES;Myotis latipennis;;Myotis latipennis ;<i>Myotis latipennis</i>;Myotis myotis (Borkhausen, 1797);Grand Murin;Greater Mouse-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60422
+Chiroptera;Vespertilionidae;;60423;;;60418;ES;Myotis murinus;Schreber;Myotis murinus Schreber;<i>Myotis murinus</i> Schreber;Myotis myotis (Borkhausen, 1797);Grand Murin;Greater Mouse-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60423
+Chiroptera;Vespertilionidae;;60420;;;60418;SSES;Myotis myotis myotis;;Myotis myotis myotis ;<i>Myotis myotis myotis</i>;Myotis myotis (Borkhausen, 1797);Grand Murin;Greater Mouse-eared Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60420
+Chiroptera;Vespertilionidae;;60424;;;60418;ES;Myotis spelaea;;Myotis spelaea ;<i>Myotis spelaea</i>;Myotis myotis (Borkhausen, 1797);Grand Murin;Greater Mouse-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60424
+Chiroptera;Vespertilionidae;;60425;;;60418;ES;Myotis submarinus;;Myotis submarinus ;<i>Myotis submarinus</i>;Myotis myotis (Borkhausen, 1797);Grand Murin;Greater Mouse-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60425
+Chiroptera;Vespertilionidae;;60426;;;60418;ES;Myotis typus;;Myotis typus ;<i>Myotis typus</i>;Myotis myotis (Borkhausen, 1797);Grand Murin;Greater Mouse-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60426
+Chiroptera;Vespertilionidae;;60383;195005;195005;60383;ES;Myotis mystacinus;(Kuhl, 1817);Myotis mystacinus (Kuhl, 1817);<i>Myotis mystacinus</i> (Kuhl, 1817);Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60383
+Chiroptera;Vespertilionidae;;60387;;;60383;ES;Myotis bulgaricus;;Myotis bulgaricus ;<i>Myotis bulgaricus</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60387
+Chiroptera;Vespertilionidae;;60388;;;60383;ES;Myotis collaris;;Myotis collaris ;<i>Myotis collaris</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60388
+Chiroptera;Vespertilionidae;;60389;;;60383;ES;Myotis humeralis;;Myotis humeralis ;<i>Myotis humeralis</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60389
+Chiroptera;Vespertilionidae;;60390;;;60383;ES;Myotis lugubris;;Myotis lugubris ;<i>Myotis lugubris</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60390
+Chiroptera;Vespertilionidae;;60385;;;60383;SSES;Myotis mystacinus mystacinus;;Myotis mystacinus mystacinus ;<i>Myotis mystacinus mystacinus</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60385
+Chiroptera;Vespertilionidae;;60391;;;60383;ES;Myotis nigrofuscus;;Myotis nigrofuscus ;<i>Myotis nigrofuscus</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60391
+Chiroptera;Vespertilionidae;;60392;;;60383;ES;Myotis rufofuscus;;Myotis rufofuscus ;<i>Myotis rufofuscus</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60392
+Chiroptera;Vespertilionidae;;60393;;;60383;ES;Myotis schinzii;;Myotis schinzii ;<i>Myotis schinzii</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60393
+Chiroptera;Vespertilionidae;;60394;;;60383;ES;Myotis schrankii;Wagner, 1843;Myotis schrankii Wagner, 1843;<i>Myotis schrankii</i> Wagner, 1843;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60394
+Chiroptera;Vespertilionidae;;60395;;;60383;ES;Myotis sibiricus;;Myotis sibiricus ;<i>Myotis sibiricus</i>;Myotis mystacinus (Kuhl, 1817);Murin à moustaches, Vespertilion à moustaches;Whiskered Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60395
+Chiroptera;Vespertilionidae;;60408;195005;195005;60408;ES;Myotis nattereri;(Kuhl, 1817);Myotis nattereri (Kuhl, 1817);<i>Myotis nattereri</i> (Kuhl, 1817);Myotis nattereri (Kuhl, 1817);Murin de Natterer, Vespertilion de Natterer;Natterer's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60408
+Chiroptera;Vespertilionidae;;60410;;;60408;SSES;Myotis nattereri nattereri;;Myotis nattereri nattereri ;<i>Myotis nattereri nattereri</i>;Myotis nattereri (Kuhl, 1817);Murin de Natterer, Vespertilion de Natterer;Natterer's Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60410
+Chiroptera;Vespertilionidae;;60412;;;60408;ES;Myotis spelaeus;;Myotis spelaeus ;<i>Myotis spelaeus</i>;Myotis nattereri (Kuhl, 1817);Murin de Natterer, Vespertilion de Natterer;Natterer's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60412
+Chiroptera;Vespertilionidae;;60413;;;60408;ES;Myotis typicus;;Myotis typicus ;<i>Myotis typicus</i>;Myotis nattereri (Kuhl, 1817);Murin de Natterer, Vespertilion de Natterer;Natterer's Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60413
+Chiroptera;Vespertilionidae;;443742;195005;195005;443742;ES;Myotis nigricans;(Schinz, 1821);Myotis nigricans (Schinz, 1821);<i>Myotis nigricans</i> (Schinz, 1821);Myotis nigricans (Schinz, 1821);;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443742
+Chiroptera;Vespertilionidae;;79298;195005;195005;79298;ES;Myotis punicus;Felten, Spitzenberger & Storch, 1977;Myotis punicus Felten, Spitzenberger & Storch, 1977;<i>Myotis punicus</i> Felten, Spitzenberger & Storch, 1977;Myotis punicus Felten, Spitzenberger & Storch, 1977;Murin du Maghreb;Maghrebian mouse-eared bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/79298
+Chiroptera;Vespertilionidae;;443743;195005;195005;443743;ES;Myotis riparius;Handley, 1960;Myotis riparius Handley, 1960;<i>Myotis riparius</i> Handley, 1960;Myotis riparius Handley, 1960;;;FMd-QCF;3;;P;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/443743
+Chiroptera;Vespertilionidae;;195295;186239;186239;195295;GN;Nyctalus;Bowdich, 1825;Nyctalus Bowdich, 1825;<i>Nyctalus</i> Bowdich, 1825;Nyctalus Bowdich, 1825;;;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;60457;195295;195295;60457;ES;Nyctalus lasiopterus;(Schreber, 1780);Nyctalus lasiopterus (Schreber, 1780);<i>Nyctalus lasiopterus</i> (Schreber, 1780);Nyctalus lasiopterus (Schreber, 1780);Grande Noctule;Giant Noctule;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60457
+Chiroptera;Vespertilionidae;;60460;;;60457;ES;Nyctalus maxima;;Nyctalus maxima ;<i>Nyctalus maxima</i>;Nyctalus lasiopterus (Schreber, 1780);Grande Noctule;Giant Noctule;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60460
+Chiroptera;Vespertilionidae;;60459;;;60457;ES;Nyctalus sicula;;Nyctalus sicula ;<i>Nyctalus sicula</i>;Nyctalus lasiopterus (Schreber, 1780);Grande Noctule;Giant Noctule;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60459
+Chiroptera;Vespertilionidae;;60461;195295;195295;60461;ES;Nyctalus leisleri;(Kuhl, 1817);Nyctalus leisleri (Kuhl, 1817);<i>Nyctalus leisleri</i> (Kuhl, 1817);Nyctalus leisleri (Kuhl, 1817);Noctule de Leisler;Lesser noctule;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60461
+Chiroptera;Vespertilionidae;;60464;;;60461;ES;Nyctalus dasykarpos;;Nyctalus dasykarpos ;<i>Nyctalus dasykarpos</i>;Nyctalus leisleri (Kuhl, 1817);Noctule de Leisler;Lesser noctule;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60464
+Chiroptera;Vespertilionidae;;60465;;;60461;ES;Nyctalus pachygnatus;;Nyctalus pachygnatus ;<i>Nyctalus pachygnatus</i>;Nyctalus leisleri (Kuhl, 1817);Noctule de Leisler;Lesser noctule;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60465
+Chiroptera;Vespertilionidae;;60463;60461;60461;60463;SSES;Nyctalus leisleri leisleri;(Kuhl, 1817);Nyctalus leisleri leisleri (Kuhl, 1817);<i>Nyctalus leisleri leisleri</i> (Kuhl, 1817);Nyctalus leisleri leisleri (Kuhl, 1817);Noctule de Leisler;;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60463
+Chiroptera;Vespertilionidae;;60468;195295;195295;60468;ES;Nyctalus noctula;(Schreber, 1774);Nyctalus noctula (Schreber, 1774);<i>Nyctalus noctula</i> (Schreber, 1774);Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60468
+Chiroptera;Vespertilionidae;;60472;;;60468;ES;Nyctalus altivolans;;Nyctalus altivolans ;<i>Nyctalus altivolans</i>;Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60472
+Chiroptera;Vespertilionidae;;60473;;;60468;ES;Nyctalus lardarius;;Nyctalus lardarius ;<i>Nyctalus lardarius</i>;Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60473
+Chiroptera;Vespertilionidae;;60474;;;60468;ES;Nyctalus magnus;;Nyctalus magnus ;<i>Nyctalus magnus</i>;Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60474
+Chiroptera;Vespertilionidae;;60475;;;60468;ES;Nyctalus minima;;Nyctalus minima ;<i>Nyctalus minima</i>;Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60475
+Chiroptera;Vespertilionidae;;60470;;;60468;SSES;Nyctalus noctula noctula;;Nyctalus noctula noctula ;<i>Nyctalus noctula noctula</i>;Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60470
+Chiroptera;Vespertilionidae;;60476;;;60468;ES;Nyctalus palustris;;Nyctalus palustris ;<i>Nyctalus palustris</i>;Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60476
+Chiroptera;Vespertilionidae;;60477;;;60468;ES;Nyctalus princeps;;Nyctalus princeps ;<i>Nyctalus princeps</i>;Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60477
+Chiroptera;Vespertilionidae;;60471;;;60468;ES;Nyctalus proterus;;Nyctalus proterus ;<i>Nyctalus proterus</i>;Nyctalus noctula (Schreber, 1774);Noctule commune;Noctule Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60471
+Chiroptera;Vespertilionidae;;532355;186239;186239;532355;GN;Nyctophilus;Leach, 1821;Nyctophilus Leach, 1821;<i>Nyctophilus</i> Leach, 1821;Nyctophilus Leach, 1821;;;;;;;;;;;;;;;;;;;P;;;
+Chiroptera;Vespertilionidae;;532356;532355;532355;532356;ES;Nyctophilus nebulosus;Parnaby, 2002;Nyctophilus nebulosus Parnaby, 2002;<i>Nyctophilus nebulosus</i> Parnaby, 2002;Nyctophilus nebulosus Parnaby, 2002;Nyctophile nébuleux;New Caledonian Long-eared Bat;FMd;3;A;A;A;A;A;A;A;A;A;A;A;A;A;A;E;A;A;https://inpn.mnhn.fr/espece/cd_nom/532356
+Chiroptera;Vespertilionidae;;196296;186239;186239;196296;GN;Pipistrellus;Kaup, 1829;Pipistrellus Kaup, 1829;<i>Pipistrellus</i> Kaup, 1829;Pipistrellus Kaup, 1829;;;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;79303;196296;196296;79303;ES;Pipistrellus kuhlii;(Kuhl, 1817);Pipistrellus kuhlii (Kuhl, 1817);<i>Pipistrellus kuhlii</i> (Kuhl, 1817);Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/79303
+Chiroptera;Vespertilionidae;;60495;;;79303;ES;Pipistrellus albicans;Monticelli, 1886;Pipistrellus albicans Monticelli, 1886;<i>Pipistrellus albicans</i> Monticelli, 1886;Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60495
+Chiroptera;Vespertilionidae;;60496;;;79303;ES;Pipistrellus albolimbatus;Küster, 1835;Pipistrellus albolimbatus Küster, 1835;<i>Pipistrellus albolimbatus</i> Küster, 1835;Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60496
+Chiroptera;Vespertilionidae;;60497;;;79303;ES;Pipistrellus calcarata;Gray, 1838;Pipistrellus calcarata Gray, 1838;<i>Pipistrellus calcarata</i> Gray, 1838;Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60497
+Chiroptera;Vespertilionidae;;60493;;;79303;ES;Pipistrellus kuhli;(Kuhl, 1817);Pipistrellus kuhli (Kuhl, 1817);<i>Pipistrellus kuhli</i> (Kuhl, 1817);Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60493
+Chiroptera;Vespertilionidae;;60498;;;79303;ES;Pipistrellus marginatus;Cretschmar;Pipistrellus marginatus Cretschmar;<i>Pipistrellus marginatus</i> Cretschmar;Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60498
+Chiroptera;Vespertilionidae;;60499;;;79303;ES;Pipistrellus pallidus;Heim de Balsac, 1936;Pipistrellus pallidus Heim de Balsac, 1936;<i>Pipistrellus pallidus</i> Heim de Balsac, 1936;Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60499
+Chiroptera;Vespertilionidae;;60500;;;79303;ES;Pipistrellus pullatus;Monticelli, 1886;Pipistrellus pullatus Monticelli, 1886;<i>Pipistrellus pullatus</i> Monticelli, 1886;Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60500
+Chiroptera;Vespertilionidae;;60501;;;79303;ES;Pipistrellus vispistrellus;Bonaparte, 1837;Pipistrellus vispistrellus Bonaparte, 1837;<i>Pipistrellus vispistrellus</i> Bonaparte, 1837;Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60501
+Chiroptera;Vespertilionidae;;847353;;;79303;ES;Vespertilio kuhlii;Kuhl, 1817;Vespertilio kuhlii Kuhl, 1817;<i>Vespertilio kuhlii</i> Kuhl, 1817;Pipistrellus kuhlii (Kuhl, 1817);Pipistrelle de Kuhl;Kuhl's Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/847353
+Chiroptera;Vespertilionidae;;60490;196296;196296;60490;ES;Pipistrellus nathusii;(Keyserling & Blasius, 1839);Pipistrellus nathusii (Keyserling & Blasius, 1839);<i>Pipistrellus nathusii</i> (Keyserling & Blasius, 1839);Pipistrellus nathusii (Keyserling & Blasius, 1839);Pipistrelle de Nathusius;Nathusius's Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60490
+Chiroptera;Vespertilionidae;;60492;;;60490;ES;Pipistrellus unicolor;;Pipistrellus unicolor ;<i>Pipistrellus unicolor</i>;Pipistrellus nathusii (Keyserling & Blasius, 1839);Pipistrelle de Nathusius;Nathusius's Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60492
+Chiroptera;Vespertilionidae;;60479;196296;196296;60479;ES;Pipistrellus pipistrellus;(Schreber, 1774);Pipistrellus pipistrellus (Schreber, 1774);<i>Pipistrellus pipistrellus</i> (Schreber, 1774);Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60479
+Chiroptera;Vespertilionidae;;60482;;;60479;ES;Pipistrellus brachyotos;;Pipistrellus brachyotos ;<i>Pipistrellus brachyotos</i>;Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60482
+Chiroptera;Vespertilionidae;;60483;;;60479;ES;Pipistrellus flavescens;;Pipistrellus flavescens ;<i>Pipistrellus flavescens</i>;Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60483
+Chiroptera;Vespertilionidae;;60484;;;60479;ES;Pipistrellus genei;;Pipistrellus genei ;<i>Pipistrellus genei</i>;Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60484
+Chiroptera;Vespertilionidae;;60485;;;60479;ES;Pipistrellus limbatus;;Pipistrellus limbatus ;<i>Pipistrellus limbatus</i>;Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60485
+Chiroptera;Vespertilionidae;;60486;;;60479;ES;Pipistrellus melanopterus;;Pipistrellus melanopterus ;<i>Pipistrellus melanopterus</i>;Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60486
+Chiroptera;Vespertilionidae;;60487;;;60479;ES;Pipistrellus murinus;Gray;Pipistrellus murinus Gray;<i>Pipistrellus murinus</i> Gray;Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60487
+Chiroptera;Vespertilionidae;;60488;;;60479;ES;Pipistrellus nigricans;Bonaparte;Pipistrellus nigricans Bonaparte;<i>Pipistrellus nigricans</i> Bonaparte;Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60488
+Chiroptera;Vespertilionidae;;60481;;;60479;SSES;Pipistrellus pipistrellus pipistrellus;;Pipistrellus pipistrellus pipistrellus ;<i>Pipistrellus pipistrellus pipistrellus</i>;Pipistrellus pipistrellus (Schreber, 1774);Pipistrelle commune;Common Pipistrelle;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60481
+Chiroptera;Vespertilionidae;;60489;196296;196296;60489;ES;Pipistrellus pygmaeus;(Leach, 1825);Pipistrellus pygmaeus (Leach, 1825);<i>Pipistrellus pygmaeus</i> (Leach, 1825);Pipistrellus pygmaeus (Leach, 1825);Pipistrelle pygmée;Soprano Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60489
+Chiroptera;Vespertilionidae;;416650;;;60489;ES;Vespertilio mediterraneus;Cabrera, 1904;Vespertilio mediterraneus Cabrera, 1904;<i>Vespertilio mediterraneus</i> Cabrera, 1904;Pipistrellus pygmaeus (Leach, 1825);Pipistrelle pygmée;Soprano Pipistrelle;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/416650
+Chiroptera;Vespertilionidae;;196414;186239;186239;196414;GN;Plecotus;É. Geoffroy Saint-Hilaire, 1818;Plecotus É. Geoffroy Saint-Hilaire, 1818;<i>Plecotus</i> É. Geoffroy Saint-Hilaire, 1818;Plecotus É. Geoffroy Saint-Hilaire, 1818;;;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;60518;196414;196414;60518;ES;Plecotus auritus;(Linnaeus, 1758);Plecotus auritus (Linnaeus, 1758);<i>Plecotus auritus</i> (Linnaeus, 1758);Plecotus auritus (Linnaeus, 1758);Oreillard roux, Oreillard septentrional;Brown Long-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60518
+Chiroptera;Vespertilionidae;;60520;60518;60518;60520;SSES;Plecotus auritus auritus;(Linnaeus, 1758);Plecotus auritus auritus (Linnaeus, 1758);<i>Plecotus auritus auritus</i> (Linnaeus, 1758);Plecotus auritus auritus (Linnaeus, 1758);Oreillard roux, Oreillard septentrional;;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60520
+Chiroptera;Vespertilionidae;;60521;;;60520;ES;Plecotus brevimanus;;Plecotus brevimanus ;<i>Plecotus brevimanus</i>;Plecotus auritus auritus (Linnaeus, 1758);Oreillard roux, Oreillard septentrional;;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60521
+Chiroptera;Vespertilionidae;;60522;;;60520;ES;Plecotus cornutus;;Plecotus cornutus ;<i>Plecotus cornutus</i>;Plecotus auritus auritus (Linnaeus, 1758);Oreillard roux, Oreillard septentrional;;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60522
+Chiroptera;Vespertilionidae;;60523;;;60520;ES;Plecotus europaeus;;Plecotus europaeus ;<i>Plecotus europaeus</i>;Plecotus auritus auritus (Linnaeus, 1758);Oreillard roux, Oreillard septentrional;;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60523
+Chiroptera;Vespertilionidae;;60524;;;60520;ES;Plecotus montanus;;Plecotus montanus ;<i>Plecotus montanus</i>;Plecotus auritus auritus (Linnaeus, 1758);Oreillard roux, Oreillard septentrional;;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60524
+Chiroptera;Vespertilionidae;;60525;;;60520;ES;Plecotus otus;;Plecotus otus ;<i>Plecotus otus</i>;Plecotus auritus auritus (Linnaeus, 1758);Oreillard roux, Oreillard septentrional;;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60525
+Chiroptera;Vespertilionidae;;60526;;;60520;ES;Plecotus typus;;Plecotus typus ;<i>Plecotus typus</i>;Plecotus auritus auritus (Linnaeus, 1758);Oreillard roux, Oreillard septentrional;;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60526
+Chiroptera;Vespertilionidae;;60527;196414;196414;60527;ES;Plecotus austriacus;(J.B. Fischer, 1829);Plecotus austriacus (J.B. Fischer, 1829);<i>Plecotus austriacus</i> (J.B. Fischer, 1829);Plecotus austriacus (J.B. Fischer, 1829);Oreillard gris, Oreillard méridional;Grey Long-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60527
+Chiroptera;Vespertilionidae;;60533;;;60527;SSES;Plecotes auritus hispanicus;Bauer, 1957;Plecotes auritus hispanicus Bauer, 1957;<i>Plecotes auritus hispanicus</i> Bauer, 1957;Plecotus austriacus (J.B. Fischer, 1829);Oreillard gris, Oreillard méridional;Grey Long-eared Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60533
+Chiroptera;Vespertilionidae;;60529;;;60527;SSES;Plecotus austriacus austriacus;(Fischer, 1829);Plecotus austriacus austriacus (Fischer, 1829);<i>Plecotus austriacus austriacus</i> (Fischer, 1829);Plecotus austriacus (J.B. Fischer, 1829);Oreillard gris, Oreillard méridional;Grey Long-eared Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60529
+Chiroptera;Vespertilionidae;;60530;;;60527;ES;Plecotus brevipes;;Plecotus brevipes ;<i>Plecotus brevipes</i>;Plecotus austriacus (J.B. Fischer, 1829);Oreillard gris, Oreillard méridional;Grey Long-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60530
+Chiroptera;Vespertilionidae;;60531;;;60527;ES;Plecotus kirschbaumii;;Plecotus kirschbaumii ;<i>Plecotus kirschbaumii</i>;Plecotus austriacus (J.B. Fischer, 1829);Oreillard gris, Oreillard méridional;Grey Long-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60531
+Chiroptera;Vespertilionidae;;60532;;;60527;ES;Plecotus meridionalis;;Plecotus meridionalis ;<i>Plecotus meridionalis</i>;Plecotus austriacus (J.B. Fischer, 1829);Oreillard gris, Oreillard méridional;Grey Long-eared Bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60532
+Chiroptera;Vespertilionidae;;163463;196414;196414;163463;ES;Plecotus macrobullaris;Kuzjakin, 1965;Plecotus macrobullaris Kuzjakin, 1965;<i>Plecotus macrobullaris</i> Kuzjakin, 1965;Plecotus macrobullaris Kuzjakin, 1965;Oreillard montagnard;Alpine Long-eared bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/163463
+Chiroptera;Vespertilionidae;;79304;;;163463;ES;Plecotus alpinus;Kiefer & Veith, 2002;Plecotus alpinus Kiefer & Veith, 2002;<i>Plecotus alpinus</i> Kiefer & Veith, 2002;Plecotus macrobullaris Kuzjakin, 1965;Oreillard montagnard;Alpine Long-eared bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/79304
+Chiroptera;Vespertilionidae;;416651;;;163463;ES;Plecotus microdontus;Spitzenberger, 2002;Plecotus microdontus Spitzenberger, 2002;<i>Plecotus microdontus</i> Spitzenberger, 2002;Plecotus macrobullaris Kuzjakin, 1965;Oreillard montagnard;Alpine Long-eared bat;FMd;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/416651
+Chiroptera;Vespertilionidae;;458691;186239;186239;458691;GN;Scotophilus;Leach, 1821;Scotophilus Leach, 1821;<i>Scotophilus</i> Leach, 1821;Scotophilus Leach, 1821;;;;3;;;;;;;;;;P;;;;;;;;
+Chiroptera;Vespertilionidae;;458692;458691;458691;458692;ES;Scotophilus borbonicus;(É. Geoffroy Saint-Hilaire, 1803);Scotophilus borbonicus (É. Geoffroy Saint-Hilaire, 1803);<i>Scotophilus borbonicus</i> (É. Geoffroy Saint-Hilaire, 1803);Scotophilus borbonicus (É. Geoffroy Saint-Hilaire, 1803);Scotophile des Mascareignes, Scotophile de Bourbon;;FMd-QCF;3;A;A;A;A;A;A;A;A;A;Z;A;A;A;A;A;A;A;https://inpn.mnhn.fr/espece/cd_nom/458692
+Chiroptera;Vespertilionidae;;198894;186239;186239;198894;GN;Vespertilio;Linnaeus, 1758;Vespertilio Linnaeus, 1758;<i>Vespertilio</i> Linnaeus, 1758;Vespertilio Linnaeus, 1758;;;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;60537;198894;198894;60537;ES;Vespertilio murinus;Linnaeus, 1758;Vespertilio murinus Linnaeus, 1758;<i>Vespertilio murinus</i> Linnaeus, 1758;Vespertilio murinus Linnaeus, 1758;Vespertilion bicolore, Sérotine bicolore;Parti-coloured Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60537
+Chiroptera;Vespertilionidae;;60540;;;60537;ES;Vespertilio albogularis;;Vespertilio albogularis ;<i>Vespertilio albogularis</i>;Vespertilio murinus Linnaeus, 1758;Vespertilion bicolore, Sérotine bicolore;Parti-coloured Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60540
+Chiroptera;Vespertilionidae;;60541;;;60537;ES;Vespertilio discolor;;Vespertilio discolor ;<i>Vespertilio discolor</i>;Vespertilio murinus Linnaeus, 1758;Vespertilion bicolore, Sérotine bicolore;Parti-coloured Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60541
+Chiroptera;Vespertilionidae;;60542;;;60537;ES;Vespertilio kraschennikovi;;Vespertilio kraschennikovi ;<i>Vespertilio kraschennikovi</i>;Vespertilio murinus Linnaeus, 1758;Vespertilion bicolore, Sérotine bicolore;Parti-coloured Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60542
+Chiroptera;Vespertilionidae;;60543;;;60537;ES;Vespertilio michnoi;;Vespertilio michnoi ;<i>Vespertilio michnoi</i>;Vespertilio murinus Linnaeus, 1758;Vespertilion bicolore, Sérotine bicolore;Parti-coloured Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60543
+Chiroptera;Vespertilionidae;;60539;;;60537;SSES;Vespertilio murinus murinus;;Vespertilio murinus murinus ;<i>Vespertilio murinus murinus</i>;Vespertilio murinus Linnaeus, 1758;Vespertilion bicolore, Sérotine bicolore;Parti-coloured Bat;;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60539
+Chiroptera;Vespertilionidae;;60544;;;60537;ES;Vespertilio siculus;;Vespertilio siculus ;<i>Vespertilio siculus</i>;Vespertilio murinus Linnaeus, 1758;Vespertilion bicolore, Sérotine bicolore;Parti-coloured Bat;FMd-QCF;3;P;;;;;;;;;;;;;;;;;https://inpn.mnhn.fr/espece/cd_nom/60544
+Chiroptera;;;699094;186233;186236;699094;IFOR;Yangochiroptera;Koopman, 1985;Yangochiroptera Koopman, 1985;Yangochiroptera Koopman, 1985;Yangochiroptera Koopman, 1985;;;;;P;P;P;P;P;P;P;P;;P;;;;;P;;;
+Chiroptera;;;699093;186233;186236;699093;IFOR;Yinpterochiroptera;;Yinpterochiroptera ;Yinpterochiroptera;Yinpterochiroptera ;;;;;P;;;;;;;;;;;;;;;;;
+Chiroptera;Phyllostomidae;;;;;;ES;Carollia sowelli;;;;;;;FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Molossops temminckii;;;;;;;FMu-QCF;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Accipiter nisus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Acrocephalus schoenobaenus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Acrocephalus scirpaceus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Actitis hypoleucos;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Aegithalos caudatus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Alauda arvensis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Alcedo atthis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Alectoris rufa;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Alopochen aegyptiaca;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Amphibia sp.;;;;;;;frog;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anas crecca;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anas penelope;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anas platyrhynchos;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anser anser;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anser brachyrhynchus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anthus campestris;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Antaxius chopardi;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Antaxius hispanicus;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Antaxius spinibrachius;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Antaxius pedestris;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anthus petrosus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anthus pratensis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anthus richardi;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Antaxius sorrezensis;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Antaxius sp.;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Anthus trivialis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Apis mellifera;;;;;;;bee;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Apodemus agrarius;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Apodemus flavicollis;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Apodemus sp.;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Apodemus sylvaticus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Apus apus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Apus pallidus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Ardea cinerea;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Arvicola amphibius;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Arvicola sapidus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Arvicola scherman;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Arvicola sp.;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Arvicola terrestris;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Asio otus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Athene noctua;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Barbitistes fischeri;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Barbitistes 'sanzii';;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Barbitistes serricauda;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Bicolorana bicolor;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;bird;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Bos taurus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Branta canadensis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Burhinus oedicnemus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Buteo buteo;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;insect wingbeats;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Calidris bairdii;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Calidris canutus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Calidris fuscicollis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Calidris himantopus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Calidris mauri;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Canis lupus familiaris;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Capreolus capreolus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Caprimulgus europaeus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Capra pyrenaica;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;vehicle;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Carduelis carduelis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Certhia brachydactyla;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cervus elaphus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cettia cettia;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Charadrius hiaticula;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Chionomys nivalis;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;chirp;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Chloris chloris;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Chlidonias hybridus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Chorthippus brunneus;;;;;;;grasshopper;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Chorthippus vagans;;;;;;;grasshopper;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Chroicocephalus ridibundus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cicadatra atra;;;;;;;cicada;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cicada orni;;;;;;;cicada;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cicadoidea sp.;;;;;;;cicada;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cinclus cinclus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Circus aeruginosus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cisticola juncidis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Coccothraustes coccothraustes;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Columba palumbus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Conocephalus conocephalus;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Conocephalus dorsalis;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Conocephalus fuscus;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Corsteropleurus chopardi;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Corvus frugilegus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Corvus monedula;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Corvus cornix;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Corvus corone;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Corvus corax;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Coturnix coturnix;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Caelifera sp.;;;;;;;grasshopper;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Crocidura russula;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cuculus canorus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Culicoides impunctatus;;;;;;;fly;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cyanistes caerulea;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cymbalophora pudica;;;;;;;moth;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Cyrtaspis scutata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Decticus albifrons;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Delichon urbica;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Dendrocopos major;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Dendrocopos minor;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Egretta garzetta;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;electronical noise;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Emberiza caesia;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Emberiza calandra;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Emberiza cia;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Emberiza cirlus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Emberiza citrinella;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Emberiza hortulana;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Emberiza schoeniclus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Ephippiger ephippiger;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Equus asinus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Equus ferus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Erinaceus europaeus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Erithacus rubecula;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Euchorthippus chopardii;;;;;;;grasshopper;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Euchorthippus elegantulus;;;;;;;grasshopper;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Eugryllodes pipiens;;;;;;;ground-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Eumodycogryllus bordigalensis;;;;;;;ground-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Eupholidoptera chabrieri;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Eupholidoptera sp.;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Eupholidoptera tyrrhenica;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Falco subbuteo;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Falco tinnunculus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Fringilla coelebs;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Fringilla montifringilla;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Fulica atra;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Fulica cristata;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Gallinula chloropus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Gallus gallus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Gallinago gallinago;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Garrulus glandarius;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Gryllidae sp.;;;;;;;ground-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Grus grus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Gryllus bimaculatus;;;;;;;ground-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Gryllus campestris;;;;;;;ground-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Gun shot;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Haematopus ostralegus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Hippolais polyglotta;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Hirundo rustica;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Homo sapiens;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Hyla meridionalis;;;;;;;frog;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp.10;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp.11;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp.12;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp.1;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp.2;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp.5;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp.6;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp.7;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp. 8;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp. 9;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect spp;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Insect sp. from Turkey 1;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Isophya pyrenaea;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Jinx torquilla;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Lampyris sp.;;;;;;;beetle;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Lanius meridionalis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Lanius senator;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Larus argentatus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Larus michahellis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Leptophyes albovittata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Leptophyes boscii;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Leptophyes laticauda;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Leptophyes punctatissima;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Limnodromus griseus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Limosa lapponica;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Linaria cannabina;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Lluciapomaresius stalii;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Locustella luscinoides;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Locustella naevia;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Lophophanes cristatus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Loxia curvirostra;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Lullula arborea;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Luscinia megarhynchos;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Lyristes plebejus;;;;;;;cicada;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Mammalia sp.;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Martes foina;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Martes martes;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;mechanical noise;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Merops apiaster;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Metrioptera brachyptera;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Metaplastes pulchripennis;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Metrioptera saussuriana;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Microtus agrestis;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Microtus arvalis;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Microtus duodecimcostatus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Microtus gerbei;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Microtus lusitanicus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Micromys minutus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Microtus multiplex;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Microtus savii;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Microtus subterraneus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Small mammal spp;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;mixed;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;micromammals sp.1;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;micromammals sp.2;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;micromammals sp.3;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;micromammals sp.4;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;micromammals sp. from Turkey 1;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Motacilla alba;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Motacilla cinerea;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Motacilla flava;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Muntiacus reevesi;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Mustela erminea;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Mustela lutreola;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Mustela nivalis;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Mustela putorius;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Soricidae sp.;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Muscicapa striata;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Mustela vison;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Myocastor coypus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Nemobius sylvestris;;;;;;;ground-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;noise;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Numenius arquata;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Numenius phaeoptus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Odontura macphersoni;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Oecanthus pellucens;;;;;;;ground-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Oenanthe oenanthe;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Omocestus viridulus;;;;;;;grasshopper;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Oriolus oriolus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Orthoptera sp.;;;;;;;insect;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Otus scops;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Ovis aries;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Panurus biarmicus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Parus major;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Passer domesticus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pavo cristatus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pelophylax bedriagae;;;;;;;frog;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pelophylax esculantus;;;;;;;frog;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pelophylax grafi;;;;;;;frog;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pelophylax ridibundus;;;;;;;frog;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Periparus ater;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pernis apivorus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phasianus colchicus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phaneroptera falcata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phaneroptera nana;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pholidoptera femorata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pholidoptera griseoaptera;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phoenicurus ochruros;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phoenicurus phoenicurus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phylloscopus bonelli;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phylloscopus collybita;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phylloscopus sibilatrix;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Phylloscopus trochilus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Aves sp.;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pica pica;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Picus viridis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Platycleis affinis;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Platycleis albopunctata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Platycleis falx;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Platycleis iberica;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Platycleis intermedia;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;plane;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Platycleis sabulosa;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pluvialis apricaria;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Poecilus palustris;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Porzana parva;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Porzana porzana;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Porzana pusilla;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Prunella modularis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pseudoips prasinana;;;;;;;moth;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rhacocleis bonfilsi;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rhacocleis corsicana;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rhacocleis germanica;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rhacocleis grallata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pteronemobius heydenii;;;;;;;ground-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rhacocleis poneli;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Ptyonoprogne fuligula;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pycnonotus xanthopygos;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pycnogaster jugicola;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pyrrhula pyrrhula;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Pyrrhocorax pyrrhocorax;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;radio;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;rain;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rallus aquaticus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rattus norvegicus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Regulus ignicapillus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Regulus regulus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rhacocleis annulata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rhacocleis sp.;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;watercourse;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Rodentia sp. from Turkey 1;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Roeseliana roeselii;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Ruspolia nitidula;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from India 1;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from India 2;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from India 3;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. 1;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. 2;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from Turkey 4;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from Turkey 5;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from Turkey 6;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from Turkey 7;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from Turkey 1;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from Turkey 2;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigoniidae sp. from Turkey 3;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Saxicola rubetra;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Saxicola rubicola;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Scolopax rusticola;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sepiana sepium;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Serinus serinus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sitta europaea;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Soricinus coronatus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Spinus spinus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Strix aluco;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Streptopelia decaocto;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sturnus vulgaris;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sus scrofa;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sylvia atricapilla;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sylvia borin;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sylvia cantillans;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sylvia communis;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sylvia curruca;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sylvia melanocephala;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Sylvia undata;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tamias sibiricus;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tessellana orina;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tessellana tessellata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigetta argentata;;;;;;;cicada;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigonia cantans;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigonia hispanica;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigetta pygmea;;;;;;;cicada;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tettigonia viridissima;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Thyreonotus corsicus;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tringa nebularia;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tringa ochropus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tringa totanus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Troglodytes troglodytes;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Turdus iliacus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Turdus merula;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Turdus philomelos;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Turdus pilaris;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Turdus viscivorus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tylopsis lilifolia;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Tyto alba;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Uromenus brevicollis;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Uromenus rugosicollis;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Uromenus sp.;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Vanellus vanellus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Vulpes vulpes;;;;;;;other-mammal;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;wind;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;wings;;;;;;;noise;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Xenus cinereus;;;;;;;bird;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Yersinella beybienkoi;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Yersinella raymondii;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Yponomeuta sp.;;;;;;;moth;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;Zeuneriana abbreviata;;;;;;;bush-cricket;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Chaerephon ansorgei;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Chaerephon chapini;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Chaerephon major;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Chaerephon nigeriae;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Chaerephon pumilus;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Glauconycteris poensis;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Glauconycteris variegata;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Hipposideridae;;;;;;ES;Hipposideros abae;;;;;;;CF-FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Hipposideridae;;;;;;ES;Hipposideros caffer;;;;;;;CF-FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Hipposideridae;;;;;;ES;Hipposideros cyclosus;;;;;;;CF-FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Hipposideridae;;;;;;ES;Hipposideros ruber haplotype 1;;;;;;;CF-FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Hipposideridae;;;;;;ES;Hipposideros ruber haplotype 2;;;;;;;CF-FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Hipposideridae;;;;;;ES;Hipposideros ruber haplotype 3;;;;;;;CF-FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;;;;;;;ES;Laephotis sp.;;;;;;;FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Mimetillus moloneyi;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Mops condylurus;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Myotis bocagii;;;;;;;FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;;;;;;;ES;Myopterus daubentonii;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Neoromicia capensis;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Neoromicia guineensis;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Neoromicia nana;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Neoromicia rendalli;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Neoromicia somalica;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Neoromicia stanleyi;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Nycteridae;;;;;;ES;Nycteris hispida;;;;;;;FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Nycteridae;;;;;;ES;Nycteris macrotis;;;;;;;FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Nycticeinops schlieffeni;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Pipistrellus nanulus;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Pipistrellus rusticus;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;;;;;;;ES;Rhinolophus landeri;;;;;;;FMu-CF-FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;;;;;;;ES;Scotoecus albofuscus;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Scotophilus dinganii;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;;;;;;;ES;Scotoecus hirundo;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Scotophilus leucogaster;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Scotophilus nigrita;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Scotophilus viridis;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Hipposideridae;;;;;;ES;Hipposideros ruber;;;;;;;CF-FMd;;;;;;;;;;;;;;;;;;;
+;;;;;;;ES;buzz;;;;;;;buzz;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Eptesicus anatolicus;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Plecotus kolombatovici;;;;;;;FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Vespertilionidae;;;;;;ES;Rhinolophus blasii;;;;;;;FMu-CF-FMd;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Eumops glaucinus;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
+Chiroptera;Molossidae;;;;;;ES;Eumops bonariensis;;;;;;;FMd-QCF;;;;;;;;;;;;;;;;;;;
