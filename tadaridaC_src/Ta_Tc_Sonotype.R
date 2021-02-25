@@ -1,5 +1,7 @@
-ClassifC1="ClassifC1.R"
-AggContacts="AggContacts.R"
+library(beepr)
+
+ClassifC1="ClassifC1_Sonotype.R"
+AggContacts="AggContacts_Sonotype.R"
 AggNbSp="AggNbSp.R"
 
 #get arguments from the command line
@@ -7,14 +9,14 @@ args <- commandArgs(trailingOnly = TRUE)
 
 if(length(args)<3) #for local tests
   {
-  ClassifC1="D:/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/ClassifC1.R"
-  AggContacts="D:/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggContacts.R"
+  ClassifC1="D:/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/ClassifC1_Sonotype.R"
+  AggContacts="D:/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggContacts_Sonotype.R"
   AggNbSp="D:/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggNbSp.R"
-    args="F:/Yves_Benin/PourScanPosteRelacherAlibori/txt" #directory containing .ta files
+    args="F:/Refs_sons_exotiquesYB/costa rica/Artibeus jamaicensis/txt" # Directory containing .ta files of sounds to classify
 #args[1]="D:/PI_20/DataPR_Net1&2/txt"
 #args[2]="ClassifEsp_LF_180320.learner"
 #args[2]="ClassifEsp_LF_180129.learner"
-args[2]="D:/RSDB_HF/ClassifEsp__tabase3HF_sansfiltre_2020-07-24.learner"
+args[2]="D:/RSDB_HF/ClassifEsp__tabase3HF_sansfiltre_2020-08-18.learner"
 #args[3]="tabase3_LFXC"
 args[3]="N"
 
@@ -33,16 +35,25 @@ args[15]="ClassifEsp_tabase3HF_France_Cir_2019-11-26_wiSR.learner"
 args[16]="CNS_RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc.learner"
 args[17]="Referentiel_seuils_RSDB_HF_tabase3HF_sansfiltre_IdTot_wiSR_IdConc__G.csv"
 args[18]=1 #block number 
+args[19]="FreqMP" # The variable used to build modes, i.e. to build groups of calls
+args[20]=1.5 # the threshold of ScoreSec used to separate secondary species
+#args[21]="130901puntarenitas-artjam2.ta" # If provided, the script will only run for this file
 }
 
 print(getwd())
 print(args)
 
-tadir=args[1]
-talistot=list.files(tadir,pattern=".ta$",full.names=T)
+tadir=args[1] # Directory containing .ta files of sounds to classify
+talistot=list.files(tadir,pattern=".ta$",full.names=T) # Lists .ta files
 
+if (!is.na(args[21])){
+  talistot=subset(talistot, talistot == paste0(args[1], "/", args[21]))
+}
+
+# Applies classifier and sorts results by sonotype
 if(length(talistot)>as.numeric(args[14])*(as.numeric(args[18])-1))
 {
+  # Subsets blocks of .ta files to process
   talistot=talistot[(as.numeric(args[14])*(as.numeric(args[18])-1)+1)
                     :(min(length(talistot)
                           ,as.numeric(args[14])*(as.numeric(args[18]))))]
@@ -50,24 +61,24 @@ if(length(talistot)>as.numeric(args[14])*(as.numeric(args[18])-1))
   FITA=file.info(talistot)
   talistot=subset(talistot,FITA$size>1000)
   
-  
-  
   block=as.numeric(args[7])
   
-  
+  # Runs the successive scripts on the block
   for (r in 1:ceiling(length(talistot)/block))
   {
     args[8]=block*(r-1)+1 #start number
     args[9]=block*r #end number
-    source(ClassifC1)
+    source(ClassifC1) # Loads classifiers and runs it to give predictions
     print(paste(r,ceiling(length(talistot)/block),Sys.time()))
     if(!skip){
-      source(AggContacts)
-      source(AggNbSp)
+      source(AggContacts) # Aggregate predictions
+      source(AggNbSp) # Aggregates Number of species (?)
     }
     
     print(gc())
     
   }
 }
+
+beep(2)
 
