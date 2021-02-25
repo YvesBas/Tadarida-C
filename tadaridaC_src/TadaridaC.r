@@ -3,19 +3,23 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-args="C:/Users/Yves Bas/Documents/txt"
+#args="C:/Users/Yves Bas/Documents/RSDB_sample2011"
+args=choose.dir()
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
 }
-tadir=args[1]
-
+ClassifFile=file.choose()
+TC=F
+HPF=21
 #uncomment the following line if you do not store the classifier file in the working directory of R
 #and in that case, indicate the folder path where the classifier file is stored
 #setwd("C:/Users/yves/Documents/Tadarida/Tadarida-C/tests")
 
 library(randomForest) #to use the classifier
 library(data.table) #to handle large numbers of .ta files
+
+tadir=args[1]
 
 Version=3 #allow to track results from different classifier versions
 
@@ -28,7 +32,7 @@ if (length(obslist) == 0) {
 }
 
 # load the classifier
-if (exists("ClassifEspA")==FALSE) load("ClassifEspFrance_simpl171214_1_50.learner")
+if (exists("ClassifEspA")==FALSE) load(ClassifFile)
 
 #concatenate all the features table
 my.data <- list()
@@ -36,6 +40,7 @@ for (i in 1:length(obslist)){
   my.data[[i]] <- read.csv(obslist[[i]],sep="\t")
 }
 CTP=as.data.frame(rbindlist(my.data))
+CTP=subset(CTP,CTP$FreqMP>HPF)
 
 #get the predictions and the main features (noticeably the file name)
 ProbEsp0 <- predict(ClassifEspA, CTP,type="prob",norm.votes=TRUE)
@@ -44,7 +49,7 @@ ProbEsp <-  cbind(CTP[,1:12],ProbEsp0)
 #this loop intends to detect successively different species within each file if there is sufficient dicrepancy in predicted probabilities
 j=0
 while (nrow(ProbEsp)>0)
- {
+{
   j=j+1
   
   #get the best score per species and file
@@ -93,13 +98,25 @@ while (nrow(ProbEsp)>0)
 #adding version number from both Tadarida-D and Tadarida-C
 IdTot2=cbind(IdTot,VersionD=CTP$Version[1],VersionC=Version)
 
-#writing .tc files
-for (i in 1:nlevels(IdTot2$Group.1))
-{
-  fichierid=paste(tadir,'/',substr(levels(IdTot2$Group.1)[i],1,(nchar(levels(IdTot2$Group.1)[i])-4)),".tc", sep="")
-  write.csv(subset(IdTot2,IdTot2$Group.1==levels(IdTot2$Group.1)[i]),fichierid,row.names=FALSE)  
+if(TC){
+  #writing .tc files
+  for (i in 1:nlevels(IdTot2$Group.1))
+  {
+    fichierid=paste(tadir,'/',substr(levels(IdTot2$Group.1)[i],1,(nchar(levels(IdTot2$Group.1)[i])-4)),".tc", sep="")
+    write.csv(subset(IdTot2,IdTot2$Group.1==levels(IdTot2$Group.1)[i]),fichierid,row.names=FALSE)  
+  }
+}else{
+  IdSp=subset(IdTot2
+              ,select=subset(names(IdTot2) 
+                                   ,names(IdTot2) %in% 
+                               levels(ClassifEspA$y)))
+  IdTot2$Espece=levels(ClassifEspA$y)[apply(IdSp,MARGIN=1
+                                            ,FUN=function(x) which.max(x))]
+  IdTot2$Score=apply(IdSp,MARGIN=1,max)
+  IdTot2=IdTot2[order(IdTot2$Group.1),]
+  
+  fwrite(IdTot2,paste0(basename(dirname(args[1])),"_IdTot.csv"),sep=";")
 }
-
 
 #suppressing every objects except the classifier (which is time-consuming to load)
 rm(list=setdiff(ls(), list("ClassifEspA","IdTot2")))
