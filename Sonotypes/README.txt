@@ -17,6 +17,11 @@ Release of the scripts and of the classifier (compilation date 11 December 2020)
 Tadarida-C is a set of scripts running under [R environment](https://www.r-project.org/). These scripts need the installation of two packages:
 -randomForest
 -data.table
+-plyr
+-dplyr
+-beepr
+-Hmisc
+-ggplot2
 If you use R in command line, you can run the “init.r” script provided on the Github repository (https://github.com/YvesBas/Tadarida-C) to install those two libraries.
 If asked, you should prefer to install those libraries in a “personal libraries” folder.
 

@@ -327,7 +327,7 @@ while (nrow(ProbEsp)>0)
                ,Tstart=TDeb1$x,Tend=TFin1$x,NbCris=NbCris1$x
                ,DurMed=Dur50$x,Dur90=Dur90$x,Ampm50=Ampm50$x
                ,Ampm90=Ampm90$x,AmpSMd=AmpSMd$x,DiffME=DiffME,SR=SR
-               ,Ramp90=Ramp90$x, RAN90=RAN90$x
+               ,Ramp90=Ramp90$x
                ,Order=paste0("N",j))
   
   if(exists("IdTot")==T){IdTot=rbind(IdTot,IdTemp)}else{IdTot=IdTemp}
@@ -365,9 +365,9 @@ IdTot= IdTot[order(IdTot$Filename, IdTot$SpMaxF2), ]
 if(exists("r"))
 {
   fwrite(IdTot,paste0(PreFichPE,"IdTot.csv"))
-  fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-20):ncol(IdTot))]),paste0(PreFichPE,"Idshort.csv"))
+  fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-19):ncol(IdTot))]),paste0(PreFichPE,"Idshort.csv"))
 }else{
   fwrite(IdTot,paste0(tadir,"/IdTot.csv"))
-  fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-20):ncol(IdTot))]),paste0(tadir,"/Idshort.csv"))
+  fwrite(cbind(Filename=IdTot[,1],IdTot[,((ncol(IdTot)-19):ncol(IdTot))]),paste0(tadir,"/Idshort.csv"))
 }
 
