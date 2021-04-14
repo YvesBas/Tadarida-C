@@ -13,7 +13,7 @@ if(length(args)<3) #for local tests
   ClassifC1="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/ClassifC1_Sonotype.R"
   AggContacts="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggContacts_Sonotype.R"
   AggNbSp="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggNbSp_Sonotype.R"
-    args="F:/Sons utilisés pour papier Sonotypes/PourScan_Valley_of_fire/txt" # Directory containing .ta files of sounds to classify
+    args="F:/Sons utilis?s pour papier Sonotypes/PourScan_Valley_of_fire/txt" # Directory containing .ta files of sounds to classify
 #args[1]="D:/PI_20/DataPR_Net1&2/txt"
 args[2]="C:/Users/croemer01/Documents/ClassifEsp__tabase3HF_sansfiltre_2020-12-11.learner"
 args[3]="N"
@@ -82,7 +82,8 @@ if(length(talistot)>as.numeric(args[14])*(as.numeric(args[18])-1))
 
 # Rbind all IdTot
 
-NomFichier="IdTot_TOTAL"
+NomFichier1 <- basename(args)
+NomFichier=paste0("IdTot_TOTAL_",NomFichier1)
 
 ls1 <- list.files(args[1], recursive=FALSE,pattern="*IdTot.csv$")
 ls2 = paste(args[1], "/", ls1, sep="")
@@ -98,7 +99,7 @@ write.table(TableID,paste(args[1], "/", NomFichier, "_V", args[22],
 
 # Summary file
 
-NomFichiersummary="IdTot_TOTAL_summary"
+NomFichiersummary=paste0("IdTot_TOTAL_summary_",NomFichier1)
 TableIDsummary=as.data.frame(table(TableID$SpMaxF2))
 write.table(TableIDsummary,paste(args[1], "/", NomFichiersummary, "_V", args[22], 
                           ".csv", sep=""),
