@@ -10,10 +10,10 @@ args <- commandArgs(trailingOnly = TRUE)
 
 if(length(args)<3) #for local tests
   {
-  ClassifC1="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/ClassifC1_Sonotype.R"
-  AggContacts="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggContacts_Sonotype.R"
-  AggNbSp="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/tadaridaC_src/AggNbSp_Sonotype.R"
-    args="F:/Sons utilis?s pour papier Sonotypes/PourScan_Valley_of_fire/txt" # Directory containing .ta files of sounds to classify
+  ClassifC1="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/Sonotypes/ClassifC1_Sonotype.R"
+  AggContacts="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/Sonotypes/AggContacts_Sonotype.R"
+  AggNbSp="C:/Users/croemer01/Documents/R/Tadarida_GitHub/Tadarida-C/Sonotypes/AggNbSp_Sonotype.R"
+    args="D:/Test_ta_tc_sonotype/test" # Directory containing .ta files of sounds to classify
 #args[1]="D:/PI_20/DataPR_Net1&2/txt"
 args[2]="C:/Users/croemer01/Documents/ClassifEsp__tabase3HF_sansfiltre_2020-12-11.learner"
 args[3]="N"
@@ -82,7 +82,7 @@ if(length(talistot)>as.numeric(args[14])*(as.numeric(args[18])-1))
 
 # Rbind all IdTot
 
-NomFichier1 <- basename(args)
+NomFichier1 <- basename(args[1])
 NomFichier=paste0("IdTot_TOTAL_",NomFichier1)
 
 ls1 <- list.files(args[1], recursive=FALSE,pattern="*IdTot.csv$")
