@@ -1,8 +1,9 @@
 # Tadarida-C for bat sonotypes
 
-##Summary
+## Summary
+
 This is a variation of Tadarida-C designed to study bat sonotypes around the world.
-A classifier is provided and can be downloaded at https://b2drop.eudat.eu/s/kaMPYmzYF6NKCqe
+A classifier is provided and can be downloaded at https://doi.org/10.6084/m9.figshare.14340341.v1
 The architecture and interaction between scripts is summarized [here](https://drive.google.com/open?id=1LV-Li36kZvC18UaklBbJp0hjeumf1fCh) (first 8 slides for building your own classifier and apply it, or 2nd slide for applying the classifier provided)
 Some files required to run scripts can be found in Tadarida-C/ tadaridaC_src
 See sections ‘Building a classifier’ and ‘Using the classifier’ (at the bottom below) for detailed explanations.
