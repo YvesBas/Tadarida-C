@@ -2,9 +2,13 @@ library(data.table)
 #get arguments from the command line
 #args <- commandArgs(trailingOnly = TRUE)
 
-#args="ProbEspHF2019-11-27_Cir.csv" #probabibility matrix file or directory containing "XXXProbEsp.csv" files
-#args[6]=F #TC
-#args[10]="SpeciesList.csv" #species list
+if(length(args)<2)
+{
+args="ProbEspHF2019-11-28.csv" #probabibility matrix file or directory containing "XXXProbEsp.csv" files
+args[6]=F #TC
+args[10]="SpeciesList.csv" #species list
+load("ClassifEsp_RSDB_HF_tabase3HF_sansfiltre_2019-11-19.learner")
+}
 
 Version=5 #allow to track results from different classifier versions
 
@@ -51,20 +55,14 @@ if(exists("r")) #very dirty...
   
   SpeciesList=fread(args[10])
   
-  TestPE_Sp=c(match(SpeciesList$Nesp,colnames(ProbEsp))
-              ,match(SpeciesList$Esp,colnames(ProbEsp)))
+  TestPE_Sp=match(ClassifEspA$classes,colnames(ProbEsp))
+    #           ,match(SpeciesList$Esp,colnames(ProbEsp)))
   
-  ColPE_Sp=unique(TestPE_Sp[!is.na(TestPE_Sp)])
-  ColPE_Sp=ColPE_Sp[order(ColPE_Sp)]
-  ColSp1=min(ColPE_Sp)
+#  ColPE_Sp=unique(TestPE_Sp[!is.na(TestPE_Sp)])
+ # ColPE_Sp=ColPE_Sp[order(ColPE_Sp)]
+  ColPE_Sp=TestPE_Sp
+  ColSp1=min(TestPE_Sp)
   
-  #test de conformité
-  TestConform=match(colnames(ProbEsp)[ColSp1:length(ProbEsp)],SpeciesList$Esp)
-  if(sum(is.na(TestConform[1:(length(TestConform)-2)]))>0)
-  {
-    print(subset(colnames(ProbEsp)[ColSp1:length(ProbEsp)],is.na(TestConform)))
-    stop("probleme de conformite entre classifieur et liste especes (especes manquantes)")
-  }
   
   #get the predictions and the main features (noticeably the file name)
   #Loop init
@@ -195,12 +193,12 @@ if(exists("r")) #very dirty...
   }
   
   
-  TestIT_Sp=c(match(SpeciesList$Nesp,colnames(IdTot))
-              ,match(SpeciesList$Esp,colnames(IdTot)))
+  #TestIT_Sp=c(match(SpeciesList$Nesp,colnames(IdTot))
+   #           ,match(SpeciesList$Esp,colnames(IdTot)))
   
-  ColIT_Sp=unique(TestIT_Sp[!is.na(TestIT_Sp)])
-  ColIT_Sp=ColIT_Sp[order(ColIT_Sp)]
-  ITSp=subset(IdTot,select=ColIT_Sp)
+  #ColIT_Sp=unique(TestIT_Sp[!is.na(TestIT_Sp)])
+   #ColIT_Sp=ColIT_Sp[order(ColIT_Sp)]
+  ITSp=subset(IdTot,select=ClassifEspA$classes)
   
   
   #computing the species

@@ -1,5 +1,5 @@
-DirQuiz="./chiros/quizRLC"
-DirQuizNew="./chiros/quizRLC_mix"
+DirQuiz="./chiros/quiz2007b"
+DirQuizNew="./chiros/quiz2007_mix"
 Nsites=10
 
 dir.create(DirQuizNew)
@@ -18,4 +18,4 @@ for (k in 1:ceiling(length(Lpref)/Nsites))
     NewName=paste0(NewDir,"/",basename(ToCopy))
     file.copy(from=ToCopy,to=NewName)
   }
-}
+

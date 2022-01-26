@@ -3,26 +3,32 @@ library(lubridate)
 library(tuneR)
 library(seewave)
 library(xlsx)
-Tabase=fread("tabase3HF_France.csv")
-IdConc=fread("tabase3HF_France_IdConc.csv")
+Tabase=fread("RSDB_HF_tabase3HF_sansfiltre.csv")
+IdConc=fread("RSDB_HF_tabase3HF_sansfiltre_IdTot_IdConc.csv")
 #SpTarget="Pleaur"
-SpTarget=c("Ple","Pip","Myo","Barbar","Eptser","Hypsav","Minsch"
-           ,"Myoalc","Myobec","Myobra","Myocap","Myoema","Myomyo"
-           ,"Myomys","Myonat","Nyclas","Nyclei","Nycnoc","Pipkuh","Pipnat"
-           ,"Pippip","Pippyg","Pleaur","Pleaus","Plemac","Rhieur","Rhihip"
+SpTarget=c("Ple"
+           #,"Pip"
+           ,"Myo","Barbar","Eptser","Hypsav","Minsch"
+           #,"Myoalc","Myobec","Myobra","Myocap","Myoema","Myomyo"
+           #,"Myomys","Myonat"
+           ,"Nyclas","Nyclei","Nycnoc","Pipkuh","Pipnat"
+           ,"Pippip","Pippyg"
+           #,"Pleaur","Pleaus","Plemac"
+           ,"Rhieur","Rhihip"
            ,"Rhifer","Tadten","Vesmur")
 RSDB="./RSDB_HF"
-DirQuiz="./chiros/quizRLC"
+DirQuiz="./chiros/quiz2007b"
 SRmin=300000
 SpeciesList=fread("SpeciesList.csv") #for species groups
 CodesConfiance=c("POSSIBLE","PROBABLE","SUR","SUR","SUR")
-NperSp=8
+NperSp=2
 
 LW=list.files(RSDB,pattern=".wav$",recursive=T,full.names=T)
 
 
 TabaseTriSR=subset(Tabase,Tabase$SampleRate>=SRmin)
 FileSR=unique(TabaseTriSR$Filename)
+FileSR=gsub(".wav","",FileSR)
 
 IdConc=subset(IdConc,IdConc$Group.1 %in% FileSR)
 IdConc$Dur=IdConc$Tend-IdConc$Tstart
@@ -47,13 +53,13 @@ for (h in 1:length(SpTarget))
     IdSub=subset(IdSp,(ScoreGroup>(i-1)*MaxI/NperSp)&
                    (ScoreGroup<=(i)*MaxI/NperSp))
     Fsub=unique(IdSub$Group.1)
-    Tsub=subset(Tabase,Tabase$Filename %in% Fsub)
+    Tsub=subset(Tabase,Tabase$Filename %in% paste0(Fsub,".wav"))
     Tsub=subset(Tsub,Tsub$Espece %in% c(SpTarget[h],SpGroup))
     if(nrow(Tsub)>0)
     {
       Tagg=aggregate(Tsub$Indice,by=list(Tsub$Filename),max)
       Tsel=subset(Tagg$Group.1,Tagg$x==max(Tagg$x))
-      IdSub=subset(IdSub,IdSub$Group.1 %in% Tsel)
+      IdSub=subset(IdSub,paste0(IdSub$Group.1,".wav") %in% Tsel)
       IdSub=subset(IdSub,IdSub$Dur==max(IdSub$Dur))
       if(nrow(IdSub)>0)
       {
@@ -72,7 +78,7 @@ for (h in 1:length(SpTarget))
   
   FSel=c(IdSel$Group.1,FOSp[1:NperSp])
   
-  TimeSel=ymd_hms(substr(FSel,nchar(FSel)-22,nchar(FSel)-8))
+  TimeSel=ymd_hms(substr(FSel,nchar(FSel)-18,nchar(FSel)-4))
   PrefSel=substr(FSel,1,nchar(FSel)-23)
   PrefTb=substr(Tabase$Filename,1,nchar(Tabase$Filename)-23)
   
@@ -98,7 +104,7 @@ for (h in 1:length(SpTarget))
   Auteur=vector()
   for (i in 1:length(FSel))
   {
-    Tsub=subset(Tabase,Tabase$Filename==FSel[i])
+    Tsub=subset(Tabase,Tabase$Filename==paste0(FSel[i],".wav"))
     Tagg=aggregate(Tsub$Indice,by=list(Tsub$Espece),max)
     Identif=""
     for (j in 1:nrow(Tagg))
@@ -116,7 +122,7 @@ for (h in 1:length(SpTarget))
   TabQuizWoR=TabQuiz
   TabQuizWoR$Ids=NULL
   
-  LSel=subset(LW,basename(LW) %in% FSel)
+  LSel=subset(LW,basename(LW) %in% paste0(FSel,".wav"))
   
   dir.create(DirQuiz)
   dir.create(paste0(DirQuiz,"/",SpTarget[h]))

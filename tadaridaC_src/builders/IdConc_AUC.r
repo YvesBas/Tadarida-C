@@ -1,15 +1,21 @@
 library(data.table)
 library(pROC)
-FIdConc="RSDB_HF_tabase3HF_sansfiltre_IdTot_woSR_IdConc"
-GroupingSp=T
-SpeciesList=fread("SpeciesList.csv")
+#FIdConc="RSDB_HF_tabase3HF_sansfiltre_IdTot_woSR_IdConc"
+#FIdConc="ProbIdConc_2021-02-16"
+FIdConc="C:/Users/Yves Bas/Downloads/predictions_1010.txt"
+GroupingSp=F
+#SpeciesList=fread("SpeciesList.csv")
 DiscardRSDB=F
-ColD="Filename" #indicate where names of data identifier; "Filename" if from C1 Classifier, "Group.1" from C3
+#ColD="Filename" #indicate where names of data identifier; "Filename" if from C1 Classifier, "Group.1" from C3
+ColD="fichier" #indicate where names of data identifier; "Filename" if from C1 Classifier, "Group.1" from C3
+ColV="classe attendue"
 
-
-
-IdConc=fread(paste0(FIdConc,".csv"))
+IdConc=fread(FIdConc)
 testD=match(ColD,colnames(IdConc))
+
+FIdConc=gsub(".csv","",basename(FIdConc))
+FIdConc=gsub(".txt","",FIdConc)
+
 
 if(DiscardRSDB)
 {
@@ -25,7 +31,8 @@ if(DiscardRSDB)
 
 if(sum(grepl("IdMan",names(IdConc)))==0)
 {
-  IdConc$IdMan=IdConc$ValidId
+  IdV=subset(IdConc,select=ColV)
+    IdConc$IdMan=as.data.frame(IdV)[,1]
 }
 #else{
 #   IdConc$IdMan=IdConc$valid.espece

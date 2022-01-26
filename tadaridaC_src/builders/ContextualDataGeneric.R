@@ -14,7 +14,7 @@ SpeciesId=""
 #IdTot3=rbind(IdTot1,IdTot2)
 load("antser_train.rdat")
 IdTot3=as.data.table(antser_train)
-load("Classifier_results_all.r")
+load("E:/Classifier_results_all.r")
 DataTot=pred_dat2
 FileId="Filename"
 
@@ -201,4 +201,4 @@ for (i in 1:length(ListLocaPart))
       }
   
 PourC2M=merge(PourC2,MaxTot,by.x="filename",by.y="Group.1")
-fwrite(PourC2M,"F:/ForOlivier_PourC2M.csv")
+fwrite(PourC2M,"F:/ForOliver_PourC2M.csv")

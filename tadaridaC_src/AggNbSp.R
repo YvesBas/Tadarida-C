@@ -129,7 +129,19 @@ if(args[12])
   #print(names(IdTot_pourRF))
   #print(row.names(ClassifNbSp$importance))
   
+  
+  test=subset(row.names(ClassifNbSp$importance),
+              !row.names(ClassifNbSp$importance) %in% names(IdTot_pourRF))
+  if(length(test)>0)
+  {
+    for (z in 1:length(test))
+    {
+      IdTot_pourRF$temp=0
+      names(IdTot_pourRF)[length(names(IdTot_pourRF))]=test[z]
+    }
+  }
   NbSp=predict(ClassifNbSp,IdTot_pourRF,type="prob",norm.votes=T)
+  
   
   IdTot_pourRF2=cbind(IdTot_pourRF,NbSp)
   
@@ -191,7 +203,7 @@ if(substr(IdTot$Group.1[1],1,3)=="Cir")
 {
   RefErrorRisk=fread(args[17])
 }else{
-RefErrorRisk=fread(args[13])
+  RefErrorRisk=fread(args[13])
 }
 IdTot4$SuccessProb=999
 IdTottemp=IdTot4[0,]

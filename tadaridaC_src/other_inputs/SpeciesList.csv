@@ -59,7 +59,7 @@ Calhim;piaf;piaf;x;x;x;x;Calidris himantopus;bird;Bécasseau à échasses;Autre
 Calmar;piaf;piaf;x;x;;x;Calidris mauri;bird;Bécasseau violet;Autre
 Calmau;piaf;piaf;x;x;;x;Calidris mauri;bird;Bécasseau d'Alaska;Autre
 Canfam;mamm;mamm;x;x;x;x;Canis lupus familiaris;other mammal;Chien;Autre
-Cansp.;Cansp.;Cansp.;x;;;x;Lampyris sp.;beetle;Lampyre sp.;Autre
+Cansp.;Cansp.;Lamsp.;x;;;x;Lampyris sp.;beetle;Lampyre sp.;Autre
 Capcap;Capcap;Capcap;x;;;x;Capreolus capreolus;other mammal;Chevreuil;Autre
 Capeur;piaf;piaf;x;;;x;Caprimulgus europaeus;bird;Engoulevent d'Europe;Autre
 Cappyr;Cappyr;Cappyr;x;;;;Capra pyrenaica;other mammal;Bouquetin d'Espagne;Autre
@@ -68,8 +68,14 @@ Carcar;piaf;piaf;x;x;x;x;Carduelis carduelis;bird;Chardonneret élégant;Autre
 Cerbra;piaf;piaf;x;x;x;;Certhia brachydactyla;bird;Grimpereau des jardins;Autre
 Cerela;Cerela;Cerela;x;;;x;Cervus elaphus;other mammal;Cerf élaphe;Autre
 Cetcet;piaf;piaf;x;x;x;x;Cettia cettia;bird;Bouscarle de Cetti;Autre
+Chaans;Chaans;Chaans;;;;;Chaerephon ansorgei;bat;Molosse d'Ansorge;Chauve-souris
+Chacha;Chacha;Chacha;;;;;Chaerephon chapini;bat;Molosse a criniere;Chauve-souris
 Chahia;piaf;piaf;x;;;x;Charadrius hiaticula;bird;Grand Gravelot;Autre
+Chamaj;Chamaj;Chamaj;;;;;Chaerephon major;bat;Grand Molosse;Chauve-souris
+Chanig;Chanig;Chanig;;;;;Chaerephon nigeriae;bat;Molosse nigerian;Chauve-souris
+Chapum;Chapum;Chapum;;;;;Chaerephon pumilus;bat;Petit Molosse;Chauve-souris
 Chioniv;Chioniv;Chioniv;x;x;x;;Chionomys nivalis;other mammal;Campagnol des neiges;Autre
+Chirosp;Chirosp;Chirosp;;;;;Chiroptera sp.;bat;Chauves-souris sp.;Chauve-souris
 chirp;chirp;noise;x;;;;chirp;noise;chirp;Autre
 Chlchl;piaf;piaf;x;x;x;x;Chloris chloris;bird;Verdier d'Europe;Autre
 Chlhyb;piaf;piaf;x;;;;Chlidonias hybridus;bird;Guifette moustac;Autre
@@ -140,13 +146,21 @@ Galchl;piaf;piaf;x;;;x;Gallinula chloropus;bird;Gallinule poule-d'eau;Autre
 Galdom;piaf;piaf;x;;;x;Gallus gallus;bird;Poule;Autre
 Galgal;piaf;piaf;x;;;x;Gallinago gallinago;bird;Bécassine des marais;Autre
 Gargla;piaf;piaf;x;;;x;Garrulus glandarius;bird;Geai des chênes;Autre
+Glapoe;Glapoe;Glapoe;;;;;Glauconycteris poensis;bat;Chauves-souris Abo;Chauve-souris
+Glavar;Glavar;Glavar;;;;;Glauconycteris variegata;bat;Chauves-souris papillon;Chauve-souris
 gril;gril;gril;x;x;x;x;Gryllidae sp.;ground-cricket;grillon sp.;Autre
 Grugru;piaf;piaf;x;;;x;Grus grus;bird;Grue cendrée;Autre
 Grybim;gril;gril;x;;;;Gryllus bimaculatus;ground-cricket;Grillon de Provence;Autre
 Grycam;gril;gril;x;x;x;;Gryllus campestris;ground-cricket;Grillon champêtre;Autre
 gunsht;gunsht;gunsht;x;;;x;Gun shot;noise;Tir;Autre
 Haeost;piaf;piaf;x;;;x;Haematopus ostralegus;bird;Huitrier pie;Autre
+Hipaba;Hipaba;Hipaba;;;;;Hipposideros abae;bat;Phyllorhine Aba;Chauve-souris
+Hipcaf;Hipcaf;Hipcaf;;;;;Hipposideros caffer;bat;Phyllorine de Cafrerie;Chauve-souris
+Hipcyc;Hipcyc;Hipcyc;;;;;Hipposideros cyclops;bat;Phyllorhine cyclope;Chauve-souris
 Hippol;piaf;piaf;x;;;;Hippolais polyglotta;bird;Hypola‹s polyglotte;Autre
+Hipru1;Hipru1;Hipru1;;;;;Hipposideros ruber haplotype 1;bat;Phyllorine rousse haplotype 1;Chauve-souris
+Hipru2;Hipru2;Hipru2;;;;;Hipposideros ruber haplotype 2;bat;Phyllorine rousse haplotype 2;Chauve-souris
+Hipru3;Hipru3;Hipru3;;;;;Hipposideros ruber haplotype 3;bat;Phyllorine rousse haplotype 3;Chauve-souris
 Hirrus;piaf;piaf;x;;;x;Hirundo rustica;bird;Hirondelle rustique;Autre
 Homsap;mamm;mamm;x;x;x;x;Homo sapiens;other mammal;voix;Autre
 Hylmer;amph;amph;x;;x;;Hyla meridionalis;frog;Rainette méridionale;Autre
@@ -165,6 +179,7 @@ INSSPE;INSSPE;INSSPE;x;;;x;Insect spp;insect;Insecte sp.;Autre
 InsTu1;InsTu1;InsTu1;;x;;;Insect sp. from Turkey 1;insect;Insecte sp. Tu1;Autre
 Isopyr;Isopyr;Isopyr;x;x;x;;Isophya pyrenaea;bush-cricket;Barbatiste pyreneen;Sauterelle
 Jyntor;piaf;piaf;x;;;;Jinx torquilla;bird;Torcol fourmilier;Autre
+Laesp;Laesp;Laesp;;;;;Laephotis sp.;bat;Oreillard sp.;Chauve-souris
 Lamsp.;Lamsp.;Lamsp.;x;x;x;x;Lampyris sp.;beetle;Lampyre sp.;Autre
 Lanmer;piaf;piaf;x;;;;Lanius meridionalis;bird;Pie-grièche méridionale;Autre
 Lansen;piaf;piaf;x;;;;Lanius senator;bird;Pie-grièche à tête rousse;Autre
@@ -203,6 +218,7 @@ Micmul;Micagr;Micagr;x;;;;Microtus multiplex;other mammal;Campagnol de Fatio;Aut
 Micsav;Micagr;Micagr;x;;;;Microtus savii;other mammal;Campagnol de Savi;Autre
 Micsub;Micagr;Micagr;x;;;;Microtus subterraneus;other mammal;Campagnol de Savi;Autre
 Mimasp;Mimasp;Mimasp;x;;;x;Small mammal spp;other mammal;Micromammifère sp.;Autre
+Mimmol;Mimmol;Mimmol;;;;;Mimetillus moloneyi;bat;Mimique de Moloney;Chauve-souris
 Minsch;Minsch;Minsch;x;x;x;;Miniopterus schreibersii;bat;Minioptere;Chauve-souris
 mixed;mixed;mixed;;;;x;mixed;noise;mix;Autre
 Mmasp1;mamm;mamm;x;x;x;x;micromammals sp.1;other mammal;Micromammifère type 1;Autre
@@ -210,6 +226,8 @@ Mmasp2;mamm;mamm;x;x;x;x;micromammals sp.2;other mammal;Micromammifère type 2;Au
 Mmasp3;mamm;mamm;x;x;x;x;micromammals sp.3;other mammal;Micromammifère type 3;Autre
 Mmasp4;mamm;mamm;x;x;x;x;micromammals sp.4;other mammal;Micromammifère type 4;Autre
 MmaTu1;mamm;mamm;x;x;x;;micromammals sp. from Turkey 1;other mammal;Micromammifère de Turquie type 1;Autre
+Moldsp;Moldsp;Moldsp;;;;;Molossidae sp.;bat;Molosside sp.;Chauve-souris
+Mopcon;Mopcon;Mopcon;;;;;Mops condylurus;bat;Molosse angolais;Chauve-souris
 Motalb;piaf;piaf;x;;;x;Motacilla alba;bird;Bergeronnette grise;Autre
 Motcin;piaf;piaf;x;x;x;x;Motacilla cinerea;bird;Bergeronnette des ruisseaux;Autre
 Motfla;piaf;piaf;x;x;x;x;Motacilla flava;bird;Bergeronnette printanière;Autre
@@ -224,9 +242,11 @@ Musvis;Musvis;Musvis;x;;x;x;Mustela vison;other mammal;Vison d'Amerique;Autre
 Myoalc;Myoalc;Myoalc;x;x;x;x;Myotis alcathoe;bat;Murin d'Alcathoe;Chauve-souris
 Myobec;Myobec;Myobec;x;x;x;x;Myotis bechsteinii;bat;Murin de Bechstein;Chauve-souris
 Myobly;MyoGT;MyoGT;x;x;x;;Myotis blythii;bat;Petit Murin;Chauve-souris
+Myoboc;Myoboc;Myoboc;;;;;Myotis bocagii;bat;Murin roux;Chauve-souris
 Myobra;Myomys;Myomys;x;x;;x;Myotis brandtii;bat;Murin de Brandt;Chauve-souris
 Myocap;Myocap;Myocap;x;x;x;;Myotis capaccinii;bat;Murin de Capaccini;Chauve-souris
 Myocoy;Myocoy;Myocoy;x;;;;Myocastor coypus;other mammal;Rat musqué;Autre
+Myocry;Myonat;Myonat;;;;;Myotis crypticus;bat;Murin cryptique;Chauve-souris
 Myodas;Myodas;Myodas;x;x;;;Myotis dasycneme;bat;Murin des marais;Chauve-souris
 Myodau;Myodau;Myodau;x;x;x;x;Myotis daubentonii;bat;Murin de Daubenton;Chauve-souris
 Myoema;Myoema;Myoema;x;x;x;;Myotis emarginatus;bat;Murin a oreilles echancrees;Chauve-souris
@@ -234,15 +254,27 @@ MyoGT;MyoGT;MyoGT;x;x;x;;Myotis cf. myotis;bat;Murin de grande taille;Chauve-sou
 Myomyo;MyoGT;MyoGT;x;x;x;;Myotis myotis;bat;Grand Murin;Chauve-souris
 Myomys;Myomys;Myomys;x;x;x;x;Myotis mystacinus;bat;Murin a moustaches;Chauve-souris
 Myonat;Myonat;Myonat;x;x;;x;Myotis nattereri;bat;Murin groupe Natterer;Chauve-souris
+Myopda;Myopda;Myopda;;;;;Myopterus daubentonii;bat;Molosse de Daubenton;Chauve-souris
 Myopun;MyoGT;MyoGT;x;;;;Myotis punicus;bat;Murin du Maghreb;Chauve-souris
-MyospA;Myonat;Myonat;x;x;x;;Myotis sp. A ('southern' Natterer);bat;Murin sp. A;Chauve-souris
+Myosp;Myosp;Myosp;;;;;Myotis sp.;bat;Murin sp.;Chauve-souris
+MyospA;Myonat;Myonat;x;x;x;;Myotis crypticus;bat;Murin cryptique;Chauve-souris
 Nemsyl;gril;gril;x;;;;Nemobius sylvestris;ground-cricket;Grillon des bois;Autre
+Neocap;Neocap;Neocap;;;;;Neoromicia capensis;bat;Pipistrelle du Cap;Chauve-souris
+Neogui;Neogui;Neogui;;;;;Neoromicia guineensis;bat;Pipistrelle de Guinée;Chauve-souris
+Neonan;Neonan;Neonan;;;;;Neoromicia nana;bat;Pipistrelle banane;Chauve-souris
+Neoren;Neoren;Neoren;;;;;Neoromicia rendalli;bat;Pipistrelle de Rendall;Chauve-souris
+Neosom;Neosom;Neosom;;;;;Neoromicia somalica;bat;Pipistrelle somalienne;Chauve-souris
+Neosp1;Neosp1;Neosp1;;;;;Neoromicia sp. 1;bat;Pipistrelle sp. N1;Chauve-souris
+Neosta;Neosta;Neosta;;;;;Neoromicia stanleyi;bat;Pipistrelle de Stanley;Chauve-souris
 noise;noise;noise;x;x;x;x;noise;noise;bruit;Autre
 Numarq;piaf;piaf;x;;;x;Numenius arquata;bird;Courlis cendré;Autre
 Numtor;piaf;piaf;x;;;x;Numenius phaeoptus;bird;Courlis corlieu;Autre
+Nychis;Nychis;Nychis;;;;;Nycteris hispida;bat;Nyctere herisse;Chauve-souris
 Nyclas;Nyclas;Nyclas;x;x;x;;Nyctalus lasiopterus;bat;Grande Noctule;Chauve-souris
 Nyclei;Nyclei;Nyclei;x;x;x;x;Nyctalus leisleri;bat;Noctule de Leisler;Chauve-souris
+Nycmac;Nycmac;Nycmac;;;;;Nycteris macrotis;bat;Nyctere oreillard;Chauve-souris
 Nycnoc;Nycnoc;Nycnoc;x;x;x;x;Nyctalus noctula;bat;Noctule commune;Chauve-souris
+Nycsch;Nycsch;Nycsch;;;;;Nycticeinops schlieffeni;bat;Chauves-souris de Schlieffen;Chauve-souris
 Odomac;Odomac;Odomac;;;x;;Odontura macphersoni;bush-cricket;Sauterelle de MacPherson;Sauterelle
 Oecpel;gril;gril;x;;;;Oecanthus pellucens;ground-cricket;Grillon d'Italie;Autre
 Oenoen;piaf;piaf;x;;;;Oenanthe oenanthe;bird;Traquet motteux;Autre
@@ -277,9 +309,14 @@ Picpic;piaf;piaf;x;x;x;x;Pica pica;bird;Pie bavarde;Autre
 Picvir;piaf;piaf;x;;;x;Picus viridis;bird;Pic vert;Autre
 Pipkuh;Pipkuh;Pipkuh;x;x;x;;Pipistrellus kuhlii;bat;Pipistrelle de Kuhl;Chauve-souris
 Pipmad;Pipmad;Pipmad;;;;;Pipistrellus madeirensis;bat;Pipistrelle de Madère;Chauve-souris
+Pipnan;Pipnan;Pipnan;;;;;Pipistrellus nanulus;bat;Pipistrelle minuscule;Chauve-souris
 Pipnat;Pipnat;Pipnat;x;x;x;x;Pipistrellus nathusii;bat;Pipistrelle de Nathusius;Chauve-souris
 Pippip;Pippip;Pippip;x;x;x;x;Pipistrellus pipistrellus;bat;Pipistrelle commune;Chauve-souris
 Pippyg;Pippyg;Pippyg;x;x;x;x;Pipistrellus pygmaeus;bat;Pipistrelle soprane;Chauve-souris
+Piprus;Piprus;Piprus;;;;;Pipistrellus rusticus;bat;Pipistrelle rouillee;Chauve-souris
+Pipsp;Pipsp;Pipsp;;;;;Pipistrellus sp.;bat;Pipistrelle sp.;Chauve-souris
+Pipsp1;Pipsp1;Pipsp1;;;;;Pipistrellus sp. 1;bat;Pipistrelle sp. P1;Chauve-souris
+Pipsp2;Pipsp2;Pipsp2;;;;;Pipistrellus sp. 2;bat;Pipistrelle sp. P2;Chauve-souris
 Plaaff;Plaaff;Plaaff;x;;x;;Platycleis affinis;bush-cricket;Decticelle cotiere;Sauterelle
 Plaalb;Plaalb;Plaalb;x;;x;x;Platycleis albopunctata;bush-cricket;Decticelle chagrinee;Sauterelle
 Plafal;Plafal;Plafal;x;;x;;Platycleis falx;bush-cricket;Decticelle a serpe;Sauterelle
@@ -291,6 +328,7 @@ Pleaur;Pleaur;Pleaur;x;;x;x;Plecotus auritus;bat;Oreillard roux;Chauve-souris
 Pleaus;Pleaus;Pleaus;x;;x;;Plecotus austriacus;bat;Oreillard gris;Chauve-souris
 Plekol;Plekol;Plekol;;x;;;Plecotus kolombatovici;bat;Oreillard des Balkans;Chauve-souris
 Plemac;Plemac;Plemac;x;x;x;;Plecotus macrobullaris;bat;Oreillard montagnard;Chauve-souris
+Plesp;Plesp;Plesp;;;;;Plecotus sp.;bat;Oreillard sp.;Chauve-souris
 Pluapr;piaf;piaf;x;;;x;Pluvialis apricaria;bird;Pluvier doré;Autre
 Poepal;piaf;piaf;x;x;x;x;Poecilus palustris;bird;Mésange nonnette;Autre
 Porpar;piaf;piaf;x;x;x;;Porzana parva;bird;Marouette poussin;Autre
@@ -313,15 +351,19 @@ radio;noise;noise;x;x;x;x;radio;noise;Radio;Autre
 rain;noise;noise;x;x;x;x;rain;noise;pluie;Autre
 Ralaqu;piaf;piaf;x;;;x;Rallus aquaticus;bird;Râle d'eau;Autre
 Ratnor;Ratnor;Ratnor;x;x;x;x;Rattus norvegicus;other mammal;Surmulot;Autre
+Ratrat;Ratrat;Ratrat;;;;;Rattus rattus;other mammal;Rat noir;Autre
 Regign;piaf;piaf;x;x;x;x;Regulus ignicapillus;bird;Roitelet triple-bandeau;Autre
 Regreg;piaf;piaf;x;x;x;x;Regulus regulus;bird;Roitelet huppé;Autre
 Rhaann;Rhaann;Rhasp;x;x;x;x;Rhacocleis annulata;bush-cricket;Decticelle annelée;Sauterelle
 Rhasp;Rhasp;Rhasp;x;x;x;x;Rhacocleis sp.;bush-cricket;Decticelle groupe arboricole;Sauterelle
+Rhi120;Rhi120;Rhi120;;;;;Rhinolophus sp. 120 kHz;bat;Rhinolophe sp. 120;Chauve-souris
 Rhibla;Rhibla;Rhibla;;x;;;Rhinolophus blasii;bat;Rhinolophe de Blasius;Chauve-souris
 Rhieur;Rhieur;Rhieur;x;x;x;;Rhinolophus euryale;bat;Rhinolophe euryale;Chauve-souris
 Rhifer;Rhifer;Rhifer;x;x;x;x;Rhinolophus ferrumequinum;bat;Grand Rhinolophe;Chauve-souris
 Rhihip;Rhihip;Rhihip;x;x;x;x;Rhinolophus hipposideros;bat;Petit Rhinolophe;Chauve-souris
-Rhimeh;Rhimeh;Rhimeh;;x;x;;Rhinolophus mehelyi;bat;Rinolophe de Mehely;Chauve-souris
+Rhilan;Rhilan;Rhilan;;;;;Rhinolophus landeri;bat;Rhinolophe de Lander;Chauve-souris
+Rhimeh;Rhimeh;Rhimeh;;x;x;;Rhinolophus mehelyi;bat;Rhinolophe de Mehely;Chauve-souris
+Rhisp.;Rhisp.;Rhisp.;;;;;Rhinolophus sp.;bat;Rhinolophe sp.;Chauve-souris
 river;noise;noise;x;x;x;x;watercourse;noise;cours d'eau;Autre
 RodTu1;mamm;mamm;x;x;x;;Rodentia sp. from Turkey 1;other mammal;Rongeur de Turquie type 1;Autre
 Roeroe;Roeroe;Roeroe;x;x;x;x;Roeseliana roeselii;bush-cricket;Decticelle bariolee;Sauterelle
@@ -340,7 +382,13 @@ SauTurquiesp2;SauTurquiesp2;SauTurquiesp2;;x;;;Tettigoniidae sp. from Turkey 2;b
 SauTurquiesp3;SauTurquiesp3;SauTurquiesp3;;x;;;Tettigoniidae sp. from Turkey 3;bush-cricket;Sauterelle sp. Tu3;Sauterelle
 Saxrube;piaf;piaf;x;;;x;Saxicola rubetra;bird;Tarier des prés;Autre
 Saxrubi;piaf;piaf;x;;;x;Saxicola rubicola;bird;Tarier pâtre;Autre
+Scoalb;Scoalb;Scoalb;;;;;Scotoecus albofuscus;bat;Scotophile a ailes claires;Chauve-souris
+Scodin;Scodin;Scodin;;;;;Scotophilus dinganii;bat;Scotophile jaune;Chauve-souris
+Scohir;Scohir;Scohir;;;;;Scotoecus hirundo;bat;Scotophile a ailes sombres;Chauve-souris
+Scoleu;Scoleu;Scoleu;;;;;Scotophilus leucogaster;bat;Scotophile a ventre blanc;Chauve-souris
+Sconig;Sconig;Sconig;;;;;Scotophilus nigrita;bat;Scotophile geant;Chauve-souris
 Scorus;piaf;piaf;x;;;x;Scolopax rusticola;bird;Bécasse des bois;Autre
+Scovir;Scovir;Scovir;;;;;Scotophilus viridis;bat;Scotophile verdatre;Chauve-souris
 Sepsep;Sepsep;Sepsep;x;;x;;Sepiana sepium;bush-cricket;Decticelle echassiere;Sauterelle
 Serser;piaf;piaf;x;x;x;;Serinus serinus;bird;Serin cini;Autre
 Siteur;piaf;piaf;x;x;x;x;Sitta europaea;bird;Sittelle torchepot;Autre
@@ -359,6 +407,7 @@ Sylmel;piaf;piaf;x;x;x;;Sylvia melanocephala;bird;Fauvette mélanocéphale;Autre
 Sylund;piaf;piaf;x;;;x;Sylvia undata;bird;Fauvette pitchou;Autre
 Tadten;Tadten;Tadten;x;x;x;;Tadarida teniotis;bat;Molosse;Chauve-souris
 Tamsib;Tamsib;Tamsib;x;;;;Tamias sibiricus;other mammal;Tamia de Sibérie;Autre
+Tapmau;Tapmau;Tapmau;;;;;Taphozous mauritianus;bat;Taphien de Maurice;Chauve-souris
 Tesori;Tesori;Tesori;;;;;Tessellana orina;bush-cricket;Decticelle orina;Sauterelle
 Testes;Testes;Testes;x;x;x;;Tessellana tessellata;bush-cricket;Decticelle carroyee;Sauterelle
 Tetarg;Tetarg;Tetarg;x;;x;;Tettigetta argentata;cicada;Cigale argentee;Autre
@@ -391,45 +440,3 @@ Yerbey;Yerbey;Yerbey;x;;;;Yersinella beybienkoi;bush-cricket;Decticelle italienn
 Yerray;Yerray;Yerray;x;;x;;Yersinella raymondii;bush-cricket;Decticelle frele;Sauterelle
 Yposp;Yposp;Yposp;x;x;x;x;Yponomeuta sp.;moth;Hyponomeute sp.;Autre
 Zeuabb;Metbra;Metbra;x;;x;;Zeuneriana abbreviata;bush-cricket;Decticelle aquitaine;Sauterelle
-Chaans;Chaans;Chaans;;;;;Chaerephon ansorgei;bat;Chaerephon ansorgei;Chauve-souris
-Chacha;Chacha;Chacha;;;;;Chaerephon chapini;bat;Chaerephon chapini;Chauve-souris
-Chamaj;Chamaj;Chamaj;;;;;Chaerephon major;bat;Chaerephon major;Chauve-souris
-Chanig;Chanig;Chanig;;;;;Chaerephon nigeriae;bat;Chaerephon nigeriae;Chauve-souris
-Chapum;Chapum;Chapum;;;;;Chaerephon pumilus;bat;Chaerephon pumilus;Chauve-souris
-Glapoe;Glapoe;Glapoe;;;;;Glauconycteris poensis;bat;Glauconycteris poensis;Chauve-souris
-Glavar;Glavar;Glavar;;;;;Glauconycteris variegata;bat;Glauconycteris variegata;Chauve-souris
-Hipaba;Hipaba;Hipaba;;;;;Hipposideros abae;bat;Hipposideros abae;Chauve-souris
-Hipcaf;Hipcaf;Hipcaf;;;;;Hipposideros caffer;bat;Hipposideros caffer;Chauve-souris
-Hipcyc;Hipcyc;Hipcyc;;;;;Hipposideros cyclosus;bat;Hipposideros cyclosus;Chauve-souris
-Hipru1;Hipru1;Hipru1;;;;;Hipposideros ruber haplotype 1;bat;Hipposideros ruber haplotype 1;Chauve-souris
-Hipru2;Hipru2;Hipru2;;;;;Hipposideros ruber haplotype 2;bat;Hipposideros ruber haplotype 2;Chauve-souris
-Hipru3;Hipru3;Hipru3;;;;;Hipposideros ruber haplotype 3;bat;Hipposideros ruber haplotype 3;Chauve-souris
-Laesp;Laesp;Laesp;;;;;Laephotis sp.;bat;Laephotis sp.;Chauve-souris
-Mimmol;Mimmol;Mimmol;;;;;Mimetillus moloneyi;bat;Mimetillus moloneyi;Chauve-souris
-Moldsp;Moldsp;Moldsp;;;;;Molossidae sp.;bat;Molossidae sp.;Chauve-souris
-Mopcon;Mopcon;Mopcon;;;;;Mops condylurus;bat;Mops condylurus;Chauve-souris
-Myoboc;Myoboc;Myoboc;;;;;Myotis bocagii;bat;Myotis bocagii;Chauve-souris
-Myopda;Myopda;Myopda;;;;;Myopterus daubentonii;bat;Myopterus daubentonii;Chauve-souris
-Neocap;Neocap;Neocap;;;;;Neoromicia capensis;bat;Neoromicia capensis;Chauve-souris
-Neogui;Neogui;Neogui;;;;;Neoromicia guineensis;bat;Neoromicia guineensis;Chauve-souris
-Neonan;Neonan;Neonan;;;;;Neoromicia nana;bat;Neoromicia nana;Chauve-souris
-Neoren;Neoren;Neoren;;;;;Neoromicia rendalli;bat;Neoromicia rendalli;Chauve-souris
-Neosom;Neosom;Neosom;;;;;Neoromicia somalica;bat;Neoromicia somalica;Chauve-souris
-Neosp1;Neosp1;Neosp1;;;;;Neoromicia sp. 1;bat;Neoromicia sp. 1;Chauve-souris
-Neosta;Neosta;Neosta;;;;;Neoromicia stanleyi;bat;Neoromicia stanleyi;Chauve-souris
-Nychis;Nychis;Nychis;;;;;Nycteris hispida;bat;Nycteris hispida;Chauve-souris
-Nycmac;Nycmac;Nycmac;;;;;Nycteris macrotis;bat;Nycteris macrotis;Chauve-souris
-Nycsch;Nycsch;Nycsch;;;;;Nycticeinops schlieffeni;bat;Nycticeinops schlieffeni;Chauve-souris
-Pipnan;Pipnan;Pipnan;;;;;Pipistrellus nanulus;bat;Pipistrellus nanulus;Chauve-souris
-Piprus;Piprus;Piprus;;;;;Pipistrellus rusticus;bat;Pipistrellus rusticus;Chauve-souris
-Pipsp1;Pipsp1;Pipsp1;;;;;Pipistrellus sp. 1;bat;Pipistrellus sp. 1;Chauve-souris
-Pipsp2;Pipsp2;Pipsp2;;;;;Pipistrellus sp. 2;bat;Pipistrellus sp. 2;Chauve-souris
-Rhi120;Rhi120;Rhi120;;;;;Rhinolophus sp. 120 kHz;bat;Rhinolophus sp. 120 kHz;Chauve-souris
-Rhilan;Rhilan;Rhilan;;;;;Rhinolophus landeri;bat;Rhinolophus landeri;Chauve-souris
-Scoalb;Scoalb;Scoalb;;;;;Scotoecus albofuscus;bat;Scotoecus albofuscus;Chauve-souris
-Scodin;Scodin;Scodin;;;;;Scotophilus dinganii;bat;Scotophilus dinganii;Chauve-souris
-Scohir;Scohir;Scohir;;;;;Scotoecus hirundo;bat;Scotoecus hirundo;Chauve-souris
-Scoleu;Scoleu;Scoleu;;;;;Scotophilus leucogaster;bat;Scotophilus leucogaster;Chauve-souris
-Sconig;Sconig;Sconig;;;;;Scotophilus nigrita;bat;Scotophilus nigrita;Chauve-souris
-Scovir;Scovir;Scovir;;;;;Scotophilus viridis;bat;Scotophilus viridis;Chauve-souris
-Tapmau;Tapmau;Tapmau;;;;;Taphozous mauritianus;bat;Taphozous mauritianus;Chauve-souris

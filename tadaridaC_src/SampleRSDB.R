@@ -1,16 +1,16 @@
 library(data.table)
 library(ggplot2)
 
-tabase=fread("tabase3HF_France.csv")
+tabase=fread("RSDB_HF_tabase3HF_sansfiltre.csv")
 SpeciesList=fread("SpeciesList.csv")
 Participants=c("Nicolas Fillol")
 RSDB="RSDB_HF"
-DirQuiz="chiros/quiz190611"
+DirQuiz="chiros/rsdb2101"
 DirQuiz2="chiros/quiz190611CS"
 DirQuiz3="chiros/quiz190611BC"
 DirPair="chiros/pourheterodyne2"
 SRSel=384000
-PairSpecies=c("Pipkuh","Pippip","Pippyg")
+PairSpecies=c("Pippip","Eptser","Rhihip")
 
 
 tabase$AmpTot=tabase$Amp1+tabase$Amp2+tabase$Amp3+tabase$Amp4

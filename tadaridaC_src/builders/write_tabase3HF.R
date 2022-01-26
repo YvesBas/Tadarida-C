@@ -3,9 +3,10 @@ library(data.table) #used to generate features table from labelled sound databas
 #required:
 
 RSDB=choose.dir()
-#RSDB="C:/Users/Yves Bas/Documents/RSDB_sample2011"
-#RSDB="E:/RSDB_LF"
-HPF=21 #high-pass filter
+#RSDB=choose.dir()
+#RSDB="C:\\Users\\yvesb\\Documents\\Tadarida\\TP_Ecoac211102\\Group1"
+#RSDB="D:/RSDB_LF"
+HPF=0 #high-pass filter
 
 #VarSel=fread("VarSel.csv") #to uncomment to select variables
 #optional:
@@ -47,8 +48,10 @@ for (i in 1:length(ListDate))
   if(exists("etilist1")==T){etilist1=c(etilist1,etilistemp1)}else{etilist1=etilistemp1}
   etilistemp2=list.files(paste(ListDate[[i]],"/eti",sep=""),pattern=".eti$",full.names=F,recursive=F)
   if(exists("etilist2")==T){etilist2=c(etilist2,etilistemp2)}else{etilist2=etilistemp2}
-  
 }
+
+#test0=match("SURVEYTM0278_20170506_203653.eti",basename(etilist1))
+#test00=match(basename(etilist1),"SURVEYTM0278_20170506_203653.eti")
 
 
 #concatenating labels tables
@@ -60,9 +63,24 @@ for (i in 1:length(etilist1)){ #5e5 labels/min
   if (file.size(etilist1[[i]])>0)
   {
     my.data[[i]] <- read.csv(etilist1[[i]],sep="\t",h=T,row.names=NULL)
-    fichier=c(fichier
+    #my.data[[i]] <- fread(etilist1[[i]],sep="\t")
+    if(ncol(my.data[[i]])==12){
+      setnames(my.data[[i]] , c("Cri" ,   "Espece" ,     "Type"  ,  "Indice" 
+                                ,"Zone"        , "Site"     ,    "Commentaire"
+                                ,"Materiel"  ,   "Confidentiel" ,"Date"
+                                , "Auteur"  ,     "Etiqueteur"))
+      
+    }else{
+    setnames(my.data[[i]] , c("Cri" ,   "Espece" ,     "Type"  ,  "Indice" 
+                       ,"Zone"        , "Site"     ,    "Commentaire"
+                       ,"Materiel"  ,   "Confidentiel" ,"Date"
+                       , "Auteur"  ,     "Etiqueteur" ,  "V1"))
+    }
+      fichier=c(fichier
               ,rep(paste(substr(etilist2[[i]],1,nchar(etilist2[[i]])-4)
                          ,".wav",sep=""),nrow(my.data[[i]])))
+    
+    #if(ncol(my.data[[i]])>13){stop("anomaly")}
     #fichier2=c(fichier2
     #         ,rep(paste(substr(etilist1[[i]],1,nchar(etilist1[[i]])-4)
     #                   ,".wav",sep=""),nrow(my.data[[i]])))
@@ -71,12 +89,14 @@ for (i in 1:length(etilist1)){ #5e5 labels/min
 
 Sys.time()
 etitot=as.data.frame(rbindlist(my.data,fill=T))
-colnames(etitot)=colnames(
-  read.csv(etilist1[[1]],sep="\t",h=T,row.names=1))
+
+#colnames(etitot)=colnames(
+  # read.csv(etilist1[[1]],sep="\t",h=T,row.names=1))
 etitot2=cbind(fichier,etitot)
 
 
-#test=subset(etitot2,(etitot2$Cri=="Pippip")&(etitot2$Espece=="social")&()
+#test=subset(etitot2,etitot2$fichier=="SURVEYTM0278_20170506_203653.wav")
+#summary(test)
 
 #concatenating features tables
 parlist=vector()
@@ -108,14 +128,18 @@ if(exists("VarSel")){
   param4=param3
 }
 
+test2=subset(param4,param4$Filename=="Nightjar_call_TF67332886_01233920150801_002227.wav")
+
 #merging labels and features
 tabase=merge(param4,etitot2,by.x=c("Filename","CallNum"),by.y=c("fichier","Cri"),all.x=T)
+test2=subset(tabase,tabase$Filename=="TF708102_20170504_215206.wav")
 
 #filtering out non-labeled sound events
 tabase2=subset(tabase,tabase$Espece!="")
+test3=subset(tabase2,tabase2$Filename=="Nightjar_call_TF67332886_01233920150801_002227.wav")
 
 
-write.csv(table(tabase2$Espece),"TtEsp.csv") #to list all species
+write.csv(table(tabase2$Espece),paste0(basename(RSDB),"_TtEsp.csv")) #to list all species
 
 #Filtering species according to their "country" occurence and grouping undistinguishable species (e.g. Myotis blythii and M. myotis)
 if (exists("GeoFilter")==T) 
@@ -174,3 +198,4 @@ if(!exists("GeoFilter"))
 #tabase3[is.na(tabase3)]=0
 
 
+#test3=subset(tabase3,tabase3$Filename=="TF708102_20170504_215206.wav")

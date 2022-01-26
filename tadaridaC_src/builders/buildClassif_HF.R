@@ -3,7 +3,7 @@ library(data.table) #used to generate features table from labelled sound databas
 #VarSel=fread("VarSel.csv")
 VarSel=NA #NA if no selection of variables
 SaveTemp=F
-#Ftabase="RSDB_sample2011_tabase3HF_sansfiltre.csv"
+#Ftabase="C:/Users/yvesb/Documents/Tadarida/TP_Ecoac211102/Group4_tabase3HF_sansfiltre.csv"
 Ftabase=file.choose()
 StartForest=1
 ToPredict="Nesp" 
@@ -53,7 +53,7 @@ Sys.time()
 for (i in StartForest:50)
 {
   Sys.time()
-  print(paste("forest n°",i,Sys.time()))
+  print(paste("forest n?",i,Sys.time()))
   
   if(!Simplified){
     #randomly selecting 63% of sites to build the small forest
@@ -94,6 +94,11 @@ for (i in StartForest:50)
     Predictors[is.na(Predictors)]=0
     #test2=apply(Predictors,MARGIN=2,FUN=function(x) sum(is.na(x)))
     #plot(test2)
+    #Predictors=as.data.frame(Predictors)
+    Predictors <- apply(Predictors, 2,            # Specify own function within apply
+                              function(x) as.numeric(as.character(x)))
+    
+    
     
     Sys.time()
     ClassifEspTemp=randomForest(x=Predictors,y=ClassY$class
@@ -159,3 +164,4 @@ setcolorder(ProbEsp,c(colnames(ProbEsp)[3:12],colnames(ProbEsp)[1:2],colnames(Pr
 fwrite(ProbEsp,paste0("ProbEspHF",substr(Sys.time(),1,10),".csv"),row.names=F)
 
 }
+

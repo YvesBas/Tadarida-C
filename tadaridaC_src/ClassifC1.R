@@ -4,23 +4,48 @@ Var_AGarder=c("Filename","CallNum","Version","FileDur","SampleRate"
               ,"StTime","Dur","PrevSt","Fmax","Fmin","BW"
               ,"FreqMP","CM_FIF","Amp1","Amp2","Amp3","Amp4")
 
-#get arguments from the command line
-#args <- commandArgs(trailingOnly = TRUE)
-#uncomment the following line if you prefer to do not use R in command line
-#args="E:/waves/wav180225/txt"
-#args[2]="ClassifEsp_LF_180320.learner"
-#args[2]="ClassifEspFrance180303.learner"
-#args[3]="tabase3_LFXC"
-#args[3]="NA"
+if(!exists("args"))
+{
+  Test=T
+}else{
+  if(length(args)<3)
+    {
+    Test=T
+  }else{
+    Test=F
+  }
+}
+print(paste0("Test:",Test))
 
-#options (HPF = filtre passe-haut / Reduc = réduction des features par DFA)
-#args[4]=8 #HPF
-#args[8]=1 #start number
-#args[9]=100 #end number number
-obslist=talistot
-FIO=FITA
-#obslist=list.files(args[1],pattern=".ta$",full.names=T,recursive=T) # 1e-4 sec/files
-#args[15]="ClassifEsp_tabase3HF_France_Cir_2019-11-26_wiSR.learner"
+if(Test)
+{
+  #get arguments from the command line
+  #args <- commandArgs(trailingOnly = TRUE)
+  #uncomment the following line if you prefer to do not use R in command line
+  args="C:/wamp64/www/ta"
+  #args[2]="ClassifEsp_LF_180320.learner"
+  args[2]="ClassifEspFrance180303.learner"
+  #args[3]="tabase3_LFXC"
+  args[3]="NA"
+  #options (HPF = filtre passe-haut / Reduc = réduction des features par DFA)
+  args[4]=8 #HPF
+  args[8]=1 #start number
+  args[9]=100 #end number number
+  #args[15]="ClassifEsp_tabase3HF_France_Cir_2019-11-26_wiSR.learner"
+  FilterDSEs=T
+  maxDSEs=400
+  
+  obslist=list.files(args[1],pattern=".ta$",full.names=T,recursive=T) # 1e-4 sec/files
+  FIO=file.info(obslist)
+  obslist=subset(obslist,FIO$size>1000)
+}else{
+  FIO=FITA
+  obslist=talistot
+  FilterDSEs=T
+  maxDSEs=400
+}  
+
+
 
 
 skip=F
@@ -39,8 +64,6 @@ if (length(obslist) == 0) {
   print("no .ta files to process")
   q()
 }
-#FIO=file.info(obslist)
-#obslist=subset(obslist,FIO$size>1000)
 
 
 #fwrite(as.list(obslist),"obslist.csv")
@@ -56,6 +79,16 @@ for(f in start:end) {   #0.026 sec/files
   #print(obslist[[f]])    
   if(FIO$size[f]>1000){
     my.data[[f]] <- read.table(obslist[[f]],sep="\t",h=T)
+    #stop(nrow(my.data))
+    if(FilterDSEs){
+      if(nrow(my.data[[f]])>maxDSEs){
+        print(paste0("too much DSEs:",nrow(my.data[[f]])))
+        Index=my.data[[f]]$Dur+my.data[[f]]$BW/10
+        my.data[[f]]=subset(my.data[[f]]
+                            ,Index>quantile(Index,1-maxDSEs/nrow(my.data[[f]])))
+        
+      }
+    }
   }
 }
 Sys.time()
@@ -75,9 +108,13 @@ if (exists("ClassifEspA")==FALSE) ClassifEspA=ClassifEsp3 #temp for test
 
 #print(ls())
 
+print("L102")
 #concatenate all the features table
 CTP=as.data.frame(rbindlist(my.data,use.names=T,fill=T))
+print("L105")
+#memory problem rough solving
 
+print("L130")
 
 #fwrite(CTP,"CTP.csv")
 

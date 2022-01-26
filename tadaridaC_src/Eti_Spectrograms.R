@@ -1,6 +1,7 @@
 library(data.table)
 library(seewave)
 library(tuneR)
+library(hht)
 #library(warbleR)
 
 find_modes<- function(x) {
@@ -240,7 +241,13 @@ plot(Dflow)
                ,collevels=c(-30:0)*(1.3*AmpMax-AmpMin)/30/2+AmpMax)
   dev.off()
   
+  ft <- list()
+  ft$nfft <- 256
+  ft$ns <- 27
+  ft$nov <- 26
   
+  #test=FTGramImage(WaveTot@left,dt=WaveTot@samp.rate,ft=ft
+   #                ,freq.span = c(0,100))
   #ggspectro(test,f=WaveJ@samp.rate)
   
   

@@ -3,15 +3,17 @@ options(error = function() traceback(2))
 #get arguments from the command line
 args <- commandArgs(trailingOnly = TRUE)
 #uncomment the following line if you prefer to do not use R in command line
-#args="C:/Users/Yves Bas/Documents/RSDB_sample2011"
+args="C:\\Users\\yvesb\\Documents\\Tadarida\\TP_Ecoac211102\\Group4b\\20211102t\\txt"
 args=choose.dir()
 if(length(args)==0){
   print("usage: Rscript TadaridaC.r <directory>")
   q()
 }
 ClassifFile=file.choose()
+#ClassifFile="ClassifEsp_Group3_tabase3HF_sansfiltre_2021-11-02.learner"
 TC=F
-HPF=21
+HPF=0
+ProbDetail=T
 #uncomment the following line if you do not store the classifier file in the working directory of R
 #and in that case, indicate the folder path where the classifier file is stored
 #setwd("C:/Users/yves/Documents/Tadarida/Tadarida-C/tests")
@@ -23,28 +25,47 @@ tadir=args[1]
 
 Version=3 #allow to track results from different classifier versions
 
-#get the .ta files list
-obslist=list.files(tadir,pattern=".ta$",full.names=T,recursive=F)
-
-if (length(obslist) == 0) {
-  print("no .ta files to process")
-  q()
-}
-
 # load the classifier
-if (exists("ClassifEspA")==FALSE) load(ClassifFile)
-
-#concatenate all the features table
-my.data <- list()
-for (i in 1:length(obslist)){
-  my.data[[i]] <- read.csv(obslist[[i]],sep="\t")
+#if (exists("ClassifEspA")==FALSE) {
+  load(ClassifFile)
+#}
+#get the .ta files list
+if(dir.exists(tadir)){
+  obslist=list.files(tadir,pattern=".ta$",full.names=T,recursive=F)
+  
+  if (length(obslist) == 0) {
+    print("no .ta files to process")
+    q()
+  }
+  
+  #concatenate all the features table
+  my.data <- list()
+  for (i in 1:length(obslist)){
+    my.data[[i]] <- read.csv(obslist[[i]],sep="\t")
+  }
+  CTP=as.data.frame(rbindlist(my.data))
+}else{
+  CTP=fread(tadir)  
 }
-CTP=as.data.frame(rbindlist(my.data))
+
+
 CTP=subset(CTP,CTP$FreqMP>HPF)
 
+
+CTP0=subset(CTP,select=row.names(ClassifEspA$importance))
+
 #get the predictions and the main features (noticeably the file name)
-ProbEsp0 <- predict(ClassifEspA, CTP,type="prob",norm.votes=TRUE)
+ProbEsp0 <- predict(ClassifEspA, CTP0,type="prob",norm.votes=TRUE)
 ProbEsp <-  cbind(CTP[,1:12],ProbEsp0)
+if(ProbDetail){
+  fwrite(ProbEsp,paste0("ProbDetail",Sys.Date(),".csv"),sep=";")
+  
+}
+#test1=apply(CTP[,1:274],MARGIN=1,FUN = function(x) sum(is.na(x)))
+#test1=apply(CTP[,1:274],MARGIN=1,FUN = function(x) sum(is.na(x)))
+#summary(test1)
+#test2=(row.names(ClassifEspA$importance) %in% names(CTP))
+#summary(test2)
 
 #this loop intends to detect successively different species within each file if there is sufficient dicrepancy in predicted probabilities
 j=0
@@ -61,8 +82,8 @@ while (nrow(ProbEsp)>0)
   
   #get the probabilities associated to the most probable species in each file
   ProbEsp2=merge(ProbEsp,SpMax2)
-  ProbEspDom0=matrix(nrow=0,ncol=(ncol(MaxparFich)+3))
-  for (i in 1:(ncol(MaxparFich)))
+  ProbEspDom0=data.frame()
+  for (i in 1:(ncol(MaxparFich)-1))
   {
     subtemp=subset(ProbEsp2,ProbEsp2$numsp==i)
     Probtemp=cbind(subtemp,subtemp[,(i+12)])
@@ -108,16 +129,18 @@ if(TC){
 }else{
   IdSp=subset(IdTot2
               ,select=subset(names(IdTot2) 
-                                   ,names(IdTot2) %in% 
+                             ,names(IdTot2) %in% 
                                levels(ClassifEspA$y)))
   IdTot2$Espece=levels(ClassifEspA$y)[apply(IdSp,MARGIN=1
                                             ,FUN=function(x) which.max(x))]
   IdTot2$Score=apply(IdSp,MARGIN=1,max)
   IdTot2=IdTot2[order(IdTot2$Group.1),]
   
-  fwrite(IdTot2,paste0(basename(dirname(args[1])),"_IdTot.csv"),sep=";")
+  fwrite(IdTot2,paste0((dirname(args[1])),"_IdTot.csv"),sep=";")
+  
+  #fwrite(IdTot2,paste0(basename(dirname(args[1])),"_IdTot.csv"),sep=";")
 }
 
 #suppressing every objects except the classifier (which is time-consuming to load)
-rm(list=setdiff(ls(), list("ClassifEspA","IdTot2")))
+#rm(list=setdiff(ls(), list("ClassifEspA","IdTot2")))
 

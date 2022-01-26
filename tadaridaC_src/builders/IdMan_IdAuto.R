@@ -2,7 +2,7 @@ library(data.table)
 
 args="RSDB_HF_tabase3HF_sansfiltre_IdMan.csv"
 #args="IdExhaustifs.csv"
-args[2]="IdTot_woSR.csv"
+args[2]="IdTot.csv"
 args[3]="SpeciesList.csv"
 args[4]=T #exhaustive? (mean every species within the files are identified so all IdAuto should have a IdMan match)
 

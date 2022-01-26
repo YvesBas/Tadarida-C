@@ -1,9 +1,8 @@
 library(data.table)
 library(xlsx)
-DirQuiz="./chiros/quizRLC_groupes"
-#DirQuiz="./chiros/quizRLC_mix"
+DirQuiz="./chiros/quizMyotis2008combi"
 
-Tabase=fread("tabase3HF_France.csv")
+Tabase=fread("RSDB_HF_tabase3HF_sansfiltre.csv")
 CodesConfiance=c("POSSIBLE","PROBABLE","SUR","SUR","SUR")
 
 
@@ -20,15 +19,18 @@ for (h in 1:length(ListQuiz))
   Auteur=vector()
   for (i in 1:length(ListW))
   {
-    Tsub=subset(Tabase,Tabase$Filename==FSel[i])
-    Tagg=aggregate(Tsub$Indice,by=list(Tsub$Espece),max)
     Identif=""
-    for (j in 1:nrow(Tagg))
+    Tsub=subset(Tabase,Tabase$Filename==FSel[i])
+    if(nrow(Tsub)>0)
+    {
+    Tagg=aggregate(Tsub$Indice,by=list(Tsub$Espece),max)
+      for (j in 1:nrow(Tagg))
     {
       Identif=paste0(Identif,Tagg$Group.1[j]," ")
       Conf=CodesConfiance[Tagg$x[j]]
       Identif=paste0(Identif,Conf)
       if(j<nrow(Tagg)){Identif=paste0(Identif,", ")}
+      }
     }
     Ids=c(Ids,Identif)
     Lieu=c(Lieu,paste0(Tsub$Site[1],", ",Tsub$Zone[1]))
