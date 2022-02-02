@@ -21,10 +21,10 @@ args[2]="ClassifEsp_LF_180129.learner"
 #args[3]="tabase3_LFXC"
 args[3]="N"
 
-#options (HPF = filtre passe-haut / Reduc = réduction des features par DFA)
+#options (HPF = filtre passe-haut / Reduc = r?duction des features par DFA)
 args[4]=0 #HPF
 args[5]=F #Reduc - obsolete
-args[6]=F #TC
+args[6]=T #TC
 args[7]=100 #block size
 args[8]=0 #init for test
 args[9]=0 #init for test
