@@ -5,10 +5,11 @@
 ## mylevels() returns levels if given a factor, otherwise 0.
 mylevels <- function(x) if (is.factor(x)) levels(x) else 0
 
-"randomForest.default"  <-
+"randomForest.default" <-
   function(x, y=NULL,  xtest=NULL, ytest=NULL, ntree=500,
            mtry=if (!is.null(y) && !is.factor(y))
              max(floor(ncol(x)/3), 1) else floor(sqrt(ncol(x))),
+           weights=NULL,
            replace=TRUE, classwt=NULL, cutoff, strata,
            sampsize = if (replace) nrow(x) else ceiling(.632*nrow(x)),
            nodesize = if (!is.null(y) && !is.factor(y)) 5 else 1,
@@ -84,11 +85,12 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
       }
     } else {
       ncat <- rep(1, p)
+      names(ncat) <- colnames(x)
       xlevels <- as.list(rep(0, p))
     }
     maxcat <- max(ncat)
-    if (maxcat > 32)
-      stop("Can not handle categorical predictors with more than 32 categories.")
+    if (maxcat > 53)
+      stop("Can not handle categorical predictors with more than 53 categories.")
     
     if (classRF) {
       nclass <- length(levels(y))
@@ -170,8 +172,8 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
         nsum <- sum(sampsize)
         if (length(sampsize) > nlevels(strata))
           stop("sampsize has too many elements.")
-        #if (any(sampsize <= 0) || nsum == 0)
-        # stop("Bad sampsize specification")
+      #  if (any(sampsize <= 0) || nsum == 0)
+       #   stop("Bad sampsize specification")
         ## If sampsize has names, match to class labels.
         if (!is.null(names(sampsize))) {
           sampsize <- sampsize[levels(strata)]
@@ -181,10 +183,10 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
       } else {
         nsum <- sampsize
       }
-      nrnodes <- 2 * trunc(nsum / nodesize) + 1
+      nrnodes <- 2 * nsum + 1
     } else {
       ## For regression trees, need to do this to get maximal trees.
-      nrnodes <- 2 * trunc(sampsize/max(1, nodesize - 4)) + 1
+      nrnodes <- 2 * sampsize + 1
     }
     if (!is.null(maxnodes)) {
       ## convert # of terminal nodes to total # of nodes
@@ -211,6 +213,20 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
     }
     nt <- if (keep.forest) ntree else 1
     
+    useweights <- 0
+    if (!is.null(weights)) {
+      if (length(weights) != n) {
+        stop("length of weights must match number of data points")
+      }
+      if (any(weights <= 0)) {
+        stop("All weights must be positive")
+      }
+      weights <- weights/sum(weights)
+      useweights <- 1
+    } else {
+      weights <- rep(1.0, n)
+    }
+    
     if (classRF) {
       cwt <- classwt
       threshold <- cutoff
@@ -224,6 +240,8 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
                   maxcat = as.integer(maxcat),
                   sampsize = as.integer(sampsize),
                   strata = if (Stratify) as.integer(strata) else integer(1),
+                  useweights = as.integer(useweights),
+                  weights = as.double(weights),
                   Options = as.integer(c(addclass,
                                          importance,
                                          localImp,
@@ -265,7 +283,7 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
                   errts = error.test,
                   inbag = if (keep.inbag)
                     matrix(integer(n * ntree), n) else integer(n),
-                  DUP=FALSE,
+                  #DUP=FALSE,
                   PACKAGE="randomForest")[-1]
       if (keep.forest) {
         ## deal with the random forest outputs
@@ -362,11 +380,17 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
                     proximity = if(proximity) matrix(rfout$proxts, nrow=ntest,
                                                      dimnames = list(xts.row.names, c(xts.row.names,
                                                                                       x.row.names))) else NULL),
-                  inbag = if (keep.inbag) rfout$inbag else NULL)
+                  inbag = if (keep.inbag) matrix(rfout$inbag, nrow=nrow(rfout$inbag),
+                                                 dimnames=list(x.row.names, NULL)) else NULL)
     } else {
+      ymean <- mean(y)
+      y <- y - ymean
+      ytest <- ytest - ymean
       rfout <- .C("regRF",
                   x,
                   as.double(y),
+                  as.integer(useweights),
+                  as.double(weights),
                   as.integer(c(n, p)),
                   as.integer(sampsize),
                   as.integer(nodesize),
@@ -407,8 +431,8 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
                   oob.times = integer(n),
                   inbag = if (keep.inbag)
                     matrix(integer(n * ntree), n) else integer(1),
-                  DUP=FALSE,
-                  PACKAGE="randomForest")[c(16:28, 36:41)]
+                  #DUP=FALSE,
+                  PACKAGE="randomForest")[c(18:30, 38:43)]
       ## Format the forest component, if present.
       if (keep.forest) {
         max.nodes <- max(rfout$ndbigtree)
@@ -417,7 +441,7 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
         rfout$bestvar <-
           rfout$bestvar[1:max.nodes, , drop=FALSE]
         rfout$nodepred <-
-          rfout$nodepred[1:max.nodes, , drop=FALSE]
+          rfout$nodepred[1:max.nodes, , drop=FALSE] + ymean
         rfout$xbestsplit <-
           rfout$xbestsplit[1:max.nodes, , drop=FALSE]
         rfout$leftDaughter <-
@@ -434,7 +458,7 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
       }
       out <- list(call = cl,
                   type = "regression",
-                  predicted = structure(ypred, names=x.row.names),
+                  predicted = structure(ypred + ymean, names=x.row.names),
                   mse = rfout$mse,
                   rsq = 1 - rfout$mse / (var(y) * (n-1) / n),
                   oob.times = rfout$oob.times,
@@ -458,9 +482,9 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
                       list(ncat = ncat), list(nrnodes=max.nodes),
                       list(ntree=ntree), list(xlevels=xlevels)) else NULL,
                   coefs = if (corr.bias) rfout$coef else NULL,
-                  y = y,
+                  y = y + ymean,
                   test = if(testdat) {
-                    list(predicted = structure(rfout$ytestpred,
+                    list(predicted = structure(rfout$ytestpred + ymean,
                                                names=xts.row.names),
                          mse = if(labelts) rfout$msets else NULL,
                          rsq = if(labelts) 1 - rfout$msets /
@@ -478,46 +502,3 @@ mylevels <- function(x) if (is.factor(x)) levels(x) else 0
     class(out) <- "randomForest"
     return(out)
   }
-
-
-"randomForest.formula" <-
-  function(formula, data = NULL, ..., subset, na.action = na.fail) {
-    ### formula interface for randomForest.
-    ### code gratefully stolen from svm.formula (package e1071).
-    ###
-    if (!inherits(formula, "formula"))
-      stop("method is only for formula objects")
-    m <- match.call(expand.dots = FALSE)
-    ## Catch xtest and ytest in arguments.
-    if (any(c("xtest", "ytest") %in% names(m)))
-      stop("xtest/ytest not supported through the formula interface")
-    names(m)[2] <- "formula"
-    if (is.matrix(eval(m$data, parent.frame())))
-      m$data <- as.data.frame(data)
-    m$... <- NULL
-    m$na.action <- na.action
-    m[[1]] <- as.name("model.frame")
-    m <- eval(m, parent.frame())
-    y <- model.response(m)
-    Terms <- attr(m, "terms")
-    attr(Terms, "intercept") <- 0
-    ## Drop any "negative" terms in the formula.
-    ## test with:
-    ## randomForest(Fertility~.-Catholic+I(Catholic<50),data=swiss,mtry=2)
-    m <- model.frame(terms(reformulate(attributes(Terms)$term.labels)),
-                     data.frame(m))
-    ## if (!is.null(y)) m <- m[, -1, drop=FALSE]
-    for (i in seq(along=ncol(m))) {
-      if (is.ordered(m[[i]])) m[[i]] <- as.numeric(m[[i]])
-    }
-    ret <- randomForest(m, y, ...)
-    cl <- match.call()
-    cl[[1]] <- as.name("randomForest")
-    ret$call <- cl
-    ret$terms <- Terms
-    if (!is.null(attr(m, "na.action")))
-      ret$na.action <- attr(m, "na.action")
-    class(ret) <- c("randomForest.formula", "randomForest")
-    return(ret)
-  }
-
