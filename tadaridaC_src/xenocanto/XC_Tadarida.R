@@ -181,7 +181,6 @@ library(data.table)
 #          ,"Monticola saxatilis")
 
 listSp=c("Turdus philomelos","Turdus iliacus")
-
 #Nfiles=40
 Nfiles="all"
 output="D:/"
